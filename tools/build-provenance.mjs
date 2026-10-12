@@ -164,27 +164,27 @@ function sourceSummary(evidence) {
     const parts = [
       author,
       source,
-      license && `Licencia declarada: ${license}`,
+      license && `Recorded license: ${license}`,
       details.processing || details.treatment || details.usage,
     ].filter(Boolean);
     if (parts.length) found.push(parts.join(' · '));
     if (found.length === 3) break;
   }
-  return found.join(' / ') || 'El registro no identifica una fuente individual para este archivo.';
+  return found.join(' / ') || 'No individual source is identified for this file in the records.';
 }
 
 function permissionSummary(status) {
   return {
     'permission-unknown-explicitly-documented':
-      'La nota fuente dice que el permiso no está confirmado.',
+      'The source note explicitly says permission is unconfirmed.',
     'license-named-in-source-record-recheck-rights-holder':
-      'El manifiesto nombra una licencia; falta confirmar que quien la publicó podía concederla para este archivo.',
+      'A license is named; the rights holder and coverage still need verification.',
     'source-recorded-permission-not-established':
-      'Hay fuente o procedencia registrada; no se encontró una licencia de reutilización para este archivo.',
+      'A source or provenance record exists, but no reuse license was found for this file.',
     'context-only-permission-not-established':
-      'Solo hay notas de contexto del proyecto; no hay fuente individual ni permiso confirmado.',
+      'Only project context is recorded; no file-specific source or permission is confirmed.',
     'source-and-permission-not-documented':
-      'No se encontró una nota de fuente ni un permiso asociado en los manifiestos examinados.',
+      'No associated source note or permission was found in the examined manifests.',
   }[status];
 }
 
@@ -261,34 +261,34 @@ const ledger = {
 };
 
 const markdown = [
-  '# Inventario de atribuciones y permisos de recursos',
+  '# Asset credits and permission inventory',
   '',
-  'Este registro se genera desde `public/assets/` y sus manifiestos mediante `npm run provenance`. Incluye cada archivo multimedia, fuente, manifiesto y dato JSON incluido en ese directorio, el SHA-256 exacto, la evidencia encontrada y el estado de permiso asignado a partir de esa evidencia.',
+  'This register is generated from `public/assets/` and its source manifests by `npm run provenance`. It includes every media, font, manifest, and JSON file in that directory, with its SHA-256 digest, available evidence, and permission status based on that evidence.',
   '',
-  `Archivos inventariados: **${records.length}**.`,
+  `Inventoried files: **${records.length}**.`,
   '',
-  '## Cómo leer el estado',
+  '## Understanding the status',
   '',
-  '- `license-named-in-source-record-recheck-rights-holder`: un manifiesto nombra una licencia; esta herramienta no comprueba por sí sola que la licencia proceda del titular correcto ni que cubra el uso concreto.',
-  '- `source-recorded-permission-not-established`: existe una pista de procedencia individual, pero no consta permiso de reutilización.',
-  '- `permission-unknown-explicitly-documented`: la nota expresa que la licencia o el permiso no están confirmados.',
-  '- `context-only-permission-not-established`: se conoce el contexto del proyecto, pero no una fuente individual que autorice este archivo.',
-  '- `source-and-permission-not-documented`: los manifiestos examinados no contienen una atribución asociada al archivo.',
+  '- `license-named-in-source-record-recheck-rights-holder`: a manifest names a license; this tool does not verify that the correct rights holder granted it for this use.',
+  '- `source-recorded-permission-not-established`: a file-specific source is recorded, but no reuse permission is established.',
+  '- `permission-unknown-explicitly-documented`: the source note explicitly says the license or permission is unconfirmed.',
+  '- `context-only-permission-not-established`: project context exists, but no file-specific source or permission is established.',
+  '- `source-and-permission-not-documented`: no associated source or permission was found in the examined manifests.',
   '',
-  '> Dar crédito no equivale a tener autorización. Este inventario mejora la trazabilidad; no constituye asesoramiento jurídico ni garantiza el resultado legal de publicar, adaptar o redistribuir una obra. Donde falta una licencia verificable, lo declara en vez de inferirla.',
+  '> Attribution is not permission. This inventory improves traceability; it is not legal advice or a guarantee that publication, adaptation, or redistribution is authorized. Missing licenses remain explicitly unresolved.',
   '',
-  '## Registro por archivo',
+  '## Per-file register',
   '',
-  '| Archivo | Evidencia de fuente y atribución | Estado documentado | SHA-256 |',
+  '| File | Source and attribution evidence | Documented status | SHA-256 |',
   '| --- | --- | --- | --- |',
   ...records.map(
     (item) =>
       `| \`${markdownEscape(item.path)}\` | ${markdownEscape(sourceSummary(item.evidence))} | ${markdownEscape(permissionSummary(item.permissionStatus))} | \`${item.sha256}\` |`,
   ),
   '',
-  '## Revisión para futuras versiones',
+  '## Review for future versions',
   '',
-  'Antes de añadir, sustituir o volver a distribuir un recurso, localiza el titular de los derechos, comprueba la página y el texto de licencia originales, anota cualquier transformación y actualiza el manifiesto más cercano. Si la licencia no se puede demostrar, marca el permiso como pendiente y conserva la incertidumbre de forma explícita.',
+  'Before adding, replacing, or redistributing an asset, identify its rights holder, check the original source page and license terms, record transformations, and update the nearest manifest. If permission cannot be demonstrated, mark it as unresolved rather than inferring it.',
   '',
 ].join('\n');
 

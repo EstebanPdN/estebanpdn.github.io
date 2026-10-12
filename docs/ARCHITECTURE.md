@@ -1,32 +1,30 @@
-# Arquitectura del sitio
+# Site architecture
 
-## La experiencia del navegador
+## Browser experience
 
-Cada URL corresponde a un documento HTML estático para que GitHub Pages pueda servirlo al abrir una ruta directamente. Una vez carga la página, `src/app/page-transitions.js` intercepta los enlaces internos elegibles, obtiene el siguiente documento, actualiza el estado del historial y deja que el runtime de escenas intercambie la vista y sus estilos. Las navegaciones compatibles mantienen el documento del navegador, incluidos sus manejadores compartidos. El botón atrás/adelante vuelve a cargar el estado de ruta esperado.
+Each public URL has its own static HTML document, so direct visits and bookmarks work on GitHub Pages. After a page loads, `src/app/page-transitions.js` handles eligible internal links, fetches the next document, updates browser history, and swaps the scene and its styles. Supported transitions keep the same browser document and its shared listeners. Back and forward navigation restore the expected route.
 
-La navegación directa y la navegación animada son complementarias: ambas usan las mismas rutas y el mismo HTML de cada destino. Los recursos no se renombran al compilarlos. El formato de salida mejora la lectura del HTML sin minificarlo ni insertar lógica de servidor.
+Direct loading and animated navigation use the same destination pages. The build retains established resource names and produces readable HTML without a server runtime.
 
-## Fuentes y salida
+## Source and output
 
-1. Las páginas y módulos mantenidos viven en `src/`.
-2. Los medios, datos públicos y manifiestos de origen viven en `public/`.
-3. `tools/build.py` compila cada vista, prepara la cabecera y la política de contenido, ensambla sus módulos mediante el analizador de `tools/compile-controllers.mjs` y copia los recursos estáticos.
-4. `tools/build-community.mjs` incluye los datos de comunidad mantenidos para que el sitio sea autosuficiente como contenido estático.
-5. `tools/build-provenance.mjs` inventaría cada fichero de `public/assets/` y produce `public/asset-provenance.json` y `docs/ASSET-CREDITS.md`.
-6. El sitio generado queda en `dist/`. Ese directorio se crea de nuevo en cada build y Git lo ignora.
+1. Maintained pages and modules live in `src/`.
+2. Static media, public data, and source manifests live in `public/`.
+3. `tools/build.py` assembles pages and shared headers, applies the content security policy, compiles page controllers with `tools/compile-controllers.mjs`, and copies static assets.
+4. `tools/build-community.mjs` embeds maintained community data for static delivery.
+5. `tools/build-provenance.mjs` inventories every file in `public/assets/` and generates `public/asset-provenance.json` and `docs/ASSET-CREDITS.md`.
+6. The generated site is written to `dist/`, which Git ignores.
 
-## Propiedad de módulos
+## Module ownership
 
-- `src/app/`: entrada, estado de inicio, runtime de vistas y transición entre rutas.
-- `src/features/collection/`: tarjetas y comportamiento de colección.
-- `src/features/community/`: página de comunidad, datos públicos y renderizado del panel de información.
-- `src/features/games/`: controladores y experiencias específicas de juegos.
-- `src/shared/`: navegación de cabecera, galería y comportamientos compartidos.
-- `src/styles/`: hojas compartidas y de cada página.
-- `src/partials/`: markup que el build expande en las páginas.
+- `src/app/`: startup state, scene runtime, and route transitions.
+- `src/features/collection/`: collection cards and behavior.
+- `src/features/community/`: community data and information views.
+- `src/features/games/`: game-specific controllers and experiences.
+- `src/shared/`: header, gallery, and shared interactions.
+- `src/styles/`: common and page-specific styles.
+- `src/partials/`: HTML fragments expanded at build time.
 
-`tools/source-map.json` documenta dónde se mantiene cada módulo JavaScript plano publicado. `src/app/index-state.js` es un fragmento del estado de página que se integra en el controlador de inicio; no es un módulo independiente de descarga.
+`tools/source-map.json` maps published JavaScript filenames to maintained source files. `src/app/index-state.js` is inserted into the homepage controller rather than shipped as a separate script.
 
-## Decisiones de despliegue
-
-GitHub Actions construye desde `main`, ejecuta las pruebas y carga solo `dist/` como artefacto de Pages. El repositorio no depende de una base de datos ni de un proceso de servidor. Por ello, las rutas y nombres de archivo estáticos forman parte del contrato del sitio y deben conservarse en futuras versiones.
+GitHub Actions builds from `main` and deploys only `dist/`. The site has no database or server process. Static URLs and filenames are part of its compatibility contract.

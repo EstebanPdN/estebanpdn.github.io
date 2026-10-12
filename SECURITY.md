@@ -1,5 +1,5 @@
-# Seguridad
+# Security
 
-Esteban’s Forge es un sitio estático, sin inicio de sesión, pagos ni API propia. Las páginas, estilos, scripts, fuentes y recursos se generan durante CI y se alojan con GitHub Pages. El contenido dinámico de la comunidad se distribuye como datos estáticos versionados; el sitio no envía ese contenido a un servicio de aplicación propio.
+Esteban’s Forge is a static GitHub Pages site with no sign-in, payments, or application API. Community data is distributed as versioned static files.
 
-Si detectas una vulnerabilidad en el código o un archivo publicado accidentalmente que no deba ser público, abre un reporte en la pestaña **Security** o en **Issues** del repositorio y señala la ruta afectada y los pasos para reproducirla. No publiques datos personales ni secretos en un issue. Este canal no es una promesa de tiempo de respuesta ni sustituye los procesos de reporte de GitHub.
+If you find a vulnerability or accidentally published private material, report the affected path and reproduction steps through the repository’s **Security** tab or **Issues**. Do not include secrets or personal information in a public issue. No response-time commitment is implied.

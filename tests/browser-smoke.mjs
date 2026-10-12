@@ -30,19 +30,19 @@ for (const [engineName, browserType] of [
       localStorage.setItem('forge-theme', 'light');
       localStorage.setItem('forge-welcome-seen-v1', '1');
     });
-    const page = await context.newPage();
-    const errors = [];
-    page.on('pageerror', (error) => errors.push(error.message));
-    page.on('response', (response) => {
-      if (response.status() >= 400 && response.url().startsWith(server.url)) {
-        errors.push(`HTTP ${response.status()} ${response.url().replace(server.url, '')}`);
-      }
-    });
-
     for (const route of routes) {
-      await page.goto(`${server.url}${route}`, { waitUntil: 'load' });
-      await page.locator('body').waitFor();
-      const pageState = await page.evaluate(() => ({
+      // A fresh tab avoids treating aborted preloads from the previous route
+      // as failures of the new route, which WebKit reports on Linux.
+      const routePage = await context.newPage();
+      const routeErrors = [];
+      routePage.on('pageerror', (error) => routeErrors.push(error.message));
+      routePage.on('response', (response) => {
+        if (response.status() >= 400 && response.url().startsWith(server.url))
+          routeErrors.push(`HTTP ${response.status()} ${response.url().replace(server.url, '')}`);
+      });
+      await routePage.goto(`${server.url}${route}`, { waitUntil: 'networkidle' });
+      await routePage.locator('body').waitFor();
+      const pageState = await routePage.evaluate(() => ({
         title: document.title,
         bodyText: document.body.innerText.trim(),
         controller: document.querySelector('meta[name="forge-controller"]')?.content,
@@ -52,10 +52,23 @@ for (const [engineName, browserType] of [
       assert.ok(pageState.bodyText.length > 40, `${engineName} ${route}: content rendered`);
       assert.ok(pageState.controller, `${engineName} ${route}: page controller compiled`);
       assert.equal(pageState.theme, 'light', `${engineName} ${route}: saved theme is applied`);
+      assert.deepEqual(
+        routeErrors,
+        [],
+        `${engineName} ${route}: no script errors or missing local resources`,
+      );
+      await routePage.close();
     }
 
     if (engineName === 'Chromium') {
-      await page.goto(server.url + 'index.html', { waitUntil: 'load' });
+      const page = await context.newPage();
+      const errors = [];
+      page.on('pageerror', (error) => errors.push(error.message));
+      page.on('response', (response) => {
+        if (response.status() >= 400 && response.url().startsWith(server.url))
+          errors.push(`HTTP ${response.status()} ${response.url().replace(server.url, '')}`);
+      });
+      await page.goto(server.url + 'index.html', { waitUntil: 'networkidle' });
       await page.evaluate(() => {
         window.__forgeOriginalDocument = document;
       });
@@ -115,9 +128,14 @@ for (const [engineName, browserType] of [
         true,
         'Browser history restores a page in the same document',
       );
+      assert.deepEqual(
+        errors,
+        [],
+        'Single-document journey has no script errors or missing local resources',
+      );
+      await page.close();
     }
 
-    assert.deepEqual(errors, [], `${engineName}: no JavaScript errors or failed local requests`);
     await context.close();
     console.log(
       `PASS: ${engineName} loaded all ${routes.length} pages${engineName === 'Chromium' ? ' and checked gallery, theme, and single-document history' : ''}.`,

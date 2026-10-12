@@ -1,31 +1,30 @@
-# Compilar y publicar
+# Build and publish
 
-## Sitio local
+## Local checks
 
 ```sh
 npm ci
-npm test
 npm run format:check
-npm run provenance:check
-npm run build
+npm test
 npm run test:browser
+npm run build
 npm run dev
 ```
 
-GitHub Pages no procesa las fuentes de este proyecto. La acción de CI compila las páginas a `dist/` y publica esa carpeta mediante el flujo oficial de artefactos y despliegue de Pages. Así la salida de publicación coincide con la compilación probada.
+`npm test` builds the site before running its integrity checks. GitHub Pages does not process the maintained source directly; the workflow publishes `dist/`.
 
-## Flujo automatizado
+## GitHub Actions
 
-`.github/workflows/pages.yml` se ejecuta al enviar cambios a `main` o al iniciarse manualmente. Antes de publicar, el job prepara Node.js y FFmpeg, instala exactamente lo descrito en `package-lock.json`, revisa el formato, ejecuta la suite local, instala Chromium y WebKit para la prueba de navegador, compila el sitio y comprueba la navegación. Solo si esos pasos pasan se configura Pages, se carga `dist/` y se crea el despliegue con `GITHUB_TOKEN` de alcance limitado al job.
+`.github/workflows/pages.yml` runs on pushes to `main` or manual dispatch. It installs the locked Node dependencies and FFmpeg, checks formatting and provenance, runs the unit and integrity suite, installs Chromium and WebKit, builds the site, and checks rendered routes. Only passing jobs upload `dist/` and deploy through GitHub Pages.
 
-Los permisos de workflow se declaran de forma explícita. No hay claves API del sitio en el repositorio ni configuración de dominio personalizado. La publicación del sitio de cuenta depende de que el repositorio público se llame `estebanpdn.github.io`.
+Workflow permissions are explicit. The repository has no application API key or custom domain. The public account-site repository is named `estebanpdn.github.io`, and Pages uses **GitHub Actions** as its build source.
 
-## Diagnóstico
+## Troubleshooting
 
-- **404 en todas las rutas:** confirma que Pages usa GitHub Actions como origen y que el último despliegue terminó correctamente.
-- **Falta `index.html`:** revisa el artefacto `github-pages`; debe contener el contenido de `dist/`, incluida la página principal.
-- **Recursos o páginas 404:** comprueba que se conservan los nombres relativos originales y que el build incluye `public/` y los módulos servidos.
-- **El controlador no arranca:** revisa la consola y los archivos JavaScript versionados por hash de contenido en `dist/`.
-- **Los datos de comunidad no coinciden con la compilación:** valida el snapshot con la suite de comunidad y vuelve a ejecutar `npm run build`.
+- **All routes return 404:** confirm that Pages uses GitHub Actions and that the latest deployment succeeded.
+- **No `index.html`:** inspect the `github-pages` artifact; it must contain the contents of `dist/`.
+- **Missing assets or routes:** check that the build preserves relative URLs and copies `public/`.
+- **Controller fails:** inspect the browser console and the content-hashed JavaScript URLs in `dist/`.
+- **Community data differs:** validate the static snapshot and rebuild.
 
-El sitio publicado debe verificarse con HTTP después del despliegue; que el job compile correctamente no demuestra por sí solo que el dominio responda al público.
+Verify the public URL with HTTP after deployment; a successful build alone does not prove that the site is available.

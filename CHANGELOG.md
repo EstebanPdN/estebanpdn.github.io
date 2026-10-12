@@ -1,14 +1,11 @@
-# Historial de cambios
-
-Los cambios notables de cada versión publicada se registran aquí.
+# Changelog
 
 ## [1.0.0] — 2026-10-12
 
-Primera versión pública del portafolio como proyecto mantenible en GitHub Pages.
+First public, maintainable GitHub Pages edition of Esteban’s Forge.
 
-- Organiza la aplicación, las páginas, las funciones, los estilos y las piezas compartidas en módulos con rutas claras.
-- Conserva las URLs y los recursos existentes, así como las transiciones entre vistas dentro de una misma experiencia del navegador.
-- Añade una compilación determinista de salida estática y un flujo de publicación de GitHub Pages.
-- Añade pruebas de comportamiento, integridad de rutas y recursos, navegación entre páginas y comparación visual controlada.
-- Reescribe la página de créditos y genera un registro con SHA-256, evidencia de fuente, licencia citada y permisos que siguen pendientes para cada recurso.
-- Documenta instalación local, arquitectura, publicación, colaboración y derechos de reutilización.
+- Organized pages, application state, shared components, game features, and styles into clear source directories.
+- Preserved existing URLs, assets, appearance, and animated navigation within one browser document.
+- Added a reproducible static build, GitHub Pages workflow, and behavior, route, browser, and visual checks.
+- Expanded the credits page and added a per-file provenance register with SHA-256 hashes and explicit permission uncertainty.
+- Documented architecture, verification, publishing, contribution, and reuse rights.
