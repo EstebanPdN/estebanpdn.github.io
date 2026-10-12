@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm run provenance && python3 tools/build.py",
     "dev": "python3 -m http.server 8080 --bind 127.0.0.1 --directory dist",
-    "test": "npm run provenance:check && python3 tools/check.py",
+    "test": "npm run provenance:check && python3 tools/build.py && python3 tools/check.py",
     "format": "prettier --write src tools tests docs .github README.md CONTRIBUTING.md CHANGELOG.md package.json .prettierrc.json",
     "format:check": "prettier --check src tools tests docs .github README.md CONTRIBUTING.md CHANGELOG.md package.json .prettierrc.json",
     "provenance": "node tools/build-provenance.mjs",

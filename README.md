@@ -49,7 +49,7 @@ La referencia de comparación se mantiene separada del repositorio. El informe s
 
 ## Verificaciones
 
-`npm test` revisa sintaxis, navegación y marca, transiciones, escenas, carruseles, galerías, controles móviles, recursos de vídeo, datos de la comunidad, enlaces locales y actualidad del inventario de procedencia. `npm run test:browser` además recorre las rutas publicadas en Chromium y WebKit. `npm run test:visual` compara capturas controladas con la referencia independiente. La comparación de estructura y recursos originales se puede repetir con `node tests/preservation.mjs /ruta/a/review/github-pages-2026-10-12/baseline` cuando se disponga de esa copia local independiente.
+`npm test` compila el sitio y revisa sintaxis, navegación y marca, transiciones, escenas, carruseles, galerías, controles móviles, recursos de vídeo, datos de la comunidad, enlaces locales y actualidad del inventario de procedencia. `npm run test:browser` además recorre las rutas publicadas en Chromium y WebKit. `npm run test:visual` compara capturas controladas con la referencia independiente. La comparación de estructura y recursos originales se puede repetir con `node tests/preservation.mjs /ruta/a/review/github-pages-2026-10-12/baseline` cuando se disponga de esa copia local independiente.
 
 Cada cambio a `main` ejecuta CI, vuelve a compilar el sitio y publica `dist/` mediante GitHub Pages. Consulta [la arquitectura](docs/ARCHITECTURE.md), [la guía de publicación](docs/PUBLISHING.md), [la evidencia de verificación](docs/VERIFICATION.md), [la guía para colaborar](CONTRIBUTING.md), [el historial](CHANGELOG.md) y [el registro completo de atribuciones](docs/ASSET-CREDITS.md).
 
