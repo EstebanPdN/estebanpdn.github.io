@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="en"
+  ><head>
+    <meta charset="utf-8" /><meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1" /><meta name="theme-color" content="#426326" />
+    <meta
+      name="description"
+      content="An illustrated adventure journal for The Minish Cap on Nintendo 3DS. Discover the port, explore the gallery, and step into the world of the Picori." />
+    <title>The Minish Cap · Esteban’s Forge</title
+    ><link rel="icon" type="image/png" href="assets/brand/estebans-forge-icon.png" />
+    <link rel="stylesheet" href="minish.css" /><link
+      rel="stylesheet"
+      href="forge-header.css" /><link rel="stylesheet" href="page-transitions.css" /><link
+      rel="preload"
+      as="font"
+      type="font/ttf"
+      href="assets/fonts/minish/font-5.ttf"
+      crossorigin />
+    <script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="minish.js" defer></script
+    ><link rel="stylesheet" href="interaction-motion.css" /><script src="game-gallery.js"></script
+    ><script src="interaction-motion.js"></script
+    ><script src="forge-header.js" defer></script
+    ><link rel="stylesheet" href="forge-captures.css"
+  /></head>
+  <body data-game="minish"
+    ><!-- forge-header -->
+    <a class="skip-link" href="#project-main">Skip to the adventure</a>
+    <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="clover" viewBox="0 0 64 64">
+          <g fill="currentColor" stroke="#426529" stroke-width="1.7" stroke-linejoin="round">
+            <path
+              id="clover-leaf"
+              d="M32 33C25 28 13 26 13 16C13 6 26 3 32 12C38 3 51 6 51 16C51 26 39 28 32 33Z"
+            />
+            <use href="#clover-leaf" transform="rotate(90 32 32)" />
+            <use href="#clover-leaf" transform="rotate(180 32 32)" />
+            <use href="#clover-leaf" transform="rotate(270 32 32)" />
+          </g>
+        </symbol>
+        <symbol id="triforce" viewBox="0 0 52 46">
+          <path d="M26 0 13 23h26ZM13 23 0 46h26Zm26 0L26 46h26Z" fill="currentColor" />
+        </symbol>
+        <symbol id="arrow" viewBox="0 0 24 24">
+          <path
+            d="M4 12h15m-6-6 6 6-6 6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </symbol>
+        <clipPath id="new3ds-outline">
+          <path
+            d="M279 96H1320Q1452 96 1452 227V738Q1452 750 1430 752Q1454 767 1454 806V1360Q1454 1498 1310 1500H282Q150 1500 150 1360V804Q150 767 172 752Q148 752 148 738V230Q148 96 279 96Z"
+          />
+        </clipPath>
+        <g id="new3ds-preview">
+          <image
+            href="assets/devices/new-nintendo-3ds-xl-neutral.webp"
+            width="1600"
+            height="1600"
+            clip-path="url(#new3ds-outline)"
+          />
+          <image
+            href="assets/screens/the-minish-cap-top.png"
+            x="365"
+            y="204"
+            width="871"
+            height="522.6"
+            preserveAspectRatio="none"
+          />
+          <image
+            href="assets/screens/the-minish-cap-bottom.png"
+            x="453"
+            y="886"
+            width="696"
+            height="522"
+            preserveAspectRatio="none"
+          />
+        </g>
+      </defs>
+    </svg>
+
+    <main id="project-main" class="minish-journal">
+      <section class="folio cover-folio" aria-labelledby="project-title">
+        <div class="folio-inner">
+          <div class="platform-line"
+            ><span class="gba-wordmark">GAME BOY <b>ADVANCE</b></span
+            ><span>REIMAGINED FOR NINTENDO 3DS</span></div
+          >
+          <div class="cover-layout">
+            <figure class="cover-link"
+              ><img
+                src="assets/minish/link-capless-4x.webp"
+                alt="Original illustration of Link holding his sword, from The Minish Cap"
+                width="320"
+                height="600"
+                fetchpriority="high"
+              /><figcaption>Our hero, Link.</figcaption></figure
+            >
+            <div class="cover-copy">
+              <h1 id="project-title"
+                ><span class="sr-only">The Legend of Zelda: The Minish Cap</span
+                ><svg viewBox="4 15 816 417" aria-hidden="true">
+                  <image href="assets/logos/the-minish-cap.png" width="844" height="439" /></svg
+              ></h1>
+              <div class="manual-ribbon cover-ribbon"
+                ><img
+                  class="ribbon-picori"
+                  src="assets/minish/forest-minish-4x.webp"
+                  alt=""
+                  width="392"
+                  height="600"
+                /><p>A little adventure begins…</p></div
+              >
+              <h2>A whole world.<br />A little closer.</h2>
+              <p class="cover-intro"
+                >Step beneath the leaves, meet the Picori, and rediscover a Game Boy Advance
+                adventure on Nintendo 3DS.</p
+              >
+              <a class="manual-button" href="#gallery"
+                >Open the adventure <svg aria-hidden="true"><use href="#arrow" /></svg
+              ></a>
+              <a
+                class="cover-repo"
+                href="https://github.com/EstebanPdN/zelda-tmc-3ds"
+                target="_blank"
+                rel="noreferrer"
+                >The 3DS project <span aria-hidden="true"></span
+              ></a>
+            </div>
+            <figure class="cover-ezlo"
+              ><img
+                src="assets/minish/ezlo-4x.webp"
+                alt="Ezlo, Link’s talking cap"
+                width="450"
+                height="600"
+              /><figcaption>…and a rather<br />talkative companion.</figcaption></figure
+            >
+          </div>
+          <nav class="contents" aria-label="Inside this journal"
+            ><p
+              ><svg aria-hidden="true"><use href="#triforce" /></svg> Inside this adventure
+              <svg aria-hidden="true"><use href="#triforce" /></svg></p
+            ><div
+              ><a href="#gallery"><span>The game &amp; gallery</span><i></i><b>01</b></a
+              ><a href="#compatibility"><span>Old &amp; New 3DS</span><i></i><b>02</b></a
+              ><a href="#port-notes"><span>The 3DS chapter</span><i></i><b>03</b></a
+              ><a href="#faq"><span>Before you begin</span><i></i><b>04</b></a></div
+            ></nav
+          >
+        </div>
+      </section>
+
+      <section
+        class="folio gallery-folio project-gallery"
+        id="gallery"
+        aria-labelledby="gallery-heading"
+      >
+        <div class="folio-inner">
+          <header class="chapter-heading"
+            ><span class="page-leaf"
+              ><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#clover" /></svg
+              ><b>01</b></span
+            ><div class="manual-ribbon"
+              ><h2 id="gallery-heading">The adventure, in your hands</h2></div
+            ><span class="chapter-aside">THE GAME &amp; GALLERY</span></header
+          >
+          <p class="gallery-intro"
+            >From Game Boy Advance to Nintendo 3DS.<br /><span
+              >The same beloved adventure, expanded onto a second screen.</span
+            ></p
+          >
+          <div class="hardware-comparison">
+            <div class="gba-chapter"
+              ><p class="device-era"><span>GBA</span> WHERE IT ALL BEGAN</p>
+              <div class="hardware-plate">
+                <div
+                  class="gba-console"
+                  aria-label="Original translucent Game Boy Advance photograph with a game preview on its screen"
+                >
+                  <img
+                    class="gba-photograph"
+                    src="assets/devices/game-boy-advance-front.png"
+                    alt="Original translucent Nintendo Game Boy Advance, photographed from the front"
+                    width="1200"
+                    height="713"
+                    fetchpriority="high"
+                  />
+                  <svg class="gba-display-plane" viewBox="0 0 1200 713" aria-hidden="true">
+                    <svg
+                      id="gallery-gba-screen"
+                      viewBox="0 0 400 240"
+                      width="400"
+                      height="240"
+                      preserveAspectRatio="none"
+                      transform="matrix(1.2775 .0125 -.0208 1.425 341 137)"
+                    >
+                      <image
+                        href="assets/captures/the-minish-cap/04-minish-woods.webp"
+                        width="720"
+                        height="240"
+                      />
+                    </svg>
+                  </svg>
+                </div>
+                <p class="hardware-caption"
+                  ><span>ORIGINAL HARDWARE</span> Nintendo Game Boy Advance</p
+                ></div
+              >
+            </div>
+            <div class="ds-chapter"
+              ><p class="device-era"><span>3DS</span> THE ADVENTURE CONTINUES</p
+              ><figure class="dual-hardware"
+                ><svg
+                  class="new3ds-photo"
+                  role="group"
+                  aria-label="Interactive gallery on a New Nintendo 3DS, with inventory on the lower screen"
+                  viewBox="140 90 1320 1420"
+                >
+                  <use href="#new3ds-preview" />
+                  <svg
+                    id="gallery-companion"
+                    viewBox="400 0 320 240"
+                    x="453"
+                    y="886"
+                    width="696"
+                    height="522"
+                    preserveAspectRatio="none"
+                  >
+                    <image
+                      href="assets/captures/the-minish-cap/04-minish-woods.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><foreignObject
+                    class="new3ds-interactive-display"
+                    x="0"
+                    y="0"
+                    width="400"
+                    height="240"
+                    transform="matrix(2.1775 0 0 2.1775 365 204)"
+                    ><div xmlns="http://www.w3.org/1999/xhtml" class="gba-display-content"
+                      ><button
+                        id="gallery-open"
+                        data-screen="upper"
+                        class="gallery-stage"
+                        type="button"
+                        aria-label="Enlarge upper screen"
+                        ><span class="gallery-screen"
+                          ><svg
+                            id="gallery-image"
+                            viewBox="0 0 400 240"
+                            role="img"
+                            aria-label="Minish Woods"
+                            data-scene-view="0 0 400 240"
+                            ><image
+                              href="assets/captures/the-minish-cap/04-minish-woods.webp"
+                              width="720"
+                              height="240" /></svg></span
+                        ><span class="gallery-preview-marker">CAPTURE</span
+                        ><span class="expand-hint"
+                          ><svg
+                            class="ui-icon"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                            focusable="false"
+                            ><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6" /></svg
+                          >Expand</span
+                        ></button
+                      ></div
+                    ></foreignObject
+                  ></svg
+                ><figcaption class="hardware-caption"
+                  ><span>THE NATIVE PORT</span> New Nintendo 3DS</figcaption
+                ></figure
+              ></div
+            >
+          </div>
+          <p class="two-screen-note"
+            ><b>The adventure above. Hyrule below.</b><br />Explore Minish Woods, visit the festival
+            or dig through Mount Crenel. The companion display changes with each scene.</p
+          >
+          <div class="gallery-selector">
+            <div class="gallery-playback"
+              ><span>Captured gameplay</span
+              ><button
+                id="gallery-autoplay"
+                type="button"
+                aria-pressed="true"
+                aria-label="Pause slideshow"
+                title="Pause slideshow"
+                ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path class="slideshow-pause" d="M6 5h4v14H6zM14 5h4v14h-4z" />
+                  <path class="slideshow-play" d="M8 5v14l11-7z" /></svg></button></div
+            ><div class="gallery-thumbs scene-thumbs" aria-label="Captured scenes"
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="true"
+                aria-label="View Minish Woods"
+                data-scene="04-minish-woods"
+                data-title="Minish Woods"
+                data-caption="Explore the woods above while the lower screen follows Link on the map. Leaves and small paths lead into the hidden Minish world."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/04-minish-woods.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>01</b> Minish Woods</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View Title screen"
+                data-scene="01-title"
+                data-title="Title screen"
+                data-caption="Title screen. Captured from the Nintendo 3DS port."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/01-title.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>02</b> Title screen</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View Smith’s house"
+                data-scene="02-smith-house"
+                data-title="Smith’s house"
+                data-caption="Smith’s house. Captured from the Nintendo 3DS port."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/02-smith-house.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>03</b> Smith’s house</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View The Picori Festival"
+                data-scene="03-picori-festival"
+                data-title="The Picori Festival"
+                data-caption="The Picori Festival. Captured from the Nintendo 3DS port."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/03-picori-festival.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>04</b> The Picori Festival</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View Minish Village"
+                data-scene="05-minish-village"
+                data-title="Minish Village"
+                data-caption="Minish Village. Captured from the Nintendo 3DS port."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/05-minish-village.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>05</b> Minish Village</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View Inside Hyrule Castle"
+                data-scene="06-hyrule-castle"
+                data-title="Inside Hyrule Castle"
+                data-caption="Inside Hyrule Castle. Captured from the Nintendo 3DS port."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/06-hyrule-castle.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>06</b> Inside Hyrule Castle</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View Mount Crenel · digging cave"
+                data-scene="07-crenel-cave"
+                data-title="Mount Crenel · digging cave"
+                data-caption="The Mole Mitts open a route through the soft ground of Mount Crenel. Items and quest information stay on the second screen."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/07-crenel-cave.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>07</b> Mount Crenel · digging cave</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View A path at Minish size"
+                data-scene="08-minish-path"
+                data-title="A path at Minish size"
+                data-caption="At Minish size, a leaf becomes a path through the forest. Collected items remain visible below."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/08-minish-path.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>08</b> A path at Minish size</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View Items at your fingertips"
+                data-scene="09-inventory"
+                data-title="Items at your fingertips"
+                data-caption="Check collected items on the lower display without hiding the adventure. Switch to the map scene to see the other side of the companion interface."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/09-inventory.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>09</b> Items at your fingertips</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View Map of Hyrule"
+                data-scene="10-map"
+                data-title="Map of Hyrule"
+                data-caption="The lower display follows Link on the map of Hyrule while Minish Woods remains visible above."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/10-map.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>10</b> Map of Hyrule</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View The castle garden"
+                data-scene="11-castle-garden"
+                data-title="The castle garden"
+                data-caption="The castle garden. Captured from the Nintendo 3DS port."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/11-castle-garden.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>11</b> The castle garden</span></button
+              ><button
+                class="gallery-thumb"
+                type="button"
+                aria-pressed="false"
+                aria-label="View Display options"
+                data-scene="12-display-options"
+                data-title="Display options"
+                data-caption="Open the lower-screen display menu to adjust the presentation while the game stays visible above."
+                ><svg viewBox="0 0 400 240" aria-hidden="true">
+                  <image
+                    href="assets/captures/the-minish-cap/12-display-options.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="thumb-label"><b>12</b> Display options</span></button
+              ></div
+            ><div class="gallery-scroll-controls" id="gallery-scroll-controls"
+              ><button id="gallery-scroll-previous" type="button" aria-label="Previous thumbnails"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m14 6-6 6 6 6" /></svg></button
+              ><input
+                id="gallery-scroll"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                aria-label="Scroll gallery thumbnails" /><button
+                id="gallery-scroll-next"
+                type="button"
+                aria-label="Next thumbnails"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m10 6 6 6-6 6" /></svg></button
+            ></div>
+          </div>
+          <div class="gallery-annotation"
+            ><span class="annotation-number" id="gallery-current">01</span
+            ><div
+              ><h3 id="gallery-title">Minish Woods</h3
+              ><p id="gallery-caption"
+                >Explore the woods above while the lower screen follows Link on the map. Leaves and
+                small paths lead into the hidden Minish world.</p
+              ></div
+            ><p class="preview-note"
+              >Enlarge the selected view to choose the upper or lower screen.</p
+            ></div
+          >
+          <div
+            class="minish-display-guide"
+            id="display-guide"
+            aria-labelledby="display-guide-title"
+          >
+            <div class="display-guide-heading"
+              ><p class="small-chapter">SETTINGS → SCREEN</p
+              ><h3 id="display-guide-title">Find your favorite view.</h3
+              ><p>Choose the framing, then choose how the pixels meet the screen.</p
+              ><p class="display-recommendation"
+                ><span>ESTEBAN RECOMMENDS</span><strong>Stretch + Bilinear</strong
+                ><span>A sharp, comfortable view on Old and New 3DS.</span></p
+              ></div
+            >
+            <div class="minish-display-layout">
+              <div class="minish-display-controls">
+                <p class="view-control-label">01 / THE FRAMING</p
+                ><div class="minish-view-buttons" aria-label="Display framing"
+                  ><button type="button" data-minish-view="wide" aria-pressed="false">Wide</button
+                  ><button type="button" data-minish-view="original" aria-pressed="false"
+                    >Original</button
+                  ><button type="button" data-minish-view="stretch" aria-pressed="true"
+                    >Stretch</button
+                  ></div
+                >
+                <div class="minish-view-description" id="minish-view-description" aria-live="polite"
+                  ><h4 id="minish-view-title">Make yourself at home.</h4
+                  ><p id="minish-view-copy"
+                    >Stretch fills the 400 × 240 upper screen with the original view. It uses all
+                    the available space, making the image a little wider.</p
+                  ></div
+                >
+                <p class="view-control-label">02 / THE PIXELS</p
+                ><div class="minish-view-buttons" aria-label="Display filtering"
+                  ><button type="button" data-minish-filter="blur" aria-pressed="false">Blur</button
+                  ><button type="button" data-minish-filter="bilinear" aria-pressed="true"
+                    >Bilinear</button
+                  ><button type="button" data-minish-filter="pixel" aria-pressed="false"
+                    >Pixel Perfect</button
+                  ></div
+                >
+                <div
+                  class="minish-view-description filter-description"
+                  id="minish-filter-description"
+                  aria-live="polite"
+                  ><h4 id="minish-filter-title">A sharper, comfortable view.</h4
+                  ><p id="minish-filter-copy"
+                    >Bilinear uses the port’s sharp scaling method: first a crisp 2× enlargement,
+                    then gentle filtering to fit the display. It keeps pixel edges more defined than
+                    Blur.</p
+                  ></div
+                >
+              </div>
+              <figure class="minish-view-preview" data-view="stretch" data-filter="bilinear"
+                ><div class="minish-view-screen"
+                  ><div class="minish-view-content"
+                    ><svg
+                      id="minish-view-image"
+                      viewBox="80 40 240 160"
+                      preserveAspectRatio="none"
+                      aria-hidden="true"
+                    >
+                      <image
+                        href="assets/screens/the-minish-cap-top.png"
+                        width="400"
+                        height="240"
+                      /></svg></div></div
+                ><div class="view-screen-measure"
+                  ><span>400 × 240 UPPER DISPLAY</span><b id="minish-view-size">400 × 240</b></div
+                ><figcaption
+                  >Framing and filtering illustration using an existing project preview.</figcaption
+                ><div class="pixel-note"
+                  ><strong>A little smaller. Every pixel intact.</strong
+                  ><p
+                    >The GBA image starts at 240 × 160. The 3DS upper screen is 400 × 240: a whole
+                    2× enlargement would need 480 × 320, so it cannot fit. Standard Pixel Perfect
+                    keeps a centered 1× image, with one source pixel for each display pixel and room
+                    around the picture.</p
+                  ></div
+                ></figure
+              >
+            </div>
+            <a
+              class="ink-link"
+              href="https://github.com/EstebanPdN/zelda-tmc-3ds/blob/main/platform/3ds/README.md#display"
+              target="_blank"
+              rel="noreferrer"
+              >Read the port’s display notes</a
+            >
+          </div>
+          <div class="folio-bottom"
+            ><a href="#project-main">↑ Table of contents</a><span>01 · THE GAME &amp; GALLERY</span
+            ><a href="#compatibility">Turn the page ↓</a></div
+          >
+        </div>
+      </section>
+
+      <!-- capture-journal:start --><section
+        id="capture-journal"
+        class="capture-journal folio"
+        aria-labelledby="capture-journal-title"
+        ><div class="capture-inner"
+          ><p class="eyebrow">IN THE GAME · TWO SCREENS</p
+          ><h2 id="capture-journal-title">A small hero. A much bigger world.</h2
+          ><p class="capture-introduction"
+            >From Minish Woods to a cave on Mount Crenel, follow Link’s adventure above while maps
+            and equipment stay within reach below.</p
+          ><p class="capture-source"
+            >Captured in Azahar · Port 2.2-E1 · Image previews show the upper screen. Open the
+            viewer to switch screens; gameplay clips show both.</p
+          ><div class="capture-grid capture-features"
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="04-minish-woods"
+                aria-label="Enlarge: A forest at two scales."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="A forest at two scales. · upper screen"
+                >
+                  <image
+                    href="assets/captures/the-minish-cap/04-minish-woods.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>A forest at two scales.</h3
+                ><p
+                  >Explore the woods above while the lower screen follows Link on the map. Leaves
+                  and small paths lead into the hidden Minish world.</p
+                ></figcaption
+              ></figure
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="07-crenel-cave"
+                aria-label="Enlarge: A tool changes the way forward."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="A tool changes the way forward. · upper screen"
+                >
+                  <image
+                    href="assets/captures/the-minish-cap/07-crenel-cave.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>A tool changes the way forward.</h3
+                ><p
+                  >The Mole Mitts open a route through the soft ground of Mount Crenel. Items and
+                  quest information stay on the second screen.</p
+                ></figcaption
+              ></figure
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="09-inventory"
+                aria-label="Enlarge: Your pocket companion."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="Your pocket companion. · upper screen"
+                >
+                  <image
+                    href="assets/captures/the-minish-cap/09-inventory.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>Your pocket companion.</h3
+                ><p
+                  >Check collected items on the lower display without hiding the adventure. Switch
+                  to the map scene to see the other side of the companion interface.</p
+                ></figcaption
+              ></figure
+            ></div
+          ><h3 class="capture-clips-title">A few moments in motion.</h3
+          ><div class="capture-grid capture-videos"
+            ><figure class="capture-frame"
+              ><video
+                controls
+                muted
+                playsinline
+                preload="none"
+                poster="assets/captures/the-minish-cap/04-minish-woods.webp"
+                width="720"
+                height="240"
+                aria-label="Minish Woods gameplay clip"
+                ><source
+                  src="assets/captures/the-minish-cap/04-minish-woods.mp4"
+                  type="video/mp4" /></video
+              ><figcaption>Minish Woods · short gameplay clip</figcaption></figure
+            ><figure class="capture-frame"
+              ><video
+                controls
+                muted
+                playsinline
+                preload="none"
+                poster="assets/captures/the-minish-cap/07-crenel-cave.webp"
+                width="720"
+                height="240"
+                aria-label="Mount Crenel · digging cave gameplay clip"
+                ><source
+                  src="assets/captures/the-minish-cap/07-crenel-cave.mp4"
+                  type="video/mp4" /></video
+              ><figcaption>Mount Crenel · digging cave · short gameplay clip</figcaption></figure
+            ></div
+          ></div
+        ></section
+      ><!-- capture-journal:end -->
+      <section
+        class="folio compatibility-folio"
+        id="compatibility"
+        aria-labelledby="compatibility-title"
+      >
+        <div class="folio-inner">
+          <header class="chapter-heading"
+            ><span class="page-leaf"
+              ><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#clover" /></svg
+              ><b>02</b></span
+            ><div class="manual-ribbon"
+              ><h2 id="compatibility-title">A place on both generations</h2></div
+            ><span class="chapter-aside">OLD &amp; NEW NINTENDO 3DS</span></header
+          >
+          <div class="compatibility-spread">
+            <div class="family-copy"
+              ><p class="small-chapter">BRING YOUR FAVORITE HANDHELD</p
+              ><h3>Old friend.<br /><em>New adventure.</em></h3
+              ><p
+                >The Minish Cap port supports both <strong>Old Nintendo 3DS</strong> and
+                <strong>New Nintendo 3DS</strong>. It automatically chooses a performance profile
+                for your console.</p
+              ><p class="family-recommendation"
+                ><span>ESTEBAN’S EVERYDAY PICK</span><strong>Stretch + Bilinear</strong>A
+                comfortable starting point on either generation.</p
+              ></div
+            >
+            <figure class="console-family"
+              ><div class="family-stage">
+                <svg
+                  class="family-new"
+                  role="img"
+                  aria-label="Front-facing New Nintendo 3DS XL, larger and placed behind the original model"
+                  viewBox="140 90 1320 1420"
+                >
+                  <use href="#new3ds-preview" />
+                </svg>
+                <svg
+                  class="family-old"
+                  role="img"
+                  aria-label="Front-facing Old Nintendo 3DS displaying the game, smaller and in front of the New Nintendo 3DS"
+                  viewBox="180 180 900 900"
+                >
+                  <defs>
+                    <clipPath id="old3ds-outline">
+                      <path
+                        d="M238 190H1012Q1061 190 1061 237V598H1039Q1065 605 1065 646L1051 663V1033Q1051 1065 1019 1065H235Q203 1065 203 1033V662L190 648V632Q190 609 213 600H193V237Q193 190 238 190Z"
+                      />
+                    </clipPath>
+                  </defs>
+                  <image
+                    href="assets/minish/old-3ds-front-hq.webp"
+                    width="1254"
+                    height="1254"
+                    clip-path="url(#old3ds-outline)"
+                  />
+                  <image
+                    href="assets/screens/the-minish-cap-top.png"
+                    x="383"
+                    y="284"
+                    width="489"
+                    height="290"
+                    preserveAspectRatio="none"
+                  />
+                  <image
+                    href="assets/screens/the-minish-cap-bottom.png"
+                    x="427"
+                    y="688"
+                    width="400"
+                    height="299"
+                    preserveAspectRatio="none"
+                  />
+                </svg> </div
+              ><figcaption
+                ><span>Old Nintendo 3DS</span><span>New Nintendo 3DS</span></figcaption
+              ></figure
+            >
+          </div>
+          <div class="family-details"
+            ><article
+              ><span class="hardware-generation">OLD</span
+              ><div
+                ><h4>Nintendo 3DS</h4
+                ><p
+                  >An optimized rendering and audio path adapts to the original hardware. Demanding
+                  scenes may display fewer frames while the game engine keeps its timing.</p
+                ></div
+              ></article
+            ><article
+              ><span class="hardware-generation">NEW</span
+              ><div
+                ><h4>New Nintendo 3DS</h4
+                ><p
+                  >Extra CPU power, L2 cache and multi-core rendering. The C-Stick also offers
+                  optional 2×–5× turbo.</p
+                ></div
+              ></article
+            ></div
+          >
+          <p class="compatibility-footnote"
+            ><a
+              href="https://github.com/EstebanPdN/zelda-tmc-3ds#performance"
+              target="_blank"
+              rel="noreferrer"
+              >Read the hardware notes</a
+            ></p
+          >
+          <div class="folio-bottom"
+            ><a href="#gallery">↑ The game &amp; gallery</a><span>02 · TWO GENERATIONS</span
+            ><a href="#port-notes">The 3DS chapter ↓</a></div
+          >
+        </div>
+      </section>
+
+      <section class="folio port-folio" id="port-notes" aria-labelledby="port-title">
+        <div class="folio-inner">
+          <header class="chapter-heading"
+            ><span class="page-leaf"
+              ><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#clover" /></svg
+              ><b>03</b></span
+            ><div class="manual-ribbon"><h2 id="port-title">A new chapter on Nintendo 3DS</h2></div
+            ><img
+              class="chapter-kinstones"
+              src="assets/minish/kinstones.png"
+              alt=""
+              width="150"
+              height="134"
+              loading="lazy"
+          /></header>
+          <div class="port-spread">
+            <div class="companion-notes"
+              ><h3 class="green-heading">Your pocket companion</h3
+              ><p
+                >The adventure on one screen. Maps, items, and quest information on the other. This
+                native adaptation gives the little details a place of their own.</p
+              ><figure class="map-inset"
+                ><span class="map-label">THE LOWER SCREEN</span
+                ><svg
+                  id="pocket-companion-image"
+                  viewBox="400 0 320 240"
+                  role="img"
+                  aria-label="Minish Cap companion display"
+                >
+                  <image
+                    href="assets/captures/the-minish-cap/04-minish-woods.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><figcaption
+                  >Maps, items &amp; quest status · follows the selected gallery scene</figcaption
+                ></figure
+              ></div
+            >
+            <div class="quest-notes"
+              ><div class="quest-title"
+                ><img
+                  src="assets/minish/link-map.png"
+                  alt="Link and Ezlo ready for the journey"
+                  width="234"
+                  height="385"
+                  loading="lazy"
+                /><div
+                  ><p class="small-chapter">QUEST STATUS</p><h3>Adventure<br />complete.</h3></div
+                ></div
+              ><div class="completion-line"
+                ><span class="completion-value">100<span>%</span></span
+                ><div
+                  ><strong>Port completed</strong
+                  ><p>Future improvements will build on this finished adventure.</p></div
+                ></div
+              ><div
+                class="completion-meter"
+                role="progressbar"
+                aria-label="Port development progress"
+                aria-valuenow="100"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                ><span></span></div
+              ><a
+                class="manual-button"
+                href="https://github.com/EstebanPdN/zelda-tmc-3ds"
+                target="_blank"
+                rel="noreferrer"
+                >Visit the project <span aria-hidden="true"></span></a
+              ><p class="status-credit">Development status shared by Esteban.</p></div
+            >
+          </div>
+          <div class="credits-note"
+            ><h3>Built on good foundations</h3
+            ><p
+              >With source work from
+              <a href="https://github.com/zeldaret/tmc" target="_blank" rel="noreferrer">zeldaret</a
+              >,
+              <a href="https://github.com/999sian/tmc" target="_blank" rel="noreferrer"
+                >Project Picori</a
+              >, and
+              <a href="https://github.com/samyost1/tmc-android" target="_blank" rel="noreferrer"
+                >samyost1</a
+              >.
+              <a
+                href="https://github.com/EstebanPdN/zelda-tmc-3ds#readme"
+                target="_blank"
+                rel="noreferrer"
+                >Setup &amp; full credits</a
+              ></p
+            ></div
+          >
+          <div class="folio-bottom"
+            ><a href="#project-main">↑ Table of contents</a><span>03 · THE 3DS CHAPTER</span
+            ><a href="#faq">Before you begin ↓</a></div
+          >
+        </div>
+      </section>
+
+      <section class="folio faq-folio" id="faq" aria-labelledby="faq-title">
+        <div class="folio-inner">
+          <header class="chapter-heading"
+            ><span class="page-leaf"
+              ><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#clover" /></svg
+              ><b>04</b></span
+            ><div class="manual-ribbon"><h2 id="faq-title">Before you begin</h2></div
+            ><span class="chapter-aside">SIX QUESTIONS FROM THE COMMUNITY</span></header
+          >
+          <div class="faq-introduction"
+            ><img
+              src="assets/minish/ezlo-4x.webp"
+              alt=""
+              width="451"
+              height="600"
+              loading="lazy"
+            /><div
+              ><h3>A little advice from a friend.</h3
+              ><p
+                >The questions that keep coming up in the Minish Cap community, with answers checked
+                against the project’s current documentation.</p
+              ></div
+            ></div
+          >
+          <div class="faq-list">
+            <details class="faq-item"
+              ><summary
+                ><span>01</span><h3>How do I install the port and keep it updated?</h3
+                ><i aria-hidden="true"></i></summary
+              ><div class="faq-answer"
+                ><p
+                  >On a homebrew-enabled 3DS, install the <b>CIA</b> with FBI or launch the
+                  <b>3DSX</b> through the Homebrew Launcher. Both formats and an FBI QR code are on
+                  the
+                  <a
+                    href="https://github.com/EstebanPdN/zelda-tmc-3ds/releases/latest"
+                    target="_blank"
+                    rel="noreferrer"
+                    >release page</a
+                  >.</p
+                ><p
+                  >Put your own compatible <b>.gba</b> ROM in
+                  <code>sdmc:/3ds/The Minish Cap 3DS/</code>. Any filename works; the extension must
+                  be <code>.gba</code>. Installing the app does not supply the game ROM.</p
+                ><p
+                  >For later updates, open <b>Settings → Update</b>, select Stable or Pre-release,
+                  and read the changelog. Save first: a successful update closes the app. You can
+                  also install a new CIA over the old one without deleting your save folder.</p
+                ></div
+              ></details
+            >
+            <details class="faq-item"
+              ><summary
+                ><span>02</span><h3>Which screen settings should I use?</h3
+                ><i aria-hidden="true"></i></summary
+              ><div class="faq-answer"
+                ><p
+                  >Esteban recommends <b>Stretch + Bilinear</b> for everyday play on both Old and
+                  New 3DS. Choose <b>Original + Bilinear</b> if you prefer the original proportions
+                  with borders.</p
+                ><p
+                  >Wide shows more of the world, but some rooms can have visual issues. Try the
+                  display guide in the game and gallery chapter to compare the framing and pixel
+                  styles.</p
+                ></div
+              ></details
+            >
+            <details class="faq-item"
+              ><summary
+                ><span>03</span><h3>USA or Europe? Can I use a patched ROM?</h3
+                ><i aria-hidden="true"></i></summary
+              ><div class="faq-answer"
+                ><p
+                  >Both clean <b>USA and European ROMs</b> are supported, with automatic region
+                  detection. The European version is recommended because it received the most
+                  testing and includes several languages, including English.</p
+                ><p
+                  >European gameplay backports are already integrated into the port, so they do not
+                  require a separate ROM patch. Other ROM hacks and translation patches are not
+                  automatically compatible with a native port. Start with a clean supported ROM and
+                  consult the
+                  <a
+                    href="https://github.com/EstebanPdN/zelda-tmc-3ds#recommended-rom"
+                    target="_blank"
+                    rel="noreferrer"
+                    >README’s checksums</a
+                  >
+                  if detection fails.</p
+                ></div
+              ></details
+            >
+            <details class="faq-item"
+              ><summary
+                ><span>04</span><h3>Do I need a New 3DS? Is this an emulator?</h3
+                ><i aria-hidden="true"></i></summary
+              ><div class="faq-answer"
+                ><p
+                  ><b>A New 3DS is not required.</b> Both Old and New Nintendo 3DS are supported,
+                  with different performance profiles. New hardware has additional performance
+                  features and C-Stick turbo.</p
+                ><p
+                  >This is a <b>native Nintendo 3DS port</b>, based on the game’s decompilation and
+                  Project Picori, with a separate lower-screen interface. It is not a general GBA
+                  emulator or a Virtual Console injection. Questions about running it inside a 3DS
+                  emulator are a separate compatibility matter; the hardware support described here
+                  refers to Nintendo’s consoles.</p
+                ></div
+              ></details
+            >
+            <details class="faq-item"
+              ><summary
+                ><span>05</span><h3>Why doesn’t the randomizer option work?</h3
+                ><i aria-hidden="true"></i></summary
+              ><div class="faq-answer"
+                ><p
+                  ><b>The randomizer is a planned feature and is not available yet.</b> The reserved
+                  option in Settings does not currently activate a randomizer.</p
+                ><p
+                  >A patched ROM or seed will not enable it. Check future release notes for news
+                  about this feature.</p
+                ><a
+                  class="ink-link"
+                  href="https://github.com/EstebanPdN/zelda-tmc-3ds/blob/main/platform/3ds/README.md"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Current 3DS implementation notes</a
+                ></div
+              ></details
+            >
+            <details class="faq-item"
+              ><summary
+                ><span>06</span><h3>Can I bring my existing GBA save?</h3
+                ><i aria-hidden="true"></i></summary
+              ><div class="faq-answer"
+                ><p
+                  >Compatible <b>mGBA / VBA-M .sav files</b> can be transferred manually. Back up
+                  your files first, close the game, and use a save from the
+                  <b>same ROM region</b>.</p
+                ><p
+                  >Place the save in <code>sdmc:/3ds/The Minish Cap 3DS/</code>: use
+                  <code>tmc.sav</code> for USA or <code>tmc_eu.sav</code> for Europe. Emulator save
+                  states are a different format. Renaming a save does not convert it between
+                  regions.</p
+                ><p
+                  >When updating an existing installation, keep the save and its companion files. If
+                  a legacy save is rejected, check the latest release notes before changing or
+                  deleting anything.</p
+                ></div
+              ></details
+            >
+          </div>
+          <div class="community-help"
+            ><svg aria-hidden="true"><use href="#triforce" /></svg
+            ><div class="help-copy"
+              ><h3>Still need a hand?</h3
+              ><p
+                >Our community is here to help. Join Esteban’s Forge on Discord for new releases,
+                setup advice and a place to share your adventure.</p
+              ><p
+                >For a crash or visual bug, press <b>L + R + A</b> to create a diagnostic dump in
+                the game’s <code>dumps/</code> folder.
+                <b>Attach the dump to a GitHub issue or share it in our Discord community.</b>
+                Include your console model, game version, ROM region and the steps that caused the
+                problem.</p
+              ><p
+                >No sound? In Luma3DS’s Rosalina menu, use
+                <b>Miscellaneous options → Dump DSP firmware</b>, then restart the game.</p
+              ></div
+            ><div class="help-actions"
+              ><a
+                class="manual-button"
+                href="https://discord.gg/zy8BqH5ss"
+                target="_blank"
+                rel="noreferrer"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M20.32 4.37a19.8 19.8 0 0 0-4.88-1.51l-.6 1.23a18.4 18.4 0 0 0-5.68 0l-.6-1.23a19.6 19.6 0 0 0-4.89 1.52C.58 9.06-.26 13.62.16 18.12a19.9 19.9 0 0 0 5.99 3.02l1.23-2.01-1.93-.94.47-.37a14.1 14.1 0 0 0 12.16 0l.47.37-1.93.94 1.23 2.01a19.9 19.9 0 0 0 5.99-3.02c.5-5.22-.85-9.74-3.52-13.75ZM8.02 15.32c-1.18 0-2.15-1.08-2.15-2.4 0-1.33.95-2.42 2.15-2.42s2.17 1.1 2.15 2.42c0 1.32-.95 2.4-2.15 2.4Zm7.96 0c-1.18 0-2.15-1.08-2.15-2.4 0-1.33.95-2.42 2.15-2.42s2.17 1.1 2.15 2.42c0 1.32-.95 2.4-2.15 2.4Z"
+                  /></svg
+                ><span>Join our Discord</span><span aria-hidden="true"></span></a
+              ><a
+                class="manual-button github-button"
+                href="https://github.com/EstebanPdN/zelda-tmc-3ds/issues"
+                target="_blank"
+                rel="noreferrer"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 .7A11.3 11.3 0 0 0 8.43 22.72c.57.1.77-.25.77-.55v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.73 1.16 1.73 1.16 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.51-.29-5.15-1.26-5.15-5.59 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.44.11-3 0 0 .95-.3 3.11 1.16a10.9 10.9 0 0 1 5.67 0c2.16-1.46 3.11-1.16 3.11-1.16.62 1.56.23 2.72.12 3 .72.79 1.15 1.8 1.15 3.03 0 4.34-2.64 5.3-5.16 5.58.41.36.77 1.05.77 2.12v3.08c0 .31.2.66.78.55A11.3 11.3 0 0 0 12 .7Z"
+                  /></svg
+                ><span>GitHub Issues</span><span aria-hidden="true"></span></a></div
+          ></div>
+          <p class="faq-source"
+            >Based on Esteban’s Minish Cap and Help &amp; Support discussions, with current setup
+            and feature information from the
+            <a
+              href="https://github.com/EstebanPdN/zelda-tmc-3ds#readme"
+              target="_blank"
+              rel="noreferrer"
+              >project README</a
+            >.</p
+          >
+          <div class="folio-bottom"
+            ><a href="#project-main">↑ Table of contents</a><span>04 · QUESTIONS &amp; ANSWERS</span
+            ><a href="index.html#collection">Back to the collection</a></div
+          >
+        </div>
+      </section>
+      <footer class="journal-footer"
+        ><a class="forge-mark" href="index.html#collection"
+          ><img src="assets/brand/estebans-forge-icon.png" alt="" width="30" height="30" /><span
+            >Back to the collection</span
+          ></a
+        ><a href="a-link-to-the-past.html"
+          >Next adventure: A Link to the Past <span aria-hidden="true">→</span></a
+        ><details class="art-credits"
+          ><summary>Artwork &amp; sources</summary
+          ><p
+            >Original Nintendo artwork from
+            <a
+              href="https://www.zelda-temple.net/media-and-downloads/official-artwork/the-legend-of-zelda-the-minish-cap"
+              target="_blank"
+              rel="noreferrer"
+              >Zelda Temple’s artwork archive</a
+            >
+            and the references supplied by Esteban. Paper texture and visual direction from the
+            original Minish Cap instruction booklet.
+            <a
+              href="https://www.mariowiki.com/File:GBA_Handheld.png"
+              target="_blank"
+              rel="noreferrer"
+              >GBA photograph</a
+            >: Wikimedia Commons, public domain, with a project preview composited on the display.
+            Old Nintendo 3DS photograph supplied by Esteban. Paper and selected illustrations
+            enlarged locally with Real-ESRGAN ×4. The Old 3DS uses the higher-resolution, fully open
+            photograph supplied by Esteban. Fonts: Fondamento and Barlow Semi Condensed, SIL Open
+            Font License. <a href="credits.html">All credits</a></p
+          ></details
+        ></footer
+      >
+    </main>
+    <dialog
+      id="gallery-lightbox"
+      data-screen="upper"
+      class="lightbox"
+      aria-labelledby="lightbox-title"
+      ><div class="lightbox-header"
+        ><p id="lightbox-title" class="lightbox-title">Minish Woods</p
+        ><button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close gallery"
+          ><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m6 6 12 12M6 18 18 6" /></svg></button></div
+      ><div class="gallery-screen-controls" role="group" aria-label="Choose screen"
+        ><span class="gallery-screen-label">View</span
+        ><button
+          type="button"
+          data-gallery-screen="upper"
+          aria-pressed="true"
+          aria-controls="lightbox-image"
+          ><svg
+            class="gallery-screen-icon"
+            viewBox="0 0 24 32"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="2" width="18" height="12" rx="1" fill="currentColor" />
+            <path d="M5 17h14" />
+            <rect x="5" y="20" width="14" height="10" rx="1" fill="none" /></svg
+          ><span>Upper screen</span></button
+        ><button
+          type="button"
+          data-gallery-screen="lower"
+          aria-pressed="false"
+          aria-controls="lightbox-image"
+          ><svg
+            class="gallery-screen-icon"
+            viewBox="0 0 24 32"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="2" width="18" height="12" rx="1" fill="none" />
+            <path d="M5 17h14" />
+            <rect x="5" y="20" width="14" height="10" rx="1" fill="currentColor" /></svg
+          ><span>Lower screen</span></button
+        ></div
+      ><div class="lightbox-screen"
+        ><svg
+          id="lightbox-image"
+          data-gallery-display
+          data-screen="upper"
+          viewBox="0 0 400 240"
+          role="img"
+          aria-label="Minish Woods"
+        >
+          <image
+            href="assets/captures/the-minish-cap/04-minish-woods.webp"
+            width="720"
+            height="240"
+          /></svg></div
+      ><div class="lightbox-controls"
+        ><p
+          ><span id="lightbox-counter">1 / 12 · Upper screen</span><br />Choose a screen above.
+          Browse scenes with the arrows.</p
+        ><div class="lightbox-arrows"
+          ><button type="button" id="lightbox-previous" aria-label="Previous image"
+            ><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M19 12H5m6 6-6-6 6-6" /></svg></button
+          ><button type="button" id="lightbox-next" aria-label="Next image"
+            ><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg></button></div></div
+    ></dialog> </body
+></html>

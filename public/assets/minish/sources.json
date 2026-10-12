@@ -1,0 +1,43 @@
+{
+  "artwork": {
+    "link-ezlo": "https://www.zeldaspalace.com/images/tmc/arts/link.jpg",
+    "kinstone": "https://www.zeldaspalace.com/images/tmc/arts/link14.jpg",
+    "mushroom": "https://www.zeldaspalace.com/images/tmc/arts/link09.jpg",
+    "link-sword": "https://www.zeldaspalace.com/images/tmc/arts/link01.jpg"
+  },
+  "artwork_credit": "Original Nintendo artwork, archived by Zelda’s Palace.",
+  "manual": "https://www.videogamemanual.com/gba/Legend%20of%20Zelda,%20The%20-%20The%20Minish%20Cap%20(USA).pdf",
+  "fonts": [
+    "https://fonts.google.com/specimen/Fondamento",
+    "https://fonts.google.com/specimen/Barlow+Semi+Condensed"
+  ],
+  "additional_original_artwork": {
+    "link-capless.png": "https://www.zelda-temple.net/images/igallery/resized/1101-1200/TMC_Link_Capless-1132-800-600-100.png",
+    "forest-minish.png": "https://www.zelda-temple.net/images/igallery/resized/1101-1200/TMC_Forest_Minish_Artwork-1116-800-600-100.png",
+    "link-map.png": "https://www.zelda-temple.net/images/igallery/resized/1101-1200/TMC_Link_08-1131-800-600-100.png",
+    "ezlo.png": "https://www.zelda-temple.net/images/igallery/resized/1101-1200/TMC_Ezlo_Artwork-1115-800-600-100.png",
+    "kinstone-fusion.png": "https://www.zelda-temple.net/images/igallery/resized/1001-1100/Kinstone_Fusion_Art-1088-800-600-100.png",
+    "kinstones.png": "https://www.zelda-temple.net/images/igallery/resized/1101-1200/Pair_Kinstones-1107-800-600-100.png",
+    "mushroom-portal.jpg": "https://www.zelda-temple.net/images/igallery/resized/1101-1200/Mushroom_Minish_Portal-1106-800-600-100.jpg"
+  },
+  "additional_credit": "Original Nintendo artwork, archived by Zelda Temple.",
+  "local_upscale": {
+    "model": "Real-ESRGAN x4plus",
+    "model_source": "https://github.com/xinntao/Real-ESRGAN/releases/tag/v0.1.0",
+    "scale": 4,
+    "method": "Local MPS inference with torch/spandrel; original images retained, alpha enlarged separately. Optimized WebP delivery.",
+    "files": {
+      "manual-paper-4x.webp": "650 × 320 → 2600 × 1280",
+      "link-capless-4x.webp": "320 × 600 → 1280 × 2400",
+      "ezlo-4x.webp": "451 × 600 → 1804 × 2400",
+      "forest-minish-4x.webp": "392 × 600 → 1568 × 2400",
+      "old-3ds-front-original-4x.webp": "800 × 600 → 3200 × 2400"
+    }
+  },
+  "hardware": {
+    "old-3ds-front-original.png": "Front-facing Nintendo product photograph supplied by Esteban.",
+    "gba": "https://www.mariowiki.com/File:GBA_Handheld.png",
+    "new_3ds": "Existing collection product photograph; game previews composited in SVG.",
+    "old-3ds-front-hq.png": "Higher-resolution, fully open front-facing Nintendo 3DS photograph supplied by Esteban; 1254 × 1254 original, WebP delivery without enlargement."
+  }
+}

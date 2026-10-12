@@ -1,0 +1,21 @@
+{
+  "references": [
+    {
+      "asset": "nes-hyrule.png",
+      "source": "User-supplied original NES scene; design-reference-library/2026-10-08/nes-zelda-scene.png",
+      "treatment": "Unmodified original image"
+    },
+    {
+      "asset": "install-v1-qr.png",
+      "source": "https://github.com/EstebanPdN/legend-of-doom-3ds/releases/download/v1.0/FBI-v1.0-QR.png",
+      "treatment": "Unmodified official release QR"
+    }
+  ],
+  "content_sources": [
+    "https://github.com/EstebanPdN/legend-of-doom-3ds/releases/tag/v1.0",
+    "https://github.com/EstebanPdN/legend-of-doom-3ds/releases/download/v1.0/BUILD-MANIFEST.txt",
+    "https://github.com/EstebanPdN/legend-of-doom-3ds/blob/v1.0/platform/3ds/README.md",
+    "https://www.nintendo.co.jp/clv/manuals/en/pdf/CLV-P-NAANE.pdf"
+  ],
+  "notes": "Existing showcase images remain labelled as project previews, not current hardware test captures. No performance claim is inferred from them."
+}

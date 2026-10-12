@@ -1,0 +1,30 @@
+{
+  "name": "estebans-forge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "EstebanPdN\u2019s Nintendo 3DS portfolio \u2014 static source for GitHub Pages.",
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "build": "npm run provenance && python3 tools/build.py",
+    "dev": "python3 -m http.server 8080 --bind 127.0.0.1 --directory dist",
+    "test": "npm run provenance:check && python3 tools/check.py",
+    "format": "prettier --write src tools tests docs .github README.md CONTRIBUTING.md CHANGELOG.md package.json .prettierrc.json",
+    "format:check": "prettier --check src tools tests docs .github README.md CONTRIBUTING.md CHANGELOG.md package.json .prettierrc.json",
+    "provenance": "node tools/build-provenance.mjs",
+    "provenance:check": "node tools/build-provenance.mjs --check",
+    "test:browser": "node tests/browser-smoke.mjs",
+    "test:visual": "node tests/visual.mjs"
+  },
+  "devDependencies": {
+    "acorn": "8.19.0",
+    "postcss": "8.5.29",
+    "prettier": "3.9.10",
+    "playwright": "1.64.0",
+    "pixelmatch": "7.1.0",
+    "pngjs": "7.0.0"
+  }
+}

@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" /><meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1" /><meta
+      name="theme-color"
+      content="#e7e7e7" /><meta
+      name="description"
+      content="Super Mario 64 DS, in the workshop. Explore the original Nintendo DS adventure and follow a Nintendo 3DS port in development through a menu inspired by the handheld itself." /><title
+      >Super Mario 64 DS · Esteban’s Forge</title
+    ><link rel="icon" type="image/png" href="assets/brand/estebans-forge-icon.png" /><link
+      rel="stylesheet"
+      href="forge-header.css" /><link rel="stylesheet" href="mario-ds.css" /><link
+      rel="preload"
+      href="assets/mario-ds/nintendo-ds.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin /><link
+      rel="stylesheet"
+      href="page-transitions.css" /><script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="workshop-pages.js" defer></script
+    ><script src="ds-system-menu.js" defer></script
+    ><link
+      rel="stylesheet"
+      href="interaction-motion.css" /><script src="interaction-motion.js"></script
+    ><script src="forge-header.js" defer></script></head
+  ><body data-game="sm64ds"
+    ><!-- forge-header --><a class="skip-link" href="#project-main">Skip to project</a>
+    <main class="ds-page" id="project-main">
+      <nav class="ds-file-nav" aria-label="Project menu"
+        ><a href="index.html#collection">◀ Collection</a><span>ESTEBAN’S FORGE / FILE 007</span
+        ><a href="#ds-project-notes">Project record ↓</a></nav
+      >
+      <section class="ds-start" aria-labelledby="project-title">
+        <div class="ds-hero-lcd"
+          ><div class="ds-window-bar"
+            ><span>GAME CARD</span><span>NINTENDO DS → NINTENDO 3DS</span></div
+          ><div class="ds-hero-content"
+            ><p class="pixel-label">A new file. A familiar adventure.</p
+            ><h1 id="project-title"
+              ><span class="sr-only">Super Mario 64 DS</span
+              ><img
+                src="assets/logos/super-mario-64-ds-clean.svg"
+                alt=""
+                width="1746"
+                height="901"
+                fetchpriority="high" /></h1
+            ><figure class="ds-group"
+              ><img
+                src="assets/mario-ds/group.webp"
+                alt="Yoshi, Mario, Luigi and Wario in original Super Mario 64 DS artwork"
+                width="1036"
+                height="813"
+                fetchpriority="high" /></figure
+            ><p class="ds-hero-caption"
+              >Four familiar faces.<br /><strong>A new possibility on Nintendo 3DS.</strong></p
+            ></div
+          ></div
+        >
+        <div class="ds-dual-menu ds-authentic-menu"
+          ><section
+            class="ds-lcd ds-system-top"
+            aria-label="Nintendo DS style clock and project calendar"
+            ><div class="ds-system-bar"
+              ><span>Esteban</span
+              ><span
+                ><time id="ds-system-time">17:00</time> <time id="ds-system-short-date">10/09</time
+                ><i class="ds-pixel-sprite ds-wireless-icon" aria-hidden="true"></i
+                ><i class="ds-pixel-sprite ds-battery-icon" aria-hidden="true"></i></span></div
+            ><div class="ds-clock-calendar"
+              ><div class="ds-analog-clock" aria-hidden="true"
+                ><span class="clock-number n12">12</span><span class="clock-number n3">3</span
+                ><span class="clock-number n6">6</span><span class="clock-number n9">9</span
+                ><span class="clock-ticks"></span><i class="clock-hour" id="ds-clock-hour"></i
+                ><i class="clock-minute" id="ds-clock-minute"></i
+                ><i class="clock-second" id="ds-clock-second"></i><b></b></div
+              ><div class="ds-calendar"
+                ><time id="ds-calendar-month">10 / 2026</time
+                ><table aria-label="Calendar"
+                  ><thead
+                    ><tr
+                      ><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th
+                      ><th>Sa</th></tr
+                    ></thead
+                  ><tbody id="ds-calendar-days"
+                    ><tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr
+                    ><tr
+                      ><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td class="today">9</td
+                      ><td>10</td></tr
+                    ><tr
+                      ><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td
+                      ><td>17</td></tr
+                    ><tr
+                      ><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td
+                      ><td>24</td></tr
+                    ><tr
+                      ><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td
+                      ><td>31</td></tr
+                    ></tbody
+                  ></table
+                ></div
+              ></div
+            ><div class="ds-system-status"
+              ><span class="ds-menu-card-icon" aria-hidden="true"
+                ><img src="assets/mario-ds/mario-icon.png" alt="" width="68" height="76" /></span
+              ><div
+                ><strong>Super Mario 64 DS</strong
+                ><p class="ds-status-progress" style="--ds-port-progress:35%"
+                  ><span class="ds-status-fill" aria-hidden="true"></span
+                  ><span class="ds-status-copy">Port development: 35%. No release yet.</span></p
+                ></div
+              ></div
+            ></section
+          >
+          <nav class="ds-lcd ds-system-bottom" aria-label="Explore Super Mario 64 DS">
+            <a class="ds-selected-file" href="#characters"
+              ><img src="assets/mario-ds/yoshi-icon.png" alt="" width="70" height="78" /><span
+                ><strong>Super Mario 64 DS</strong><small>Nintendo</small></span
+              ></a
+            >
+            <div class="ds-touch-pair">
+              <a class="ds-notes-tile" href="#ds-project-notes"
+                ><span>Project notes</span
+                ><span class="ds-pixel-sprite ds-notes-icon" aria-hidden="true"></span
+              ></a>
+              <a class="ds-screens-tile" href="#two-screens"
+                ><span>Two screens</span
+                ><span class="ds-pixel-sprite ds-console-icon" aria-hidden="true"></span
+              ></a>
+            </div>
+            <a class="ds-empty-slot" href="#questions"
+              ><span class="ds-pixel-sprite ds-gba-cartridge-icon" aria-hidden="true"></span
+              ><span>There is no release<br />available yet.</span></a
+            >
+            <div class="ds-touch-footer"
+              ><span class="ds-pixel-sprite ds-brightness-icon" aria-hidden="true"></span
+              ><a href="index.html#progress" aria-label="View all project files"
+                ><span class="ds-pixel-sprite ds-console-icon" aria-hidden="true"></span></a
+              ><span class="ds-pixel-sprite ds-alarm-icon" aria-hidden="true"></span
+            ></div>
+          </nav>
+          <div class="ds-system-endbar" aria-hidden="true"
+            ><span>Touch screen</span><span>Nintendo DS</span></div
+          >
+        </div>
+        <div class="ds-system-foot"
+          ><span>NINTENDO DS / THE ORIGINAL ADVENTURE</span
+          ><span>PROJECT FILE · IN DEVELOPMENT</span></div
+        >
+      </section>
+      <section
+        class="ds-manual character-guide"
+        id="characters"
+        aria-labelledby="characters-title"
+        data-reveal
+      >
+        <header class="ds-chapter-title"
+          ><span class="gold-star" aria-hidden="true">★</span
+          ><h2 id="characters-title">Four ways to be a hero.</h2
+          ><span class="manual-page">01</span></header
+        >
+        <div class="manual-intro"
+          ><p class="manual-kicker">FROM THE ORIGINAL INSTRUCTION BOOKLET</p
+          ><p
+            >Same castle. Four different sets of shoes.<br />Choose a character to explore their
+            original abilities.</p
+          ></div
+        >
+        <div class="character-select" data-tabs data-selection="yoshi"
+          ><div class="character-tabs" role="tablist" aria-label="Original game characters"
+            ><button
+              type="button"
+              id="tab-yoshi"
+              role="tab"
+              aria-controls="panel-yoshi"
+              aria-selected="true"
+              tabindex="0"
+              data-selection="yoshi"
+              ><img src="assets/mario-ds/yoshi-icon.png" alt="" width="70" height="78" /><span
+                >Yoshi</span
+              ></button
+            ><button
+              type="button"
+              id="tab-mario"
+              role="tab"
+              aria-controls="panel-mario"
+              aria-selected="false"
+              tabindex="-1"
+              data-selection="mario"
+              ><img src="assets/mario-ds/mario-icon.png" alt="" width="70" height="78" /><span
+                >Mario</span
+              ></button
+            ><button
+              type="button"
+              id="tab-luigi"
+              role="tab"
+              aria-controls="panel-luigi"
+              aria-selected="false"
+              tabindex="-1"
+              data-selection="luigi"
+              ><img src="assets/mario-ds/luigi-icon.png" alt="" width="70" height="78" /><span
+                >Luigi</span
+              ></button
+            ><button
+              type="button"
+              id="tab-wario"
+              role="tab"
+              aria-controls="panel-wario"
+              aria-selected="false"
+              tabindex="-1"
+              data-selection="wario"
+              ><img src="assets/mario-ds/wario-icon.png" alt="" width="70" height="78" /><span
+                >Wario</span
+              ></button
+            ></div
+          ><div class="character-stage"
+            ><div
+              class="character-panel"
+              id="panel-yoshi"
+              role="tabpanel"
+              aria-labelledby="tab-yoshi"
+              ><div class="character-copy"
+                ><p class="manual-kicker">The first step belongs to Yoshi.</p
+                ><h3>A flutter, a flick, a little fire.</h3
+                ><p
+                  >Yoshi starts the original DS adventure. His tongue turns enemies into eggs, and
+                  his flutter jump gives a little more time in the air. A Power Flower lets him
+                  breathe fire.</p
+                ><ul class="ability-tags"
+                  ><li>Flutter jump</li
+                  ><li>Egg throw</li
+                  ><li>Fire breath</li></ul
+                ><p class="original-note"
+                  >Character abilities in the original Nintendo DS game.</p
+                ></div
+              ><figure class="character-art"
+                ><img
+                  src="assets/mario-ds/yoshi.webp"
+                  alt="Original Nintendo illustration of Yoshi from Super Mario 64 DS"
+                  width="1375"
+                  height="1600"
+                  loading="lazy" /></figure></div
+            ><div
+              class="character-panel"
+              id="panel-mario"
+              role="tabpanel"
+              aria-labelledby="tab-mario"
+              hidden
+              ><div class="character-copy"
+                ><p class="manual-kicker">The all-round adventurer.</p
+                ><h3>Some things never get old.</h3
+                ><p
+                  >Run, jump and explore with Mario’s familiar moves. In the original DS game, a
+                  Power Flower turns him into a balloon so he can float up to places that are harder
+                  to reach.</p
+                ><ul class="ability-tags"
+                  ><li>Wall kick</li
+                  ><li>Float</li
+                  ><li>Wings</li></ul
+                ><p class="original-note"
+                  >Character abilities in the original Nintendo DS game.</p
+                ></div
+              ><figure class="character-art"
+                ><img
+                  src="assets/mario-ds/mario.webp"
+                  alt="Original Nintendo illustration of Mario from Super Mario 64 DS"
+                  width="869"
+                  height="1600"
+                  loading="lazy" /></figure></div
+            ><div
+              class="character-panel"
+              id="panel-luigi"
+              role="tabpanel"
+              aria-labelledby="tab-luigi"
+              hidden
+              ><div class="character-copy"
+                ><p class="manual-kicker">A little more air time.</p><h3>Take the high road.</h3
+                ><p
+                  >Luigi’s backflip and scuttle help him stay airborne. His Power Flower ability
+                  makes him invisible, opening paths through certain obstacles in the original
+                  adventure.</p
+                ><ul class="ability-tags"
+                  ><li>Scuttle</li
+                  ><li>Backflip</li
+                  ><li>Invisibility</li></ul
+                ><p class="original-note"
+                  >Character abilities in the original Nintendo DS game.</p
+                ></div
+              ><figure class="character-art"
+                ><img
+                  src="assets/mario-ds/luigi.webp"
+                  alt="Original Nintendo illustration of Luigi from Super Mario 64 DS"
+                  width="1289"
+                  height="1600"
+                  loading="lazy" /></figure></div
+            ><div
+              class="character-panel"
+              id="panel-wario"
+              role="tabpanel"
+              aria-labelledby="tab-wario"
+              hidden
+              ><div class="character-copy"
+                ><p class="manual-kicker">Bring a little muscle.</p><h3>Make an entrance.</h3
+                ><p
+                  >Wario trades speed for strength. He can break black bricks, and a Power Flower
+                  turns him into Metal Wario, heavy enough to explore underwater.</p
+                ><ul class="ability-tags"
+                  ><li>Power</li
+                  ><li>Black bricks</li
+                  ><li>Metal form</li></ul
+                ><p class="original-note"
+                  >Character abilities in the original Nintendo DS game.</p
+                ></div
+              ><figure class="character-art"
+                ><img
+                  src="assets/mario-ds/wario.webp"
+                  alt="Original Nintendo illustration of Wario from Super Mario 64 DS"
+                  width="1385"
+                  height="1600"
+                  loading="lazy" /></figure></div></div
+        ></div>
+        <footer class="ds-chapter-foot"
+          ><span>CHARACTER-SPECIFIC MOVES</span
+          ><a
+            href="https://www.nintendo.com/eu/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_SuperMario64DS_EN.pdf"
+            target="_blank"
+            rel="noreferrer"
+            >Open Nintendo’s original booklet</a
+          ></footer
+        >
+      </section>
+      <section
+        class="ds-hardware-chapter"
+        id="two-screens"
+        aria-labelledby="screens-title"
+        data-reveal
+      >
+        <div class="ds-hardware-copy"
+          ><span class="blue-chapter-label">02 / THE ORIGINAL HANDHELD</span
+          ><h2 id="screens-title">A world above.<br /><span>A little help below.</span></h2
+          ><p
+            >Super Mario 64 DS made the most of its two screens: a 3D adventure on the upper
+            display, and a map with touch controls on the lower one.</p
+          ><div class="screen-notes"
+            ><div
+              ><span class="ds-pixel-sprite ds-screen-top-icon" aria-hidden="true"></span
+              ><strong>Top screen</strong
+              ><p>The castle, the courses and the next Power Star.</p></div
+            ><div
+              ><span class="ds-pixel-sprite ds-screen-touch-icon" aria-hidden="true"></span
+              ><strong>Touch screen</strong
+              ><p>Your map, touch controls and a collection of minigames.</p></div
+            ></div
+          ><p class="original-note"
+            >The original DS experience. Port features are still to be defined.</p
+          ></div
+        >
+        <figure class="ds-hardware"
+          ><img
+            src="assets/hardware/nintendo-ds-original-blue.png"
+            alt="Original blue Nintendo DS and stylus, photographed by Evan-Amos"
+            width="960"
+            height="873"
+            loading="lazy"
+          /><figcaption>NINTENDO DS · ORIGINAL HARDWARE</figcaption></figure
+        >
+      </section>
+      <section class="ds-manual ds-adventure" aria-labelledby="adventure-title" data-reveal>
+        <header class="ds-chapter-title"
+          ><span class="gold-star" aria-hidden="true">★</span
+          ><h2 id="adventure-title">There’s more behind every painting.</h2
+          ><span class="manual-page">03</span></header
+        >
+        <div class="ds-adventure-layout"
+          ><div class="power-star-count"
+            ><span aria-hidden="true"
+              ><img
+                src="assets/mario-ds/power-star.png"
+                alt=""
+                width="27"
+                height="26"
+                loading="lazy" /></span
+            ><strong>150</strong><span>POWER STARS</span><small>IN THE ORIGINAL DS GAME</small></div
+          ><div
+            ><p class="manual-kicker">THE CLASSIC, WITH A FEW NEW TRICKS</p
+            ><h3>A castle worth coming back to.</h3
+            ><p
+              >Familiar courses, extra challenges, four playable characters and touch-screen
+              minigames. The DS edition gives Mario’s adventure a different rhythm, one discovery at
+              a time.</p
+            ><a
+              class="manual-link"
+              href="https://www.nintendo.com/en-gb/Games/Nintendo-DS/Super-Mario-64-DS-273179.html"
+              target="_blank"
+              rel="noreferrer"
+              >Explore the original game at Nintendo</a
+            ></div
+          ></div
+        >
+      </section>
+      <section class="ds-workshop" id="ds-project-notes" aria-labelledby="notes-title" data-reveal>
+        <div class="ds-window-bar"><span>PROJECT NOTES</span><span>ESTEBAN / FILE 007</span></div
+        ><div class="ds-workshop-layout"
+          ><div
+            ><p class="pixel-label">A NEW ADVENTURE TAKING SHAPE</p
+            ><h2 id="notes-title">A new chapter<br />is taking shape.</h2
+            ><p
+              >The idea is to give the Nintendo DS adventure a new home on Nintendo 3DS. The project
+              is in development, with its current progress shared here by Esteban.</p
+            ><a class="ds-outline-button" href="index.html#progress"
+              >Follow the workshop <span></span></a></div
+          ><div class="ds-save-file"
+            ><span class="ds-pixel-sprite ds-notes-icon" aria-hidden="true"></span
+            ><h3>Project record saved.</h3><p>In development · Not released</p
+            ><div class="ds-port-percentage"
+              ><strong>35<small>%</small></strong
+              ><span>PORT DEVELOPMENT</span></div
+            ><div
+              class="ds-save-meter"
+              role="progressbar"
+              aria-label="Port development progress"
+              aria-valuenow="35"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              ><span style="width:35%"></span></div
+            ><p
+              >There’s no build to download and no port gameplay to show. Development captures will
+              appear here when there’s more to share.</p
+            ></div
+          ></div
+        >
+      </section>
+      <section class="ds-questions" id="questions" aria-labelledby="questions-title" data-reveal
+        ><p class="pixel-label">BEFORE YOU PRESS START</p
+        ><h2 id="questions-title">A few project answers.</h2
+        ><div class="ds-faq"
+          ><details data-disclosure
+            ><summary
+              ><span class="faq-slot">01</span><span>Can I download the 3DS port?</span
+              ><b aria-hidden="true">+</b></summary
+            ><div class="answer"
+              ><p
+                >There is no release yet. Super Mario 64 DS is in development at 35%, as shared by
+                Esteban. Check the Forge progress page for its current status.</p
+              ></div
+            ></details
+          ><details data-disclosure
+            ><summary
+              ><span class="faq-slot">02</span><span>Is this the Nintendo 64 version?</span
+              ><b aria-hidden="true">+</b></summary
+            ><div class="answer"
+              ><p
+                >This project is based on Super Mario 64 DS, the Nintendo DS edition. It is a
+                separate project from Mario Kart 64 and from ports of the original Nintendo 64 Super
+                Mario 64.</p
+              ></div
+            ></details
+          ><details data-disclosure
+            ><summary
+              ><span class="faq-slot">03</span><span>Will it work on Old and New 3DS?</span
+              ><b aria-hidden="true">+</b></summary
+            ><div class="answer"
+              ><p
+                >Supported console models have not been announced for this project. Hardware
+                compatibility will be documented when development produces results to share.</p
+              ></div
+            ></details
+          ><details data-disclosure
+            ><summary
+              ><span class="faq-slot">04</span
+              ><span>When can I see gameplay or installation instructions?</span
+              ><b aria-hidden="true">+</b></summary
+            ><div class="answer"
+              ><p
+                >Development captures will appear here when there is more to show. There is no
+                announced release date, installation method or performance target. Join the
+                community to follow the project.</p
+              ></div
+            ></details
+          ></div
+        ><div class="ds-community"
+          ><div
+            ><h3>Come hang out in the workshop.</h3
+            ><p
+              >Follow the project, share an idea, or explore the other ports with our community.</p
+            ></div
+          ><a
+            class="ds-outline-button"
+            href="https://discord.gg/zy8BqH5ss"
+            target="_blank"
+            rel="noreferrer"
+            ><span class="ds-pixel-sprite ds-discord-icon" aria-hidden="true"></span>Join our
+            Discord</a
+          ></div
+        ></section
+      >
+      <footer class="ds-footer"
+        ><a href="index.html#collection">◀ Back to the collection</a
+        ><span>esteban’s <b>forge.</b></span
+        ><a href="credits.html">Artwork &amp; credits</a
+        ><p
+          >Original game, characters and artwork © Nintendo. Project status shared by Esteban. This
+          page presents a project in development.</p
+        ></footer
+      >
+    </main></body
+  ></html
+>

@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" /><meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1" /><meta
+      name="theme-color"
+      content="#10251e" /><meta
+      name="description"
+      content="A native A Link to the Past adventure for Old and New Nintendo 3DS. Explore two-screen features, installation, display modes and the field guide." /><title
+      >A Link to the Past · Esteban’s Forge</title
+    ><link rel="icon" type="image/png" href="assets/brand/estebans-forge-icon.png" /><link
+      rel="stylesheet"
+      href="forge-header.css" /><link rel="stylesheet" href="page-transitions.css" /><link
+      rel="stylesheet"
+      href="alttp.css" /><script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="alttp.js" defer></script
+    ><link rel="stylesheet" href="interaction-motion.css" /><script src="game-gallery.js"></script
+    ><script src="interaction-motion.js"></script
+    ><script src="forge-header.js" defer></script
+    ><link rel="stylesheet" href="forge-captures.css" /></head
+  ><body data-game="alttp"
+    ><!-- forge-header --><a class="skip-link" href="#project-main">Skip to project</a
+    ><svg class="svg-defs" aria-hidden="true" width="0" height="0">
+      <defs>
+        <symbol id="tri" viewBox="0 0 60 52">
+          <path d="M30 0 15 26h30ZM15 26 0 52h30ZM45 26 30 52h30Z" />
+        </symbol>
+        <symbol id="arrow" viewBox="0 0 24 24">
+          <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+          <path
+            d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.58 4.94.36.31.68.92.68 1.86v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"
+          />
+        </symbol>
+        <symbol id="discord" viewBox="0 0 24 24">
+          <path
+            d="M19.7 5.4a18 18 0 0 0-4.4-1.4l-.5 1a16 16 0 0 0-5.6 0l-.5-1a18 18 0 0 0-4.4 1.4C1.5 9.6.7 13.7 1.1 17.7a18 18 0 0 0 5.4 2.7l1.1-1.9-1.7-.8.4-.3a13 13 0 0 0 11.4 0l.4.3-1.7.8 1.1 1.9a18 18 0 0 0 5.4-2.7c.5-4.7-.8-8.8-3.2-12.3ZM8.4 14.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm7.2 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"
+          />
+        </symbol>
+        <clipPath id="new-outline">
+          <path
+            d="M279 96H1320Q1452 96 1452 227V738Q1452 750 1430 752Q1454 767 1454 806V1360Q1454 1498 1310 1500H282Q150 1500 150 1360V804Q150 767 172 752Q148 752 148 738V230Q148 96 279 96Z"
+          />
+        </clipPath>
+        <clipPath id="old-outline">
+          <path
+            d="M238 190H1012Q1061 190 1061 237V598H1039Q1065 605 1065 646L1051 663V1033Q1051 1065 1019 1065H235Q203 1065 203 1033V662L190 648V632Q190 609 213 600H193V237Q193 190 238 190Z"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+    <main id="project-main">
+      <section class="lost-woods" aria-labelledby="project-title">
+        <img
+          class="woods-art"
+          src="assets/alttp/master-sword-4x.webp"
+          alt="The Master Sword resting in its pedestal in the Lost Woods, original A Link to the Past illustration"
+          width="2992"
+          height="2400"
+          fetchpriority="high"
+        />
+        <div class="woods-shade"></div
+        ><div class="hero-inner wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb"
+            ><a href="index.html#collection">← The collection</a
+            ><span>SNES → NINTENDO 3DS</span></nav
+          >
+          <div class="hero-copy"
+            ><p class="eyebrow gold">THE LEGEND OF ZELDA</p>
+            <h1 id="project-title"
+              ><img
+                src="assets/logos/a-link-to-the-past.png"
+                alt="Zelda"
+                width="1200"
+                height="1066"
+              /><span class="sr-only">A Link to the Past</span></h1
+            >
+            <p class="hero-line">Two worlds.<br />One legendary adventure.</p>
+            <p class="hero-intro"
+              >Answer the call of Hyrule. Rediscover the Super Nintendo classic, crafted for two
+              screens on Nintendo 3DS.</p
+            >
+            <div class="hero-actions"
+              ><a class="gold-button" href="#gallery"
+                >Enter the adventure <svg aria-hidden="true"><use href="#arrow" /></svg></a
+              ><a
+                class="quiet-link"
+                href="https://github.com/EstebanPdN/zelda-alttp-3ds/releases/latest"
+                target="_blank"
+                rel="noreferrer"
+                >Get the 3DS port</a
+              ></div
+            > </div
+          ><p class="woods-coordinate"><span>THE LOST WOODS</span> A sword waits for its hero.</p>
+        </div>
+      </section>
+      <nav class="quest-index" aria-label="Explore this adventure"
+        ><div class="wrap"
+          ><a href="#legend"><b>Ⅰ</b><span>The legend</span></a
+          ><a href="#gallery"><b>Ⅱ</b><span>Two screens</span></a
+          ><a href="#compatibility"><b>Ⅲ</b><span>Your handheld</span></a
+          ><a href="#begin"><b>Ⅳ</b><span>Begin your quest</span></a></div
+        ></nav
+      >
+
+      <section id="legend" class="legend-page reveal-section">
+        <div class="wrap legend-layout">
+          <div class="legend-copy"
+            ><p class="eyebrow red">FROM THE SUPER NINTENDO CHRONICLES</p
+            ><h2>A rainy night.<br />A call from the castle.</h2
+            ><p class="lead">Some adventures stay with you.</p
+            ><p
+              >A young hero, an ancient kingdom, and a world with a darker reflection. From the
+              halls of Hyrule Castle to the secret paths of the Lost Woods, every discovery leads a
+              little further into the legend.</p
+            ><p
+              >This native port brings that journey to Nintendo 3DS, with the adventure above and
+              the tools to explore it just below.</p
+            ><a
+              class="text-link"
+              href="https://www.nintendo.co.jp/clvs/manuals/common/pdf/CLV-P-SAAEE.pdf"
+              target="_blank"
+              rel="noreferrer"
+              >Revisit the original instruction booklet</a
+            ></div
+          >
+          <figure class="hero-illustration"
+            ><img
+              src="assets/alttp/alttp_link_running_artwork-4x.webp"
+              alt="Original SNES-era illustration of Link running with his sword and shield"
+              width="2004"
+              height="1816"
+              loading="lazy"
+            /><figcaption
+              ><span>LINK, THE HERO OF HYRULE</span
+              ><i>Small beginnings. A world to save.</i></figcaption
+            ></figure
+          >
+          <div class="legend-foot"
+            ><span class="snes-label">SUPER NINTENDO <small>ENTERTAINMENT SYSTEM</small></span
+            ><p>Sixteen-bit roots.<br />A new home on Nintendo 3DS.</p
+            ><svg aria-hidden="true"><use href="#tri" /></svg
+          ></div>
+        </div>
+      </section>
+
+      <section id="gallery" class="adventure-room reveal-section" aria-labelledby="gallery-heading">
+        <div class="wrap">
+          <header class="room-heading"
+            ><div
+              ><p class="eyebrow gold">Ⅱ · THE NINTENDO 3DS ADVENTURE</p
+              ><h2 id="gallery-heading"
+                >Hyrule above.<br /><em>Everything you need below.</em></h2
+              ></div
+            ><p
+              >A dedicated second screen for maps, equipment and items. More of the world. Less in
+              the way.</p
+            ></header
+          >
+          <div class="adventure-layout">
+            <div class="console-column"
+              ><figure class="console-view"
+                ><svg
+                  class="new-console"
+                  role="group"
+                  aria-label="New Nintendo 3DS showing an interactive project gallery above and the dungeon map below"
+                  viewBox="140 90 1320 1420"
+                >
+                  <image
+                    href="assets/devices/new-nintendo-3ds-xl-neutral.webp"
+                    width="1600"
+                    height="1600"
+                    clip-path="url(#new-outline)"
+                  />
+                  <svg
+                    id="gallery-companion"
+                    viewBox="400 0 320 240"
+                    x="453"
+                    y="886"
+                    width="696"
+                    height="522"
+                    preserveAspectRatio="none"
+                  >
+                    <image
+                      href="assets/captures/a-link-to-the-past/05-eastern-palace.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><foreignObject x="365" y="204" width="871" height="523"
+                    ><div xmlns="http://www.w3.org/1999/xhtml" class="console-display"
+                      ><button
+                        id="gallery-open"
+                        data-screen="upper"
+                        class="gallery-stage"
+                        type="button"
+                        aria-label="Enlarge upper screen"
+                        ><svg
+                          id="gallery-image"
+                          viewBox="0 0 400 240"
+                          role="img"
+                          aria-label="Eastern Palace"
+                          data-scene-view="0 0 400 240"
+                          ><image
+                            href="assets/captures/a-link-to-the-past/05-eastern-palace.webp"
+                            width="720"
+                            height="240" /></svg
+                        ><span>EXPAND</span></button
+                      ></div
+                    ></foreignObject
+                  ></svg
+                ><figcaption>NEW NINTENDO 3DS · PROJECT PREVIEW</figcaption></figure
+              >
+              <div class="gallery-playback"
+                ><span>Captured gameplay</span
+                ><button
+                  id="gallery-autoplay"
+                  type="button"
+                  aria-pressed="true"
+                  aria-label="Pause slideshow"
+                  title="Pause slideshow"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path class="slideshow-pause" d="M6 5h4v14H6zM14 5h4v14h-4z" />
+                    <path class="slideshow-play" d="M8 5v14l11-7z" /></svg></button></div
+              ><div class="gallery-thumbs scene-thumbs" aria-label="Captured scenes"
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="true"
+                  aria-label="View Eastern Palace"
+                  data-scene="05-eastern-palace"
+                  data-title="Eastern Palace"
+                  data-caption="Eastern Palace. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/05-eastern-palace.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>01</b> Eastern Palace</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View The legend of Hyrule"
+                  data-scene="01-hyrule-legend"
+                  data-title="The legend of Hyrule"
+                  data-caption="The legend of Hyrule. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/01-hyrule-legend.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>02</b> The legend of Hyrule</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Choose a save file"
+                  data-scene="02-file-select"
+                  data-title="Choose a save file"
+                  data-caption="Choose a save file. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/02-file-select.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>03</b> Choose a save file</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Zelda’s call for help"
+                  data-scene="03-link-house"
+                  data-title="Zelda’s call for help"
+                  data-caption="Zelda’s call for help. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/03-link-house.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>04</b> Zelda’s call for help</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Zelda and the priest · Sanctuary"
+                  data-scene="04-sanctuary"
+                  data-title="Zelda and the priest · Sanctuary"
+                  data-caption="Zelda and the priest · Sanctuary. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/04-sanctuary.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"
+                    ><b>05</b> Zelda and the priest · Sanctuary</span
+                  ></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Desert Palace"
+                  data-scene="06-desert-palace"
+                  data-title="Desert Palace"
+                  data-caption="Desert Palace. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/06-desert-palace.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>06</b> Desert Palace</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Tower of Hera · Death Mountain"
+                  data-scene="07-tower-of-hera"
+                  data-title="Tower of Hera · Death Mountain"
+                  data-caption="Tower of Hera · Death Mountain. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/07-tower-of-hera.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>07</b> Tower of Hera · Death Mountain</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Pyramid of Power · Dark World"
+                  data-scene="08-dark-world"
+                  data-title="Pyramid of Power · Dark World"
+                  data-caption="The Pyramid of Power opens a view into the Dark World. Its lower-screen map helps place Link in the kingdom’s darker reflection."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/08-dark-world.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>08</b> Pyramid of Power · Dark World</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Palace of Darkness"
+                  data-scene="09-dark-palace"
+                  data-title="Palace of Darkness"
+                  data-caption="Palace of Darkness. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/09-dark-palace.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>09</b> Palace of Darkness</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Inside the Palace of Darkness"
+                  data-scene="10-dungeon-map"
+                  data-title="Inside the Palace of Darkness"
+                  data-caption="Inside the Palace of Darkness, the lower display shows the dungeon floor and Link’s position while the room remains visible above."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/10-dungeon-map.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>10</b> Inside the Palace of Darkness</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Skull Woods"
+                  data-scene="11-skull-woods"
+                  data-title="Skull Woods"
+                  data-caption="Skull Woods. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/11-skull-woods.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>11</b> Skull Woods</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Village of Outcasts"
+                  data-scene="12-village-outcasts"
+                  data-title="Village of Outcasts"
+                  data-caption="Village of Outcasts. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/12-village-outcasts.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>12</b> Village of Outcasts</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Classic inventory and touch items"
+                  data-scene="13-inventory"
+                  data-title="Classic inventory and touch items"
+                  data-caption="The classic inventory can be opened above, with equipment and the touch item grid still visible on the lower screen."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/a-link-to-the-past/13-inventory.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"
+                    ><b>13</b> Classic inventory and touch items</span
+                  ></button
+                ></div
+              ><div class="gallery-scroll-controls" id="gallery-scroll-controls"
+                ><button id="gallery-scroll-previous" type="button" aria-label="Previous thumbnails"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m14 6-6 6 6 6" /></svg></button
+                ><input
+                  id="gallery-scroll"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  aria-label="Scroll gallery thumbnails" /><button
+                  id="gallery-scroll-next"
+                  type="button"
+                  aria-label="Next thumbnails"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m10 6 6 6-6 6" /></svg></button></div
+              ><div class="gallery-caption"
+                ><span id="gallery-current">01</span
+                ><div
+                  ><h3 id="gallery-title">Eastern Palace</h3
+                  ><p id="gallery-caption"
+                    >Eastern Palace. Captured from the Nintendo 3DS port.</p
+                  ></div
+                ></div
+              ><p class="preview-note"
+                >Enlarge the selected view to choose the upper or lower screen.</p
+              >
+            </div>
+            <div class="inventory-column">
+              <div class="inventory-box"
+                ><div class="inventory-title"
+                  ><span>YOUR ADVENTURE KIT</span><span aria-hidden="true">♥ ♥ ♥</span></div
+                >
+                <div class="inventory-options" role="tablist" aria-label="Native port features"
+                  ><button
+                    type="button"
+                    role="tab"
+                    id="tab-map"
+                    aria-selected="true"
+                    aria-controls="kit-panel"
+                    data-kit="map"
+                    data-gallery-target="10-dungeon-map"
+                    ><img src="assets/alttp/alttp_map.png" width="100" height="93" alt="" /><span
+                      >MAP</span
+                    ></button
+                  ><button
+                    type="button"
+                    role="tab"
+                    id="tab-items"
+                    aria-selected="false"
+                    aria-controls="kit-panel"
+                    data-kit="items"
+                    data-gallery-target="13-inventory"
+                    tabindex="-1"
+                    ><img
+                      src="assets/alttp/book_of_mudora.png"
+                      width="352"
+                      height="379"
+                      alt=""
+                    /><span>ITEMS</span></button
+                  ><button
+                    type="button"
+                    role="tab"
+                    id="tab-screen"
+                    aria-selected="false"
+                    aria-controls="kit-panel"
+                    data-kit="screen"
+                    data-gallery-target="08-dark-world"
+                    tabindex="-1"
+                    ><img
+                      src="assets/alttp/magical_mirror.png"
+                      width="99"
+                      height="120"
+                      alt=""
+                    /><span>SCREEN</span></button
+                  ></div
+                >
+                <div
+                  id="kit-panel"
+                  class="kit-panel"
+                  role="tabpanel"
+                  aria-labelledby="tab-map"
+                  tabindex="0"
+                  ><p class="kit-label" id="kit-label">THE LOWER SCREEN</p
+                  ><h3 id="kit-title">Never lose your way.</h3
+                  ><p id="kit-copy"
+                    >Follow your position on a live overworld map, or check the floor you are
+                    exploring inside a dungeon. Hyrule stays close at hand.</p
+                  ><p class="kit-foot" id="kit-foot">Overworld map · Dungeon floors · Gear</p></div
+                ></div
+              >
+              <div class="display-guide"
+                ><p class="eyebrow">CHOOSE YOUR VIEW</p
+                ><div class="mode-buttons" aria-label="Display mode guide"
+                  ><button type="button" aria-pressed="true" data-mode="wide">WIDE</button
+                  ><button type="button" aria-pressed="false" data-mode="original">ORIGINAL</button
+                  ><button type="button" aria-pressed="false" data-mode="stretch"
+                    >STRETCH</button
+                  ></div
+                ><div class="mode-diagram" data-selected="wide" aria-hidden="true"
+                  ><div
+                    ><svg><use href="#tri" /></svg></div
+                  ><span>400 × 240 DISPLAY</span></div
+                ><div class="mode-description" aria-live="polite"
+                  ><h4 id="mode-title">A wider window into Hyrule.</h4
+                  ><p id="mode-copy"
+                    >Native 400 × 240. Choose Standard or Fixed camera behavior in Settings →
+                    Screen.</p
+                  ></div
+                ><p class="diagram-note"
+                  >Framing guide. Some original rooms have fewer tiles to show.</p
+                ></div
+              >
+            </div>
+          </div></div
+        >
+      </section>
+
+      <!-- capture-journal:start --><section
+        id="capture-journal"
+        class="capture-journal adventure-room"
+        aria-labelledby="capture-journal-title"
+        ><div class="capture-inner"
+          ><p class="eyebrow">IN THE GAME · TWO SCREENS</p
+          ><h2 id="capture-journal-title">A field guide to two worlds.</h2
+          ><p class="capture-introduction"
+            >Travel between the Light and Dark Worlds, explore dungeon floors and keep Link’s
+            equipment close. These scenes show how the Super Nintendo adventure uses both Nintendo
+            3DS displays.</p
+          ><p class="capture-source"
+            >Captured in Azahar · Port 3.2 · Image previews show the upper screen. Open the viewer
+            to switch screens; gameplay clips show both.</p
+          ><div class="capture-grid capture-features"
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="08-dark-world"
+                aria-label="Enlarge: A familiar kingdom, transformed."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="A familiar kingdom, transformed. · upper screen"
+                >
+                  <image
+                    href="assets/captures/a-link-to-the-past/08-dark-world.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>A familiar kingdom, transformed.</h3
+                ><p
+                  >The Pyramid of Power opens a view into the Dark World. Its lower-screen map helps
+                  place Link in the kingdom’s darker reflection.</p
+                ></figcaption
+              ></figure
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="10-dungeon-map"
+                aria-label="Enlarge: One floor at a time."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="One floor at a time. · upper screen"
+                >
+                  <image
+                    href="assets/captures/a-link-to-the-past/10-dungeon-map.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>One floor at a time.</h3
+                ><p
+                  >Inside the Palace of Darkness, the lower display shows the dungeon floor and
+                  Link’s position while the room remains visible above.</p
+                ></figcaption
+              ></figure
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="13-inventory"
+                aria-label="Enlarge: The right item within reach."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="The right item within reach. · upper screen"
+                >
+                  <image
+                    href="assets/captures/a-link-to-the-past/13-inventory.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>The right item within reach.</h3
+                ><p
+                  >The classic inventory can be opened above, with equipment and the touch item grid
+                  still visible on the lower screen.</p
+                ></figcaption
+              ></figure
+            ></div
+          ><h3 class="capture-clips-title">A few moments in motion.</h3
+          ><div class="capture-grid capture-videos"
+            ><figure class="capture-frame"
+              ><video
+                controls
+                muted
+                playsinline
+                preload="none"
+                poster="assets/captures/a-link-to-the-past/11-skull-woods.webp"
+                width="720"
+                height="240"
+                aria-label="Skull Woods gameplay clip"
+                ><source
+                  src="assets/captures/a-link-to-the-past/11-skull-woods.mp4"
+                  type="video/mp4" /></video
+              ><figcaption>Skull Woods · short gameplay clip</figcaption></figure
+            ><figure class="capture-frame"
+              ><video
+                controls
+                muted
+                playsinline
+                preload="none"
+                poster="assets/captures/a-link-to-the-past/12-village-outcasts.webp"
+                width="720"
+                height="240"
+                aria-label="Village of Outcasts gameplay clip"
+                ><source
+                  src="assets/captures/a-link-to-the-past/12-village-outcasts.mp4"
+                  type="video/mp4" /></video
+              ><figcaption>Village of Outcasts · short gameplay clip</figcaption></figure
+            ></div
+          ></div
+        ></section
+      ><!-- capture-journal:end -->
+      <section
+        id="compatibility"
+        class="hardware-section reveal-section"
+        aria-labelledby="hardware-heading"
+        ><div class="wrap hardware-layout">
+          <figure class="old-console"
+            ><svg
+              role="img"
+              aria-label="Old Nintendo 3DS displaying A Link to the Past on both screens"
+              viewBox="180 180 900 900"
+            >
+              <image
+                href="assets/minish/old-3ds-front-hq.webp"
+                width="1254"
+                height="1254"
+                clip-path="url(#old-outline)"
+              />
+              <image
+                href="assets/alttp/top-preview.png"
+                x="383"
+                y="284"
+                width="489"
+                height="290"
+                preserveAspectRatio="none"
+              />
+              <image
+                href="assets/alttp/map-preview.png"
+                x="427"
+                y="688"
+                width="400"
+                height="299"
+                preserveAspectRatio="none"
+              /></svg
+            ><figcaption>OLD NINTENDO 3DS</figcaption></figure
+          >
+          <div class="hardware-copy"
+            ><p class="eyebrow red">Ⅲ · BRING YOUR HANDHELD</p
+            ><h2 id="hardware-heading">A legend for<br />both generations.</h2
+            ><p
+              >The adventure runs on <strong>Old Nintendo 3DS</strong> and
+              <strong>New Nintendo 3DS</strong>, with a rendering path adapted to each console.</p
+            ><div class="generation-notes"
+              ><div
+                ><span>OLD 3DS</span
+                ><p>A dedicated GPU rendering path, with fallback for effects that need it.</p></div
+              ><div
+                ><span>NEW 3DS</span
+                ><p>A CPU rendering path that makes use of the newer hardware.</p></div
+              ></div
+            ><p class="hardware-note"
+              >Performance varies with the scene and console. See the
+              <a
+                href="https://github.com/EstebanPdN/zelda-alttp-3ds/blob/main/platform/3ds/README.md"
+                target="_blank"
+                rel="noreferrer"
+                >current hardware notes</a
+              >.</p
+            ></div
+          >
+        </div></section
+      >
+
+      <section id="begin" class="field-manual reveal-section" aria-labelledby="begin-title"
+        ><div class="wrap">
+          <header class="manual-heading"
+            ><p class="eyebrow red">Ⅳ · THE FIELD MANUAL</p
+            ><h2 id="begin-title">Before you draw your sword.</h2
+            ><p>A few essentials for the journey ahead.</p></header
+          >
+          <div class="setup-layout"
+            ><div class="setup-intro"
+              ><img
+                src="assets/alttp/book_of_mudora.png"
+                alt="The Book of Mudora, original manual illustration"
+                width="352"
+                height="379"
+                loading="lazy"
+              /><h3>Begin your quest</h3
+              ><p>You will need a homebrew-enabled 3DS and your own clean USA SNES game dump.</p
+              ><a
+                class="red-button"
+                href="https://github.com/EstebanPdN/zelda-alttp-3ds/releases/latest"
+                target="_blank"
+                rel="noreferrer"
+                >Download the port <svg aria-hidden="true"><use href="#arrow" /></svg></a
+              ><a
+                class="text-link"
+                href="https://github.com/EstebanPdN/zelda-alttp-3ds#readme"
+                target="_blank"
+                rel="noreferrer"
+                >Read the complete setup guide</a
+              ></div
+            >
+            <ol class="setup-steps"
+              ><li
+                ><span>01</span
+                ><div
+                  ><h3>Choose how to install</h3
+                  ><p
+                    >Install the <strong>CIA</strong> with FBI, scan the release’s
+                    <strong>QR code</strong>, or launch the <strong>3DSX</strong> through Homebrew
+                    Launcher.</p
+                  ></div
+                ></li
+              ><li
+                ><span>02</span
+                ><div
+                  ><h3>Bring the original adventure</h3
+                  ><p
+                    >Put a clean, unheadered <strong>USA .sfc or .smc</strong> in this folder.
+                    <code>zelda3.sfc</code> is the recommended filename.</p
+                  ><code class="path">sdmc:/3ds/Zelda 3DS/</code></div
+                ></li
+              ><li
+                ><span>03</span
+                ><div
+                  ><h3>Let Hyrule take shape</h3
+                  ><p
+                    >Press <kbd>A</kbd> on first launch to validate the ROM and extract the game
+                    assets locally. The download contains no ROM or extracted game assets.</p
+                  ></div
+                ></li
+              ><li
+                ><span>04</span
+                ><div
+                  ><h3>Make room for the music</h3
+                  ><p
+                    >Audio needs <code>sdmc:/3ds/dspfirm.cdc</code>. Rosalina’s
+                    <strong>Dump DSP firmware</strong> option creates it from your console.</p
+                  ></div
+                ></li
+              ></ol
+            ></div
+          >
+          <div class="faq-layout" id="faq"
+            ><div class="faq-intro"
+              ><img
+                src="assets/alttp/alttp_compass.png"
+                width="95"
+                height="72"
+                alt=""
+                loading="lazy"
+              /><p class="eyebrow red">A LITTLE GUIDANCE</p
+              ><h2
+                >Answers for<br />
+                the road.</h2
+              ><p>From getting started to returning to the title screen.</p></div
+            ><div class="faq-list">
+              <details class="faq-item"
+                ><summary
+                  ><span class="faq-number">01</span><h3>Why does it ask for a ROM?</h3
+                  ><span class="faq-plus" aria-hidden="true">+</span></summary
+                ><div class="faq-answer"
+                  ><p
+                    >The application is a native port of the Zelda3 engine. It extracts the original
+                    artwork, maps, music and other game data from your clean USA ROM on the console.
+                    Installing the CIA or 3DSX alone is not enough. Place the ROM in
+                    <code>sdmc:/3ds/Zelda 3DS/</code>, then press A when prompted.</p
+                  ></div
+                ></details
+              >
+              <details class="faq-item"
+                ><summary
+                  ><span class="faq-number">02</span><h3>Does it work on Old and New 3DS?</h3
+                  ><span class="faq-plus" aria-hidden="true">+</span></summary
+                ><div class="faq-answer"
+                  ><p
+                    >Yes, both generations are supported. Rendering performance depends on your
+                    console and the scene. Configurable turbo also works on both: hold ZL or the
+                    C-stick on New 3DS, or hold X for one second on Old 3DS. A short tap of X still
+                    performs its normal action.</p
+                  ></div
+                ></details
+              >
+              <details class="faq-item"
+                ><summary
+                  ><span class="faq-number">03</span><h3>Which display mode should I use?</h3
+                  ><span class="faq-plus" aria-hidden="true">+</span></summary
+                ><div class="faq-answer"
+                  ><p
+                    ><strong>WIDE</strong> uses the 400 × 240 upper display.
+                    <strong>ORIGINAL</strong> keeps the 256 × 224 game view, and
+                    <strong>STRETCH</strong> fills the display. WIDE has Standard and Fixed camera
+                    options. Choose in Settings → Screen; your preference is saved for that ROM.
+                    Some rooms do not contain enough original tiles to fill a wider view.</p
+                  ></div
+                ></details
+              >
+              <details class="faq-item"
+                ><summary
+                  ><span class="faq-number">04</span
+                  ><h3>What about translations, Redux or a randomizer?</h3
+                  ><span class="faq-plus" aria-hidden="true">+</span></summary
+                ><div class="faq-answer"
+                  ><p
+                    >For a translation, keep both the clean USA ROM and your patched ROM in the game
+                    folder. Compatible patches can provide translated text while the clean copy
+                    supplies the original assets. Compatibility depends on the patch.<br /><br />Gameplay-changing
+                    hacks such as Redux do not work simply by selecting a patched ROM: this port
+                    runs its own engine. A randomizer is planned as a possible future addition; it
+                    is not currently available and has no announced date.</p
+                  ></div
+                ></details
+              >
+              <details class="faq-item"
+                ><summary
+                  ><span class="faq-number">05</span><h3>Will updates keep my saves?</h3
+                  ><span class="faq-plus" aria-hidden="true">+</span></summary
+                ><div class="faq-answer"
+                  ><p
+                    >Updates retain the port’s saves. Save in-game before updating, keep the same
+                    ROM filename and back up the game folder before changing files. Each ROM profile
+                    has its own saves and settings.<br /><br />Importing an emulator’s
+                    <code>.srm</code> file is not part of the documented setup. Ask for help before
+                    replacing a save; renaming a file is not a supported conversion procedure.</p
+                  ></div
+                ></details
+              >
+              <details class="faq-item"
+                ><summary
+                  ><span class="faq-number">06</span><h3>How do I return to the title screen?</h3
+                  ><span class="faq-plus" aria-hidden="true">+</span></summary
+                ><div class="faq-answer"
+                  ><p
+                    >The port resumes the previous session. Open
+                    <strong>Settings → Restart</strong> and choose the ROM again to start from the
+                    title screen; your normal saves remain.<br /><br />If an older build goes black
+                    or silent after Restart, update to <strong>v3.2 or later</strong>. That specific
+                    issue was fixed in v3.2.</p
+                  ></div
+                ></details
+              >
+            </div></div
+          >
+          <div class="quest-status"
+            ><svg aria-hidden="true"><use href="#tri" /></svg
+            ><div
+              ><span class="eyebrow">PORT DEVELOPMENT</span><h3>A chapter complete.</h3
+              ><p
+                >100% complete · Development status shared by Esteban. Future improvements continue
+                through project updates.</p
+              ></div
+            ><div class="status-meter"
+              ><strong>100<small>%</small></strong
+              ><div
+                role="progressbar"
+                aria-label="Port development progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="100"
+                ><span></span></div
+              ><a href="index.html#progress">All project progress</a></div
+            ></div
+          >
+        </div></section
+      >
+
+      <section class="sahasrahla-help reveal-section" aria-labelledby="help-title"
+        ><div class="wrap help-layout"
+          ><img
+            src="assets/alttp/lanternlttp.png"
+            alt=""
+            width="53"
+            height="90"
+            loading="lazy"
+          /><div
+            ><p class="eyebrow gold">YOU DON’T HAVE TO GO ALONE</p
+            ><h2 id="help-title">Need a little guidance?</h2
+            ><p
+              >If something looks wrong, press <kbd>L</kbd> + <kbd>R</kbd> + <kbd>A</kbd> while the
+              issue is visible. Wait for <strong>DUMP SAVED</strong>, then share the complete new
+              folder from <code>sdmc:/3ds/Zelda 3DS/dumps/</code>.</p
+            ><p
+              >Tell us your console model, port version, ROM region or translation patch, and what
+              you were doing. Send the report through GitHub or our Discord community.</p
+            ><div class="support-actions"
+              ><a
+                class="gold-button"
+                href="https://github.com/EstebanPdN/zelda-alttp-3ds/issues/new"
+                target="_blank"
+                rel="noreferrer"
+                ><svg aria-hidden="true"><use href="#github" /></svg>Open a GitHub issue</a
+              ><a
+                class="outline-button"
+                href="https://discord.gg/zy8BqH5ss"
+                target="_blank"
+                rel="noreferrer"
+                ><svg aria-hidden="true"><use href="#discord" /></svg>Join our Discord</a
+              ></div
+            ></div
+          ></div
+        ></section
+      >
+      <footer class="alttp-footer"
+        ><div class="wrap"
+          ><div class="footer-top"
+            ><a class="footer-brand" href="index.html#collection">esteban’s <b>forge.</b></a
+            ><a
+              href="https://github.com/EstebanPdN/zelda-alttp-3ds"
+              target="_blank"
+              rel="noreferrer"
+              >Explore the source project</a
+            ><a href="#project-main">Back to the Lost Woods ↑</a></div
+          ><p
+            >Built on
+            <a href="https://github.com/snesrev/zelda3" target="_blank" rel="noreferrer"
+              >snesrev / Zelda3</a
+            >,
+            <a href="https://github.com/Waterdish/zelda3-android" target="_blank" rel="noreferrer"
+              >Waterdish</a
+            >
+            and
+            <a href="https://github.com/samyost1/zelda3-android" target="_blank" rel="noreferrer"
+              >samyost1</a
+            >.
+            <a
+              href="https://github.com/EstebanPdN/zelda-alttp-3ds#credits"
+              target="_blank"
+              rel="noreferrer"
+              >Full project credits</a
+            ></p
+          ><details class="art-credits"
+            ><summary
+              >About the artwork &amp; this field guide <span aria-hidden="true">+</span></summary
+            ><div
+              ><p
+                >Visual references: Nintendo’s
+                <a
+                  href="https://www.nintendo.co.jp/clvs/manuals/common/pdf/CLV-P-SAAEE.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  >original SNES instruction booklet</a
+                >, its Master Sword illustration, and the game’s inventory screens. Original artwork
+                archived by
+                <a
+                  href="https://zelda-temple.net/media-and-downloads/official-artwork/the-legend-of-zelda-a-link-to-the-past"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Zelda Temple</a
+                >. The forest and Link illustrations were upscaled locally with Real-ESRGAN,
+                preserving their original compositions. Game previews are from the existing project
+                showcase. Hardware photographs are shared collection assets.</p
+              ><p
+                >Cinzel, Archivo and VT323 are used under the SIL Open Font License. Game artwork
+                and trademarks © Nintendo. This is an independent homebrew project.
+                <a href="credits.html">Collection credits</a></p
+              ></div
+            ></details
+          ></div
+        ></footer
+      >
+    </main>
+    <dialog
+      id="gallery-lightbox"
+      data-screen="upper"
+      class="lightbox"
+      aria-labelledby="lightbox-title"
+      ><div class="lightbox-header"
+        ><h2 id="lightbox-title">Eastern Palace</h2
+        ><button id="lightbox-close" type="button" aria-label="Close gallery">×</button></div
+      ><div class="gallery-screen-controls" role="group" aria-label="Choose screen"
+        ><span class="gallery-screen-label">View</span
+        ><button
+          type="button"
+          data-gallery-screen="upper"
+          aria-pressed="true"
+          aria-controls="lightbox-image"
+          ><svg
+            class="gallery-screen-icon"
+            viewBox="0 0 24 32"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="2" width="18" height="12" rx="1" fill="currentColor" />
+            <path d="M5 17h14" />
+            <rect x="5" y="20" width="14" height="10" rx="1" fill="none" /></svg
+          ><span>Upper screen</span></button
+        ><button
+          type="button"
+          data-gallery-screen="lower"
+          aria-pressed="false"
+          aria-controls="lightbox-image"
+          ><svg
+            class="gallery-screen-icon"
+            viewBox="0 0 24 32"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="2" width="18" height="12" rx="1" fill="none" />
+            <path d="M5 17h14" />
+            <rect x="5" y="20" width="14" height="10" rx="1" fill="currentColor" /></svg
+          ><span>Lower screen</span></button
+        ></div
+      ><div class="lightbox-screen"
+        ><svg
+          id="lightbox-image"
+          data-gallery-display
+          data-screen="upper"
+          viewBox="0 0 400 240"
+          role="img"
+          aria-label="Eastern Palace"
+        >
+          <image
+            href="assets/captures/a-link-to-the-past/05-eastern-palace.webp"
+            width="720"
+            height="240"
+          /></svg></div
+      ><div class="lightbox-controls"
+        ><p
+          ><span id="lightbox-counter">1 / 13 · Upper screen</span><br />Choose a screen above.
+          Browse scenes with the arrows.</p
+        ><div
+          ><button id="lightbox-previous" type="button" aria-label="Previous image">←</button
+          ><button id="lightbox-next" type="button" aria-label="Next image">→</button></div
+        ></div
+      ></dialog
+    >
+  </body></html
+>

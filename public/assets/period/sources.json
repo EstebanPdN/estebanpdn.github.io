@@ -1,0 +1,22 @@
+{
+  "supplied_by": "Esteban",
+  "references": [
+    "DOOM cover artwork",
+    "The Legend of Zelda NES sprite sheet, ripped by Mister Mike (credit retained in source sheet)",
+    "The Legend of Zelda NES gold manual cover",
+    "Star Fox cover reference (modified cover; not represented as original launch packaging)",
+    "SNES cyan and magenta hardware reference"
+  ],
+  "starfox_manual": {
+    "url": "https://www.nintendo.co.jp/clvs/manuals/common/pdf/CLV-P-SADGE.pdf",
+    "page": 26,
+    "pdf_page": 27,
+    "owner": "Nintendo"
+  },
+  "nes_manual": "https://www.nintendo.co.jp/clv/manuals/en/pdf/CLV-P-NAANE.pdf",
+  "gba_photo": {
+    "url": "https://www.mariowiki.com/File:GBA_Handheld.png",
+    "original_source": "Wikipedia:File:Game-Boy-Advance-1stGen.png",
+    "license": "Public domain, per file page"
+  }
+}

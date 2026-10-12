@@ -1,0 +1,84 @@
+{
+  "link": {
+    "source": "User-supplied The Legend of Zelda NES sprite sheet",
+    "ripped_by": "Mister Mike",
+    "treatment": "Exact native pixel crops; remove only RGB (0,128,0) and (116,116,116). Compose raised sword from original pickup pose and original white sword. No resampling of the atlas.",
+    "frame_size": [
+      40,
+      36
+    ],
+    "frames": [
+      "raise",
+      "walk-right-1",
+      "walk-right-2",
+      "attack-1",
+      "attack-2",
+      "attack-3",
+      "attack-4",
+      "left",
+      "front"
+    ],
+    "crop_boxes": {
+      "walk-right-1": [
+        35,
+        11,
+        51,
+        27
+      ],
+      "walk-right-2": [
+        52,
+        11,
+        68,
+        27
+      ],
+      "raise-body": [
+        230,
+        11,
+        246,
+        27
+      ],
+      "sword": [
+        35,
+        154,
+        43,
+        170
+      ],
+      "attack-1": [
+        94,
+        77,
+        110,
+        93
+      ],
+      "attack-2": [
+        111,
+        77,
+        139,
+        93
+      ],
+      "attack-3": [
+        139,
+        77,
+        163,
+        93
+      ],
+      "attack-4": [
+        163,
+        77,
+        183,
+        93
+      ],
+      "front": [
+        1,
+        11,
+        17,
+        27
+      ]
+    }
+  },
+  "decorations": {
+    "octorok-red": "https://www.nesmaps.com/maps/Zelda/sprites/ZeldaSpriteOctorokRedDown.gif",
+    "octorok-up": "https://www.nesmaps.com/maps/Zelda/sprites/ZeldaSpriteOctorokBlueUp.gif",
+    "octorok-right": "https://www.nesmaps.com/maps/Zelda/sprites/ZeldaSpriteOctorokRedRight.gif",
+    "octorok-left": "https://www.nesmaps.com/maps/Zelda/sprites/ZeldaSpriteOctorokBlueLeft.gif"
+  }
+}

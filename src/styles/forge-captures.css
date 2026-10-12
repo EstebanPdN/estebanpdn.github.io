@@ -1,0 +1,813 @@
+/* Real port captures, scoped to preserve each game’s visual identity. */
+.capture-journal {
+  margin: 56px auto;
+  scroll-margin-top: 90px;
+}
+.capture-inner {
+  width: min(1100px, 100%);
+  margin: auto;
+  padding: 42px 32px;
+}
+.capture-journal h2 {
+  font-family: inherit;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.15;
+  margin: 10px 0 22px;
+}
+.capture-story {
+  columns: 2;
+  column-gap: 36px;
+}
+.capture-story p {
+  margin: 0 0 18px;
+  break-inside: avoid;
+  line-height: 1.65;
+}
+.capture-source {
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.78;
+  margin: 22px 0;
+}
+.capture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.capture-frame {
+  margin: 0;
+  min-width: 0;
+}
+.capture-frame img,
+.capture-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3;
+  background: #000;
+  object-fit: contain;
+  border: 1px solid currentColor;
+  image-rendering: auto;
+}
+.capture-frame a {
+  display: block;
+}
+.capture-frame a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}
+.capture-frame figcaption {
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 9px 0 0;
+}
+.capture-clips-title {
+  font-family: inherit;
+  font-size: 25px;
+  margin: 38px 0 20px;
+}
+.minish-journal .capture-inner {
+  background: var(--paper);
+  color: var(--ink);
+}
+.minish-journal .capture-journal h2 {
+  font-family: var(--display);
+}
+.sf-page .capture-inner {
+  border-top: 1px solid #78919b;
+  border-bottom: 1px solid #78919b;
+}
+.desktop-shell .capture-inner {
+  background: #c0c0c0;
+  color: #111;
+}
+.desktop-shell .capture-journal h2 {
+  font-family: Arial, sans-serif;
+}
+.desktop-shell .capture-journal {
+  margin: 30px 0;
+}
+.capture-frame video:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+@media (max-width: 650px) {
+  .capture-inner {
+    padding: 28px 18px;
+  }
+  .capture-story {
+    columns: 1;
+  }
+  .capture-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .capture-journal {
+    margin: 32px auto;
+  }
+  .capture-source {
+    font-size: 12px;
+  }
+}
+/* Gallery rails share behavior while keeping the page’s own colors and type. */
+.gallery-playback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 12px;
+  margin: 16px 0 12px;
+}
+.gallery-playback > span {
+  opacity: 0.75;
+}
+.gallery-playback > button {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid currentColor;
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.gallery-playback > button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+#gallery-autoplay {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  flex: 0 0 40px;
+}
+#gallery-autoplay svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+#gallery-autoplay .slideshow-play,
+#gallery-autoplay[aria-pressed='false'] .slideshow-pause {
+  display: none;
+}
+#gallery-autoplay[aria-pressed='false'] .slideshow-play {
+  display: block;
+}
+#gallery .gallery-thumbs.scene-thumbs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 12px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x proximity;
+  padding: 5px 3px 14px;
+  max-width: 100%;
+  min-width: 0;
+}
+.scene-thumbs > .gallery-thumb {
+  flex: 0 0 168px;
+  min-width: 0;
+  scroll-snap-align: start;
+  height: auto;
+  margin: 0;
+}
+#gallery .scene-thumbs {
+  scrollbar-width: none;
+}
+#gallery .scene-thumbs::-webkit-scrollbar {
+  display: none;
+}
+.gallery-scroll-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 20px;
+  color: inherit;
+}
+.gallery-scroll-controls[hidden] {
+  display: none;
+}
+.gallery-scroll-controls button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.gallery-scroll-controls button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.gallery-scroll-controls button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+.gallery-scroll-controls input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-width: 0;
+  height: 24px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+.gallery-scroll-controls input::-webkit-slider-runnable-track {
+  height: 3px;
+  background: color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 2px;
+}
+.gallery-scroll-controls input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 36px;
+  height: 9px;
+  margin-top: -3px;
+  border: 0;
+  border-radius: 3px;
+  background: currentColor;
+}
+.gallery-scroll-controls input::-moz-range-track {
+  height: 3px;
+  background: color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 2px;
+}
+.gallery-scroll-controls input::-moz-range-thumb {
+  width: 36px;
+  height: 9px;
+  border: 0;
+  border-radius: 3px;
+  background: currentColor;
+}
+.gallery-scroll-controls :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.desktop-shell .gallery-scroll-controls button {
+  border-radius: 0;
+  border: 1px solid #333;
+  box-shadow:
+    inset 1px 1px #fff,
+    inset -1px -1px #777;
+  background: #c0c0c0;
+}
+.scene-thumbs > .gallery-thumb svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5/3;
+  object-fit: contain;
+}
+.scene-thumbs .thumb-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 9px 7px;
+  white-space: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.scene-thumbs .thumb-label > b {
+  font-size: 11px;
+  margin-right: 6px;
+}
+#gallery .gallery-pair > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5/3;
+}
+#gallery .gallery-pair {
+  min-width: 0;
+  height: auto;
+  aspect-ratio: 5/3;
+  max-height: none;
+}
+#gallery .gallery-pair[data-screen='lower'],
+#gallery .gallery-pair[data-screen='lower'] > svg {
+  aspect-ratio: 4/3;
+}
+.capture-introduction {
+  max-width: 760px;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+.capture-features {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.capture-feature figcaption h3 {
+  font-family: inherit;
+  font-size: 21px;
+  line-height: 1.3;
+  margin: 16px 0 10px;
+}
+.capture-feature figcaption p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.capture-feature-open {
+  display: block;
+  color: inherit;
+}
+.capture-feature-open > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5/3;
+  border: 1px solid currentColor;
+  background: #111;
+  image-rendering: pixelated;
+}
+.capture-feature-open:hover > svg {
+  outline: 1px solid var(--gallery-ui-active, currentColor);
+  outline-offset: 2px;
+}
+.capture-feature-open:focus-visible {
+  outline: 3px solid var(--gallery-ui-active, currentColor);
+  outline-offset: 5px;
+}
+#pocket-companion-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  background: #151515;
+}
+.minish-journal .faq-introduction {
+  width: fit-content;
+  max-width: min(770px, 100%);
+  margin-inline: auto;
+  padding-inline: 20px;
+  justify-content: center;
+}
+.sf-page #gallery .recorder .scene-thumbs {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-height: none;
+}
+.sf-page #gallery .recorder .scene-thumbs > .gallery-thumb {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+.sf-page #gallery .recorder .scene-thumbs .thumb-label {
+  padding: 8px 0;
+  font-size: 12px;
+}
+.desktop-shell .capture-journal h2 {
+  font-family: inherit;
+}
+@media (max-width: 800px) {
+  .capture-features {
+    grid-template-columns: 1fr;
+  }
+  .capture-feature img {
+    max-width: 720px;
+  }
+  .sf-page #gallery .recorder .scene-thumbs {
+    display: flex;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .sf-page #gallery .recorder .scene-thumbs > .gallery-thumb {
+    flex-basis: 180px;
+  }
+  .minish-journal .faq-introduction {
+    padding-inline: 0;
+  }
+  .gallery-playback {
+    flex-wrap: wrap;
+  }
+}
+
+/* One screen at a time, with controls drawn in each project's own language. */
+body[data-game='minish'] {
+  --gallery-ui-ink: #3c5f29;
+  --gallery-ui-surface: #fff8d9;
+  --gallery-ui-border: #8c824a;
+  --gallery-ui-active: #47773b;
+  --gallery-ui-active-ink: #fffbe5;
+}
+body[data-game='alttp'] {
+  --gallery-ui-ink: #ead7a1;
+  --gallery-ui-surface: #101c2b;
+  --gallery-ui-border: #72795d;
+  --gallery-ui-active: #ead7a1;
+  --gallery-ui-active-ink: #142331;
+}
+body[data-game='doom'] {
+  --gallery-ui-ink: #111;
+  --gallery-ui-surface: #c0c0c0;
+  --gallery-ui-border: #333;
+  --gallery-ui-active: #000080;
+  --gallery-ui-active-ink: #fff;
+}
+body[data-game='kart'] {
+  --gallery-ui-ink: #252c50;
+  --gallery-ui-surface: #f7f5ff;
+  --gallery-ui-border: #8992b3;
+  --gallery-ui-active: #ffd85a;
+  --gallery-ui-active-ink: #242945;
+}
+body[data-game='starwing'] {
+  --gallery-ui-ink: #d9f5f7;
+  --gallery-ui-surface: #192b3f;
+  --gallery-ui-border: #6a959c;
+  --gallery-ui-active: #9cffff;
+  --gallery-ui-active-ink: #132738;
+}
+.gallery-screen-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+  color: var(--gallery-ui-ink);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.gallery-screen-label {
+  margin-right: 5px;
+  opacity: 0.76;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.gallery-screen-controls [data-gallery-screen] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 9px 12px;
+  border: 1px solid var(--gallery-ui-border);
+  border-radius: 2px;
+  background: var(--gallery-ui-surface);
+  color: var(--gallery-ui-ink);
+  font: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+.gallery-screen-controls [data-gallery-screen][aria-pressed='true'] {
+  background: var(--gallery-ui-active);
+  color: var(--gallery-ui-active-ink);
+  border-color: var(--gallery-ui-active);
+  box-shadow: inset 0 -2px 0 color-mix(in srgb, currentColor 24%, transparent);
+}
+.gallery-screen-controls [data-gallery-screen]:hover {
+  border-color: var(--gallery-ui-active);
+  box-shadow: 0 0 0 1px var(--gallery-ui-active);
+}
+.gallery-screen-controls [data-gallery-screen]:focus-visible {
+  outline: 2px solid var(--gallery-ui-active);
+  outline-offset: 3px;
+}
+.gallery-screen-controls .gallery-screen-icon {
+  display: block;
+  width: 20px;
+  height: 18px;
+  flex: 0 0 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: square;
+}
+#gallery .gallery-thumbs.scene-thumbs {
+  align-items: stretch;
+}
+#gallery .gallery-thumbs.scene-thumbs > .gallery-thumb {
+  display: block;
+  flex: 0 0 180px;
+  max-width: none;
+  text-align: left;
+  align-self: stretch;
+}
+#gallery .gallery-thumbs.scene-thumbs > .gallery-thumb > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  aspect-ratio: 5/3;
+}
+#gallery .gallery-thumbs.scene-thumbs .thumb-label {
+  display: block;
+  min-height: 3.8em;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+}
+#gallery .gallery-thumbs.scene-thumbs .thumb-label b {
+  font-family: inherit;
+  font-size: 12px;
+}
+.gallery-playback {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.gallery-playback > button {
+  min-height: 38px;
+  border-radius: 2px;
+  padding: 8px 12px;
+}
+#gallery-lightbox {
+  width: min(900px, 94vw, calc(166.6667dvh - 366.6667px));
+  min-width: min(300px, 94vw);
+  max-width: 94vw;
+  max-height: 94dvh;
+  box-sizing: border-box;
+  padding: 18px;
+  overflow: auto;
+}
+#gallery-lightbox[data-screen='lower'] {
+  width: min(780px, 94vw, calc(133.3333dvh - 293.3333px));
+}
+#gallery-lightbox .lightbox-header {
+  gap: 14px;
+  margin: 0;
+  padding: 0 0 14px;
+  align-items: center;
+}
+#gallery-lightbox .lightbox-header > :first-child {
+  min-width: 0;
+  line-height: 1.2;
+}
+#gallery-lightbox .gallery-screen-controls {
+  margin: 0 0 12px;
+}
+#gallery-lightbox .lightbox-screen {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  min-width: 0;
+  aspect-ratio: 5/3;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#gallery-lightbox .lightbox-screen > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5/3;
+  image-rendering: pixelated;
+}
+#gallery-lightbox[data-screen='lower'] .lightbox-screen,
+#gallery-lightbox[data-screen='lower'] .lightbox-screen > svg {
+  aspect-ratio: 4/3;
+}
+#gallery-lightbox .lightbox-controls {
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 14px 0 0;
+  align-items: center;
+}
+#gallery-lightbox .lightbox-controls > p {
+  margin: 0;
+  max-width: none;
+  font-size: 12px;
+  line-height: 1.5;
+}
+#gallery-lightbox .lightbox-controls > div {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+body:not([data-game='doom']) #gallery-lightbox #lightbox-close {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  flex: 0 0 38px;
+  padding: 0;
+  font-size: 25px;
+  line-height: 1;
+  border-radius: 0;
+}
+body:not([data-game='doom']) #gallery-lightbox .lightbox-controls button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  font-size: 22px;
+  line-height: 1;
+}
+#gallery-lightbox #lightbox-close svg,
+#gallery-lightbox .lightbox-controls button svg {
+  width: 18px;
+  height: 18px;
+}
+body[data-game='minish'] .gallery-screen-controls [data-gallery-screen] {
+  border-radius: 0;
+  box-shadow: 2px 2px 0 #92702c22;
+}
+body[data-game='minish'] .gallery-screen-controls [data-gallery-screen][aria-pressed='true'] {
+  box-shadow:
+    2px 2px 0 #92702c44,
+    inset 0 0 0 1px #e8e5a530;
+}
+body[data-game='alttp'] .gallery-screen-controls [data-gallery-screen] {
+  border-radius: 0;
+  letter-spacing: 0.2px;
+}
+body[data-game='alttp'] #gallery-lightbox {
+  border-color: #b4a477;
+}
+body[data-game='doom'] .gallery-screen-controls {
+  gap: 7px;
+}
+body[data-game='doom'] .gallery-screen-controls [data-gallery-screen],
+body[data-game='doom'] .gallery-playback > button {
+  border-radius: 0;
+  border: 1px solid #111;
+  background: #c0c0c0;
+  color: #111;
+  box-shadow:
+    inset 1px 1px #fff,
+    inset -1px -1px #777;
+  font-family: inherit;
+}
+body[data-game='doom'] .gallery-screen-controls [data-gallery-screen][aria-pressed='true'] {
+  background: #000080;
+  color: #fff;
+  box-shadow:
+    inset 1px 1px #7777c5,
+    inset -1px -1px #111;
+}
+body[data-game='doom'] .gallery-screen-controls [data-gallery-screen]:focus-visible {
+  outline: 1px dotted #111;
+  outline-offset: 2px;
+}
+body[data-game='doom'] #gallery-lightbox {
+  padding: 3px;
+}
+body[data-game='doom'] #gallery-lightbox .gallery-screen-controls {
+  margin: 11px 10px;
+}
+body[data-game='doom'] #gallery-lightbox .lightbox-screen {
+  border: 1px solid #777;
+}
+body[data-game='doom'] #gallery-lightbox .lightbox-controls {
+  padding: 11px 10px;
+}
+body[data-game='kart'] .gallery-screen-controls [data-gallery-screen] {
+  border-width: 2px;
+  border-radius: 0;
+  font-weight: 700;
+}
+body[data-game='kart'] #gallery-lightbox .gallery-screen-controls {
+  --gallery-ui-ink: #edf0ff;
+  --gallery-ui-surface: #292d53;
+  --gallery-ui-border: #8992b3;
+}
+body[data-game='kart'] #gallery-lightbox .lightbox-header {
+  background: transparent;
+}
+body[data-game='starwing'] .gallery-screen-controls [data-gallery-screen] {
+  border-radius: 0;
+  letter-spacing: 0.2px;
+}
+body[data-game='starwing'] #gallery .gallery-thumbs.scene-thumbs > .gallery-thumb {
+  padding: 8px;
+}
+@media (max-width: 650px) {
+  .gallery-screen-controls {
+    gap: 7px;
+    font-size: 12px;
+  }
+  .gallery-screen-label {
+    font-size: 11px;
+    margin-right: 2px;
+  }
+  .gallery-screen-controls [data-gallery-screen] {
+    gap: 6px;
+    padding: 8px 10px;
+    min-height: 38px;
+  }
+  .gallery-screen-controls .gallery-screen-icon {
+    width: 18px;
+    flex-basis: 18px;
+  }
+  #gallery .gallery-thumbs.scene-thumbs > .gallery-thumb {
+    flex-basis: 154px;
+  }
+  .scene-thumbs .thumb-label {
+    padding: 8px 5px;
+  }
+  #gallery-lightbox {
+    padding: 12px;
+    max-width: 94vw;
+  }
+  .gallery-playback {
+    font-size: 12px;
+    gap: 10px;
+  }
+  .gallery-playback > button {
+    min-height: 36px;
+  }
+  #gallery-lightbox .lightbox-header {
+    padding-bottom: 12px;
+    gap: 10px;
+  }
+  #gallery-lightbox .lightbox-controls {
+    padding-top: 12px;
+    gap: 10px;
+  }
+  #gallery-lightbox .lightbox-controls > p {
+    font-size: 11px;
+  }
+  #gallery-lightbox .lightbox-description {
+    padding: 12px 0 0;
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-screen-controls [data-gallery-screen] {
+    transition: none;
+  }
+}
+
+/* Clips live alongside stills in the same rail, with upper-screen posters. */
+.gallery-video-thumb {
+  position: relative;
+}
+.thumb-video-marker {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #fff9;
+  background: #101318d9;
+  color: white;
+  font: 13px/1 Arial;
+  pointer-events: none;
+}
+#gallery-lightbox #lightbox-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3;
+  background: #000;
+  object-fit: contain;
+}
+#gallery-lightbox #lightbox-video[hidden],
+#gallery-lightbox #lightbox-image[hidden],
+#gallery-lightbox .gallery-screen-controls[hidden] {
+  display: none;
+}
+#gallery-lightbox[data-media='video'] .lightbox-screen {
+  aspect-ratio: 3;
+}
+
+/* Compact phone rhythm and comfortable touch targets. */
+@media (max-width: 600px) {
+  .gallery-playback > button,
+  .lightbox-arrows button,
+  .lightbox-close,
+  .gallery-screen-controls [data-gallery-screen] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  #gallery .gallery-thumbs.scene-thumbs > .gallery-thumb {
+    flex-basis: 125px;
+  }
+  .scene-thumbs .thumb-label {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+  #gallery-lightbox {
+    max-height: calc(100svh - 24px);
+    overflow-y: auto;
+  }
+}

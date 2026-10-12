@@ -1,0 +1,23 @@
+{
+  "css_source": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap",
+  "download_date": "2026-09-30",
+  "assets": [
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2",
+      "file": "468d56b6b25b05b70190.woff2",
+      "sha256": "468d56b6b25b05b70190b6c233d773f6f1770e8579827ce022a57f03fa8002fb",
+      "bytes": 36980
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2",
+      "file": "219b02c7d8884817d3d6.woff2",
+      "sha256": "219b02c7d8884817d3d6ad4c8771f2c000ce4c5669a67ef4e2e5617ffa25c4cc",
+      "bytes": 18192
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/OFL.txt",
+      "file": "dmsans-OFL.txt",
+      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    }
+  ]
+}

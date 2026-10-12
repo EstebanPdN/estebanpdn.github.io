@@ -1,0 +1,31 @@
+{
+  "manual": "https://www.nintendo.co.jp/clvs/manuals/common/pdf/CLV-P-SADGE.pdf",
+  "manual_assets": {
+    "fleet-24.jpg": "PDF page 24 / printed page 23, original Arwing formation",
+    "enemies-27.jpg": "PDF page 27 / printed page 26, enemy artwork",
+    "handbook-01.jpg": "Original instruction booklet cover",
+    "manual-course-map.png": "PDF page 29 / printed page 28, Course Map; high-resolution manual crop supplied by the user, preserved without filters or resampling."
+  },
+  "screenshots": "Existing Starwing development showcase assets, retained unchanged",
+  "information": [
+    "https://github.com/EstebanPdN/starwing-3ds",
+    "https://github.com/EstebanPdN/starwing-3ds/blob/main/docs/STATUS.md",
+    "https://www.nintendo.com/en-za/News/2017/September/Nintendo-Classic-Mini-SNES-developer-interview-Volume-1-Star-Fox-Star-Fox-2-1273086.html"
+  ],
+  "fonts": "Pixelify Sans, from the official Google Fonts repository; SIL Open Font License in assets/fonts/starfox/",
+  "ui_sprites": {
+    "source": "User-supplied Star Fox SNES sprite sheet, 448 x 974 pixels",
+    "sheet_credit": "Arima, 2005 (as credited on the supplied sheet)",
+    "processing": "Exact crops, cyan colour key removed from isolated sprites, original glyphs and palette used for derived HUD bars. Python/Pillow; no smoothing.",
+    "included": [
+      "Star Fox logo",
+      "Fox radio portrait",
+      "shield label",
+      "bomb icons",
+      "selection arrow",
+      "chapter and gallery numerals",
+      "derived shield and bomb gauges"
+    ],
+    "extractor": "scripts/extract-starfox-ui.py"
+  }
+}

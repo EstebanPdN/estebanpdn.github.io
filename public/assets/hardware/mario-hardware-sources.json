@@ -1,0 +1,23 @@
+[
+  {
+    "file": "sony-pvm-4300-front.jpg",
+    "author": "Shank Mods",
+    "source": "https://commons.wikimedia.org/wiki/File:Direct_front_view_of_Sony_PVM-4300_(KX-45ED1).jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "usage": "Unchanged Wikimedia thumbnail, displayed through an SVG crop and outline mask, with an independent project preview over the screen. Photo and displayed adaptation remain CC BY-SA 4.0."
+  },
+  {
+    "file": "nintendo-ds-original-blue.png",
+    "author": "Evan-Amos",
+    "source": "https://commons.wikimedia.org/wiki/File:Nintendo-DS-Fat-Blue.png",
+    "license": "Public domain",
+    "usage": "Unchanged Wikimedia PNG thumbnail, with independent illustrative artwork and planned-status screen overlays."
+  },
+  {
+    "file": "../logos/super-mario-64-ds.webp",
+    "author": "Nintendo",
+    "source": "https://commons.wikimedia.org/wiki/File:Super_Mario_64_DS_logo.webp",
+    "usage": "Original title logo used for identification, unchanged. Nintendo copyright and trademark."
+  }
+]

@@ -1,0 +1,195 @@
+.community-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0 0 23px;
+  padding: 6px 0;
+  font-size: 12px;
+  color: #617780;
+}
+.community-toolbar > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.community-toolbar p {
+  margin: 0;
+  font-size: 11px;
+  text-align: right;
+  line-height: 1.5;
+}
+.community-live-dot {
+  width: 6px;
+  height: 6px;
+  background: #5d917e;
+  border-radius: 50%;
+}
+.community-card {
+  align-items: flex-start;
+  --port-color: #638c9d;
+}
+.community-card .progress-art {
+  align-self: flex-start;
+  margin-top: 3px;
+}
+.community-monogram {
+  font-size: 24px;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+  color: #758d96;
+}
+.community-card .progress-meta {
+  margin-top: 17px;
+}
+.community-card .community-unavailable {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #788a92;
+}
+.community-card p.community-measure {
+  font-size: 11px;
+  margin-top: 11px;
+  line-height: 1.6;
+  color: #536e79;
+}
+.community-measure > span {
+  font-size: 10px;
+  color: #798c95;
+  overflow-wrap: anywhere;
+}
+.community-card p.community-activity {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #607680;
+}
+.community-card p.community-check {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #7a8e97;
+}
+.community-card p.community-detail {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #687d86;
+  line-height: 1.55;
+}
+.community-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.community-related {
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: 1px solid #7d919624;
+  display: grid;
+  gap: 12px;
+}
+.community-related-item {
+  display: grid;
+  justify-items: start;
+  gap: 6px;
+}
+.community-related-item > span {
+  font-size: 10px;
+  color: #6d818a;
+  line-height: 1.5;
+}
+.community-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #668d8011;
+  color: #487464;
+}
+.community-card p.community-no-port {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #7d919624;
+  font-size: 10px;
+  color: #81929a;
+}
+.community-explainer {
+  font-size: 12px;
+  line-height: 1.75;
+  color: #70838c;
+  margin: 26px 0 15px;
+  max-width: 860px;
+}
+.community-sources {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  font-size: 11px;
+  color: #70838c;
+}
+.community-sources a {
+  font-weight: 700;
+}
+.community-sources a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+[data-theme='dark'] .community-toolbar,
+[data-theme='dark'] .community-card p.community-measure,
+[data-theme='dark'] .community-card p.community-activity,
+[data-theme='dark'] .community-card p.community-detail,
+[data-theme='dark'] .community-related-item > span,
+[data-theme='dark'] .community-explainer,
+[data-theme='dark'] .community-sources {
+  color: #b5b5b8;
+}
+[data-theme='dark'] .community-monogram,
+[data-theme='dark'] .community-measure > span,
+[data-theme='dark'] .community-card p.community-check,
+[data-theme='dark'] .community-card p.community-no-port,
+[data-theme='dark'] .community-card .community-unavailable {
+  color: #a7a7ab;
+}
+[data-theme='dark'] .community-badge {
+  background: #90b2a51a;
+  color: #b0cdbf;
+}
+@media (max-width: 600px) {
+  .community-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0;
+  }
+  .community-toolbar p {
+    text-align: left;
+  }
+  .community-card .progress-art {
+    width: 47px;
+    height: 54px;
+    flex-basis: 47px;
+    padding: 5px;
+  }
+  .community-monogram {
+    font-size: 20px;
+  }
+  .community-card .progress-content h3 {
+    font-size: 15px;
+  }
+  .community-card .progress-meta strong {
+    font-size: 25px;
+  }
+  .community-card .progress-meta > span {
+    font-size: 11px;
+  }
+  .community-card .community-unavailable {
+    font-size: 12px;
+  }
+  .community-sources {
+    gap: 9px 14px;
+  }
+}

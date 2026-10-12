@@ -1,0 +1,36 @@
+/* Scene selection uses a single JavaScript opacity clock for every surface. */
+.hero-backdrop-layer {
+  transition: none;
+}
+.scene-copy-stage {
+  position: relative;
+}
+.scene-copy-current {
+  display: block;
+}
+.scene-copy-incoming {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+}
+/* Selecting a game never adds a scale, bounce or translation to the title strip. */
+.dual .rail-project:active {
+  scale: 1;
+}
+.dual .rail-project:hover {
+  transform: none;
+}
+.dual-rail .rail-project {
+  transition:
+    background 560ms ease-in-out,
+    color 560ms ease-in-out,
+    transform 0.6s var(--ease-out),
+    box-shadow 560ms ease-in-out;
+}
+.dual-rail .rail-project:after {
+  transition:
+    opacity 560ms ease-in-out,
+    background-position 0.9s var(--ease-out);
+}

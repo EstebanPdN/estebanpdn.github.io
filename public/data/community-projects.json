@@ -1,0 +1,357 @@
+[
+  {
+    "id": "tp",
+    "name": "Twilight Princess",
+    "platform": "GameCube / Wii",
+    "repo": "zeldaret/tp",
+    "mark": "TP",
+    "image": "assets/logos/dusklight-icon.png",
+    "progress": {
+      "type": "decomp",
+      "version": "GZ2E01"
+    },
+    "note": "This card tracks the GameCube version; Wii versions have separate reports.",
+    "related": [
+      {
+        "name": "Dusklight",
+        "kind": "PC port",
+        "repo": "TwilitRealm/dusklight"
+      }
+    ]
+  },
+  {
+    "id": "mk64",
+    "name": "Mario Kart 64",
+    "platform": "Nintendo 64",
+    "repo": "n64decomp/mk64",
+    "mark": "MK",
+    "image": "assets/icons/mk64.webp",
+    "progress": {
+      "type": "svg",
+      "url": "https://n64decomp.github.io/mk64/total_progress.svg",
+      "label": "Total progress · repository badge",
+      "version": "Repository total"
+    },
+    "related": [
+      {
+        "name": "SpaghettiKart",
+        "kind": "PC port",
+        "repo": "HarbourMasters/SpaghettiKart"
+      }
+    ]
+  },
+  {
+    "id": "sm64",
+    "name": "Super Mario 64",
+    "platform": "Nintendo 64",
+    "repo": "n64decomp/sm64",
+    "mark": "64",
+    "progress": {
+      "type": "readme",
+      "url": "https://raw.githubusercontent.com/n64decomp/sm64/master/README.md",
+      "label": "Full decompilation · repository README",
+      "version": "JP / US / EU / Shindou / iQue"
+    },
+    "related": [
+      {
+        "name": "sm64ex",
+        "kind": "PC port",
+        "repo": "sm64pc/sm64ex"
+      }
+    ],
+    "image": "assets/icons/sm64.webp"
+  },
+  {
+    "id": "oot",
+    "name": "Ocarina of Time",
+    "platform": "Nintendo 64",
+    "repo": "zeldaret/oot",
+    "mark": "OT",
+    "progress": {
+      "type": "shield",
+      "url": "https://zelda.deco.mp/assets/csv/progress-oot-shield.json",
+      "label": "Decompilation · team badge",
+      "version": "Team aggregate",
+      "page": "https://zelda.deco.mp/games/oot"
+    },
+    "related": [
+      {
+        "name": "Ship of Harkinian",
+        "kind": "PC port",
+        "repo": "HarbourMasters/Shipwright"
+      },
+      {
+        "name": "Zelda 64: Recompiled",
+        "kind": "Recompilation",
+        "repo": "Zelda64Recomp/Zelda64Recomp",
+        "announcement": "Ocarina of Time support in development",
+        "evidence": "https://raw.githubusercontent.com/Zelda64Recomp/Zelda64Recomp/master/README.md",
+        "keyword": "Ocarina of Time",
+        "pendingPhrase": "and soon Ocarina of Time"
+      }
+    ],
+    "image": "assets/icons/oot.webp"
+  },
+  {
+    "id": "tmc",
+    "name": "The Minish Cap",
+    "platform": "Game Boy Advance",
+    "repo": "zeldaret/tmc",
+    "mark": "MC",
+    "image": "assets/icons/minish.webp",
+    "progress": {
+      "type": "shield",
+      "url": "https://zelda64.dev/assets/csv/progress-tmc-shield.json",
+      "label": "Decompilation · team badge",
+      "version": "Team aggregate",
+      "page": "https://zelda64.dev/games/tmc"
+    },
+    "related": [
+      {
+        "name": "Project Picori",
+        "kind": "PC port",
+        "repo": "999sian/tmc"
+      }
+    ]
+  },
+  {
+    "id": "galaxy",
+    "name": "Super Mario Galaxy",
+    "platform": "Wii",
+    "repo": "SMGCommunity/Petari",
+    "mark": "G1",
+    "progress": {
+      "type": "decomp",
+      "version": "RMGK01"
+    },
+    "related": [
+      {
+        "name": "AstroCore",
+        "kind": "PC port",
+        "url": "https://github.com/SMGCommunity/Petari#readme",
+        "announcement": "Announced · in development",
+        "evidence": "https://raw.githubusercontent.com/SMGCommunity/Petari/master/README.md",
+        "keyword": "AstroCore"
+      }
+    ],
+    "image": "assets/icons/galaxy.webp"
+  },
+  {
+    "id": "tww",
+    "name": "The Wind Waker",
+    "platform": "GameCube",
+    "repo": "zeldaret/tww",
+    "mark": "WW",
+    "progress": {
+      "type": "decomp",
+      "version": "GZLE01"
+    },
+    "related": [],
+    "image": "assets/icons/tww.webp"
+  },
+  {
+    "id": "sunshine",
+    "name": "Super Mario Sunshine",
+    "platform": "GameCube",
+    "repo": "doldecomp/sms",
+    "mark": "SS",
+    "progress": {
+      "type": "decomp",
+      "version": "GMSJ01"
+    },
+    "related": [
+      {
+        "name": "SMS PC Port",
+        "kind": "PC port",
+        "repo": "chasem-dev/sms-pc-port"
+      }
+    ],
+    "image": "assets/icons/sunshine.webp"
+  },
+  {
+    "id": "mkdd",
+    "name": "Mario Kart: Double Dash!!",
+    "platform": "GameCube",
+    "repo": "doldecomp/mkdd",
+    "mark": "DD",
+    "progress": {
+      "type": "decomp",
+      "version": "MarioClub_us"
+    },
+    "related": [],
+    "image": "assets/icons/mkdd.webp"
+  },
+  {
+    "id": "melee",
+    "name": "Super Smash Bros. Melee",
+    "platform": "GameCube",
+    "repo": "doldecomp/melee",
+    "mark": "ML",
+    "progress": {
+      "type": "decomp",
+      "version": "GALE01"
+    },
+    "related": [],
+    "image": "assets/icons/melee.webp"
+  },
+  {
+    "id": "galaxy2",
+    "name": "Super Mario Galaxy 2",
+    "platform": "Wii",
+    "repo": "SMGCommunity/Garigari",
+    "mark": "G2",
+    "progress": {
+      "type": "decomp",
+      "version": "SB4E01"
+    },
+    "related": [],
+    "image": "assets/icons/galaxy2.webp"
+  },
+  {
+    "id": "mkw",
+    "name": "Mario Kart Wii",
+    "platform": "Wii",
+    "repo": "doldecomp/mkw",
+    "mark": "KW",
+    "progress": {
+      "type": "decomp",
+      "version": "RMCP01"
+    },
+    "related": [],
+    "image": "assets/icons/mkw.webp"
+  },
+  {
+    "id": "brawl",
+    "name": "Super Smash Bros. Brawl",
+    "platform": "Wii",
+    "repo": "doldecomp/brawl",
+    "mark": "BR",
+    "progress": {
+      "type": "decomp",
+      "version": "RSBE01_02"
+    },
+    "related": [],
+    "image": "assets/icons/brawl.webp"
+  },
+  {
+    "id": "sports",
+    "name": "Wii Sports",
+    "platform": "Wii",
+    "repo": "doldecomp/ogws",
+    "mark": "WS",
+    "progress": {
+      "type": "decomp",
+      "version": "RSPE01_01"
+    },
+    "related": [],
+    "image": "assets/icons/sports.webp"
+  },
+  {
+    "id": "sfa",
+    "name": "Star Fox Adventures",
+    "platform": "GameCube",
+    "repo": "zcanann/SFA-Decomp",
+    "mark": "SF",
+    "progress": {
+      "type": "decomp",
+      "version": "GSAE01"
+    },
+    "related": [
+      {
+        "name": "Foxhollow",
+        "kind": "PC port",
+        "repo": "JackPriceBurns/foxhollow"
+      }
+    ],
+    "image": "assets/icons/sfa.webp"
+  },
+  {
+    "id": "ss",
+    "name": "Skyward Sword",
+    "platform": "Wii",
+    "repo": "zeldaret/ss",
+    "mark": "SW",
+    "progress": {
+      "type": "decomp",
+      "version": "SOUE01"
+    },
+    "related": [],
+    "image": "assets/icons/ss.webp"
+  },
+  {
+    "id": "lm",
+    "name": "Luigi’s Mansion",
+    "platform": "GameCube",
+    "repo": "SomeJakeGuy/lm-decomp",
+    "mark": "LM",
+    "progress": {
+      "type": "decomp",
+      "version": "GLME01"
+    },
+    "related": [],
+    "image": "assets/icons/lm.webp"
+  },
+  {
+    "id": "sadx",
+    "name": "Sonic Adventure DX",
+    "platform": "GameCube",
+    "repo": "doldecomp/sadx",
+    "mark": "SA",
+    "progress": {
+      "type": "decomp",
+      "version": "GXSE8P"
+    },
+    "related": [
+      {
+        "name": "PC version decompilation",
+        "kind": "PC decompilation",
+        "repo": "FraGag/sadx_decomp"
+      }
+    ],
+    "image": "assets/icons/sadx.webp"
+  },
+  {
+    "id": "advance",
+    "name": "Sonic Advance",
+    "platform": "Game Boy Advance",
+    "repo": "SAT-R/sa2",
+    "sourcePath": "/tree/main/sa1",
+    "mark": "AS",
+    "progress": {
+      "type": "shield",
+      "url": "https://sat-r.github.io/sa2/reports/progress-sa1-shield-matching.json",
+      "label": "Matching code · team badge",
+      "version": "Sonic Advance · Europe"
+    },
+    "note": "Sonic Advance 1 now lives in the Sonic Advance Trilogy repository.",
+    "related": [],
+    "image": "assets/icons/advance.webp"
+  },
+  {
+    "id": "mm",
+    "name": "Majora’s Mask",
+    "platform": "Nintendo 64",
+    "repo": "zeldaret/mm",
+    "mark": "MM",
+    "progress": {
+      "type": "shield",
+      "url": "https://zelda.deco.mp/assets/csv/progress-mm-shield.json",
+      "label": "Decompilation · team badge",
+      "version": "US 1.0",
+      "page": "https://zelda.deco.mp/games/mm"
+    },
+    "related": [
+      {
+        "name": "2 Ship 2 Harkinian",
+        "kind": "PC port",
+        "repo": "2ship2harkinian/2ship2harkinian"
+      },
+      {
+        "name": "Zelda 64: Recompiled",
+        "kind": "Recompilation",
+        "repo": "Zelda64Recomp/Zelda64Recomp"
+      }
+    ],
+    "image": "assets/icons/mm.webp"
+  }
+]

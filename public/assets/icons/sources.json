@@ -1,0 +1,94 @@
+{
+  "sm64": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Super%20Mario%2064%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "oot": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Legend%20of%20Zelda%2C%20The%20-%20Ocarina%20of%20Time%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "mm": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Legend%20of%20Zelda%2C%20The%20-%20Majora%27s%20Mask%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "mk64": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Nintendo_64/master/Named_Boxarts/Mario%20Kart%2064%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "galaxy": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Wii/master/Named_Boxarts/Super%20Mario%20Galaxy%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "galaxy2": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Wii/master/Named_Boxarts/Super%20Mario%20Galaxy%202%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "mkw": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Wii/master/Named_Boxarts/Mario%20Kart%20Wii%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "brawl": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Wii/master/Named_Boxarts/Super%20Smash%20Bros.%20Brawl%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "sports": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Wii/master/Named_Boxarts/Wii%20Sports%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "ss": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Wii/master/Named_Boxarts/Legend%20of%20Zelda%2C%20The%20-%20Skyward%20Sword%20%28USA%29%20%28En%2CFr%2CEs%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "tww": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Legend%20of%20Zelda%2C%20The%20-%20The%20Wind%20Waker%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "sunshine": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Super%20Mario%20Sunshine%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "mkdd": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Mario%20Kart%20-%20Double%20Dash%21%21%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "melee": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Super%20Smash%20Bros.%20Melee%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "sfa": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Star%20Fox%20Adventures%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "lm": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Luigi%27s%20Mansion%20%28USA%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "sadx": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Sonic%20Adventure%20DX%20-%20Director%27s%20Cut%20%28USA%29%20%28En%2CJa%2CFr%2CDe%2CEs%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "advance": {
+    "source": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/master/Named_Boxarts/Sonic%20Advance%20%28USA%29%20%28En%2CJa%29.png",
+    "credit": "Original game cover artwork \u00a9 Nintendo / Sega and respective creators; cover archive: Libretro thumbnails."
+  },
+  "alttp": {
+    "source": "icon.png",
+    "credit": "Owner project HOME Menu icon artwork",
+    "original": "originals/alttp.png"
+  },
+  "minish": {
+    "source": "icon.png",
+    "credit": "Owner project HOME Menu icon artwork",
+    "original": "originals/minish.png"
+  },
+  "starwing": {
+    "source": "starfox-icon-original.jpg",
+    "credit": "Owner project HOME Menu icon artwork",
+    "original": "originals/starwing.jpg"
+  },
+  "doom": {
+    "source": "legend-of-doom.png",
+    "credit": "Existing approved Legend of Doom logo",
+    "original": "originals/doom.png"
+  }
+}

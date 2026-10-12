@@ -1,0 +1,101 @@
+{
+  "scope": "Documented development captures. Historical pack builds and combined Auto builds are labelled individually. No physical performance claim.",
+  "scenes": [
+    {
+      "scene": "wario",
+      "game": "Virtual Boy Wario Land",
+      "session": "matrix-wario-color-04",
+      "evidence": "gameplay-stereo-final.png",
+      "mode": "Color pack",
+      "build_prefix": "01800cb8",
+      "crop": [
+        0,
+        262,
+        968,
+        565
+      ],
+      "source_sha256": "ccfeea8c64853f50cd4f9d7cccaa99b3683d38c2efee62f4c8318a59ad81f55d",
+      "scope": "Azahar on macOS; not a physical 3DS capture"
+    },
+    {
+      "scene": "tennis",
+      "game": "Mario\u2019s Tennis",
+      "session": "matrix-tennis-color-02",
+      "evidence": "gameplay-action-confirmed.png",
+      "mode": "Color pack",
+      "build_prefix": "7f8293a9",
+      "crop": [
+        0,
+        262,
+        968,
+        565
+      ],
+      "source_sha256": "60387762883c8267157bd8989fd86750db69aa5d23c0cab0e81613667f090833",
+      "scope": "Azahar on macOS; not a physical 3DS capture"
+    },
+    {
+      "scene": "jack",
+      "game": "Jack Bros.",
+      "session": "matrix-jack-color-04",
+      "evidence": "gameplay-action-confirmed.png",
+      "mode": "Color pack",
+      "build_prefix": "7f8293a9",
+      "crop": [
+        0,
+        262,
+        968,
+        565
+      ],
+      "source_sha256": "784193d78b409fad9bc2672dcf3ad3d376843a91f2e68de6244aee6dc6be49d0",
+      "scope": "Azahar on macOS; not a physical 3DS capture"
+    },
+    {
+      "scene": "vertical",
+      "game": "Vertical Force",
+      "session": "matrix-verticalforce-usa-color-01",
+      "evidence": "gameplay-action-confirmed.png",
+      "mode": "Color pack",
+      "build_prefix": "7f8293a9",
+      "crop": [
+        0,
+        262,
+        968,
+        565
+      ],
+      "source_sha256": "c1e9365d305217c987c1f73e7568bbd5a4a6a63ec892b1da964450baf56bb450",
+      "scope": "Azahar on macOS; not a physical 3DS capture"
+    },
+    {
+      "scene": "bowling",
+      "game": "Virtual Bowling",
+      "session": "matrix-bowling-auto-03-01",
+      "evidence": "gameplay-action-confirmed.png",
+      "mode": "Pack + Auto",
+      "build_prefix": "823315b2",
+      "crop": [
+        0,
+        215,
+        1230,
+        718
+      ],
+      "source_sha256": "5ee78806e88e6c4171bdcbee338df390f1f6b516ea0df09af01fa33e5c5c0348",
+      "scope": "Azahar on macOS; not a physical 3DS capture"
+    },
+    {
+      "scene": "golf",
+      "game": "Golf",
+      "session": "matrix-golf-auto-03-01",
+      "evidence": "gameplay-direction-confirmed.png",
+      "mode": "Pack + Auto",
+      "build_prefix": "823315b2",
+      "crop": [
+        0,
+        439,
+        1452,
+        848
+      ],
+      "source_sha256": "175e6ab55aeb78725bca7581dc7df7b080b318efe701bdc90a79edf7026f9684",
+      "scope": "Azahar on macOS; not a physical 3DS capture"
+    }
+  ]
+}

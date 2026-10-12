@@ -1,0 +1,347 @@
+{
+  "reference": "Owner-supplied original Nintendo DS menu screenshot",
+  "reference_sha256": "de80c923cffd6efd66d8755d50f4cb44b705024d1dc4c980a7f45b0d89a1a411",
+  "rights_holder": "Nintendo (original DS UI); Discord (Discord mark)",
+  "assets": [
+    {
+      "file": "ui/ds-console.png",
+      "native_dimensions": [
+        21,
+        21
+      ],
+      "crop_box": [
+        117,
+        362,
+        138,
+        383
+      ],
+      "processing": "Native pixels preserved; isolated rectangular sprite bounds",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/pictochat-console.png",
+      "native_dimensions": [
+        16,
+        16
+      ],
+      "crop_box": [
+        111,
+        296,
+        127,
+        312
+      ],
+      "processing": "Native pixels preserved; isolated rectangular sprite bounds",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/gba-cartridge.png",
+      "native_dimensions": [
+        32,
+        21
+      ],
+      "crop_box": [
+        40,
+        326,
+        72,
+        347
+      ],
+      "processing": "Native pixels preserved; isolated rectangular sprite bounds",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/game-card.png",
+      "native_dimensions": [
+        11,
+        11
+      ],
+      "crop_box": [
+        209,
+        2,
+        220,
+        13
+      ],
+      "processing": "Native pixels preserved; isolated rectangular sprite bounds",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/brightness.png",
+      "native_dimensions": [
+        11,
+        11
+      ],
+      "crop_box": [
+        10,
+        367,
+        21,
+        378
+      ],
+      "processing": "LCD background pixels made transparent; icon pixels retained",
+      "dark_variant": false
+    },
+    {
+      "file": "ui/alarm.png",
+      "native_dimensions": [
+        13,
+        11
+      ],
+      "crop_box": [
+        234,
+        367,
+        247,
+        378
+      ],
+      "processing": "LCD background pixels made transparent; icon pixels retained",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/top-screen.png",
+      "native_dimensions": [
+        21,
+        21
+      ],
+      "crop_box": [
+        117,
+        362,
+        138,
+        383
+      ],
+      "processing": "Original DS console sprite with the named display highlighted",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/touch-screen.png",
+      "native_dimensions": [
+        21,
+        21
+      ],
+      "crop_box": [
+        117,
+        362,
+        138,
+        383
+      ],
+      "processing": "Original DS console sprite with the named display highlighted",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/menu-gradient.png",
+      "native_dimensions": [
+        96,
+        42
+      ],
+      "crop_box": [
+        36,
+        266,
+        38,
+        308
+      ],
+      "processing": "Native two-column dither repeated across 96 pixels; keep square pixel scaling on both axes",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/status-gradient.png",
+      "native_dimensions": [
+        2,
+        15
+      ],
+      "crop_box": [
+        50,
+        0,
+        52,
+        15
+      ],
+      "processing": "Text-free original status bar including the two-pixel dither",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/top-grid.png",
+      "native_dimensions": [
+        16,
+        16
+      ],
+      "crop_box": [
+        0,
+        16,
+        16,
+        32
+      ],
+      "processing": "Native grid and equidistant lines retained; the full pattern uses subdued contrast",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/bottom-grid.png",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "crop_box": [
+        0,
+        192,
+        32,
+        224
+      ],
+      "processing": "Unobstructed lower LCD cell reconstructed from reference scanlines and grid color; continuous right and bottom edges at the existing 32-pixel tile size",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/background-grid.png",
+      "native_dimensions": [
+        16,
+        16
+      ],
+      "crop_box": [
+        0,
+        16,
+        16,
+        32
+      ],
+      "processing": "Native grid retained with lower contrast outside the LCD panels",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/clock-grid.png",
+      "native_dimensions": [
+        16,
+        16
+      ],
+      "crop_box": [
+        0,
+        16,
+        16,
+        32
+      ],
+      "processing": "The same native grid with a fainter LCD line palette for the clock",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/file-lines.png",
+      "native_dimensions": [
+        2,
+        2
+      ],
+      "crop_box": null,
+      "processing": "Selected-file LCD lines, without a screen-wide overlay",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/notes.png",
+      "native_dimensions": [
+        20,
+        21
+      ],
+      "crop_box": null,
+      "processing": "Custom pixel document icon for Project notes; no cartridge imagery",
+      "dark_variant": true
+    },
+    {
+      "file": "ui/wireless.png",
+      "native_dimensions": [
+        17,
+        13
+      ],
+      "crop_box": null,
+      "processing": "Custom pixel wireless connection indicator for the status bar",
+      "dark_variant": false
+    },
+    {
+      "file": "ui/battery.png",
+      "native_dimensions": [
+        12,
+        7
+      ],
+      "crop_box": [
+        240,
+        3,
+        255,
+        12
+      ],
+      "processing": "Original status-bar battery; blue background and outside transparent margin removed",
+      "dark_variant": false
+    },
+    {
+      "file": "ui/clock-12.png",
+      "native_dimensions": [
+        16,
+        20
+      ],
+      "crop_box": [
+        50,
+        49,
+        78,
+        71
+      ],
+      "processing": "Original clock numeral isolated from the supplied DS menu; native pixels retained",
+      "dark_variant": false
+    },
+    {
+      "file": "ui/clock-3.png",
+      "native_dimensions": [
+        12,
+        20
+      ],
+      "crop_box": [
+        89,
+        79,
+        111,
+        107
+      ],
+      "processing": "Original clock numeral isolated from the supplied DS menu; native pixels retained",
+      "dark_variant": false
+    },
+    {
+      "file": "ui/clock-6.png",
+      "native_dimensions": [
+        12,
+        20
+      ],
+      "crop_box": [
+        50,
+        120,
+        77,
+        143
+      ],
+      "processing": "Original clock numeral isolated from the supplied DS menu; native pixels retained",
+      "dark_variant": false
+    },
+    {
+      "file": "ui/clock-9.png",
+      "native_dimensions": [
+        12,
+        20
+      ],
+      "crop_box": [
+        17,
+        79,
+        39,
+        109
+      ],
+      "processing": "Original clock numeral isolated from the supplied DS menu; native pixels retained",
+      "dark_variant": false
+    },
+    {
+      "file": "ui/discord.svg",
+      "native_dimensions": [
+        64,
+        48
+      ],
+      "crop_box": null,
+      "processing": "Original Discord symbol and proportions; black/white theme variants",
+      "dark_variant": true,
+      "source": "https://discord.com/branding"
+    }
+  ],
+  "logo": {
+    "file": "assets/logos/super-mario-64-ds-hd.webp",
+    "source": "https://mario.wiki.gallery/images/4/46/Super_Mario_64_DS_logo.jpg",
+    "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+    "original_dimensions": [
+      1904,
+      966
+    ],
+    "delivery_dimensions": [
+      1925,
+      992
+    ],
+    "processing": "Exterior white matte removed; native resolution and artwork preserved; 16px safety margin"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "game-boy-advance-indigo.png": {
+    "source": "https://commons.wikimedia.org/wiki/File:Nintendo-Game-Boy-Advance-Purple-FL.png",
+    "asset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Nintendo-Game-Boy-Advance-Purple-FL.png/1920px-Nintendo-Game-Boy-Advance-Purple-FL.png",
+    "author": "Evan-Amos",
+    "license": "Public domain (PD-self)",
+    "presentation": "Unmodified source thumbnail, project preview overlaid in HTML/SVG on its display."
+  },
+  "a-link-to-the-past-cartridge.jpg": {
+    "source": "https://www.powerupgaming.ca/products/snes-gm-lozlttp",
+    "asset": "https://www.powerupgaming.ca/cdn/shop/products/127913-the-legend-of-zelda-a-link-to-the-past-snes-media.jpg?v=1702967969&width=800",
+    "credit": "Power Up Gaming catalogue; original Nintendo game cartridge",
+    "license": "No explicit reuse licence stated on source page; do not describe as CC or public domain.",
+    "presentation": "Unmodified catalogue image. White margins outside cartridge hidden through SVG viewport."
+  },
+  "design_references": {
+    "minish_cap": [
+      {
+        "source": "https://www.ebay.com/itm/325240341589",
+        "description": "Original 2005 promotional print page: green backdrop, large Zelda mark, cream text area and three framed gameplay screenshots. Inspected the source photograph; used as reference only."
+      },
+      {
+        "source": "https://retromtl.com/en/products/zelda-minish-cap-game-boy-advance-gba",
+        "description": "Original North American box, instruction booklet and cartridge: silver vertical Game Boy Advance band, forest greens, cream, red logo. Inspected photograph; reference only."
+      },
+      {
+        "source": "https://www.dkoldies.com/legend-of-zelda-minish-cap-game-boy-advance-manual/",
+        "description": "Original instruction booklet cover: dense miniature forest and oversized flowers; reference only."
+      }
+    ],
+    "a_link_to_the_past": [
+      {
+        "source": "https://www.mobygames.com/game/6608/the-legend-of-zelda-a-link-to-the-past/promo/group-54848/image-468243/",
+        "description": "Power Play Germany November1992 promotion: dark ground, gold headings, framed game-pixel screenshots. Inspected actual ad photograph; reference only."
+      },
+      {
+        "source": "https://www.nintendo.co.jp/clvs/manuals/common/pdf/CLV-P-SAAEE.pdf",
+        "description": "Nintendo-hosted original instruction manual; source reference for game booklet framing, not reproduced."
+      },
+      {
+        "source": "https://www.lastdodo.com/en/items/1043463-the-legend-of-zelda-a-link-to-the-past",
+        "description": "Original1992 gold SNES box: gold, red, shield/sword, fine serif title; reference only."
+      }
+    ]
+  }
+}

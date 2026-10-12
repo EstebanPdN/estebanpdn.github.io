@@ -1,0 +1,531 @@
+@import url('assets/fonts/dmsans.css');
+@import url('assets/fonts/nunito.css');
+/* One permanent console bar, with its own typography and palette on every route. */
+:root {
+  --forge-header-background: #fff;
+  --forge-header-line: #dce5e8;
+  --forge-header-height: clamp(80px, 10.4svh, 110px);
+  scroll-padding-top: calc(var(--forge-header-height) + 24px);
+  scrollbar-gutter: stable !important;
+}
+:root[data-theme='dark'] {
+  --forge-header-background: #242426;
+  --forge-header-line: #ffffff18;
+}
+.forge-header-band {
+  position: sticky;
+  top: 0;
+  z-index: 10001;
+  width: 100%;
+  background: var(--forge-header-background);
+  border-bottom: 1px solid var(--forge-header-line);
+  color: #38464d;
+  font:
+    400 16px/1.4 Nunito,
+    'DM Sans',
+    sans-serif;
+  font-synthesis: none;
+  box-shadow: 0 8px 25px #334b5408;
+  isolation: isolate;
+}
+.forge-header-band * {
+  box-sizing: border-box;
+}
+.forge-header-shell {
+  max-width: 1640px;
+  padding-inline: clamp(24px, 5.5vw, 100px);
+  margin: auto;
+}
+.forge-header-band .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 1440px;
+  margin: auto;
+  height: var(--forge-header-height);
+  padding: 0;
+  border: 0;
+}
+.forge-header-band .brand-home {
+  display: flex;
+  flex-shrink: 0;
+}
+.forge-header-band .brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font:
+    400 25px/1.2 'DM Sans',
+    sans-serif;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 24px;
+}
+.forge-header-band .brand b {
+  font-weight: 750;
+}
+.forge-header-band .avatar {
+  display: block;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px #33495412;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.forge-header-band .avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+.forge-header-band .dual-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.forge-header-band .dual-navigation button {
+  position: relative;
+  display: block;
+  margin: 0;
+  border: 0;
+  border-radius: 24px;
+  background: transparent;
+  padding: 10px 22px;
+  color: #829097;
+  font:
+    800 15px/1.4 Nunito,
+    sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color 0.25s,
+    background 0.35s,
+    box-shadow 0.5s;
+}
+.forge-header-band .dual-navigation button[aria-pressed='true'] {
+  background: linear-gradient(125deg, #fff, #ecf4f8);
+  color: #40545d;
+  box-shadow:
+    0 4px 10px #34495a10,
+    inset 0 1px 0 #fff;
+}
+.forge-header-band .dual-navigation button:after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 35%;
+  right: 35%;
+  height: 2px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #70c8cd, #b4a1d9);
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition:
+    opacity 0.3s,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.forge-header-band .dual-navigation button[aria-pressed='true']:after {
+  opacity: 0.7;
+  transform: scaleX(1);
+}
+.forge-header-band .system-clock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #63757d;
+  font:
+    800 16px/1.4 Nunito,
+    sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+.forge-header-band [data-clock] {
+  margin-right: 10px;
+}
+.forge-header-band .battery {
+  display: grid;
+  place-items: center;
+  position: relative;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  padding: 0;
+  border: 0;
+  opacity: 1;
+  color: inherit;
+  background: transparent;
+}
+.forge-header-band .battery:before,
+.forge-header-band .battery:after {
+  content: none;
+}
+.forge-header-band .battery svg {
+  display: block;
+  width: 27px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+}
+.forge-header-band .battery-charge {
+  fill: currentColor;
+  stroke: none;
+}
+.forge-header-band .system-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  opacity: 1;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.forge-header-band .ui-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.forge-header-band .system-icon:hover {
+  color: #334e5b;
+  background: transparent;
+  transform: none;
+}
+.forge-header-band .theme-sun,
+.forge-header-band .speaker-on {
+  display: none;
+}
+.forge-header-band .sound[aria-pressed='true'] .speaker-off {
+  display: none;
+}
+.forge-header-band .sound[aria-pressed='true'] .speaker-on {
+  display: block;
+}
+.forge-header-band a:focus-visible,
+.forge-header-band button:focus-visible {
+  outline: 3px solid #7ebac7;
+  outline-offset: 6px;
+}
+:root[data-theme='dark'] .forge-header-band {
+  color: #ededee;
+  box-shadow: 0 8px 25px #0002;
+}
+:root[data-theme='dark'] .forge-header-band .system-clock {
+  color: #ced2d5;
+}
+:root[data-theme='dark'] .forge-header-band .dual-navigation button {
+  color: #aaa9ad;
+}
+:root[data-theme='dark'] .forge-header-band .dual-navigation button[aria-pressed='true'] {
+  background: linear-gradient(145deg, #454548, #303033);
+  color: #f3f3f5;
+  box-shadow:
+    0 4px 10px #0003,
+    inset 0 1px 0 #ffffff12;
+}
+:root[data-theme='dark'] .forge-header-band .theme-moon {
+  display: none;
+}
+:root[data-theme='dark'] .forge-header-band .theme-sun {
+  display: block;
+}
+:root[data-theme='dark'] .forge-header-band .system-icon:hover {
+  color: #fff;
+}
+:root:is(.welcome-pending, .welcome-open) .forge-header-band {
+  visibility: hidden;
+}
+@media (max-width: 1000px) and (min-width: 901px) {
+  .forge-header-shell {
+    padding-inline: 35px;
+  }
+  .forge-header-band .brand {
+    font-size: 21px;
+  }
+  .forge-header-band .dual-navigation button {
+    padding: 9px 15px;
+  }
+}
+@media (max-width: 900px) {
+  :root {
+    --forge-header-height: 96px;
+  }
+  .forge-header-shell {
+    padding-inline: 16px;
+  }
+  .forge-header-band .site-header {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 12px 0 10px;
+  }
+  .forge-header-band .brand {
+    font-size: 17px;
+    gap: 7px;
+  }
+  .forge-header-band .avatar {
+    width: 30px;
+    height: 30px;
+  }
+  .forge-header-band .system-clock {
+    gap: 1px;
+    font-size: 12px;
+    order: 2;
+  }
+  .forge-header-band [data-clock] {
+    margin-right: 3px;
+  }
+  .forge-header-band .battery {
+    flex-basis: 25px;
+    width: 25px;
+    height: 25px;
+    margin-right: 0;
+  }
+  .forge-header-band .battery svg {
+    width: 24px;
+    height: 16px;
+  }
+  .forge-header-band .system-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .forge-header-band .ui-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .forge-header-band .dual-navigation {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+  .forge-header-band .dual-navigation button {
+    padding: 7px 22px;
+    font-size: 13px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  :root {
+    --forge-header-height: 118px;
+  }
+  .forge-header-shell {
+    padding-inline: clamp(28px, 5vw, 44px);
+  }
+  .forge-header-band .site-header {
+    padding-block: 18px 14px;
+    row-gap: 12px;
+  }
+  .forge-header-band .brand {
+    font-size: 22px;
+    gap: 10px;
+  }
+  .forge-header-band .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .forge-header-band .system-clock {
+    font-size: 14px;
+    gap: 3px;
+  }
+}
+@media (max-width: 389px) {
+  .forge-header-band .brand {
+    font-size: 15px;
+    gap: 5px;
+  }
+  .forge-header-band .avatar {
+    width: 26px;
+    height: 26px;
+  }
+  .forge-header-band .system-clock {
+    font-size: 11px;
+    gap: 0;
+  }
+  .forge-header-band [data-clock] {
+    margin-right: 1px;
+  }
+  .forge-header-band .battery {
+    flex-basis: 22px;
+    width: 22px;
+  }
+  .forge-header-band .system-icon {
+    width: 24px;
+  }
+}
+@media (max-width: 359px) {
+  .forge-header-shell {
+    padding-inline: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .forge-header-band * {
+    transition: none !important;
+  }
+}
+
+/* One console selection surface slides between Collection, Progress and Info. */
+.forge-header-band .dual-navigation {
+  position: relative;
+  isolation: isolate;
+}
+.forge-header-band .nav-selection {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--nav-selection-width, 116px);
+  transform: translateX(var(--nav-selection-left, 0px));
+  border-radius: 24px;
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(125deg, #fff, #ecf4f8);
+  box-shadow:
+    0 4px 10px #34495a10,
+    inset 0 1px 0 #fff;
+}
+.forge-header-band .dual-navigation.is-ready .nav-selection {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.forge-header-band .nav-selection:after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 35%;
+  right: 35%;
+  height: 2px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #70c8cd, #b4a1d9);
+  opacity: 0.7;
+}
+.forge-header-band .dual-navigation button[aria-pressed='true'],
+:root[data-theme='dark'] .forge-header-band .dual-navigation button[aria-pressed='true'] {
+  background: transparent;
+  box-shadow: none;
+}
+.forge-header-band .dual-navigation button:after {
+  display: none;
+}
+:root[data-theme='dark'] .forge-header-band .nav-selection {
+  background: linear-gradient(145deg, #454548, #303033);
+  box-shadow:
+    0 4px 10px #0003,
+    inset 0 1px 0 #ffffff12;
+}
+@media (prefers-reduced-motion: reduce) {
+  .forge-header-band .dual-navigation.is-ready .nav-selection {
+    transition: none;
+  }
+}
+
+@media (max-width: 359px) {
+  .forge-header-band .dual-navigation button {
+    padding-inline: 18px;
+  }
+}
+
+/* Compact phone rhythm and comfortable touch targets. */
+@media (max-width: 600px) {
+  :root {
+    --forge-header-height: 104px;
+    scrollbar-gutter: auto !important;
+  }
+  .forge-header-shell {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+  .forge-header-band .site-header {
+    padding-block: 6px;
+    gap: 4px 6px;
+  }
+  .forge-header-band .dual-navigation {
+    gap: 4px;
+  }
+  .forge-header-band .dual-navigation button {
+    min-height: 44px;
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+  .forge-header-band .system-clock .system-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .forge-header-band .system-clock .battery {
+    display: none;
+  }
+  .forge-header-band .brand {
+    font-size: 16px;
+  }
+}
+@media (max-width: 359px) {
+  .forge-header-band [data-clock] {
+    display: none;
+  }
+  .forge-header-band .brand {
+    font-size: 15px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) and (max-height: 600px) {
+  :root {
+    --forge-header-height: 64px;
+  }
+  .forge-header-shell {
+    padding-inline: 20px;
+  }
+  .forge-header-band .site-header {
+    flex-wrap: nowrap;
+    padding: 8px 0;
+    gap: 12px;
+  }
+  .forge-header-band .brand {
+    font-size: 18px;
+    gap: 8px;
+  }
+  .forge-header-band .avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .forge-header-band .dual-navigation {
+    width: auto;
+    order: 2;
+    gap: 3px;
+  }
+  .forge-header-band .dual-navigation button {
+    font-size: 12px;
+    padding: 10px 13px;
+    min-height: 44px;
+  }
+  .forge-header-band .system-clock {
+    order: 3;
+  }
+  .forge-header-band [data-clock],
+  .forge-header-band .battery {
+    display: none;
+  }
+  .forge-header-band .system-clock .system-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

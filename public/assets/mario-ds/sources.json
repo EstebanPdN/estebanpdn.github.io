@@ -1,0 +1,259 @@
+{
+  "assets": [
+    {
+      "file": "yoshi.webp",
+      "source": "https://mario.wiki.gallery/images/6/68/SM64DS_Yoshi_Artwork.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "purpose": "Original game artwork for editorial project presentation; not a port gameplay capture",
+      "original_dimensions": [
+        2253,
+        2622
+      ],
+      "delivery_dimensions": [
+        1375,
+        1600
+      ],
+      "bytes": 143554
+    },
+    {
+      "file": "mario.webp",
+      "source": "https://mario.wiki.gallery/images/6/66/Mario_SM64DS_art.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "purpose": "Original game artwork for editorial project presentation; not a port gameplay capture",
+      "original_dimensions": [
+        1586,
+        2920
+      ],
+      "delivery_dimensions": [
+        869,
+        1600
+      ],
+      "bytes": 127650
+    },
+    {
+      "file": "luigi.webp",
+      "source": "https://mario.wiki.gallery/images/f/f5/Luigi_Artwork_-_Super_Mario_64_DS.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "purpose": "Original game artwork for editorial project presentation; not a port gameplay capture",
+      "original_dimensions": [
+        1829,
+        2271
+      ],
+      "delivery_dimensions": [
+        1289,
+        1600
+      ],
+      "bytes": 139984
+    },
+    {
+      "file": "wario.webp",
+      "source": "https://mario.wiki.gallery/images/8/89/Wario_SM64DS_art.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "purpose": "Original game artwork for editorial project presentation; not a port gameplay capture",
+      "original_dimensions": [
+        2088,
+        2413
+      ],
+      "delivery_dimensions": [
+        1385,
+        1600
+      ],
+      "bytes": 188526
+    },
+    {
+      "file": "group.webp",
+      "source": "https://mario.wiki.gallery/images/0/0d/SM64DS_group_art.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "purpose": "Original game artwork for editorial project presentation; not a port gameplay capture",
+      "original_dimensions": [
+        1036,
+        813
+      ],
+      "delivery_dimensions": [
+        1036,
+        813
+      ],
+      "bytes": 115004
+    },
+    {
+      "file": "logo-pixel.png",
+      "source": "https://mario.wiki.gallery/images/4/45/SM64DS_Logo_ingame.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "purpose": "Original game artwork for editorial project presentation; not a port gameplay capture",
+      "original_dimensions": [
+        236,
+        117
+      ],
+      "delivery_dimensions": [
+        236,
+        117
+      ],
+      "bytes": 11817
+    },
+    {
+      "file": "pixelify-sans.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/pixelifysans/PixelifySans%5Bwght%5D.ttf",
+      "license": "SIL Open Font License 1.1",
+      "purpose": "Open-license DS-like pixel typography"
+    },
+    {
+      "file": "OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/pixelifysans/OFL.txt",
+      "license": "SIL Open Font License 1.1",
+      "purpose": "Open-license DS-like pixel typography"
+    },
+    {
+      "file": "manual-cover.jpg",
+      "source": "https://www.nintendo.com/eu/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_SuperMario64DS_EN.pdf",
+      "rights_holder": "Nintendo",
+      "source_page": 1,
+      "delivery_dimensions": [
+        1000,
+        939
+      ],
+      "purpose": "Original instruction booklet cover"
+    },
+    {
+      "file": "grass-texture.webp",
+      "source": "https://www.nintendo.com/eu/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_SuperMario64DS_EN.pdf",
+      "rights_holder": "Nintendo",
+      "source_page": 4,
+      "crop_box": [
+        1280,
+        1480,
+        1920,
+        1900
+      ],
+      "delivery_dimensions": [
+        640,
+        420
+      ],
+      "purpose": "Text-free manual grass ground crop; decorative background at natural size"
+    },
+    {
+      "file": "yoshi-icon.png",
+      "source": "https://mario.wiki.gallery/images/1/17/SM64DS_Yoshi_Level_Start_Sprite.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "delivery_dimensions": [
+        70,
+        78
+      ],
+      "purpose": "Original level-start portrait sprite; preserve pixels using nearest-neighbor/image-rendering pixelated"
+    },
+    {
+      "file": "mario-icon.png",
+      "source": "https://mario.wiki.gallery/images/1/12/SM64DS_Mario_Level_Start_Sprite.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "delivery_dimensions": [
+        68,
+        76
+      ],
+      "purpose": "Original level-start portrait sprite; preserve pixels using nearest-neighbor/image-rendering pixelated"
+    },
+    {
+      "file": "luigi-icon.png",
+      "source": "https://mario.wiki.gallery/images/0/04/SM64DS_Luigi_Level_Start_Sprite.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "delivery_dimensions": [
+        60,
+        80
+      ],
+      "purpose": "Original level-start portrait sprite; preserve pixels using nearest-neighbor/image-rendering pixelated"
+    },
+    {
+      "file": "wario-icon.png",
+      "source": "https://mario.wiki.gallery/images/f/ff/SM64DS_Wario_Level_Start_Sprite.png",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "delivery_dimensions": [
+        69,
+        77
+      ],
+      "purpose": "Original level-start portrait sprite; preserve pixels using nearest-neighbor/image-rendering pixelated"
+    },
+    {
+      "file": "power-star.png",
+      "source": "https://www.mariowiki.com/images/c/c9/SM64DS_Star_map_icon.png",
+      "reference": "https://www.mariowiki.com/File:SM64DS_Star_map_icon.png",
+      "original_source": "https://www.spriters-resource.com/ds_dsi/supermario64ds/asset/137713/",
+      "rip_credit": "Storice",
+      "rights_holder": "Nintendo",
+      "delivery_dimensions": [
+        27,
+        26
+      ],
+      "processing": "Original transparent sprite preserved byte-for-byte. Nearest-neighbor pixel rendering in CSS.",
+      "sha256": "23eadeb1952b9f96bcb35620ab2bd1dacc23a75d31b6b1f6d13d431c0bb1d036"
+    },
+    {
+      "file": "collection-ds-scene.jpg",
+      "title": "Four heroes emerging from the Nintendo DS",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "source_url": "https://superluigibros.com/wp-content/uploads/2010/05/sm64ds_1024x768.jpg",
+      "catalogue_url": "https://superluigibros.com/nintendo-ds-desktop-wallpaper/",
+      "provenance": "Nintendo-branded promotional wallpaper mirrored by Super Luigi Bros; image footer credits Nintendo (2004 or 2004-2005). Original Nintendo download endpoint not independently located.",
+      "rights_holder": "Nintendo",
+      "sha256": "b51cc4a8c2f02ad813d7f58a50db7aa1896493a63c3079a13f1cf56274ebc813",
+      "notes": "Recommended. A complete scene with the original silver handheld, castle background and all four heroes. Lower-right game logo can be excluded using CSS cover at landscape aspect ratio and object-position:50% 25%. Preserve original bytes.",
+      "purpose": "Collection card backdrop only; source JPEG unchanged; not a port gameplay capture",
+      "processing": "Original JPEG bytes preserved; CSS frames source rows48-624 at standard landscape ratios, keeping the embedded footer logo outside the displayed card",
+      "original_dimensions": [
+        1024,
+        768
+      ]
+    },
+    {
+      "file": "../logos/super-mario-64-ds-hd.webp",
+      "source": "https://mario.wiki.gallery/images/4/46/Super_Mario_64_DS_logo.jpg",
+      "reference": "https://www.mariowiki.com/Gallery:Super_Mario_64_DS",
+      "rights_holder": "Nintendo",
+      "original_dimensions": [
+        1904,
+        966
+      ],
+      "delivery_dimensions": [
+        1925,
+        992
+      ],
+      "processing": "Exterior white matte removed at native resolution; inner silver lettering preserved; 16px safety margin; lossless WebP",
+      "purpose": "Clean logo for project hero and collection/progress cards; original low-resolution files retained"
+    },
+    {
+      "file": "nintendo-ds.ttf",
+      "source": "https://www.fontstruct.com/font_archives/download/255896",
+      "reference": "https://www.fontstruct.com/fontstructions/show/255896/nintendo_ds_1",
+      "author": "cheezonpeaz41",
+      "license": "Creative Commons Attribution Share Alike 3.0",
+      "license_file": "nintendo-ds-LICENSE.txt",
+      "readme_file": "nintendo-ds-README.txt",
+      "purpose": "Native DS menu font recreation; replaces the generic Pixelify Sans menu typeface"
+    }
+  ],
+  "design_references": [
+    {
+      "reference": "User supplied ds-original-menu.png",
+      "native_dimensions": [
+        256,
+        384
+      ],
+      "notes": "Original Nintendo DS menu reference: top grid 16 native pixels, lower grid 32; horizontal LCD lines only inside cells, fainter inside clock; button gradients alternate flat grays and ordered dither. Native UI sprites and processing are documented in ui/sources.json."
+    },
+    {
+      "reference": "https://www.nintendo.com/eu/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_SuperMario64DS_EN.pdf",
+      "notes": "Grass green ground, blue chapter ribbons with a gold star, lime subheads and page semicircles, cream callouts, red/Mario green/Luigi purple/Wario lime/Yoshi character accents."
+    }
+  ],
+  "ui_manifest": "ui/sources.json"
+}

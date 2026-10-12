@@ -1,0 +1,16 @@
+# Verificación de la versión 1.0.0
+
+La referencia independiente es una copia local del sitio anterior, tomada del commit `a03017d6f9181a636bb4b7b9553cfb0a3baaaa3e`. No forma parte del repositorio publicado. Las pruebas se ejecutaron el 12 de octubre de 2026 en macOS con Node.js 26.8.1, Python 3.14.7 y Playwright 1.64.0.
+
+| Comprobación                                   | Resultado | Alcance                                                                                                                                                                                                                               |
+| ---------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm test`                                     | Aprobada  | Sintaxis, comportamiento de escenas, navegación, galerías, interacción, datos y referencias locales de las 10 páginas.                                                                                                                |
+| `npm run test:browser`                         | Aprobada  | Carga directa de las 10 rutas en Chromium y WebKit; galería, tema e historial sin recarga del documento en Chromium.                                                                                                                  |
+| `node tests/preservation.mjs /ruta/a/baseline` | Aprobada  | 24 árboles de sintaxis JavaScript equivalentes, 18 hojas CSS con igual contenido y 446 recursos anteriores idénticos byte por byte. El registro de procedencia añadido es un archivo nuevo.                                           |
+| `npm run test:visual -- /ruta/a/baseline/dist` | Aprobada  | 96 comparaciones controladas de rutas, tamaños y temas: 92 idénticas en los píxeles visibles; cuatro con entre 3 y 11 píxeles distintos. Ninguna superó el margen de 0,005 %; no hubo errores de script ni recursos locales ausentes. |
+| `npm run provenance:check`                     | Aprobada  | 443 archivos de `public/assets/` tienen ruta, tamaño, SHA-256 y estado de evidencia.                                                                                                                                                  |
+| `npm run format:check`                         | Aprobada  | Código, documentación y configuración mantenidos siguen el formato del proyecto.                                                                                                                                                      |
+
+La comparación visual ignora diferencias de antialiasing de fuentes y tolera hasta el 0,005 % de píxeles visibles por captura. Conserva las dimensiones de página como condición estricta y registra cada imagen en `.review/visual/` fuera de Git. La página nueva de créditos no existía en la referencia y se revisó separadamente en el navegador.
+
+El inventario de procedencia registra lo que existe en los manifiestos del proyecto; una fuente citada o una licencia nombrada no demuestran por sí mismas que todos los titulares hayan autorizado esta redistribución. Los permisos no comprobados quedan señalados como tales.

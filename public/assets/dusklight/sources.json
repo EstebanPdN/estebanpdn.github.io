@@ -1,0 +1,156 @@
+{
+  "project": "Dusklight page visual references",
+  "status": "Integrated into the Dusklight page and Forge collection card",
+  "license": "Original Nintendo copyrighted promotional artwork and booklet scans. Not public domain and no open redistribution license asserted. Use as attributed editorial game/project reference. Source-gallery availability does not imply an open license.",
+  "manual": {
+    "title": "The Legend of Zelda: Twilight Princess - Nintendo GameCube instruction booklet",
+    "edition": "English USA scan; 19 viewer pages, most are two-page spreads",
+    "url": "https://manuall.co.uk/nintendo-gamecube-the-legend-of-zelda-twilight-princess/",
+    "cover_url": "https://manuals-us.handleidingkwijt.com/html/460895/bg1.png",
+    "reference_spreads": [
+      "https://manuals-us.handleidingkwijt.com/html/460895/bg3.png",
+      "https://manuals-us.handleidingkwijt.com/html/460895/bg4.png",
+      "https://manuals-us.handleidingkwijt.com/html/460895/bg5.png"
+    ],
+    "download_note": "Public viewer directly verified. PDF download requires the sites interactive CAPTCHA; no bypass attempted. French GameCube PDF available in web viewer at alternate_url but local download returned403.",
+    "alternate_url": "https://manuals.plus/m/2b3b91c20db097bd6c3c34c44fb15fc715012b9cf298e3e7fd0a3eee69de65ec_optim.pdf",
+    "local_library_correction": "dusklight-twilight-princess-35.pdf is GameCube console manual; -36.pdf is Wii U Twilight Princess HD manual, not original GameCube TP booklet."
+  },
+  "assets": [
+    {
+      "file": "wolf-midna.webp",
+      "title": "Wolf Link and Midna original promotional artwork",
+      "type": "transparent artwork",
+      "source_url": "https://zelda-temple.net/images/igallery/original/1201-1300/TP_Wolf_Midna_Art-1294.png",
+      "source_page": "https://zelda-temple.net/media-and-downloads/official-artwork/the-legend-of-zelda-twilight-princess",
+      "dimensions": [
+        1452,
+        1500
+      ],
+      "original_dimensions": [
+        1452,
+        1500
+      ],
+      "processing": "WebP delivery encoding, original dimensions and transparency preserved; no generative alterations",
+      "bytes": 345914,
+      "sha256": "efb28221f819930dcb320180ac97c0309bd2255ba3e65f4c0d2a5cf8039525d1"
+    },
+    {
+      "file": "link-epona.webp",
+      "title": "Link riding Epona original promotional artwork",
+      "type": "transparent artwork",
+      "source_url": "https://zelda-temple.net/images/igallery/original/1201-1300/TP_Link_and_Epona_Artwork-1266.png",
+      "source_page": "https://zelda-temple.net/media-and-downloads/official-artwork/the-legend-of-zelda-twilight-princess",
+      "dimensions": [
+        1565,
+        1500
+      ],
+      "original_dimensions": [
+        1565,
+        1500
+      ],
+      "processing": "WebP delivery encoding, original dimensions and transparency preserved; no generative alterations",
+      "bytes": 375156,
+      "sha256": "37ab8b5e1a65cac0067c95203f3830a4e2a7e736c59752323c50902a41cb9451"
+    },
+    {
+      "file": "hyrule.webp",
+      "title": "Hyrule in peace landscape from public original-game gallery",
+      "type": "original-game promotional landscape; not a Dusklight port capture",
+      "source_url": "https://zelda-temple.net/images/igallery/original/1201-1300/HyruleInPeace-1227.jpg",
+      "source_page": "https://zelda-temple.net/media-and-downloads/official-artwork/the-legend-of-zelda-twilight-princess",
+      "dimensions": [
+        1024,
+        576
+      ],
+      "original_dimensions": [
+        1024,
+        576
+      ],
+      "processing": "WebP delivery encoding, original dimensions and transparency preserved; no generative alterations",
+      "bytes": 114994,
+      "sha256": "cc4d91b8cadfe75eccd6ed83d06898e658f0fdace3dc5ac81dd5cacc2a94f455"
+    },
+    {
+      "file": "twilight-story.webp",
+      "title": "Link and cloaked Zelda original illustration",
+      "type": "original promotional illustration; optional alternative to landscape",
+      "source_url": "https://zelda-temple.net/images/igallery/original/1301-1400/Twilight_Princess_Artwork-1326.jpg",
+      "source_page": "https://zelda-temple.net/media-and-downloads/official-artwork/the-legend-of-zelda-twilight-princess",
+      "dimensions": [
+        1088,
+        1500
+      ],
+      "original_dimensions": [
+        1088,
+        1500
+      ],
+      "processing": "WebP delivery encoding, original dimensions and transparency preserved; no generative alterations",
+      "bytes": 221862,
+      "sha256": "82cc4f9214cc7b1dd22a595f053153a5cc060913d79e81d6a0104e991e73727f"
+    },
+    {
+      "file": "manual-cover.webp",
+      "title": "Original GameCube Twilight Princess booklet cover",
+      "type": "unaltered scan including EmuMovies scan watermark",
+      "source_url": "https://manuals-us.handleidingkwijt.com/html/460895/bg1.png",
+      "source_page": "https://manuall.co.uk/nintendo-gamecube-the-legend-of-zelda-twilight-princess/",
+      "dimensions": [
+        595,
+        1003
+      ],
+      "original_dimensions": [
+        595,
+        1003
+      ],
+      "processing": "WebP delivery encoding, original dimensions and transparency preserved; no generative alterations",
+      "bytes": 318102,
+      "sha256": "4e0d7c1a3ada2e36fe76d4a6380de063bb854eb3d1dcbae3d0ac2853c02c9141"
+    },
+    {
+      "file": "manual-moss-texture.webp",
+      "title": "Blank dark moss paper from original GameCube manual controller spread",
+      "source_url": "https://manuals-us.handleidingkwijt.com/html/460895/bg5.png",
+      "source_page": "https://manuall.co.uk/nintendo-gamecube-the-legend-of-zelda-twilight-princess/",
+      "dimensions": [
+        160,
+        160
+      ],
+      "crop_box": [
+        612,
+        60,
+        772,
+        220
+      ],
+      "processing": "Cropped blank paper area only; no lettering or hardware included; WebP quality94",
+      "bytes": 7898,
+      "sha256": "db5eab5b2b89a9dab5931708a8fac0e94c45d50a4eddcbd9942a1b8ba986a6f4"
+    },
+    {
+      "file": "collection-amber-twilight.webp",
+      "dimensions": [
+        1400,
+        850
+      ],
+      "bytes": 473880,
+      "sha256": "7a8bb0e70e4784d51a0cac2a40536c1c6edc78866e24740171ec607f974b42f7",
+      "source_page": "https://www.nintendo.co.jp/wiiu/azaj/index.html",
+      "source_urls": [
+        "https://www.nintendo.co.jp/wiiu/azaj/_img/index/mv1.png",
+        "https://www.nintendo.co.jp/wiiu/azaj/_img/index/mv2.png"
+      ],
+      "source_css": "https://www.nintendo.co.jp/wiiu/azaj/_css/index.css",
+      "provenance": "Official Nintendo Japanese Twilight Princess HD promotional website, published2016. Two transparent artwork layers reassembled exactly as official page at same position0,0; the sites logo is separate and was never included.",
+      "processing": "Alpha composite mv2 over mv1 at0,0; convertRGB; WebPquality94; no generative edits",
+      "originals": [
+        "originals/mv1.png",
+        "originals/mv2.png"
+      ],
+      "original_dimensions": [
+        1400,
+        850
+      ],
+      "purpose": "Collection card backdrop only; original-game promotional art, not a Dusklight port capture"
+    }
+  ]
+}

@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" /><meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1" /><meta
+      name="theme-color"
+      content="#10251e" /><meta
+      name="description"
+      content="The original Hyrule, in first person. Discover Legend of Doom for New Nintendo 3DS, with installation, controls, screenshots and help." /><title
+      >Legend of Doom · Esteban's Forge</title
+    ><link rel="icon" type="image/png" href="assets/brand/estebans-forge-icon.png" /><link
+      rel="stylesheet"
+      href="forge-header.css" /><link rel="stylesheet" href="page-transitions.css" /><link
+      rel="preload"
+      href="assets/fonts/doom/windows31-system.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin /><link rel="stylesheet" href="doom.css" /><script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="doom.js" defer></script
+    ><script src="doom-cameo.js" defer></script
+    ><link rel="stylesheet" href="interaction-motion.css" /><script src="game-gallery.js"></script
+    ><script src="interaction-motion.js"></script
+    ><script src="forge-header.js" defer></script
+    ><link rel="stylesheet" href="forge-captures.css" /></head
+  ><body data-game="doom"
+    ><!-- forge-header --><a class="skip-link" href="#project-main">Skip to project</a
+    ><svg class="svg-defs" aria-hidden="true" width="0" height="0">
+      <defs>
+        <!-- Original SVG pixel drawings, informed by Windows 3.x icon proportions. -->
+        <symbol id="doom-gallery-pixel" viewBox="0 0 32 32">
+          <path fill="#202020" d="M4 3h8v1h1v1h16v2h1v23H2V8h2Z" />
+          <path fill="#e8dda8" d="M5 4h6v1h1v1h16v1h1v7H3V9h2Z" />
+          <path fill="#202020" d="M2 10h28v20H2Z" />
+          <path fill="#ffffdc" d="M3 11h26v18H3Z" />
+          <path fill="#fff" d="M4 12h24v1H4Z" />
+          <path fill="#c0b890" d="M4 28h24v1H4Z" />
+          <path fill="#202020" d="M8 15h16v10H8Z" />
+          <path fill="#3b697c" d="M9 16h14v8H9Z" />
+          <path fill="#ffffad" d="M19 17h2v2h-2Z" />
+          <path fill="#98c6a0" d="M9 23h2v-2h2v-1h2v2h2v1h2v1H9Zm8 0h2v-2h2v1h2v2h-6Z" />
+        </symbol>
+        <symbol id="doom-help-pixel" viewBox="0 0 32 32">
+          <path fill="#111" d="M3 2h26v26H15v1h-1v1h-1v1H9v-3H3Z" />
+          <path fill="#ffffad" d="M4 3h24v24H14v1h-1v1h-3v-2H4Z" />
+          <path fill="#fff" d="M5 4h22v1H5ZM5 5h1v20H5Z" />
+          <path
+            fill="#000080"
+            d="M12 6h8v1h2v2h1v5h-1v2h-2v1h-2v3h-4v-5h2v-1h2v-1h1v-3h-1V9h-5v1h-1v2H9V9h1V7h2Zm2 16h4v2h-4Z"
+          />
+        </symbol>
+        <symbol id="tri" viewBox="0 0 60 52">
+          <path d="M30 0 15 26h30ZM15 26 0 52h30ZM45 26 30 52h30Z" />
+        </symbol>
+        <symbol id="arrow" viewBox="0 0 24 24">
+          <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+          <path
+            d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.58 4.94.36.31.68.92.68 1.86v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"
+          />
+        </symbol>
+        <symbol id="discord" viewBox="0 0 24 24">
+          <path
+            d="M19.7 5.4a18 18 0 0 0-4.4-1.4l-.5 1a16 16 0 0 0-5.6 0l-.5-1a18 18 0 0 0-4.4 1.4C1.5 9.6.7 13.7 1.1 17.7a18 18 0 0 0 5.4 2.7l1.1-1.9-1.7-.8.4-.3a13 13 0 0 0 11.4 0l.4.3-1.7.8 1.1 1.9a18 18 0 0 0 5.4-2.7c.5-4.7-.8-8.8-3.2-12.3ZM8.4 14.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm7.2 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"
+          />
+        </symbol>
+        <clipPath id="new-outline">
+          <path
+            d="M279 96H1320Q1452 96 1452 227V738Q1452 750 1430 752Q1454 767 1454 806V1360Q1454 1498 1310 1500H282Q150 1500 150 1360V804Q150 767 172 752Q148 752 148 738V230Q148 96 279 96Z"
+          />
+        </clipPath>
+        <clipPath id="old-outline">
+          <path
+            d="M238 190H1012Q1061 190 1061 237V598H1039Q1065 605 1065 646L1051 663V1033Q1051 1065 1019 1065H235Q203 1065 203 1033V662L190 648V632Q190 609 213 600H193V237Q193 190 238 190Z"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+    <main id="project-main" class="desktop-shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"
+        ><a href="index.html#collection">← Back to collection</a
+        ><span>NEW NINTENDO 3DS / LEGEND OF DOOM</span></nav
+      >
+      <div class="program-manager win-window">
+        <header class="win-titlebar inactive"
+          ><span class="system-mark" aria-hidden="true"
+            ><svg class="win-system-icon" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+              <path fill="#808080" d="M3 7h12v4H3Z" />
+              <path fill="#111" d="M3 7h12v3H3Z" />
+              <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+          ><h2>Program Manager - Legend of Doom</h2
+          ><span class="win-caption-controls" aria-hidden="true"
+            ><span class="win-caption-mark win-caption-down"></span
+            ><span class="win-caption-mark win-caption-up"></span></span
+        ></header>
+        <nav class="win-menubar" aria-label="Project menus">
+          <details class="win-menu" name="project-menu"
+            ><summary><u>F</u>ile</summary
+            ><div class="menu-items"
+              ><a
+                href="https://github.com/EstebanPdN/legend-of-doom-3ds/releases/latest"
+                target="_blank"
+                rel="noreferrer"
+                >Download release</a
+              ><a href="#install">Installation guide</a><hr /><a href="index.html#collection"
+                >Exit to collection</a
+              ></div
+            ></details
+          >
+          <details class="win-menu" name="project-menu"
+            ><summary><u>V</u>iew</summary
+            ><div class="menu-items"
+              ><a href="#gallery">Gallery</a><a href="#hardware">Two-screen features</a
+              ><a href="#origins">Origins archive</a></div
+            ></details
+          >
+          <details class="win-menu" name="project-menu"
+            ><summary><u>H</u>elp</summary
+            ><div class="menu-items"
+              ><a href="#help">Help contents</a><a href="#support">Report a problem</a
+              ><button type="button" data-about>About Legend of Doom...</button></div
+            ></details
+          ><span>ESTEBAN'S FORGE · PORT ARCHIVE</span>
+        </nav>
+        <div class="desktop-content">
+          <div class="launch-strip"
+            ><nav class="desktop-icons" aria-label="Project shortcuts"
+              ><a class="desktop-shortcut" href="#gallery"
+                ><svg
+                  class="win31-pixel-icon"
+                  viewBox="0 0 32 32"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="#doom-gallery-pixel" /></svg
+                ><span>Gallery</span></a
+              ><a class="desktop-shortcut" href="#install"
+                ><svg viewBox="0 0 48 40" aria-hidden="true">
+                  <path fill="#e8ddac" stroke="#171717" stroke-width="2" d="M8 3h30l3 4v30H8Z" />
+                  <path fill="#33338f" d="M13 3h20v13H13Z" />
+                  <path fill="#fff" stroke="#222" d="M14 23h21v14H14Z" />
+                  <path stroke="#aaa" d="M18 27h13m-13 5h13" /></svg
+                ><span>Install</span></a
+              ><a class="desktop-shortcut" href="#readme"
+                ><svg viewBox="0 0 48 40" aria-hidden="true">
+                  <path
+                    fill="#f8f8eb"
+                    stroke="#202020"
+                    stroke-width="1.5"
+                    d="M11 2h20l8 8v28H11Z"
+                  />
+                  <path fill="#bbbcae" stroke="#202020" stroke-width="1.5" d="M31 2v8h8" />
+                  <path
+                    stroke="#4b514a"
+                    stroke-width="2"
+                    d="M17 15h16m-16 5h16m-16 5h16m-16 5h11"
+                  /></svg
+                ><span>Read me</span></a
+              ><a class="desktop-shortcut" href="#help"
+                ><svg
+                  class="win31-pixel-icon"
+                  viewBox="0 0 32 32"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="#doom-help-pixel" /></svg
+                ><span>Help</span></a
+              ><a class="desktop-shortcut" href="https://github.com/EstebanPdN/legend-of-doom-3ds"
+                ><svg viewBox="0 0 48 40" aria-hidden="true">
+                  <path fill="#d5d5ca" stroke="#202020" stroke-width="1.5" d="M4 4h37v26H4Z" />
+                  <path fill="#14201a" stroke="#202020" d="M8 8h29v18H8Z" />
+                  <path stroke="#c5e2a5" fill="none" stroke-width="2" d="m13 13 4 4-4 4m7 0h9" />
+                  <path fill="#aaa99e" stroke="#202020" d="M19 30h9v5h9v3H10v-3h9Z" /></svg
+                ><span>Source</span></a
+              ></nav
+            ><div class="release-stamp"
+              ><span class="status-light" aria-hidden="true"></span
+              ><div>READY TO EXPLORE<small>v1.0 · Stable release</small></div></div
+            ></div
+          >
+          <div class="hero-layout"
+            ><img
+              class="desktop-visitor octorok-red"
+              src="assets/doom/sprites/octorok-red.png"
+              alt=""
+              aria-hidden="true"
+              width="16"
+              height="16"
+            />
+            <section class="welcome-window win-window" id="readme" aria-labelledby="project-title">
+              <header class="win-titlebar inactive"
+                ><span class="system-mark" aria-hidden="true"
+                  ><svg
+                    class="win-system-icon"
+                    viewBox="0 0 18 18"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path fill="#808080" d="M3 7h12v4H3Z" />
+                    <path fill="#111" d="M3 7h12v3H3Z" />
+                    <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+                ><h2>WELCOME.TXT</h2
+                ><span class="win-caption-controls" aria-hidden="true"
+                  ><span class="win-caption-mark win-caption-down"></span
+                  ><span class="win-caption-mark win-caption-up"></span></span
+              ></header>
+              <div class="welcome-body"
+                ><p class="file-path">C:\FORGE\LEGEND_OF_DOOM</p
+                ><svg
+                  class="game-logo"
+                  viewBox="518 125 1310 1005"
+                  role="img"
+                  aria-label="The Legend of Doom"
+                >
+                  <image href="assets/logos/legend-of-doom.png" width="2560" height="1280" />
+                </svg>
+                <h1 id="project-title"
+                  ><span class="sr-only">Legend of Doom. </span>Same Hyrule.<br />A different<br />point
+                  of view.</h1
+                >
+                <p
+                  >The world you remember. The perspective you don't. Step inside the original Zelda
+                  adventure, rebuilt in first person and brought to New Nintendo 3DS.</p
+                >
+                <div class="welcome-actions"
+                  ><a
+                    class="win-button primary"
+                    href="https://github.com/EstebanPdN/legend-of-doom-3ds/releases/latest"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Get the 3DS port</a
+                  ><a class="plain-link" href="#install">Read the installation guide ↓</a></div
+                >
+                <p class="welcome-foot"
+                  >DeTwelve Games' adventure.<br />EstebanPdN's Nintendo 3DS port.</p
+                ></div
+              ></section
+            >
+            <section
+              class="gallery-window win-window"
+              id="gallery"
+              aria-labelledby="gallery-heading"
+            >
+              <header class="win-titlebar "
+                ><span class="system-mark" aria-hidden="true"
+                  ><svg
+                    class="win-system-icon"
+                    viewBox="0 0 18 18"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path fill="#808080" d="M3 7h12v4H3Z" />
+                    <path fill="#111" d="M3 7h12v3H3Z" />
+                    <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+                ><h2>HYRULE.BMP - Image Viewer</h2
+                ><button
+                  type="button"
+                  class="title-help win-caption-up"
+                  data-enlarge
+                  aria-label="Enlarge gallery"
+                ></button
+              ></header>
+              <div class="window-toolbar"
+                ><h2 id="gallery-heading">A window into Hyrule</h2
+                ><span
+                  ><b id="gallery-current">01</b> / <span id="gallery-total">12</span></span
+                ></div
+              >
+              <button
+                class="gallery-stage gallery-pair"
+                id="gallery-open"
+                data-screen="upper"
+                type="button"
+                aria-label="Enlarge upper screen"
+                ><svg
+                  id="gallery-image"
+                  data-gallery-display
+                  data-screen="upper"
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="Hyrule · first-person view"
+                  data-scene-view="0 0 400 240"
+                >
+                  <image
+                    href="assets/captures/legend-of-doom/03-hyrule.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><span class="expand-label">Enlarge</span></button
+              >
+              <div class="gallery-playback"
+                ><span>Captured gameplay</span
+                ><button
+                  id="gallery-autoplay"
+                  type="button"
+                  aria-pressed="true"
+                  aria-label="Pause slideshow"
+                  title="Pause slideshow"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path class="slideshow-pause" d="M6 5h4v14H6zM14 5h4v14h-4z" />
+                    <path class="slideshow-play" d="M8 5v14l11-7z" /></svg></button></div
+              ><div class="gallery-thumbs scene-thumbs" aria-label="Captured scenes"
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="true"
+                  aria-label="View Hyrule · first-person view"
+                  data-scene="03-hyrule"
+                  data-title="Hyrule · first-person view"
+                  data-caption="Hyrule · first-person view. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/03-hyrule.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>01</b> Hyrule · first-person view</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View About The Legend of Doom"
+                  data-scene="01-title"
+                  data-title="About The Legend of Doom"
+                  data-caption="About The Legend of Doom. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/01-title.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>02</b> About The Legend of Doom</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Main menu"
+                  data-scene="02-main-menu"
+                  data-title="Main menu"
+                  data-caption="Main menu. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/02-main-menu.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>03</b> Main menu</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View The old man’s cave"
+                  data-scene="04-sword-cave"
+                  data-title="The old man’s cave"
+                  data-caption="The old man, two fires and a wooden sword: the first Zelda adventure seen from inside the cave."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/04-sword-cave.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>04</b> The old man’s cave</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View An enemy in the forest"
+                  data-scene="05-forest-enemy"
+                  data-title="An enemy in the forest"
+                  data-caption="A familiar enemy becomes a close encounter in the forest. The lower screen keeps the local map, hearts and collected resources in view."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/05-forest-enemy.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>05</b> An enemy in the forest</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Port options"
+                  data-scene="06-options"
+                  data-title="Port options"
+                  data-caption="The options menu lives on the lower display, beside the captured overworld scene."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/06-options.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>06</b> Port options</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Display settings"
+                  data-scene="07-display-settings"
+                  data-title="Display settings"
+                  data-caption="The display menu is available on the lower screen, with controls for the upper HUD, aspect and other presentation options."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/07-display-settings.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>07</b> Display settings</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Camera and controller settings"
+                  data-scene="08-controller"
+                  data-title="Camera and controller settings"
+                  data-caption="Configure camera, movement and inversion from the controller menu on the lower screen."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/08-controller.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>08</b> Camera and controller settings</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Nintendo 3DS controls"
+                  data-scene="09-controls"
+                  data-title="Nintendo 3DS controls"
+                  data-caption="Review actions and bindings in the lower-screen controls menu."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/09-controls.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>09</b> Nintendo 3DS controls</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Native save browser"
+                  data-scene="10-load-game"
+                  data-title="Native save browser"
+                  data-caption="The save browser opens on the upper display; choose a saved adventure to continue."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/10-load-game.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>10</b> Native save browser</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Hyrule · full-screen automap"
+                  data-scene="11-automap"
+                  data-title="Hyrule · full-screen automap"
+                  data-caption="The automap fills the upper screen with the surrounding area. The companion display continues to show the local map and Link’s status."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/11-automap.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>11</b> Hyrule · full-screen automap</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Pause menu"
+                  data-scene="12-pause"
+                  data-title="Pause menu"
+                  data-caption="Pause the adventure and review the available game actions on the lower screen."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/legend-of-doom/12-pause.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>12</b> Pause menu</span></button
+                ></div
+              ><div class="gallery-scroll-controls" id="gallery-scroll-controls"
+                ><button id="gallery-scroll-previous" type="button" aria-label="Previous thumbnails"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m14 6-6 6 6 6" /></svg></button
+                ><input
+                  id="gallery-scroll"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  aria-label="Scroll gallery thumbnails" /><button
+                  id="gallery-scroll-next"
+                  type="button"
+                  aria-label="Next thumbnails"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m10 6 6 6-6 6" /></svg></button></div
+              ><div class="gallery-caption"
+                ><h3 id="gallery-title">Hyrule · first-person view</h3
+                ><p id="gallery-caption"
+                  >Hyrule · first-person view. Captured from the Nintendo 3DS port.</p
+                ></div
+              ><p class="preview-note"
+                >Enlarge the selected view to choose the upper or lower screen.</p
+              >
+              <div class="game-hud" aria-hidden="true"
+                ><span>♥ ♥ ♥<small>LIFE</small></span
+                ><span>HYRULE<small>DESTINATION</small></span
+                ><span>3DS<small>NEW PERSPECTIVE</small></span></div
+              >
+            </section></div
+          >
+
+          <!-- capture-journal:start --><section
+            id="capture-journal"
+            class="capture-journal win-window"
+            aria-labelledby="capture-journal-title"
+            ><div class="capture-inner"
+              ><p class="eyebrow">IN THE GAME · TWO SCREENS</p
+              ><h2 id="capture-journal-title">Walk into Hyrule.</h2
+              ><p class="capture-introduction"
+                >Explore the original Zelda’s Hyrule in first person. The companion screen keeps the
+                map and status in view, with display options ready when you need them.</p
+              ><p class="capture-source"
+                >Captured in Azahar · Port 1.0 · Image previews show the upper screen. Open the
+                viewer to switch screens; gameplay clips show both.</p
+              ><div class="capture-grid capture-features"
+                ><figure class="capture-frame capture-feature"
+                  ><a
+                    href="#gallery"
+                    class="capture-feature-open"
+                    data-gallery-feature="05-forest-enemy"
+                    aria-label="Enlarge: Meet Hyrule at eye level."
+                    ><svg
+                      viewBox="0 0 400 240"
+                      role="img"
+                      aria-label="Meet Hyrule at eye level. · upper screen"
+                    >
+                      <image
+                        href="assets/captures/legend-of-doom/05-forest-enemy.webp"
+                        width="720"
+                        height="240"
+                      /></svg></a
+                  ><figcaption
+                    ><h3>Meet Hyrule at eye level.</h3
+                    ><p
+                      >A familiar enemy becomes a close encounter in the forest. The lower screen
+                      keeps the local map, hearts and collected resources in view.</p
+                    ></figcaption
+                  ></figure
+                ><figure class="capture-frame capture-feature"
+                  ><a
+                    href="#gallery"
+                    class="capture-feature-open"
+                    data-gallery-feature="11-automap"
+                    aria-label="Enlarge: Find your bearings."
+                    ><svg
+                      viewBox="0 0 400 240"
+                      role="img"
+                      aria-label="Find your bearings. · upper screen"
+                    >
+                      <image
+                        href="assets/captures/legend-of-doom/11-automap.webp"
+                        width="720"
+                        height="240"
+                      /></svg></a
+                  ><figcaption
+                    ><h3>Find your bearings.</h3
+                    ><p
+                      >The automap fills the upper screen with the surrounding area. The companion
+                      display continues to show the local map and Link’s status.</p
+                    ></figcaption
+                  ></figure
+                ><figure class="capture-frame capture-feature"
+                  ><a
+                    href="#gallery"
+                    class="capture-feature-open"
+                    data-gallery-feature="07-display-settings"
+                    aria-label="Enlarge: Make the view your own."
+                    ><svg
+                      viewBox="0 0 400 240"
+                      role="img"
+                      aria-label="Make the view your own. · upper screen"
+                    >
+                      <image
+                        href="assets/captures/legend-of-doom/07-display-settings.webp"
+                        width="720"
+                        height="240"
+                      /></svg></a
+                  ><figcaption
+                    ><h3>Make the view your own.</h3
+                    ><p
+                      >The display menu is available on the lower screen, with controls for the
+                      upper HUD, aspect and other presentation options.</p
+                    ></figcaption
+                  ></figure
+                ></div
+              ><h3 class="capture-clips-title">A few moments in motion.</h3
+              ><div class="capture-grid capture-videos"
+                ><figure class="capture-frame"
+                  ><video
+                    controls
+                    muted
+                    playsinline
+                    preload="none"
+                    poster="assets/captures/legend-of-doom/03-hyrule.webp"
+                    width="720"
+                    height="240"
+                    aria-label="Exploring Hyrule gameplay clip"
+                    ><source
+                      src="assets/captures/legend-of-doom/03-hyrule-exploration.mp4"
+                      type="video/mp4" /></video
+                  ><figcaption>Exploring Hyrule · short gameplay clip</figcaption></figure
+                ><figure class="capture-frame"
+                  ><video
+                    controls
+                    muted
+                    playsinline
+                    preload="none"
+                    poster="assets/captures/legend-of-doom/04-sword-cave.webp"
+                    width="720"
+                    height="240"
+                    aria-label="The old man’s cave gameplay clip"
+                    ><source
+                      src="assets/captures/legend-of-doom/04-sword-cave.mp4"
+                      type="video/mp4" /></video
+                  ><figcaption>The old man’s cave · short gameplay clip</figcaption></figure
+                ><figure class="capture-frame"
+                  ><video
+                    controls
+                    muted
+                    playsinline
+                    preload="none"
+                    poster="assets/captures/legend-of-doom/05-forest-enemy.webp"
+                    width="720"
+                    height="240"
+                    aria-label="An enemy in the forest gameplay clip"
+                    ><source
+                      src="assets/captures/legend-of-doom/05-forest-enemy.mp4"
+                      type="video/mp4" /></video
+                  ><figcaption>An enemy in the forest · short gameplay clip</figcaption></figure
+                ></div
+              ></div
+            ></section
+          ><!-- capture-journal:end -->
+          <section
+            class="hardware-window win-window reveal-section"
+            id="hardware"
+            aria-labelledby="hardware-title"
+          >
+            <header class="win-titlebar inactive"
+              ><span class="system-mark" aria-hidden="true"
+                ><svg
+                  class="win-system-icon"
+                  viewBox="0 0 18 18"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path fill="#808080" d="M3 7h12v4H3Z" />
+                  <path fill="#111" d="M3 7h12v3H3Z" />
+                  <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+              ><h2>Control Panel - Two screens, one adventure</h2
+              ><span class="win-caption-controls" aria-hidden="true"
+                ><span class="win-caption-mark win-caption-down"></span
+                ><span class="win-caption-mark win-caption-up"></span></span
+            ></header>
+            <div class="hardware-layout"
+              ><figure class="console-figure"
+                ><svg
+                  class="new-console"
+                  viewBox="140 90 1320 1420"
+                  role="img"
+                  aria-label="New Nintendo 3DS displaying the Legend of Doom captures on both screens"
+                >
+                  <image
+                    href="assets/devices/new-nintendo-3ds-xl-neutral.webp"
+                    width="1600"
+                    height="1600"
+                    clip-path="url(#new-outline)"
+                  />
+                  <svg
+                    id="gallery-console-top"
+                    x="365"
+                    y="204"
+                    width="871"
+                    height="523"
+                    viewBox="0 0 400 240"
+                    preserveAspectRatio="none"
+                  >
+                    <image
+                      href="assets/captures/legend-of-doom/03-hyrule.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><svg
+                    id="gallery-companion"
+                    x="453"
+                    y="886"
+                    width="696"
+                    height="522"
+                    viewBox="400 0 320 240"
+                    preserveAspectRatio="none"
+                  >
+                    <image
+                      href="assets/captures/legend-of-doom/03-hyrule.webp"
+                      width="720"
+                      height="240"
+                    />
+                  </svg></svg
+                ><figcaption>NEW NINTENDO 3DS · PORT CAPTURE</figcaption></figure
+              >
+              <div class="hardware-copy"
+                ><p class="small-label">SYSTEM PROPERTIES</p
+                ><h2 id="hardware-title">Hyrule above.<br />Your bearings below.</h2
+                ><p class="lead">An unlikely adventure, at home on two screens.</p
+                ><dl class="feature-list"
+                  ><div
+                    ><dt><span>01</span> The adventure</dt
+                    ><dd
+                      >Explore Hyrule in first person on the upper display, with the familiar
+                      forests, enemies and secrets of the original world.</dd
+                    ></div
+                  ><div
+                    ><dt><span>02</span> The companion</dt
+                    ><dd
+                      >Tap an item to select it, or tap the map to change its zoom. Your hearts,
+                      inventory and bearings stay close at hand.</dd
+                    ></div
+                  ><div
+                    ><dt><span>03</span> Your controls</dt
+                    ><dd
+                      >Move with the Circle Pad and look with the C-stick. R attacks, A interacts
+                      and Start pauses the adventure.</dd
+                    ></div
+                  ></dl
+                >
+                <div class="compatibility-note"
+                  ><strong>New Nintendo 3DS family required</strong
+                  ><p
+                    >New 3DS · New 3DS XL · New 2DS XL<br />Old Nintendo 3DS and original 2DS are
+                    not supported.</p
+                  ></div
+                ><a class="plain-link" href="#help"
+                  >More hardware &amp; gameplay questions ↓</a
+                ></div
+              ></div
+            >
+          </section>
+          <section
+            class="origins-section reveal-section"
+            id="origins"
+            aria-labelledby="origins-title"
+          >
+            <div class="section-heading"
+              ><img
+                class="desktop-visitor octorok-origins"
+                src="assets/doom/sprites/octorok-up.png"
+                alt=""
+                aria-hidden="true"
+                width="16"
+                height="16"
+              /><span>01 / THE ORIGINS ARCHIVE</span
+              ><h2 id="origins-title">Two classics. One unexpected world.</h2
+              ><p>Eight-bit Hyrule meets the first-person language of DOOM.</p></div
+            >
+            <div class="origins-layout"
+              ><figure class="win-window doom-art-window"
+                ><img
+                  class="desktop-visitor octorok-archive"
+                  src="assets/doom/sprites/octorok-right.png"
+                  alt=""
+                  aria-hidden="true"
+                  width="16"
+                  height="16"
+                /><header class="win-titlebar inactive"
+                  ><span class="system-mark" aria-hidden="true"
+                    ><svg
+                      class="win-system-icon"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path fill="#808080" d="M3 7h12v4H3Z" />
+                      <path fill="#111" d="M3 7h12v3H3Z" />
+                      <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+                  ><h2>DOOM.JPG - PC archive</h2
+                  ><span class="win-caption-controls" aria-hidden="true"
+                    ><span class="win-caption-mark win-caption-down"></span
+                    ><span class="win-caption-mark win-caption-up"></span></span></header
+                ><img
+                  class="doom-cover"
+                  src="assets/period/doom-cover.jpg"
+                  alt="The original DOOM cover: the marine surrounded by demons"
+                  width="933"
+                  height="1400"
+                  loading="lazy"
+                /><figcaption>PC / 1993<span>THE FIRST-PERSON LEGACY</span></figcaption></figure
+              >
+              <div class="hyrule-archive win-window"
+                ><header class="win-titlebar inactive"
+                  ><span class="system-mark" aria-hidden="true"
+                    ><svg
+                      class="win-system-icon"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path fill="#808080" d="M3 7h12v4H3Z" />
+                      <path fill="#111" d="M3 7h12v3H3Z" />
+                      <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+                  ><h2>HYRULE.NES - Adventure archive</h2
+                  ><span class="win-caption-controls" aria-hidden="true"
+                    ><span class="win-caption-mark win-caption-down"></span
+                    ><span class="win-caption-mark win-caption-up"></span></span></header
+                ><img
+                  class="nes-scene"
+                  src="assets/doom/nes-hyrule.png"
+                  alt="An original NES Zelda scene, with Link approaching a dungeon entrance"
+                  width="768"
+                  height="528"
+                  loading="lazy"
+                /><div class="archive-copy"
+                  ><img
+                    src="assets/period/zelda-nes-manual.png"
+                    alt="The original gold Legend of Zelda instruction booklet"
+                    width="250"
+                    height="361"
+                    loading="lazy"
+                  /><div
+                    ><p class="small-label">NINTENDO ENTERTAINMENT SYSTEM</p
+                    ><h3>It's dangerous<br />to go alone.</h3
+                    ><p
+                      >DeTwelve Games reimagined the original Zelda as a GZDoom adventure. This port
+                      gives that meeting of worlds a new home on Nintendo's handheld.</p
+                    ><a
+                      class="plain-link"
+                      href="https://www.nintendo.co.jp/clv/manuals/en/pdf/CLV-P-NAANE.pdf"
+                      target="_blank"
+                      rel="noreferrer"
+                      >Open the original manual</a
+                    ></div
+                  ></div
+                ></div
+              ></div
+            >
+          </section>
+          <section
+            class="installer win-window reveal-section"
+            id="install"
+            aria-labelledby="install-title"
+            ><span class="setup-link" aria-hidden="true" data-phase="idle" hidden></span
+            ><header class="win-titlebar "
+              ><span class="system-mark" aria-hidden="true"
+                ><svg
+                  class="win-system-icon"
+                  viewBox="0 0 18 18"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path fill="#808080" d="M3 7h12v4H3Z" />
+                  <path fill="#111" d="M3 7h12v3H3Z" />
+                  <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+              ><h2>Legend of Doom Setup</h2
+              ><span class="win-caption-controls" aria-hidden="true"
+                ><span class="win-caption-mark win-caption-down"></span
+                ><span class="win-caption-mark win-caption-up"></span></span
+            ></header>
+            <div class="installer-layout"
+              ><aside class="setup-sidebar"
+                ><div class="disk-icon"
+                  ><svg viewBox="0 0 48 40" aria-hidden="true">
+                    <path fill="#e8ddac" stroke="#171717" stroke-width="2" d="M8 3h30l3 4v30H8Z" />
+                    <path fill="#33338f" d="M13 3h20v13H13Z" />
+                    <path fill="#fff" stroke="#222" d="M14 23h21v14H14Z" />
+                    <path stroke="#aaa" d="M18 27h13m-13 5h13" /></svg></div
+                ><p>LEGEND<br />OF DOOM</p><span>NINTENDO 3DS EDITION</span
+                ><div class="setup-rule"></div
+                ><p class="setup-side-note">Your next adventure<br />starts here.</p
+                ><span class="setup-version">VERSION 1.0</span></aside
+              >
+              <div class="setup-content"
+                ><p class="small-label">INSTALLATION GUIDE</p
+                ><h2 id="install-title">Welcome to Hyrule.</h2
+                ><p>Start with a homebrew-enabled console from the New Nintendo 3DS family.</p
+                ><div class="package-tabs" aria-label="Installation format"
+                  ><button type="button" data-package="cia" aria-pressed="true"
+                    >CIA · HOME Menu</button
+                  ><button type="button" data-package="3dsx" aria-pressed="false"
+                    >3DSX · Homebrew Launcher</button
+                  ></div
+                >
+                <div id="package-panel" aria-live="polite"
+                  ><ol class="setup-steps"
+                    ><li
+                      ><b>1</b
+                      ><div
+                        ><h3>Get the stable release</h3
+                        ><p
+                          >Download the CIA from the latest GitHub release. Keep its version and any
+                          accompanying instructions together.</p
+                        ></div
+                      ></li
+                    ><li
+                      ><b>2</b
+                      ><div
+                        ><h3>Install with FBI</h3
+                        ><p
+                          >Copy the CIA to your SD card and install it with FBI. The matching game
+                          data is embedded in the CIA.</p
+                        ></div
+                      ></li
+                    ><li
+                      ><b>3</b
+                      ><div
+                        ><h3>Launch from the HOME Menu</h3
+                        ><p
+                          >No NES ROM or commercial DOOM IWAD is needed. The package uses Freedoom2
+                          as its base.</p
+                        ></div
+                      ></li
+                    ></ol
+                  ></div
+                >
+                <div class="setup-bottom"
+                  ><a
+                    class="win-button primary"
+                    href="https://github.com/EstebanPdN/legend-of-doom-3ds/releases/latest"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Download release</a
+                  ><button class="plain-link" type="button" id="show-install-qr"
+                    >Install v1.0 with QR</button
+                  ><a
+                    class="plain-link"
+                    href="https://github.com/EstebanPdN/legend-of-doom-3ds/blob/v1.0/README.md"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Full setup notes</a
+                  ></div
+                ></div
+              ></div
+            ></section
+          >
+          <section
+            class="help-window win-window reveal-section"
+            id="help"
+            aria-labelledby="help-title"
+            ><header class="win-titlebar "
+              ><span class="system-mark" aria-hidden="true"
+                ><svg
+                  class="win-system-icon"
+                  viewBox="0 0 18 18"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path fill="#808080" d="M3 7h12v4H3Z" />
+                  <path fill="#111" d="M3 7h12v3H3Z" />
+                  <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+              ><h2>Legend of Doom Help</h2
+              ><span class="win-caption-controls" aria-hidden="true"
+                ><span class="win-caption-mark win-caption-down"></span
+                ><span class="win-caption-mark win-caption-up"></span></span
+            ></header>
+            <div class="window-toolbar"
+              ><h2 id="help-title">Help contents</h2><span>6 TOPICS</span></div
+            ><div class="help-layout"
+              ><aside class="help-contents"
+                ><div class="help-icon"
+                  ><svg
+                    class="win31-pixel-icon"
+                    viewBox="0 0 32 32"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="#doom-help-pixel" /></svg></div
+                ><h3>A little help<br />for the adventure.</h3
+                ><p>Installation, hardware and the questions that come up along the way.</p
+                ><a href="#support">Still need a hand? ↓</a></aside
+              ><div class="faq-list"
+                ><details class="faq-item"
+                  ><summary
+                    ><span class="faq-number">01</span><h3>Will it work on my Old 3DS?</h3
+                    ><span class="faq-plus" aria-hidden="true">+</span></summary
+                  ><div class="faq-answer"
+                    ><p
+                      >This release targets the <strong>New Nintendo 3DS family</strong>: New 3DS,
+                      New 3DS XL and New 2DS XL. Old 3DS, Old 3DS XL and the original 2DS are not
+                      supported.</p
+                    ></div
+                  ></details
+                ><details class="faq-item"
+                  ><summary
+                    ><span class="faq-number">02</span><h3>Do I need a Zelda ROM or a DOOM WAD?</h3
+                    ><span class="faq-plus" aria-hidden="true">+</span></summary
+                  ><div class="faq-answer"
+                    ><p
+                      >No NES ROM or commercial DOOM IWAD is required. The release uses
+                      <strong>Freedoom2</strong> as the base. The CIA embeds its matching game data.
+                      For Homebrew Launcher, copy the complete release ZIP's <code>3ds</code> folder
+                      to the root of your SD card. The standalone 3DSX is not enough.</p
+                    ></div
+                  ></details
+                ><details class="faq-item"
+                  ><summary
+                    ><span class="faq-number">03</span
+                    ><h3>Can I use this to run other GZDoom mods?</h3
+                    ><span class="faq-plus" aria-hidden="true">+</span></summary
+                  ><div class="faq-answer"
+                    ><p
+                      >This is a dedicated <strong>Legend of Doom port</strong>, not a
+                      general-purpose GZDoom launcher for the 3DS. Support for other mods is not
+                      part of this release.</p
+                    ></div
+                  ></details
+                ><details class="faq-item"
+                  ><summary
+                    ><span class="faq-number">04</span><h3>What can I do on the lower screen?</h3
+                    ><span class="faq-plus" aria-hidden="true">+</span></summary
+                  ><div class="faq-answer"
+                    ><p
+                      >Keep an eye on the map, hearts and inventory while the adventure stays above.
+                      Tap items to select them and tap the map to change its zoom. Touch controls
+                      also work in the menus. Camera input can use the C-stick, touch or both.</p
+                    ></div
+                  ></details
+                ><details class="faq-item"
+                  ><summary
+                    ><span class="faq-number">05</span><h3>Why is there no sound on my console?</h3
+                    ><span class="faq-plus" aria-hidden="true">+</span></summary
+                  ><div class="faq-answer"
+                    ><p
+                      >Check that your console's DSP firmware has been dumped to
+                      <code>sdmc:/3ds/dspfirm.cdc</code>. In Luma3DS, open
+                      <strong>Rosalina → Miscellaneous options → Dump DSP firmware</strong>. Also
+                      check the game's master, music and effects volume settings.</p
+                    ></div
+                  ></details
+                ><details class="faq-item"
+                  ><summary
+                    ><span class="faq-number">06</span><h3>What should I send with a bug report?</h3
+                    ><span class="faq-plus" aria-hidden="true">+</span></summary
+                  ><div class="faq-answer"
+                    ><p
+                      >Capture the issue while it is visible, then send the complete new report
+                      folder from <code>sdmc:/3ds/legend-of-doom/dumps/</code>.</p
+                    ><ul class="dump-guide"
+                      ><li
+                        ><strong>L + R + A · Quick dump</strong> - Both screens, raw framebuffers,
+                        game state, configuration and diagnostic logs. Includes a memory-map
+                        summary, without the large RAM image. Start here for an ordinary bug
+                        report.</li
+                      ><li
+                        ><strong>L + R + X · Full dump</strong> - Everything in a quick dump, plus
+                        the game's readable memory in <code>memory.bin</code> and its map. The
+                        memory payload is roughly <strong>136 MiB</strong>; allow extra SD space and
+                        wait for capture to finish.</li
+                      ><li
+                        ><strong>L + R + Y · Clean dumps</strong> - Deletes all saved dump reports
+                        to free SD space. Copy or send the reports you need first. Saves,
+                        configuration and ordinary logs stay intact.</li
+                      ></ul
+                    ><p
+                      >Include your console model, release version and steps to reproduce. For
+                      updater errors, also attach <code>sdmc:/3ds/legend-of-doom/update.log</code>.
+                      Use GitHub issues or Discord below.</p
+                    ></div
+                  ></details
+                ></div
+              ></div
+            ></section
+          >
+          <section
+            class="support-window win-window reveal-section"
+            id="support"
+            aria-labelledby="support-title"
+            ><header class="win-titlebar inactive"
+              ><span class="system-mark" aria-hidden="true"
+                ><svg
+                  class="win-system-icon"
+                  viewBox="0 0 18 18"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path fill="#808080" d="M3 7h12v4H3Z" />
+                  <path fill="#111" d="M3 7h12v3H3Z" />
+                  <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+              ><h2>Support - Send a field report</h2
+              ><span class="win-caption-controls" aria-hidden="true"
+                ><span class="win-caption-mark win-caption-down"></span
+                ><span class="win-caption-mark win-caption-up"></span></span
+            ></header>
+            <div class="support-layout"
+              ><div
+                class="diagnostic-screen"
+                role="region"
+                aria-label="Diagnostic command reference"
+                ><div class="terminal-titlebar win-titlebar"
+                  ><span class="system-mark" aria-hidden="true"
+                    ><svg
+                      class="win-system-icon"
+                      viewBox="0 0 18 18"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path fill="#808080" d="M3 7h12v4H3Z" />
+                      <path fill="#111" d="M3 7h12v3H3Z" />
+                      <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></span
+                  ><span class="terminal-window-title">MS-DOS Prompt - Diagnostics</span
+                  ><span class="win-caption-controls" aria-hidden="true"
+                    ><span class="win-caption-mark win-caption-down"></span
+                    ><span class="win-caption-mark win-caption-up"></span></span></div
+                ><div class="terminal-body"
+                  ><p class="terminal-prompt"
+                    >C:\Forge\<wbr />LegendsOfDoom\<wbr />Diagnostics&gt; <span>help</span></p
+                  ><p class="terminal-comment">Hold L + R, then press the action button.</p
+                  ><div class="dump-command"
+                    ><p class="terminal-command"
+                      ><span aria-hidden="true">&gt;</span> QUICK_DUMP <kbd>[L + R + A]</kbd></p
+                    ><p class="terminal-output"
+                      >Screens, game state and logs.<br />RAM image: not included.</p
+                    ></div
+                  ><div class="dump-command"
+                    ><p class="terminal-command"
+                      ><span aria-hidden="true">&gt;</span> FULL_DUMP <kbd>[L + R + X]</kbd></p
+                    ><p class="terminal-output"
+                      >Quick report + readable game RAM.<br />memory.bin: approximately 136 MiB.</p
+                    ></div
+                  ><div class="dump-command"
+                    ><p class="terminal-command"
+                      ><span aria-hidden="true">&gt;</span> CLEAN_DUMPS <kbd>[L + R + Y]</kbd></p
+                    ><p class="terminal-output"
+                      >Delete stored dump reports.<br />Saves and configuration: preserved.</p
+                    ></div
+                  ><p class="terminal-comment terminal-save">Report directory:</p
+                  ><p class="dump-path">sdmc:/3ds/legend-of-doom/dumps/</p
+                  ><p class="terminal-ready"
+                    >C:\Forge\<wbr />LegendsOfDoom\<wbr />Diagnostics&gt;
+                    <span class="terminal-cursor" aria-hidden="true">▌</span></p
+                  ></div
+                ></div
+              ><div class="support-copy"
+                ><h2 id="support-title">Don't explore alone.</h2
+                ><p
+                  ><strong>Start with a quick dump.</strong> Press <strong>L + R + A</strong> while
+                  the problem is visible. It captures both screens, raw framebuffers, game state,
+                  configuration and diagnostic logs, without a large memory image.</p
+                ><p
+                  ><strong>Need a deeper report?</strong> Use <strong>L + R + X</strong> for a full
+                  dump. It adds the game's readable RAM as <code>memory.bin</code>, with offsets in
+                  <code>memory-map.txt</code>. The memory payload is around
+                  <strong>136 MiB</strong>, so leave enough free space on your SD card and wait for
+                  the capture to finish.</p
+                ><p
+                  ><strong>Free up space afterward.</strong> Once you have copied or shared your
+                  reports, <strong>L + R + Y</strong> clears the dumps folder. It leaves your saves,
+                  configuration and ordinary logs untouched.</p
+                ><p
+                  >Send the <strong>complete report folder</strong> with your console model, release
+                  version and the steps that caused the issue. For updater problems, also attach
+                  <code>sdmc:/3ds/legend-of-doom/update.log</code>.</p
+                ><p
+                  ><a
+                    class="plain-link"
+                    href="https://github.com/EstebanPdN/legend-of-doom-3ds/blob/v1.0/platform/3ds/README.md"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Diagnostic documentation</a
+                  ></p
+                ><div class="support-actions"
+                  ><a
+                    class="win-button"
+                    href="https://github.com/EstebanPdN/legend-of-doom-3ds/issues/new"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><svg aria-hidden="true"><use href="#github" /></svg> GitHub issues</a
+                  ><a
+                    class="win-button"
+                    href="https://discord.gg/zy8BqH5ss"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><svg aria-hidden="true"><use href="#discord" /></svg> Discord community</a
+                  ></div
+                ></div
+              ></div
+            ></section
+          >
+          <section class="about-strip"
+            ><img
+              class="desktop-visitor octorok-complete"
+              src="assets/doom/sprites/octorok-left.png"
+              alt=""
+              aria-hidden="true"
+              width="16"
+              height="16"
+            /><div
+              ><span class="small-label">PORT BY ESTEBANPDN</span><h2>An adventure, complete.</h2
+              ><p
+                >Original conversion by DeTwelve Games.<br />Built on GZDoom, with Freedoom and the
+                3DS homebrew toolchain.</p
+              ><button type="button" class="plain-link" data-about
+                >About the project &amp; credits...</button
+              ></div
+            ><div class="completion-box"
+              ><strong>100%</strong><span>PORT DEVELOPMENT</span
+              ><div
+                class="windows-progress"
+                role="progressbar"
+                aria-label="Port development progress"
+                aria-valuenow="100"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                ><span></span></div
+              ><a href="index.html#progress">View collection progress</a></div
+            ></section
+          > </div
+        ><footer class="manager-status"
+          ><span>Legend of Doom 3DS</span><span>v1.0 · Stable</span
+          ><span>New Nintendo 3DS family</span></footer
+        ></div
+      >
+      <footer class="doom-footer"
+        ><a class="footer-brand" href="index.html#collection">esteban's <b>forge.</b></a
+        ><a href="star-fox.html">Next adventure: Star Fox →</a
+        ><a href="credits.html">Collection credits</a></footer
+      >
+    </main>
+    <dialog class="win-window qr-dialog" id="qr-dialog" aria-labelledby="qr-title"
+      ><header class="win-titlebar"
+        ><button
+          class="system-mark"
+          type="button"
+          id="close-install-qr"
+          aria-label="Close installation QR"
+          ><svg class="win-system-icon" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+            <path fill="#808080" d="M3 7h12v4H3Z" />
+            <path fill="#111" d="M3 7h12v3H3Z" />
+            <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></button
+        ><h2 id="qr-title">FBI - Install Legend of Doom v1.0</h2></header
+      ><div
+        ><p>On your New Nintendo 3DS, open <strong>FBI → Remote Install → Scan QR Code</strong>.</p
+        ><img
+          src="assets/doom/install-v1-qr.png"
+          alt="Official FBI QR code for the Legend of Doom v1.0 CIA download"
+          width="400"
+          height="400"
+        /><p>Official v1.0 release · CIA with embedded data</p
+        ><a
+          class="plain-link"
+          href="https://github.com/EstebanPdN/legend-of-doom-3ds/releases/tag/v1.0"
+          target="_blank"
+          rel="noreferrer"
+          >View the release on GitHub</a
+        ></div
+      ></dialog
+    ><dialog class="win-window about-dialog" id="about-dialog" aria-labelledby="about-title"
+      ><header class="win-titlebar "
+        ><button class="system-mark" type="button" data-close-about aria-label="Close about dialog"
+          ><svg class="win-system-icon" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+            <path fill="#808080" d="M3 7h12v4H3Z" />
+            <path fill="#111" d="M3 7h12v3H3Z" />
+            <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></button
+        ><h2>About Legend of Doom</h2></header
+      ><div
+        ><h2 id="about-title">Legend of Doom</h2
+        ><p
+          >Nintendo 3DS port by <strong>EstebanPdN</strong>.<br />Original adventure by
+          <strong>DeTwelve Games</strong>.</p
+        ><p>Built on GZDoom, Freedoom, devkitPro and the work of their contributors.</p
+        ><p
+          ><a
+            class="plain-link"
+            href="https://github.com/EstebanPdN/legend-of-doom-3ds"
+            target="_blank"
+            rel="noreferrer"
+            >Source &amp; full credits</a
+          ><br /><a
+            class="plain-link"
+            href="https://github.com/emawind84/legend-of-doom"
+            target="_blank"
+            rel="noreferrer"
+            >Original project</a
+          ></p
+        ><hr /><p class="credits-small"
+          >Game previews come from the existing project showcase. DOOM and Zelda archive
+          illustrations were supplied as design references. Game artwork and trademarks belong to
+          their respective owners. This is an independent homebrew project.</p
+        ><p class="credits-small"
+          >NES Link sprites ripped by Mister Mike, supplied by Esteban. Octorok sprites from
+          <a
+            class="plain-link"
+            href="https://www.nesmaps.com/maps/Zelda/sprites/ZeldaSprites.html"
+            target="_blank"
+            rel="noreferrer"
+            >NES Maps</a
+          >.</p
+        ><button class="win-button" type="button" data-close-about>OK</button></div
+      ></dialog
+    >
+    <dialog
+      id="gallery-lightbox"
+      data-screen="upper"
+      class="lightbox win-window"
+      aria-labelledby="lightbox-title"
+      ><header class="win-titlebar"
+        ><button id="lightbox-close" class="system-mark" type="button" aria-label="Close gallery"
+          ><svg class="win-system-icon" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+            <path fill="#808080" d="M3 7h12v4H3Z" />
+            <path fill="#111" d="M3 7h12v3H3Z" />
+            <path fill="#c0c0c0" d="M4 8h10v1H4Z" /></svg></button
+        ><h2 id="lightbox-title">Hyrule · first-person view</h2></header
+      ><div class="gallery-screen-controls" role="group" aria-label="Choose screen"
+        ><span class="gallery-screen-label">View</span
+        ><button
+          type="button"
+          data-gallery-screen="upper"
+          aria-pressed="true"
+          aria-controls="lightbox-image"
+          ><svg
+            class="gallery-screen-icon"
+            viewBox="0 0 24 32"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="2" width="18" height="12" rx="1" fill="currentColor" />
+            <path d="M5 17h14" />
+            <rect x="5" y="20" width="14" height="10" rx="1" fill="none" /></svg
+          ><span>Upper screen</span></button
+        ><button
+          type="button"
+          data-gallery-screen="lower"
+          aria-pressed="false"
+          aria-controls="lightbox-image"
+          ><svg
+            class="gallery-screen-icon"
+            viewBox="0 0 24 32"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="2" width="18" height="12" rx="1" fill="none" />
+            <path d="M5 17h14" />
+            <rect x="5" y="20" width="14" height="10" rx="1" fill="currentColor" /></svg
+          ><span>Lower screen</span></button
+        ></div
+      ><div class="lightbox-screen"
+        ><svg
+          id="lightbox-image"
+          data-gallery-display
+          data-screen="upper"
+          viewBox="0 0 400 240"
+          role="img"
+          aria-label="Hyrule · first-person view"
+        >
+          <image
+            href="assets/captures/legend-of-doom/03-hyrule.webp"
+            width="720"
+            height="240"
+          /></svg></div
+      ><div class="lightbox-controls"
+        ><p
+          ><span id="lightbox-counter">1 / 12 · Upper screen</span><br />Choose a screen above.
+          Browse scenes with the arrows.</p
+        ><div
+          ><button
+            id="lightbox-previous"
+            class="win-button"
+            type="button"
+            aria-label="Previous image"
+            >←</button
+          ><button id="lightbox-next" class="win-button" type="button" aria-label="Next image"
+            >→</button
+          ></div
+        ></div
+      ></dialog
+    >
+  </body></html
+>

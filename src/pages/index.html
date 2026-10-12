@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://media.discordapp.net; font-src 'self'; connect-src 'self' https://discord.com https://decomp.dev https://api.github.com https://raw.githubusercontent.com https://n64decomp.github.io https://sat-r.github.io https://zelda.deco.mp https://zelda64.dev; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" /><meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1" /><meta
+      name="theme-color"
+      content="#edf3f5" /><meta
+      name="description"
+      content="Esteban’s Forge. Nintendo 3DS ports, projects, and a second life for the classics." /><title
+      >Esteban’s Forge · Nintendo 3DS Ports</title
+    ><link
+      rel="icon"
+      type="image/png"
+      href="assets/brand/estebans-forge-icon.png?v=dabcfd2731bd" /><link
+      rel="stylesheet"
+      href="styles.css" /><link rel="stylesheet" href="forge-header.css" /><link
+      rel="stylesheet"
+      href="dual.css" /><link rel="stylesheet" href="scene.css" /><script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="welcome-init.js"></script
+    ><script src="app.js" defer></script
+    ><script src="dual.js?v=20260930-welcome1" defer></script
+    ><link rel="stylesheet" href="community.css" /><link
+      rel="stylesheet"
+      href="collection-cards.css" /><script src="community.js" type="module"></script
+    ><link rel="stylesheet" href="page-transitions.css" /><link
+      rel="stylesheet"
+      href="interaction-motion.css" /><script src="interaction-motion.js"></script
+    ><script src="forge-header.js" defer></script
+    ><script src="info-community.js" defer></script
+  ></head>
+  <body
+    ><!-- forge-header --><main>
+      <section id="dual" class="view dual" data-game="kart">
+        <div class="hero-backdrop" aria-hidden="true">
+          <div class="hero-backdrop-layer is-active" data-backdrop="kart"
+            ><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+              <image href="assets/artwork/mario-kart-64.png" width="1200" height="800" /></svg
+          ></div>
+          <div class="hero-backdrop-layer" data-backdrop="minish"
+            ><svg viewBox="0 0 1800 2400" preserveAspectRatio="xMidYMid slice">
+              <image href="assets/artwork/the-minish-cap.png" width="1800" height="2400" /></svg
+          ></div>
+          <div class="hero-backdrop-layer" data-backdrop="alttp"
+            ><svg viewBox="0 0 1000 663" preserveAspectRatio="xMidYMid slice">
+              <image href="assets/artwork/a-link-to-the-past.png" width="1000" height="663" /></svg
+          ></div>
+          <div class="hero-backdrop-layer" data-backdrop="doom"
+            ><svg viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice">
+              <image href="assets/artwork/legend-of-doom.png" width="1200" height="675" /></svg
+          ></div>
+          <div class="hero-backdrop-layer" data-backdrop="starwing"
+            ><svg viewBox="0 0 2152 1542" preserveAspectRatio="xMidYMid slice">
+              <image href="assets/artwork/starwing.png" width="2152" height="1542" /></svg
+          ></div>
+        </div>
+
+        <div class="dual-pages" id="dual-pages"
+          ><div id="dual-collection">
+            <div class="dual-hero" id="dual-feature">
+              <div class="feature-story"
+                ><div class="feature-position"
+                  ><span id="feature-index">03</span><span class="position-line"></span
+                  ><span>05</span></div
+                ><p class="feature-platform" id="feature-platform">NINTENDO 64 → NINTENDO 3DS</p>
+                <div class="feature-copy"
+                  ><h1 class="sr-only selected-name">Mario Kart 64</h1
+                  ><div class="feature-logo"
+                    ><img
+                      id="feature-logo"
+                      src="assets/logos/mario-kart-64.png"
+                      alt="Mario Kart 64" /><svg
+                      id="feature-mobile-logo"
+                      class="mobile-project-logo"
+                      viewBox="59 86 568 232"
+                      role="img"
+                      aria-label="Mario Kart 64"
+                    >
+                      <image
+                        href="assets/logos/mario-kart-64.png"
+                        width="667"
+                        height="374"
+                      /></svg></div
+                  ><p id="feature-description"
+                    >One more lap.<br />This time, on two screens.</p
+                  ></div
+                >
+                <a class="collection-link" href="#dual-library"
+                  >Explore collection
+                  <svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 5v14m-6-6 6 6 6-6" /></svg
+                ></a>
+                <div class="feature-controls"
+                  ><button type="button" id="previous-game" aria-label="Previous project"
+                    ><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="m14 6-6 6 6 6" /></svg></button
+                  ><span id="feature-short">Mario Kart 64</span
+                  ><button type="button" id="next-game" aria-label="Next project"
+                    ><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="m10 6 6 6-6 6" /></svg></button
+                ></div>
+              </div>
+              <figure class="console-showcase"
+                ><div class="console-plinth" aria-hidden="true"></div
+                ><div class="console-float"
+                  ><div class="device-frame"
+                    ><svg
+                      class="device-photo"
+                      viewBox="230 140 2105 2270"
+                      role="img"
+                      aria-label="Black New Nintendo 3DS XL, front view"
+                    >
+                      <defs>
+                        <clipPath id="console-shell-clip">
+                          <path
+                            d="M454 155 H2100 C2220 155 2319 247 2319 366 V1180 Q2319 1196 2301 1196 H2127 V1205 H2259 Q2318 1205 2318 1266 V2174 C2318 2305 2236 2395 2102 2395 H455 C318 2395 244 2302 244 2174 V1328 Q238 1320 238 1270 Q238 1205 298 1205 H441 V1196 H254 Q239 1196 239 1180 V366 C239 247 333 155 454 155 Z"
+                          />
+                        </clipPath>
+                      </defs>
+                      <image
+                        href="assets/devices/new-nintendo-3ds-xl-neutral.webp"
+                        width="2560"
+                        height="2560"
+                        clip-path="url(#console-shell-clip)"
+                      />
+                    </svg>
+                    <div class="device-screen device-screen-top"
+                      ><div id="dual-top" class="console-screen-surface" role="img"
+                        ><svg
+                          viewBox="250 142 498 296"
+                          preserveAspectRatio="none"
+                          aria-hidden="true"
+                        >
+                          <image
+                            href="assets/screens/mario-kart-64.png"
+                            width="1672"
+                            height="941"
+                          /></svg></div
+                    ></div>
+                    <div class="device-screen device-screen-bottom"
+                      ><div id="dual-bottom" class="console-screen-surface" role="img"
+                        ><svg
+                          viewBox="296 520 401 291"
+                          preserveAspectRatio="none"
+                          aria-hidden="true"
+                        >
+                          <image
+                            href="assets/screens/mario-kart-64.png"
+                            width="1672"
+                            height="941"
+                          /></svg></div
+                    ></div> </div></div
+              ></figure>
+              <nav class="dual-rail" aria-label="Select game"
+                ><button
+                  class="rail-project"
+                  data-console="alttp"
+                  data-project="A Link to the Past"
+                  aria-pressed="false"
+                  ><span class="rail-thumb game-icon"
+                    ><img src="assets/icons/alttp.webp" alt="" /></span
+                  ><span class="rail-number">01</span><span>A Link to the Past</span
+                  ><span class="rail-selected" aria-hidden="true">◂</span></button
+                ><button
+                  class="rail-project"
+                  data-console="minish"
+                  data-project="The Minish Cap"
+                  aria-pressed="false"
+                  ><span class="rail-thumb game-icon"
+                    ><img src="assets/icons/minish.webp" alt="" /></span
+                  ><span class="rail-number">02</span><span>The Minish Cap</span
+                  ><span class="rail-selected" aria-hidden="true">◂</span></button
+                ><button
+                  class="rail-project selected"
+                  data-console="kart"
+                  data-project="Mario Kart 64"
+                  aria-pressed="true"
+                  ><span class="rail-thumb game-icon"
+                    ><img src="assets/icons/mk64.webp" alt="" /></span
+                  ><span class="rail-number">03</span><span>Mario Kart 64</span
+                  ><span class="rail-selected" aria-hidden="true">◂</span></button
+                ><button
+                  class="rail-project"
+                  data-console="doom"
+                  data-project="Legend of Doom"
+                  aria-pressed="false"
+                  ><span class="rail-thumb game-icon"
+                    ><img src="assets/icons/doom.webp" alt="" /></span
+                  ><span class="rail-number">04</span><span>Legend of Doom</span
+                  ><span class="rail-selected" aria-hidden="true">◂</span></button
+                ><button
+                  class="rail-project"
+                  data-console="starwing"
+                  data-project="Starwing 3DS"
+                  aria-pressed="false"
+                  ><span class="rail-thumb game-icon"
+                    ><img src="assets/icons/starwing.webp" alt="" /></span
+                  ><span class="rail-number">05</span><span>Starwing 3DS</span
+                  ><span class="rail-selected" aria-hidden="true">◂</span></button
+                ></nav
+              >
+            </div>
+            <section class="dual-library" id="dual-library" aria-labelledby="library-title">
+              <div class="library-heading-row"
+                ><h2 class="eyebrow" id="library-title">Released Ports</h2
+                ><p>The classics, ready for another adventure.</p></div
+              >
+              <div class="game-mosaic released-mosaic">
+                <a
+                  class="game-channel game-minish"
+                  href="the-minish-cap.html"
+                  data-project="The Minish Cap"
+                >
+                  <span class="channel-art channel-art-minish">
+                    <img
+                      class="channel-wallpaper"
+                      src="assets/artwork/the-minish-cap.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    /><svg
+                      class="channel-logo"
+                      viewBox="4 15 816 417"
+                      preserveAspectRatio="xMidYMid meet"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <image href="assets/logos/the-minish-cap.png" width="844" height="439" />
+                    </svg>
+                    <span class="channel-status">Released</span>
+                    <span class="channel-details"
+                      ><span class="channel-platform">Game Boy Advance → Nintendo 3DS</span
+                      ><strong>The Minish Cap</strong
+                      ><span class="channel-description"
+                        >A little adventure.<br />A whole world to discover.</span
+                      ><span class="channel-action"
+                        >Explore project
+                        <svg
+                          class="ui-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+                    ></span>
+                    <span class="channel-index" aria-hidden="true">02</span>
+                  </span>
+                </a>
+                <a
+                  class="game-channel game-doom"
+                  href="legend-of-doom.html"
+                  data-project="Legend of Doom"
+                >
+                  <span class="channel-art channel-art-doom">
+                    <img
+                      class="channel-wallpaper"
+                      src="assets/artwork/legend-of-doom.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    /><svg
+                      class="channel-logo"
+                      viewBox="518 125 1310 1005"
+                      preserveAspectRatio="xMidYMid meet"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <image href="assets/logos/legend-of-doom.png" width="2560" height="1280" />
+                    </svg>
+                    <span class="channel-status">Released</span>
+                    <span class="channel-details"
+                      ><span class="channel-platform">Zelda × Doom → Nintendo 3DS</span
+                      ><strong>Legend of Doom</strong
+                      ><span class="channel-description"
+                        >Hyrule, from another angle.<br />Two classics come together.</span
+                      ><span class="channel-action"
+                        >Explore project
+                        <svg
+                          class="ui-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+                    ></span>
+                    <span class="channel-index" aria-hidden="true">04</span>
+                  </span>
+                </a>
+                <a
+                  class="game-channel game-alttp"
+                  href="a-link-to-the-past.html"
+                  data-project="A Link to the Past"
+                >
+                  <span class="channel-art channel-art-alttp">
+                    <img
+                      class="channel-wallpaper"
+                      src="assets/artwork/a-link-to-the-past.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    /><svg
+                      class="channel-logo"
+                      viewBox="0 0 1200 1066"
+                      preserveAspectRatio="xMidYMid meet"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <image
+                        href="assets/logos/a-link-to-the-past.png"
+                        width="1200"
+                        height="1066"
+                      />
+                    </svg>
+                    <span class="channel-status">Released</span>
+                    <span class="channel-details"
+                      ><span class="channel-platform">Super Nintendo → Nintendo 3DS</span
+                      ><strong>A Link to the Past</strong
+                      ><span class="channel-description"
+                        >Two worlds.<br />An adventure worth revisiting.</span
+                      ><span class="channel-action"
+                        >Explore project
+                        <svg
+                          class="ui-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+                    ></span>
+                    <span class="channel-index" aria-hidden="true">01</span>
+                  </span>
+                </a>
+                <a
+                  class="game-channel game-kart"
+                  href="mario-kart-64.html"
+                  data-project="Mario Kart 64"
+                >
+                  <span class="channel-art channel-art-kart">
+                    <img
+                      class="channel-wallpaper"
+                      src="assets/artwork/mario-kart-64.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    /><svg
+                      class="channel-logo"
+                      viewBox="59 86 568 232"
+                      preserveAspectRatio="xMidYMid meet"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <image href="assets/logos/mario-kart-64.png" width="667" height="374" />
+                    </svg>
+                    <span class="channel-status">Released</span>
+                    <span class="channel-details"
+                      ><span class="channel-platform">Nintendo 64 → Nintendo 3DS</span
+                      ><strong>Mario Kart 64</strong
+                      ><span class="channel-description"
+                        >One more lap.<br />This time, on two screens.</span
+                      ><span class="channel-action"
+                        >Explore project
+                        <svg
+                          class="ui-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+                    ></span>
+                    <span class="channel-index" aria-hidden="true">03</span>
+                  </span>
+                </a>
+              </div>
+              <div class="library-heading-row development-heading"
+                ><h2 class="eyebrow" id="development-library-title">Ports in Development</h2
+                ><p>The next adventures taking shape.</p></div
+              >
+              <div
+                class="game-mosaic development-mosaic"
+                aria-labelledby="development-library-title"
+              >
+                <a
+                  class="game-channel game-sm64ds"
+                  href="super-mario-64-ds.html"
+                  data-project="Super Mario 64 DS"
+                >
+                  <span class="channel-art channel-art-sm64ds"
+                    ><img
+                      class="channel-wallpaper"
+                      src="assets/mario-ds/collection-ds-scene.jpg"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    /><svg
+                      class="channel-logo"
+                      viewBox="0 0 1925 992"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <image
+                        href="assets/logos/super-mario-64-ds-clean.svg"
+                        width="1925"
+                        height="992"
+                      /></svg
+                    ><span class="channel-status is-development">In development · 35%</span
+                    ><span class="channel-details"
+                      ><span class="channel-platform">Nintendo DS → Nintendo 3DS</span
+                      ><strong>Super Mario 64 DS</strong
+                      ><span class="channel-description">A new adventure<br />on the horizon.</span
+                      ><span class="channel-action"
+                        >Explore project
+                        <svg
+                          class="ui-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span></span
+                    ><span class="channel-index" aria-hidden="true">07</span></span
+                  >
+                </a>
+                <a
+                  class="game-channel game-dusklight"
+                  href="dusklight.html"
+                  data-project="Dusklight"
+                >
+                  <span class="channel-art channel-art-dusklight"
+                    ><img
+                      class="channel-wallpaper"
+                      src="assets/dusklight/collection-amber-twilight.webp"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    /><svg
+                      class="channel-logo"
+                      viewBox="0 0 2310 495"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <image href="assets/logos/dusklight.png" width="2310" height="495" /></svg
+                    ><span class="channel-status is-development">In development · 10%</span
+                    ><span class="channel-details"
+                      ><span class="channel-platform">Twilight Princess → New Nintendo 3DS</span
+                      ><strong>Dusklight</strong
+                      ><span class="channel-description"
+                        >Twilight Princess<br />in the palm of your hand.</span
+                      ><span class="channel-action"
+                        >Explore project
+                        <svg
+                          class="ui-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span></span
+                    ><span class="channel-index" aria-hidden="true">06</span></span
+                  >
+                </a>
+                <a
+                  class="game-channel game-starwing"
+                  href="star-fox.html"
+                  data-project="Starwing 3DS"
+                >
+                  <span class="channel-art channel-art-starwing">
+                    <img
+                      class="channel-wallpaper"
+                      src="assets/artwork/starwing.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    /><svg
+                      class="channel-logo"
+                      viewBox="0 22 254 82"
+                      preserveAspectRatio="xMidYMid meet"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <image href="assets/logos/starwing.png" width="256" height="128" />
+                    </svg>
+                    <span class="channel-status is-development">In development · 70%</span>
+                    <span class="channel-details"
+                      ><span class="channel-platform">Super Nintendo → Nintendo 3DS</span
+                      ><strong>Starwing 3DS</strong
+                      ><span class="channel-description"
+                        >Set course for Lylat.<br />Your next mission fits in your pocket.</span
+                      ><span class="channel-action"
+                        >Explore project
+                        <svg
+                          class="ui-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+                    ></span>
+                    <span class="channel-index" aria-hidden="true">05</span>
+                  </span>
+                </a>
+
+                <a
+                  class="game-channel game-viper"
+                  href="red-viper-color.html"
+                  data-project="Red Viper Color"
+                  ><span class="channel-art channel-art-viper"
+                    ><img
+                      class="channel-wallpaper"
+                      src="assets/red-viper/virtual-boy-tile.png"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    /><svg
+                      class="channel-logo"
+                      viewBox="0 0 330 37"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <image
+                        href="assets/red-viper/menu-wordmark.png"
+                        width="330"
+                        height="37"
+                      /></svg
+                    ><span class="channel-status is-development">In development · 75%</span
+                    ><span class="channel-details"
+                      ><span class="channel-platform">Virtual Boy → Nintendo 3DS</span
+                      ><strong>Red Viper Color</strong
+                      ><span class="channel-description"
+                        >A familiar world.<br />A whole new spectrum.</span
+                      ><span class="channel-action"
+                        >Explore project
+                        <svg
+                          class="ui-icon"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span></span
+                    ><span class="channel-index" aria-hidden="true">08</span></span
+                  ></a
+                >
+              </div>
+            </section></div
+          ><section id="dual-progress" class="dual-progress" aria-labelledby="progress-title" hidden
+            ><div class="progress-heading"
+              ><p class="eyebrow">IN THE WORKSHOP</p
+              ><h1 id="progress-title"
+                >What’s cooking
+                <span class="cooking-icon" role="img" aria-label="Frying pan">🍳</span></h1
+              ><p
+                >Check the status of my ports<br />
+                and the decompilation projects I follow.</p
+              ></div
+            ><div class="progress-filters" aria-label="Project type"
+              ><button type="button" data-progress-filter="ports" aria-pressed="true"
+                >My ports <span>08</span></button
+              ><button type="button" data-progress-filter="community" aria-pressed="false"
+                >Decompilations <span>20</span></button
+              ></div
+            ><p class="progress-context" id="progress-context"
+              >My work adapting games to Nintendo 3DS.</p
+            ><div id="progress-results"
+              ><div class="progress-groups" id="progress-ports"
+                ><details
+                  class="progress-completed"
+                  id="ports-completed"
+                  data-progress-completed
+                  open
+                  ><summary
+                    ><span class="progress-group-label"
+                      >Completed ports <span class="progress-group-count">3</span
+                      ><small>Ready for your Nintendo 3DS</small></span
+                    ><span class="progress-disclosure-action"
+                      ><span class="progress-action-hide"
+                        >Hide<span class="progress-action-suffix"> completed</span></span
+                      ><span class="progress-action-show"
+                        >Show<span class="progress-action-suffix"> completed</span></span
+                      ><span
+                        class="progress-disclosure-mark"
+                        aria-hidden="true"
+                      ></span></span></summary
+                  ><div class="progress-grid">
+                    <article class="progress-card port-minish">
+                      <div class="progress-art game-icon"
+                        ><img src="assets/icons/minish.webp" alt="" loading="lazy" decoding="async"
+                      /></div>
+                      <div class="progress-content"
+                        ><h3
+                          ><a href="the-minish-cap.html"
+                            >The Minish Cap<span
+                              class="progress-open"
+                              aria-hidden="true"
+                            ></span></a></h3
+                        ><p>Game Boy Advance → Nintendo 3DS</p>
+                        <div class="progress-meta"
+                          ><span class="port-status is-complete">Completed</span
+                          ><strong>100<small>%</small></strong></div
+                        >
+                        <div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="The Minish Cap progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="100"
+                          ><span style="width:100%"></span
+                        ></div>
+                        <p class="port-note">Future improvements planned.</p></div
+                      ></article
+                    >
+                    <article class="progress-card port-alttp">
+                      <div class="progress-art game-icon"
+                        ><img src="assets/icons/alttp.webp" alt="" loading="lazy" decoding="async"
+                      /></div>
+                      <div class="progress-content"
+                        ><h3
+                          ><a href="a-link-to-the-past.html"
+                            >A Link to the Past<span
+                              class="progress-open"
+                              aria-hidden="true"
+                            ></span></a></h3
+                        ><p>Super Nintendo → Nintendo 3DS</p>
+                        <div class="progress-meta"
+                          ><span class="port-status is-complete">Completed</span
+                          ><strong>100<small>%</small></strong></div
+                        >
+                        <div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="A Link to the Past progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="100"
+                          ><span style="width:100%"></span
+                        ></div>
+                        <p class="port-note">Future improvements planned.</p></div
+                      ></article
+                    >
+                    <article class="progress-card port-doom">
+                      <div class="progress-art game-icon"
+                        ><img src="assets/icons/doom.webp" alt="" loading="lazy" decoding="async"
+                      /></div>
+                      <div class="progress-content"
+                        ><h3
+                          ><a href="legend-of-doom.html"
+                            >Legend of Doom<span
+                              class="progress-open"
+                              aria-hidden="true"
+                            ></span></a></h3
+                        ><p>Zelda × Doom → Nintendo 3DS</p>
+                        <div class="progress-meta"
+                          ><span class="port-status is-complete">Completed</span
+                          ><strong>100<small>%</small></strong></div
+                        >
+                        <div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="Legend of Doom progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="100"
+                          ><span style="width:100%"></span
+                        ></div>
+                        <p class="port-note">A finished adventure.</p></div
+                      ></article
+                    ></div
+                  ></details
+                ><section class="progress-ongoing" aria-labelledby="ports-ongoing-title"
+                  ><div class="progress-group-heading"
+                    ><h2 id="ports-ongoing-title"
+                      >In development <span class="progress-group-count">5</span></h2
+                    ><p>Closest to completion first</p></div
+                  ><div class="progress-grid">
+                    <article class="progress-card port-viper"
+                      ><div class="progress-art game-icon"
+                        ><img
+                          src="assets/red-viper/icon.png"
+                          alt=""
+                          loading="lazy"
+                          decoding="async" /></div
+                      ><div class="progress-content"
+                        ><h3
+                          ><a href="red-viper-color.html"
+                            >Red Viper Color<span
+                              class="progress-open"
+                              aria-hidden="true"
+                            ></span></a></h3
+                        ><p>Virtual Boy → Nintendo 3DS</p
+                        ><div class="progress-meta"
+                          ><span class="port-status">In development</span
+                          ><strong>75<small>%</small></strong></div
+                        ><div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="Red Viper Color progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="75"
+                          ><span style="width:75%"></span></div
+                        ><p class="port-note">A new spectrum for Virtual Boy.</p></div
+                      ></article
+                    >
+                    <article class="progress-card port-starwing">
+                      <div class="progress-art game-icon"
+                        ><img
+                          src="assets/icons/starwing.webp"
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                      /></div>
+                      <div class="progress-content"
+                        ><h3
+                          ><a href="star-fox.html"
+                            >Star Fox / Starwing 3DS<span
+                              class="progress-open"
+                              aria-hidden="true"
+                            ></span></a></h3
+                        ><p>Super Nintendo → Nintendo 3DS</p>
+                        <div class="progress-meta"
+                          ><span class="port-status">In development</span
+                          ><strong>70<small>%</small></strong></div
+                        >
+                        <div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="Star Fox / Starwing 3DS progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="70"
+                          ><span style="width:70%"></span
+                        ></div>
+                        <p class="port-note">First release coming soon.</p></div
+                      ></article
+                    >
+                    <article class="progress-card port-kart">
+                      <div class="progress-art game-icon"
+                        ><img src="assets/icons/mk64.webp" alt="" loading="lazy" decoding="async"
+                      /></div>
+                      <div class="progress-content"
+                        ><h3
+                          ><a href="mario-kart-64.html"
+                            >Mario Kart 64<span
+                              class="progress-open"
+                              aria-hidden="true"
+                            ></span></a></h3
+                        ><p>Nintendo 64 → Nintendo 3DS</p>
+                        <div class="progress-meta"
+                          ><span class="port-status">In development</span
+                          ><strong>65<small>%</small></strong></div
+                        >
+                        <div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="Mario Kart 64 progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="65"
+                          ><span style="width:65%"></span
+                        ></div>
+                        <p class="port-note">The race continues.</p></div
+                      ></article
+                    >
+                    <article class="progress-card port-sm64ds">
+                      <div class="progress-art game-icon game-icon-logo"
+                        ><img
+                          src="assets/logos/super-mario-64-ds-clean.svg"
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                      /></div>
+                      <div class="progress-content"
+                        ><h3
+                          ><a href="super-mario-64-ds.html"
+                            >Super Mario 64 DS<span
+                              class="progress-open"
+                              aria-hidden="true"
+                            ></span></a></h3
+                        ><p>Nintendo DS → Nintendo 3DS</p>
+                        <div class="progress-meta"
+                          ><span class="port-status">In development</span
+                          ><strong>35<small>%</small></strong></div
+                        >
+                        <div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="Super Mario 64 DS progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="35"
+                          ><span style="width:35%"></span
+                        ></div>
+                        <p class="port-note">A new adventure on the horizon.</p></div
+                      ></article
+                    >
+                    <article class="progress-card port-dusklight">
+                      <div class="progress-art game-icon"
+                        ><img
+                          src="assets/logos/dusklight-icon.png"
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                      /></div>
+                      <div class="progress-content"
+                        ><h3
+                          ><a href="dusklight.html"
+                            >Dusklight<span class="progress-open" aria-hidden="true"></span></a></h3
+                        ><p>Twilight Princess → New Nintendo 3DS</p>
+                        <div class="progress-meta"
+                          ><span class="port-status">In development</span
+                          ><strong>10<small>%</small></strong></div
+                        >
+                        <div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="Dusklight progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="10"
+                          ><span style="width:10%"></span
+                        ></div>
+                        <p class="port-note">Early development · Unreleased</p></div
+                      ></article
+                    ></div
+                  ></section
+                ></div
+              ><div class="community-panel" id="progress-community" hidden>
+                <div class="community-toolbar"
+                  ><div
+                    ><span class="community-live-dot" aria-hidden="true"></span
+                    ><span>Following 20 classics</span></div
+                  ><p id="community-sync" role="status"
+                    >Updates automatically when you visit · refreshes hourly</p
+                  ></div
+                >
+                <div class="progress-groups" id="community-grid"><!-- COMMUNITY_CARDS --></div>
+                <p class="community-explainer"
+                  >Each percentage follows the linked source and version. Matching code, total
+                  decompilation progress and a PC release measure different things. 100% of a code
+                  metric does not mean a finished port. Missing percentages remain unavailable.</p
+                >
+                <p class="community-sources"
+                  >Explore the community:
+                  <a href="https://decomp.dev/" target="_blank" rel="noopener noreferrer"
+                    >decomp.dev</a
+                  ><a href="https://decomp.wiki/" target="_blank" rel="noopener noreferrer"
+                    >Decompedia</a
+                  ><a
+                    href="https://www.retroreversing.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >RetroReversing</a
+                  ></p
+                > </div
+              ><p class="progress-note"
+                >Port progress is set by Esteban. Completed ports can still receive future
+                improvements. Community projects are tracked separately.</p
+              ></div
+            ></section
+          ><section id="dual-info" class="dual-info" aria-labelledby="info-title" hidden>
+            <header class="info-heading"
+              ><p class="eyebrow">FROM THE FORGE</p
+              ><h1 id="info-title">A little news.<br />A place to connect.</h1
+              ><p>Notes from the workshop, new adventures and the people behind them.</p></header
+            >
+            <div class="info-links"
+              ><a
+                class="info-card info-discord"
+                href="https://discord.gg/zy8BqH5ss"
+                target="_blank"
+                rel="noreferrer"
+                ><span class="info-card-body"
+                  ><span class="info-service-mark"
+                    ><img
+                      id="info-discord-icon"
+                      src="assets/info/discord-community.png"
+                      alt="Esteban&#x27;s Forge community icon"
+                      width="128"
+                      height="128" /></span
+                  ><span class="info-card-copy"
+                    ><small>THE COMMUNITY</small><h2 id="info-discord-name">Esteban&#x27;s Forge</h2
+                    ><p id="info-discord-description"
+                      >Community for my homebrew projects and more!</p
+                    ><div class="info-discord-stats" aria-live="polite"
+                      ><span id="info-discord-members">≈ 2,192 members</span
+                      ><span id="info-discord-online">244 online</span></div
+                    ><small id="info-discord-status">Last available estimate</small
+                    ><b>Join our Discord <span aria-hidden="true">→</span></b></span
+                  ></span
+                ></a
+              >
+              <a
+                class="info-card info-x"
+                href="https://x.com/estebanpdn_"
+                target="_blank"
+                rel="noreferrer"
+                ><span class="info-card-body"
+                  ><span class="info-service-mark" aria-hidden="true"
+                    ><svg viewBox="0 0 24 24">
+                      <path
+                        d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.9-9L1.8 2h6.5l4.4 6.7L18.9 2ZM17.8 20h1.7L7.3 3.9H5.5L17.8 20Z"
+                      /></svg></span
+                  ><span class="info-card-copy"
+                    ><small>QUICK NOTES &amp; UPDATES</small><h2>Follow the next idea.</h2
+                    ><p>Little discoveries, project updates and things taking shape in the Forge.</p
+                    ><b>@estebanpdn_ <span aria-hidden="true">→</span></b></span
+                  ></span
+                ></a
+              ></div
+            >
+            <p class="info-foot">More stories from the workshop will find a home here.</p>
+          </section></div
+        ><footer class="dual-footer"
+          ><span>esteban’s <b>forge.</b></span
+          ><span>A second life for the classics.</span
+          ><a href="credits.html" target="_blank">Credits</a></footer
+        >
+      </section>
+    </main>
+    <section
+      class="welcome-screen"
+      id="welcome-screen"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="welcome-title"
+      hidden
+    >
+      <div class="welcome-panel">
+        <div class="welcome-emblem"
+          ><span class="avatar"
+            ><img
+              src="assets/brand/estebans-forge-icon.png?v=dabcfd2731bd"
+              width="176"
+              height="176"
+              alt=""
+              fetchpriority="high" /></span
+        ></div>
+        <p class="welcome-eyebrow">WELCOME</p>
+        <h1 id="welcome-title">esteban’s <b>forge.</b></h1>
+        <button type="button" class="welcome-enter" id="welcome-enter"
+          ><span>Check it out!</span
+          ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M5 12h14m-6-6 6 6-6 6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            /></svg
+        ></button>
+      </div>
+    </section>
+    <div class="sr-only" id="announcement" aria-live="polite"></div></body
+></html>

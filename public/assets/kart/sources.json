@@ -1,0 +1,194 @@
+{
+  "artwork": [
+    {
+      "file": "mario.png",
+      "source": "https://mario.wiki.gallery/images/1/18/MK64_Mario.png",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 75854
+    },
+    {
+      "file": "cup-mushroom.png",
+      "source": "https://mario.wiki.gallery/images/8/86/MK64-MushroomCup.png",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 29189
+    },
+    {
+      "file": "cup-flower.png",
+      "source": "https://mario.wiki.gallery/images/b/ba/MK64-FlowerCup.png",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 28098
+    },
+    {
+      "file": "cup-star.png",
+      "source": "https://mario.wiki.gallery/images/1/11/MK64_Star_Cup_Artwork.png",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 28898
+    },
+    {
+      "file": "cup-special.png",
+      "source": "https://mario.wiki.gallery/images/2/2e/MK64_Special_Cup_Artwork.png",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 30662
+    },
+    {
+      "file": "luigi-raceway.webp",
+      "source": "https://mario.wiki.gallery/images/5/5f/MK64_Luigi_Raceway_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 1895019,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "moo-moo-farm.webp",
+      "source": "https://mario.wiki.gallery/images/6/61/MK64_Moo_Moo_Farm_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3491052,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "koopa-troopa-beach.webp",
+      "source": "https://mario.wiki.gallery/images/1/1e/MK64_Koopa_Troopa_Beach_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3238939,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "kalimari-desert.webp",
+      "source": "https://mario.wiki.gallery/images/8/8c/MK64_Kalimari_Desert_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3597961,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "toads-turnpike.webp",
+      "source": "https://mario.wiki.gallery/images/7/76/MK64_Toad%27s_Turnpike_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3656164,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "frappe-snowland.webp",
+      "source": "https://mario.wiki.gallery/images/1/11/MK64_Frappe_Snowland_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3213071,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "choco-mountain.webp",
+      "source": "https://mario.wiki.gallery/images/c/cc/MK64_Choco_Mountain_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3215460,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "mario-raceway.webp",
+      "source": "https://mario.wiki.gallery/images/6/65/MK64_Mario_Raceway_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 2995542,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "wario-stadium.webp",
+      "source": "https://mario.wiki.gallery/images/4/46/MK64_Wario_Stadium_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3751299,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "sherbet-land.webp",
+      "source": "https://mario.wiki.gallery/images/3/38/MK64_Sherbet_Land_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 2959111,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "royal-raceway.webp",
+      "source": "https://mario.wiki.gallery/images/a/a1/MK64_Royal_Raceway_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3253682,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "bowsers-castle.webp",
+      "source": "https://mario.wiki.gallery/images/b/b5/MK64_Bowser%27s_Castle_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3794652,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "dk-jungle-parkway.webp",
+      "source": "https://mario.wiki.gallery/images/0/02/MK64_D.K.%27s_Jungle_Parkway_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3983866,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "yoshi-valley.webp",
+      "source": "https://mario.wiki.gallery/images/b/bd/MK64_Yoshi_Valley_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 3793743,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "banshee-boardwalk.webp",
+      "source": "https://mario.wiki.gallery/images/0/0f/MK64_Banshee_Boardwalk_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 2087362,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    },
+    {
+      "file": "rainbow-road.webp",
+      "source": "https://mario.wiki.gallery/images/9/99/MK64_Rainbow_Road_art.jpg",
+      "rights": "Original Nintendo Mario Kart 64 artwork. Hosted by Super Mario Wiki.",
+      "bytes": 2987928,
+      "delivery": "Original retained locally; max 1100px WebP, quality 90."
+    }
+  ],
+  "manual": "https://www.videogamemanual.com/n64/Mario%20Kart%2064%20%28USA%29.pdf",
+  "port": "https://github.com/EstebanPdN/mario-kart-64-3ds",
+  "reviewed": "2026-10-09",
+  "font": {
+    "name": "Racing Sans One",
+    "source": "https://github.com/google/fonts/tree/main/ofl/racingsansone",
+    "license": "SIL Open Font License 1.1"
+  },
+  "manual_cover": {
+    "file": "manual-cover.jpg",
+    "description": "First page rendered from the original USA instruction booklet scan. No generative changes."
+  },
+  "hero": {
+    "source": "https://mario.wiki.gallery/images/d/de/MarioKart64gart.jpg",
+    "file": "title-original-4x.webp",
+    "local_upscale": {
+      "model": "RealESRGAN_x4plus",
+      "source": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+      "weights_sha256": "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1",
+      "torch": "2.14.1",
+      "device": "Apple MPS",
+      "scale": 4,
+      "tile": 192,
+      "padding": 24,
+      "alpha": "Lanczos resampled separately; no generated alpha",
+      "assets": [
+        {
+          "input": "title-original.jpg",
+          "input_dimensions": [
+            1024,
+            768
+          ],
+          "output": "title-original-4x.webp",
+          "output_dimensions": [
+            4096,
+            3072
+          ],
+          "seconds": 10.71,
+          "bytes": 795016
+        }
+      ]
+    },
+    "rights": "Original Nintendo artwork; restored at 4x with local Real-ESRGAN, not a newly generated scene."
+  },
+  "lakitu": {
+    "source": "https://mario.wiki.gallery/images/9/94/Lakitu_MK64.png",
+    "file": "lakitu.png"
+  }
+}

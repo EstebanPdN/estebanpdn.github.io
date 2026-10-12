@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Asset sources, credits, license notes, and unresolved permissions for Esteban’s Forge."
+    />
+    <title>Credits &amp; asset sources · Esteban’s Forge</title>
+    <link rel="icon" type="image/png" href="assets/brand/estebans-forge-icon.png" />
+    <script src="page-transitions.js"></script>
+    <link rel="stylesheet" href="page-transitions.css" />
+    <link rel="stylesheet" href="interaction-motion.css" />
+    <script src="interaction-motion.js"></script>
+    <link rel="stylesheet" href="forge-header.css" />
+    <script src="forge-header.js" defer></script>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f3f6f8;
+        color: #22333d;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+      }
+
+      html[data-theme="dark"] { color-scheme: dark; background: #11191e; color: #e2e9ed; }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; line-height: 1.65; }
+      main { width: min(880px, calc(100% - 36px)); margin: 0 auto; padding: clamp(54px, 9vw, 104px) 0 88px; }
+      .back-link, .resource-links a { color: #126d72; }
+      html[data-theme="dark"] .back-link, html[data-theme="dark"] .resource-links a { color: #79ced0; }
+      .back-link { font-size: 0.95rem; text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
+      .eyebrow { margin: 44px 0 8px; font-size: 0.78rem; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
+      h1 { margin: 0; font-size: clamp(2.25rem, 7vw, 4.25rem); letter-spacing: -0.055em; line-height: 1.05; }
+      h2 { margin: 0 0 9px; font-size: 1.22rem; line-height: 1.25; }
+      p { margin: 10px 0; }
+      .lede { max-width: 67ch; margin-top: 18px; font-size: 1.08rem; }
+      .notice { margin: 28px 0; padding: 20px 22px; border-left: 4px solid #b76b35; border-radius: 8px; background: #f7e9dc; color: #422c1e; }
+      html[data-theme="dark"] .notice { background: #30251e; color: #f0dfd1; }
+      .notice p:last-child { margin-bottom: 0; }
+      .section { margin: 34px 0; padding: 24px; border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 14px; background: color-mix(in srgb, currentColor 3%, transparent); }
+      .resource-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+      .resource-links a { display: inline-block; padding: 10px 14px; border: 1px solid currentColor; border-radius: 9px; font-weight: 700; text-decoration: none; }
+      .resource-links a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+      .status-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; margin: 16px 0 0; padding: 0; list-style: none; }
+      .status-list li { padding: 13px 15px; border-radius: 9px; background: color-mix(in srgb, currentColor 5%, transparent); }
+      .status-list strong { display: block; margin-bottom: 3px; }
+      .source-note { font-size: 0.94rem; }
+      footer { margin-top: 54px; padding-top: 18px; border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent); font-size: 0.93rem; }
+      :focus-visible { outline: 3px solid #24777b; outline-offset: 3px; }
+    </style>
+  </head>
+  <body>
+    <!-- forge-header -->
+    <main id="main-content">
+      <a class="back-link" href="index.html#collection">← Back to Esteban’s Forge</a>
+      <p class="eyebrow">Credits · sources · permissions</p>
+      <h1>Who made these assets?</h1>
+      <p class="lede">
+        This portfolio brings together original project work, owner-supplied references, game
+        artwork, product photographs, manuals, captures, software, and fonts. The register below
+        records the available source evidence for every file shipped in <code>assets/</code>.
+      </p>
+
+      <aside class="notice" aria-labelledby="permission-note-title">
+        <h2 id="permission-note-title">A credit is not a reuse licence</h2>
+        <p>
+          Nintendo, Sega, Atari, id Software, and other rights holders retain rights to their games,
+          characters, logos, manuals, and promotional artwork. An archive, shop page, search result,
+          or attribution does not establish permission to reproduce those materials. Some
+          permissions for the original portfolio assets could not be verified; their sources and
+          uncertainty are recorded rather than described as cleared.
+        </p>
+        <p>
+          The files remain because Esteban chose to preserve the current portfolio resources and
+          publish their attribution evidence with the project. That decision is not a claim that
+          every right or licence has been independently confirmed.
+        </p>
+      </aside>
+
+      <section class="section" aria-labelledby="ledger-title">
+        <h2 id="ledger-title">Per-file provenance register</h2>
+        <p>
+          Each entry includes its exact relative path, SHA-256 digest, the closest matching source
+          note, and a careful permission status. Source links point to the material recorded by the
+          project; a named licence still needs confirmation against the rights holder and the
+          intended use.
+        </p>
+        <div class="resource-links">
+          <a href="asset-provenance.json">Open the complete machine-readable register (JSON)</a>
+          <a
+            href="https://github.com/estebanpdn/estebanpdn.github.io/blob/main/docs/ASSET-CREDITS.md"
+          >
+            Read the source-by-source report
+          </a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="status-title">
+        <h2 id="status-title">How the register describes permission</h2>
+        <ul class="status-list">
+          <li
+            ><strong>Licence named in a source record</strong>The record names terms; the rights
+            holder and coverage still need checking.</li
+          >
+          <li
+            ><strong>Source recorded, permission not established</strong>A source is identified,
+            with no reuse grant recorded.</li
+          >
+          <li
+            ><strong>Permission explicitly unknown</strong>The source notes itself say that the
+            permission or licence is unknown.</li
+          >
+          <li
+            ><strong>Context only or no source note</strong>The manifests do not establish a
+            file-specific source or permission.</li
+          >
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="credits-title">
+        <h2 id="credits-title">Creators and source families</h2>
+        <p>
+          The project records source links for archived Nintendo artwork and manuals, console and
+          cartridge photographs, development captures, community game icons, and original interface
+          references. Its font records name Pixelify Sans, DM Sans, Nunito, Cormorant Garamond,
+          Fondamento, Barlow Semi Condensed, and Nintendo DS by cheezonpeaz41. Where bundled font
+          licence text is present, it remains alongside the relevant files.
+        </p>
+        <p>
+          The Sony PVM-4300 photograph is attributed to Shank Mods under CC BY-SA 4.0 in the project
+          record. The blue Nintendo DS and Game Boy Advance photos are recorded as public-domain
+          photographs by Evan-Amos. Other hardware images include a shop-catalogue cartridge photo
+          whose reuse terms are not stated in the source record. The Star Fox Arwing model credits
+          lllll440 and records CC BY 4.0; the per-file register links that source and the noted
+          terms.
+        </p>
+        <p class="source-note">
+          Artwork archives, manuals, supplied project files, and image hosts are not necessarily the
+          original rights holders. Please use the register to follow each chain of evidence and
+          check the original licence text before reusing an asset.
+        </p>
+      </section>
+
+      <footer>
+        <p
+          >All third-party marks and works remain with their respective owners. No blanket licence
+          is granted for this repository’s source code or bundled media.</p
+        >
+        <p><a class="back-link" href="index.html#collection">Return to the collection</a></p>
+      </footer>
+    </main>
+  </body>
+</html>

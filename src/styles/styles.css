@@ -1,0 +1,132 @@
+@import url('assets/fonts/dmsans.css');
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #343d43;
+  background: #f0f4f5;
+  font-synthesis: none;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #0a9e9b;
+  outline-offset: 6px;
+}
+[hidden] {
+  display: none !important;
+}
+.view {
+  min-height: 100svh;
+  overflow: hidden;
+}
+.site-header {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+.brand b {
+  font-weight: 750;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px #33495412;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.system-clock {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.battery {
+  width: 26px;
+  height: 14px;
+  border: 2px solid #758289;
+  border-radius: 4px;
+  padding: 2px;
+  position: relative;
+  flex: none;
+}
+.battery:before {
+  content: '';
+  display: block;
+  width: 85%;
+  height: 100%;
+  background: #758289;
+  border-radius: 1px;
+}
+.battery:after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 3px;
+  width: 2px;
+  height: 4px;
+  background: #758289;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .site-header {
+    height: auto;
+    min-height: 88px;
+  }
+  .brand {
+    font-size: 19px;
+    gap: 9px;
+  }
+  .avatar {
+    height: 40px;
+    width: 40px;
+  }
+  .system-clock {
+    font-size: 14px;
+    gap: 9px;
+  }
+}

@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" /><meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1" /><meta
+      name="theme-color"
+      content="#24296a" /><meta
+      name="description"
+      content="Back on the starting grid. Discover Mario Kart 64 for Nintendo 3DS: two-screen racing, the original circuits, installation, controls and support." /><title
+      >Mario Kart 64 · Esteban’s Forge</title
+    ><link rel="icon" type="image/png" href="assets/brand/estebans-forge-icon.png" /><link
+      rel="stylesheet"
+      href="forge-header.css" /><link rel="stylesheet" href="page-transitions.css" /><link
+      rel="stylesheet"
+      href="kart.css" /><script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="game.js" defer></script
+    ><script src="kart.js" defer></script
+    ><link rel="stylesheet" href="interaction-motion.css" /><script src="game-gallery.js"></script
+    ><script src="interaction-motion.js"></script
+    ><script src="forge-header.js" defer></script
+    ><link rel="stylesheet" href="forge-captures.css"
+  /></head>
+  <body data-game="kart"
+    ><!-- forge-header --><a class="skip-link" href="#project-main">Skip to project</a>
+
+    <main id="project-main" class="kart-page">
+      <nav class="kart-nav" aria-label="Mario Kart 64 sections"
+        ><a href="index.html#collection">← Collection</a><span>THE NINTENDO 3DS PIT GUIDE</span
+        ><div
+          ><a href="#gallery">Race view</a><a href="#install">Get ready</a
+          ><a href="#help">Help</a></div
+        ></nav
+      >
+      <section class="kart-hero" aria-labelledby="project-title"
+        ><img
+          class="hero-art"
+          src="assets/kart/title-original-4x.webp"
+          alt="Mario, Peach, Toad, Wario and Bowser race side by side in original Mario Kart 64 artwork"
+          width="4096"
+          height="3072"
+          fetchpriority="high"
+        /><div class="hero-shade"></div
+        ><div class="hero-copy"
+          ><p class="eyebrow">NINTENDO 64 ORIGINAL → NINTENDO 3DS</p
+          ><h1 id="project-title"
+            ><svg viewBox="62 173 1575 674" role="img" aria-label="Mario Kart 64">
+              <image href="assets/logos/mario-kart-64-clean.png" width="1676" height="939" /></svg
+            ><span
+              >Back on the<br />
+              starting grid.</span
+            ></h1
+          ><p
+            >The corners you know. The rivals you remember.<br />
+            One more lap, now in your hands.</p
+          ><a class="start-button" href="#gallery"
+            ><span class="a-button">A</span> LET’S-A GO! <span aria-hidden="true">↓</span></a
+          ></div
+        ><div class="hero-race-tag"
+          ><span>NATIVE 3DS PORT</span><strong>65<small>%</small></strong
+          ><span>IN DEVELOPMENT</span></div
+        ><div class="hero-credit">ORIGINAL NINTENDO ARTWORK / 1997</div></section
+      >
+      <div class="starting-line"
+        ><span>1 PLAYER</span><span class="starting-caption">A NEW HOME FOR A CLASSIC RACE</span
+        ><a
+          href="https://github.com/EstebanPdN/mario-kart-64-3ds/releases/latest"
+          target="_blank"
+          rel="noreferrer"
+          >GET THE LATEST BUILD</a
+        ></div
+      >
+      <nav class="lap-nav" aria-label="Jump to a lap"
+        ><a href="#gallery"><b>01</b><span>THE RACE</span></a
+        ><a href="#courses"><b>02</b><span>THE CIRCUITS</span></a
+        ><a href="#install"><b>03</b><span>THE PIT STOP</span></a></nav
+      >
+      <section id="gallery" class="race-section paper-section" aria-labelledby="gallery-heading"
+        ><header class="section-heading"
+          ><p class="eyebrow chapter-ribbon"><b>1.</b> Introducing the port</p
+          ><h2 id="gallery-heading">Two screens.<br /><em>One more race.</em></h2
+          ><p
+            >A native adaptation built on
+            <a
+              href="https://github.com/HarbourMasters/SpaghettiKart"
+              target="_blank"
+              rel="noreferrer"
+              >SpaghettiKart</a
+            >.<br />
+            The familiar drive, with a little more room for the details.</p
+          ></header
+        ><div class="race-layout"
+          ><div class="console-stage"
+            ><figure class="console-figure"
+              ><svg
+                viewBox="140 90 1320 1420"
+                role="img"
+                aria-label="New Nintendo 3DS with Mario Kart 64 development previews on both screens"
+              >
+                <defs>
+                  <clipPath id="kart-console">
+                    <path
+                      d="M268.75 93.75L258.75 95.00L246.25 97.50L230.62 102.50L221.88 106.25L214.38 110.00L200.62 118.75L191.88 125.62L179.38 138.12L169.38 151.25L168.75 153.12L163.75 160.62L160.00 168.12L160.00 169.38L158.75 170.62L158.75 171.88L156.25 176.88L153.12 186.25L153.12 188.12L150.62 195.62L150.00 201.88L148.75 205.62L148.12 215.62L147.50 216.25L147.50 529.38L145.00 530.62L143.12 532.50L143.12 536.88L144.38 538.12L147.50 538.75L147.50 575.62L148.12 576.25L147.50 743.12L148.75 745.62L151.25 748.12L153.75 749.38L156.88 750.00L172.50 750.62L167.50 753.12L163.12 756.25L157.50 762.50L156.25 766.88L153.75 769.38L150.00 776.25L149.38 781.25L148.75 781.88L148.75 786.88L148.12 787.50L148.12 813.12L148.75 813.75L149.38 820.62L151.88 825.62L151.88 1379.38L152.50 1380.00L153.12 1390.00L153.75 1390.62L153.75 1393.75L154.38 1394.38L154.38 1396.88L155.00 1397.50L156.88 1406.88L160.62 1418.12L163.75 1424.38L163.75 1425.62L171.88 1440.62L182.50 1455.00L187.50 1460.00L187.50 1460.62L191.88 1464.38L191.88 1465.00L206.25 1476.88L221.88 1486.25L240.00 1493.75L256.88 1498.12L270.62 1500.00L456.25 1500.62L460.00 1501.25L1140.62 1501.25L1143.75 1500.62L1329.38 1500.00L1343.12 1498.12L1360.00 1493.75L1378.12 1486.25L1386.88 1481.25L1398.75 1473.12L1413.12 1460.00L1422.50 1448.75L1430.00 1437.50L1435.62 1426.88L1435.62 1425.62L1439.38 1418.12L1443.12 1406.88L1443.12 1405.00L1443.75 1404.38L1443.75 1402.50L1445.62 1396.88L1445.62 1393.75L1446.25 1393.12L1446.88 1386.25L1447.50 1385.62L1447.50 1380.00L1448.12 1379.38L1448.12 825.62L1450.62 820.62L1451.25 813.75L1451.88 813.12L1451.88 787.50L1451.25 786.88L1451.25 781.88L1450.62 781.25L1450.62 778.75L1449.38 775.00L1446.25 769.38L1443.75 766.88L1443.75 765.00L1442.50 763.75L1442.50 762.50L1436.88 756.25L1432.50 753.12L1427.50 750.62L1443.75 750.00L1446.25 749.38L1448.75 748.12L1451.25 745.62L1452.50 743.12L1452.50 552.50L1453.12 551.88L1453.12 538.75L1456.88 537.50L1456.88 532.50L1455.62 531.25L1453.12 530.62L1453.12 516.25L1452.50 515.62L1452.50 216.25L1451.88 215.62L1451.88 210.62L1451.25 210.00L1451.25 205.62L1450.62 205.00L1450.62 201.88L1450.00 201.25L1449.38 195.62L1448.75 195.00L1447.50 188.12L1443.75 176.88L1442.50 175.00L1442.50 173.75L1436.25 160.62L1435.00 159.38L1431.88 153.12L1420.62 138.12L1408.12 125.62L1399.38 118.75L1390.00 112.50L1376.88 105.62L1360.62 99.38L1353.75 97.50L1345.00 95.62L1331.25 93.75Z"
+                    />
+                  </clipPath>
+                </defs>
+                <image
+                  href="assets/devices/new-nintendo-3ds-xl-neutral.webp"
+                  width="1600"
+                  height="1600"
+                  clip-path="url(#kart-console)"
+                />
+                <svg
+                  id="gallery-console-top"
+                  viewBox="0 0 400 240"
+                  x="365"
+                  y="204"
+                  width="871"
+                  height="523"
+                  preserveAspectRatio="none"
+                >
+                  <image
+                    href="assets/captures/mario-kart-64/06-koopa-troopa-beach.webp"
+                    width="720"
+                    height="240"
+                  /></svg
+                ><svg
+                  id="gallery-companion"
+                  viewBox="400 0 320 240"
+                  x="453"
+                  y="886"
+                  width="696"
+                  height="522"
+                  preserveAspectRatio="none"
+                >
+                  <image
+                    href="assets/captures/mario-kart-64/06-koopa-troopa-beach.webp"
+                    width="720"
+                    height="240"
+                  />
+                </svg></svg
+              ><figcaption>NEW NINTENDO 3DS · EXISTING PROJECT SHOWCASE</figcaption></figure
+            ><span class="screen-note top-note"><b>01</b> THE RACE</span
+            ><span class="screen-note bottom-note"><b>02</b> THE DETAILS</span></div
+          ><div class="race-features"
+            ><div
+              ><h3 class="manual-feature-name">THE RACE</h3
+              ><p
+                >A native 400 × 240 race view. Adjust the render scale, distance and Bilinear, Blur
+                or CRT filtering to suit your setup.</p
+              ></div
+            ><div
+              ><h3 class="manual-feature-name">THE SECOND SCREEN</h3
+              ><p
+                >The lower screen brings together touch menus, the course map and race information.
+                Five HUD layouts let you find your preferred view.</p
+              ><div class="hud-labels" aria-label="Available HUD layouts"
+                ><span>Clean</span><span>MK7</span><span>MKDS</span><span>MKDS 2</span
+                ><span>Classic</span></div
+              ></div
+            ><div class="hardware-note"
+              ><b>Old 3DS &amp; New 3DS</b
+              ><p
+                >Built with profiles for both generations. Performance depends on your hardware and
+                settings.</p
+              ><a href="#help">Hardware &amp; performance questions ↓</a></div
+            ></div
+          ></div
+        >
+        <div class="replay-desk reveal-section"
+          ><div class="replay-heading"
+            ><span>REPLAY</span><p>Take a closer look.</p
+            ><span><b id="gallery-current">01</b> / <span id="gallery-total">12</span></span></div
+          ><div class="replay-layout"
+            ><button
+              id="gallery-open"
+              data-screen="upper"
+              class="gallery-pair replay-screen"
+              type="button"
+              aria-label="Enlarge upper screen"
+              ><svg
+                id="gallery-image"
+                data-gallery-display
+                data-screen="upper"
+                viewBox="0 0 400 240"
+                role="img"
+                aria-label="Koopa Troopa Beach · VS race"
+                data-scene-view="0 0 400 240"
+              >
+                <image
+                  href="assets/captures/mario-kart-64/06-koopa-troopa-beach.webp"
+                  width="720"
+                  height="240"
+                /></svg
+              ><span>⛶ EXPAND</span></button
+            ><div class="replay-info"
+              ><div class="gallery-playback"
+                ><span>Captured gameplay</span
+                ><button
+                  id="gallery-autoplay"
+                  type="button"
+                  aria-pressed="true"
+                  aria-label="Pause slideshow"
+                  title="Pause slideshow"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path class="slideshow-pause" d="M6 5h4v14H6zM14 5h4v14h-4z" />
+                    <path class="slideshow-play" d="M8 5v14l11-7z" /></svg></button></div
+              ><div class="gallery-thumbs scene-thumbs" aria-label="Captured scenes"
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="true"
+                  aria-label="View Koopa Troopa Beach · VS race"
+                  data-scene="06-koopa-troopa-beach"
+                  data-title="Koopa Troopa Beach · VS race"
+                  data-caption="Koopa Troopa Beach brings coastal turns and a full field of racers. The lower map keeps the course in sight beyond the next corner."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/06-koopa-troopa-beach.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>01</b> Koopa Troopa Beach · VS race</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Title screen"
+                  data-scene="01-title"
+                  data-title="Title screen"
+                  data-caption="Title screen. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/01-title.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>02</b> Title screen</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Choose a race mode"
+                  data-scene="02-mode-selection"
+                  data-title="Choose a race mode"
+                  data-caption="Choose a race mode. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/02-mode-selection.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>03</b> Choose a race mode</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View The eight drivers"
+                  data-scene="03-characters"
+                  data-title="The eight drivers"
+                  data-caption="The eight-driver selection screen and the course preview share the two displays."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/03-characters.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>04</b> The eight drivers</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Choose a cup and course"
+                  data-scene="04-cup-course-select"
+                  data-title="Choose a cup and course"
+                  data-caption="Choose a cup and course above, with its outline already visible on the lower screen."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/04-cup-course-select.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>05</b> Choose a cup and course</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Luigi Raceway · Time Trials"
+                  data-scene="05-luigi-raceway"
+                  data-title="Luigi Raceway · Time Trials"
+                  data-caption="Luigi Raceway’s broad straight opens the Time Trials run. The course outline and lap information sit on the lower display."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/05-luigi-raceway.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>06</b> Luigi Raceway · Time Trials</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Rainbow Road"
+                  data-scene="10-rainbow-road"
+                  data-title="Rainbow Road"
+                  data-caption="Bright rails frame Rainbow Road’s winding course. Compare the view ahead with the full circuit on the lower screen."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/10-rainbow-road.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>07</b> Rainbow Road</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Pause menu"
+                  data-scene="11-pause"
+                  data-title="Pause menu"
+                  data-caption="Pause menu. Captured from the Nintendo 3DS port."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/11-pause.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>08</b> Pause menu</span></button
+                ><button
+                  class="gallery-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="View Display options"
+                  data-scene="12-display-options"
+                  data-title="Display options"
+                  data-caption="Open the lower-screen display menu to adjust the presentation while the game stays visible above."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/12-display-options.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-label"><b>09</b> Display options</span></button
+                ><button
+                  class="gallery-thumb gallery-video-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Play Luigi Raceway · Time Trials · Video"
+                  data-scene="video-05-luigi-raceway"
+                  data-video="assets/captures/mario-kart-64/05-luigi-raceway.mp4"
+                  data-title="Luigi Raceway · Time Trials · Video"
+                  data-caption="A short gameplay clip from the Nintendo 3DS port. Recorded in Azahar on macOS; both screens are shown together."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/05-luigi-raceway.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-video-marker" aria-hidden="true">▶</span
+                  ><span class="thumb-label"
+                    ><b>10</b> Luigi Raceway · Time Trials · Video</span
+                  ></button
+                ><button
+                  class="gallery-thumb gallery-video-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Play Koopa Troopa Beach · VS race · Video"
+                  data-scene="video-06-koopa-troopa-beach"
+                  data-video="assets/captures/mario-kart-64/06-koopa-troopa-beach.mp4"
+                  data-title="Koopa Troopa Beach · VS race · Video"
+                  data-caption="A short gameplay clip from the Nintendo 3DS port. Recorded in Azahar on macOS; both screens are shown together."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/06-koopa-troopa-beach.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-video-marker" aria-hidden="true">▶</span
+                  ><span class="thumb-label"
+                    ><b>11</b> Koopa Troopa Beach · VS race · Video</span
+                  ></button
+                ><button
+                  class="gallery-thumb gallery-video-thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Play Rainbow Road · Video"
+                  data-scene="video-10-rainbow-road"
+                  data-video="assets/captures/mario-kart-64/10-rainbow-road.mp4"
+                  data-title="Rainbow Road · Video"
+                  data-caption="A short gameplay clip from the Nintendo 3DS port. Recorded in Azahar on macOS; both screens are shown together."
+                  ><svg viewBox="0 0 400 240" aria-hidden="true">
+                    <image
+                      href="assets/captures/mario-kart-64/10-rainbow-road.webp"
+                      width="720"
+                      height="240"
+                    /></svg
+                  ><span class="thumb-video-marker" aria-hidden="true">▶</span
+                  ><span class="thumb-label"><b>12</b> Rainbow Road · Video</span></button
+                ></div
+              ><div class="gallery-scroll-controls" id="gallery-scroll-controls"
+                ><button id="gallery-scroll-previous" type="button" aria-label="Previous thumbnails"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m14 6-6 6 6 6" /></svg></button
+                ><input
+                  id="gallery-scroll"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  aria-label="Scroll gallery thumbnails" /><button
+                  id="gallery-scroll-next"
+                  type="button"
+                  aria-label="Next thumbnails"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m10 6 6 6-6 6" /></svg></button></div
+              ><div class="replay-caption" aria-live="polite"
+                ><h3 id="gallery-title">Koopa Troopa Beach · VS race</h3
+                ><p id="gallery-caption"
+                  >Koopa Troopa Beach brings coastal turns and a full field of racers. The lower map
+                  keeps the course in sight beyond the next corner.</p
+                ></div
+              ><p class="preview-note"
+                >Enlarge the selected view to choose the upper or lower screen.</p
+              ></div
+            ></div
+          ></div
+        ></section
+      >
+
+      <!-- capture-journal:start --><section
+        id="capture-journal"
+        class="capture-journal paper-section"
+        aria-labelledby="capture-journal-title"
+        ><div class="capture-inner"
+          ><p class="eyebrow">IN THE GAME · TWO SCREENS</p
+          ><h2 id="capture-journal-title">Race day, on both screens.</h2
+          ><p class="capture-introduction"
+            >Follow the racing line on Luigi Raceway, Koopa Troopa Beach and Rainbow Road. The lower
+            display keeps the course map in sight as the race unfolds above.</p
+          ><p class="capture-source"
+            >Captured in Azahar · Port 1.6-E15-local · Image previews show the upper screen. Open
+            the viewer to switch screens; gameplay clips show both.</p
+          ><div class="capture-grid capture-features"
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="05-luigi-raceway"
+                aria-label="Enlarge: Chase your own best lap."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="Chase your own best lap. · upper screen"
+                >
+                  <image
+                    href="assets/captures/mario-kart-64/05-luigi-raceway.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>Chase your own best lap.</h3
+                ><p
+                  >Luigi Raceway’s broad straight opens the Time Trials run. The course outline and
+                  lap information sit on the lower display.</p
+                ></figcaption
+              ></figure
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="06-koopa-troopa-beach"
+                aria-label="Enlarge: Trade the tarmac for sand."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="Trade the tarmac for sand. · upper screen"
+                >
+                  <image
+                    href="assets/captures/mario-kart-64/06-koopa-troopa-beach.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>Trade the tarmac for sand.</h3
+                ><p
+                  >Koopa Troopa Beach brings coastal turns and a full field of racers. The lower map
+                  keeps the course in sight beyond the next corner.</p
+                ></figcaption
+              ></figure
+            ><figure class="capture-frame capture-feature"
+              ><a
+                href="#gallery"
+                class="capture-feature-open"
+                data-gallery-feature="10-rainbow-road"
+                aria-label="Enlarge: One more lap above the clouds."
+                ><svg
+                  viewBox="0 0 400 240"
+                  role="img"
+                  aria-label="One more lap above the clouds. · upper screen"
+                >
+                  <image
+                    href="assets/captures/mario-kart-64/10-rainbow-road.webp"
+                    width="720"
+                    height="240"
+                  /></svg></a
+              ><figcaption
+                ><h3>One more lap above the clouds.</h3
+                ><p
+                  >Bright rails frame Rainbow Road’s winding course. Compare the view ahead with the
+                  full circuit on the lower screen.</p
+                ></figcaption
+              ></figure
+            ></div
+          ></div
+        ></section
+      ><!-- capture-journal:end -->
+      <section class="courses-section reveal-section" id="courses" aria-labelledby="courses-title"
+        ><header class="section-heading"
+          ><p class="eyebrow chapter-ribbon"><b>2.</b> Mario Kart 64 courses</p
+          ><h2 id="courses-title">Know every corner.</h2
+          ><p
+            >Four cups. Sixteen circuits. A whole lot of memories.<br />Explore Nintendo’s original
+            illustrations of the circuits.</p
+          ></header
+        ><div class="course-select" data-cup="mushroom"
+          ><div class="course-select-title"><span>MAP SELECT</span><span>CHOOSE A CUP</span></div
+          ><div class="cup-tabs" role="tablist" aria-label="Original Mario Kart 64 cups"
+            ><span class="cup-highlight" aria-hidden="true"></span
+            ><button
+              class="cup-tab"
+              id="tab-mushroom"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="cup-mushroom"
+              tabindex="0"
+              ><img src="assets/kart/cup-mushroom.png" alt="" width="151" height="177" /><span
+                >Mushroom<small>CUP</small></span
+              ></button
+            ><button
+              class="cup-tab"
+              id="tab-flower"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="cup-flower"
+              tabindex="-1"
+              ><img src="assets/kart/cup-flower.png" alt="" width="151" height="177" /><span
+                >Flower<small>CUP</small></span
+              ></button
+            ><button
+              class="cup-tab"
+              id="tab-star"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="cup-star"
+              tabindex="-1"
+              ><img src="assets/kart/cup-star.png" alt="" width="151" height="177" /><span
+                >Star<small>CUP</small></span
+              ></button
+            ><button
+              class="cup-tab"
+              id="tab-special"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="cup-special"
+              tabindex="-1"
+              ><img src="assets/kart/cup-special.png" alt="" width="151" height="177" /><span
+                >Special<small>CUP</small></span
+              ></button
+            ></div
+          ><div
+            class="cup-panel"
+            role="tabpanel"
+            id="cup-mushroom"
+            aria-labelledby="tab-mushroom"
+            tabindex="0"
+            ><div class="course-grid"
+              ><figure
+                ><img
+                  src="assets/kart/luigi-raceway.webp"
+                  alt="Original course artwork for Luigi Raceway"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>01</span><h3>Luigi Raceway</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/moo-moo-farm.webp"
+                  alt="Original course artwork for Moo Moo Farm"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>02</span><h3>Moo Moo Farm</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/koopa-troopa-beach.webp"
+                  alt="Original course artwork for Koopa Troopa Beach"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>03</span><h3>Koopa Troopa Beach</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/kalimari-desert.webp"
+                  alt="Original course artwork for Kalimari Desert"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>04</span><h3>Kalimari Desert</h3></figcaption></figure
+              ></div
+            ></div
+          ><div
+            class="cup-panel"
+            role="tabpanel"
+            id="cup-flower"
+            aria-labelledby="tab-flower"
+            tabindex="0"
+            hidden
+            ><div class="course-grid"
+              ><figure
+                ><img
+                  src="assets/kart/toads-turnpike.webp"
+                  alt="Original course artwork for Toad’s Turnpike"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>01</span><h3>Toad’s Turnpike</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/frappe-snowland.webp"
+                  alt="Original course artwork for Frappe Snowland"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>02</span><h3>Frappe Snowland</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/choco-mountain.webp"
+                  alt="Original course artwork for Choco Mountain"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>03</span><h3>Choco Mountain</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/mario-raceway.webp"
+                  alt="Original course artwork for Mario Raceway"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>04</span><h3>Mario Raceway</h3></figcaption></figure
+              ></div
+            ></div
+          ><div
+            class="cup-panel"
+            role="tabpanel"
+            id="cup-star"
+            aria-labelledby="tab-star"
+            tabindex="0"
+            hidden
+            ><div class="course-grid"
+              ><figure
+                ><img
+                  src="assets/kart/wario-stadium.webp"
+                  alt="Original course artwork for Wario Stadium"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>01</span><h3>Wario Stadium</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/sherbet-land.webp"
+                  alt="Original course artwork for Sherbet Land"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>02</span><h3>Sherbet Land</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/royal-raceway.webp"
+                  alt="Original course artwork for Royal Raceway"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>03</span><h3>Royal Raceway</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/bowsers-castle.webp"
+                  alt="Original course artwork for Bowser’s Castle"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>04</span><h3>Bowser’s Castle</h3></figcaption></figure
+              ></div
+            ></div
+          ><div
+            class="cup-panel"
+            role="tabpanel"
+            id="cup-special"
+            aria-labelledby="tab-special"
+            tabindex="0"
+            hidden
+            ><div class="course-grid"
+              ><figure
+                ><img
+                  src="assets/kart/dk-jungle-parkway.webp"
+                  alt="Original course artwork for D.K.’s Jungle Parkway"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>01</span><h3>D.K.’s Jungle Parkway</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/yoshi-valley.webp"
+                  alt="Original course artwork for Yoshi Valley"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>02</span><h3>Yoshi Valley</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/banshee-boardwalk.webp"
+                  alt="Original course artwork for Banshee Boardwalk"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>03</span><h3>Banshee Boardwalk</h3></figcaption></figure
+              ><figure
+                ><img
+                  src="assets/kart/rainbow-road.webp"
+                  alt="Original course artwork for Rainbow Road"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                /><figcaption><span>04</span><h3>Rainbow Road</h3></figcaption></figure
+              ></div
+            ></div
+          ><div class="course-credit"
+            ><span>ORIGINAL N64 COURSE ART / NINTENDO</span
+            ><a
+              href="https://www.videogamemanual.com/n64/Mario%20Kart%2064%20%28USA%29.pdf"
+              target="_blank"
+              rel="noreferrer"
+              >Open the original manual</a
+            ></div
+          ></div
+        ></section
+      >
+      <section class="manual-spread paper-section reveal-section" aria-labelledby="manual-title"
+        ><div class="manual-art"
+          ><img
+            src="assets/v10-mario/kinopio-highway.png"
+            alt="Mario, Luigi and Toad weave through the traffic in the original Toad’s Turnpike artwork"
+            width="640"
+            height="513"
+            loading="lazy"
+          /><span>TOAD’S TURNPIKE / ORIGINAL ARTWORK</span></div
+        ><div class="manual-copy"
+          ><p class="eyebrow">FROM THE BOOKLET TO THE HANDHELD</p
+          ><h2 id="manual-title">Same friendly rivalry.<br />New starting line.</h2
+          ><p
+            >Mario Kart 64’s world is all big personalities, impossible shortcuts and last-second
+            shells. This project brings the original game to Nintendo’s handheld through a native
+            port, with a dual-screen interface of its own.</p
+          ><p>The work continues. Explore the source, try a build and help shape the next lap.</p
+          ><a
+            class="inline-link"
+            href="https://github.com/EstebanPdN/mario-kart-64-3ds"
+            target="_blank"
+            rel="noreferrer"
+            >Meet the project &amp; its contributors</a
+          ></div
+        ></section
+      >
+      <section
+        id="install"
+        class="pit-section paper-section reveal-section"
+        aria-labelledby="install-title"
+        ><header class="section-heading"
+          ><p class="eyebrow chapter-ribbon"><b>3.</b> Before starting the game</p
+          ><img
+            class="pit-lakitu"
+            src="assets/kart/lakitu.png"
+            alt="Lakitu gives the signal to start"
+            width="181"
+            height="202"
+            loading="lazy"
+          /><h2 id="install-title">A quick pit stop.</h2
+          ><p>Your console. Your game. Everything ready for the first race.</p></header
+        ><div class="pit-layout"
+          ><ol class="setup-steps"
+            ><li
+              ><span>1</span
+              ><div
+                ><h3>Choose your build.</h3
+                ><p
+                  >Install the <strong>CIA with FBI</strong>, or use the full
+                  <strong>3DSX with the Homebrew Launcher</strong>. The CIA is recommended for
+                  expanded application memory.</p
+                ><a
+                  href="https://github.com/EstebanPdN/mario-kart-64-3ds/releases/latest"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Get the latest release</a
+                ></div
+              ></li
+            ><li
+              ><span>2</span
+              ><div
+                ><h3>Bring your own game.</h3
+                ><p
+                  >Place your compatible USA ROM in <code>sd:/3ds/MK64/</code> and name it
+                  <code>mk64.z64</code>. It must use Z64 byte order.</p
+                ></div
+              ></li
+            ><li
+              ><span>3</span
+              ><div
+                ><h3>Let the first lap load.</h3
+                ><p
+                  >Launch the port to validate the ROM and create <code>mk64.o2r</code>. Keep the
+                  console charged during extraction. Future launches reuse this archive.</p
+                ></div
+              ></li
+            ></ol
+          ><aside class="sd-card"
+            ><div class="sd-label"><b>MK64</b><span>YOUR SD CARD</span></div
+            ><pre>
+sd:/
+ └─ 3ds/
+     └─ MK64/
+         ├─ mk64.z64
+         └─ mk64.o2r</pre
+            ><p
+              ><b>Want a faster start?</b> Create <code>mk64.o2r</code> with SpaghettiKart on a
+              computer, then copy it alongside your ROM.</p
+            ><a
+              href="https://github.com/EstebanPdN/mario-kart-64-3ds#installation"
+              target="_blank"
+              rel="noreferrer"
+              >Full installation guide</a
+            ><small>No ROM or extracted game data is supplied.</small></aside
+          ></div
+        ></section
+      >
+      <section
+        class="controls-section reveal-section"
+        id="controls"
+        aria-labelledby="controls-title"
+        ><div class="controls-intro"
+          ><div
+            ><p class="eyebrow chapter-ribbon"><b>4.</b> The operation card</p
+            ><h2 id="controls-title">Find your racing line.</h2
+            ><p>Hop into a corner. Hold the drift. Time the item.</p></div
+          ><img
+            src="assets/kart/mario.png"
+            alt="Original artwork of Mario at the wheel of his red kart"
+            width="646"
+            height="588"
+            loading="lazy" /></div
+        ><div class="controls-grid"
+          ><div
+            ><span class="control-3ds" aria-hidden="true"><kbd class="key-circle"></kbd></span
+            ><p><b>Circle Pad</b><span>Steer</span></p></div
+          ><div
+            ><span class="control-3ds" aria-hidden="true"><kbd class="key-a">A</kbd></span
+            ><p><b>A button</b><span>Accelerate</span></p></div
+          ><div
+            ><span class="control-3ds" aria-hidden="true"><kbd class="key-b">B</kbd></span
+            ><p><b>B button</b><span>Brake / reverse</span></p></div
+          ><div
+            ><span class="control-3ds" aria-hidden="true"><kbd class="key-r">R</kbd></span
+            ><p><b>R button</b><span>Hop / drift</span></p></div
+          ><div
+            ><span class="control-3ds" aria-hidden="true"><kbd class="key-l">L</kbd></span
+            ><p><b>L button</b><span>Use an item</span></p></div
+          ><div
+            ><span class="control-3ds" aria-hidden="true"><kbd class="key-x">X</kbd></span
+            ><p><b>X button</b><span>Camera distance</span></p></div
+          ><div
+            ><span class="control-3ds" aria-hidden="true"><kbd class="key-y">Y</kbd></span
+            ><p><b>Y button</b><span>Cycle the top-screen HUD</span></p></div
+          ><div
+            ><span class="control-3ds" aria-hidden="true"><kbd class="key-start">START</kbd></span
+            ><p><b>START</b><span>Start / pause</span></p></div
+          ></div
+        ><p class="controls-foot"
+          >Touch the lower screen to navigate menus. From Game Select, <kbd>L</kbd> opens
+          Options.<br /><a
+            href="https://github.com/EstebanPdN/mario-kart-64-3ds#controls"
+            target="_blank"
+            rel="noreferrer"
+            >See the full control reference</a
+          ></p
+        ></section
+      >
+      <section
+        class="faq-section paper-section reveal-section"
+        id="help"
+        aria-labelledby="faq-title"
+        ><div class="faq-intro"
+          ><p class="eyebrow chapter-ribbon"><b>5.</b> Driver’s handbook</p
+          ><h2 id="faq-title">Before you<br />hit the gas.</h2
+          ><p>A few things worth knowing before the next race.</p
+          ><a
+            class="manual-book"
+            href="https://www.videogamemanual.com/n64/Mario%20Kart%2064%20%28USA%29.pdf"
+            target="_blank"
+            rel="noreferrer"
+            ><img
+              src="assets/kart/manual-cover.jpg"
+              alt="Read the original 1997 Mario Kart 64 instruction booklet"
+              width="669"
+              height="1000"
+              loading="lazy"
+            /><span>THE ORIGINAL MANUAL</span></a
+          ></div
+        ><div class="faq-list"
+          ><details class="kart-faq"
+            ><summary
+              ><span>01</span><h3>Does it work on Old and New Nintendo 3DS?</h3
+              ><b aria-hidden="true">+</b></summary
+            ><div class="faq-answer"
+              ><p
+                >The port has hardware profiles for both Old and New Nintendo 3DS. The installed CIA
+                requests expanded application memory on both; Old models can take longer to launch
+                and exit while the system changes memory mode. Performance varies by console, course
+                and settings. The CIA is recommended for the expanded-memory path.</p
+              ></div
+            ></details
+          ><details class="kart-faq"
+            ><summary
+              ><span>02</span><h3>Which ROM do I need?</h3><b aria-hidden="true">+</b></summary
+            ><div class="faq-answer"
+              ><p
+                >Provide your own legally obtained <strong>USA Mario Kart 64 ROM</strong>, in
+                <code>.z64</code> byte order. Name it <code>mk64.z64</code> and place it in
+                <code>sd:/3ds/MK64/</code>. Renaming a <code>.n64</code> or <code>.v64</code> file
+                does not change its byte order; the README links a conversion tool. Game data is not
+                included in the download.</p
+              ></div
+            ></details
+          ><details class="kart-faq"
+            ><summary
+              ><span>03</span><h3>Why is the first launch taking so long?</h3
+              ><b aria-hidden="true">+</b></summary
+            ><div class="faq-answer"
+              ><p
+                >The console validates your ROM and builds <code>mk64.o2r</code>. This first
+                extraction can take a long time; keep the battery charged. You can close the lid
+                while it continues, or press <kbd>START</kbd> to cancel safely. Later launches reuse
+                the completed archive. For faster setup, create the archive with SpaghettiKart on a
+                computer and copy it alongside your ROM.</p
+              ></div
+            ></details
+          ><details class="kart-faq"
+            ><summary
+              ><span>04</span><h3>Is this a 60 FPS port?</h3><b aria-hidden="true">+</b></summary
+            ><div class="faq-answer"
+              ><p
+                >The original simulation runs at <strong>30 Hz</strong>. Adaptive interpolation can
+                add an intermediate frame when there is enough headroom, then fall back to the
+                required frames under load. It is not a fixed or sustained 60 FPS mode. Render
+                scale, distance and filters can be adjusted in Display settings.</p
+              ></div
+            ></details
+          ><details class="kart-faq"
+            ><summary
+              ><span>05</span><h3>Can we race together?</h3><b aria-hidden="true">+</b></summary
+            ><div class="faq-answer"
+              ><p
+                ><strong>Multiplayer is planned, but is not currently available.</strong> Follow the
+                GitHub project or our Discord community for development updates. The original game’s
+                multiplayer modes should not be taken as a feature promise for the current 3DS
+                port.</p
+              ></div
+            ></details
+          ><details class="kart-faq"
+            ><summary
+              ><span>06</span><h3>How do I update and keep my saves?</h3
+              ><b aria-hidden="true">+</b></summary
+            ><div class="faq-answer"
+              ><p
+                >Open <strong>Options → Game → Update</strong> to check Stable or Experimental
+                builds. Review the changelog and confirm installation; the game then closes. The
+                updater preserves your ROM, O2R, saves and settings. Time Trial ghosts use the
+                original two save slots in <code>sd:/3ds/MK64/controller-pak.bin</code>. Keep a
+                backup of your MK64 folder.</p
+              ></div
+            ></details
+          ></div
+        ></section
+      >
+      <section class="support-section reveal-section" id="support" aria-labelledby="support-title"
+        ><div class="support-copy"
+          ><p class="eyebrow chapter-ribbon"><b>6.</b> The pit crew</p
+          ><h2 id="support-title">A bump in the road?</h2
+          ><p
+            >Tell us your build, console model, course, game mode and display settings, plus what
+            happened just before the issue. Screenshots and a clear set of steps help us find the
+            problem.</p
+          ><div class="support-actions"
+            ><a
+              href="https://github.com/EstebanPdN/mario-kart-64-3ds/issues/new"
+              target="_blank"
+              rel="noreferrer"
+              ><svg aria-hidden="true"><use href="#kart-github" /></svg>GitHub issues</a
+            ><a href="https://discord.gg/zy8BqH5ss" target="_blank" rel="noreferrer"
+              ><svg aria-hidden="true"><use href="#kart-discord" /></svg>Discord community</a
+            ></div
+          ></div
+        ><div class="service-card"
+          ><h3>Diagnostic toolkit</h3
+          ><dl
+            ><div
+              ><dt><kbd>SELECT</kbd></dt
+              ><dd>Capture a diagnostic report.</dd></div
+            ><div
+              ><dt><kbd>L + SELECT</kbd></dt
+              ><dd
+                >Add an expanded application RAM snapshot. Larger and slower; not a whole-system
+                dump.</dd
+              ></div
+            ><div
+              ><dt>Developer → Clean dumps</dt
+              ><dd
+                >Remove reports and start a fresh log. Game data, settings and saves are
+                preserved.</dd
+              ></div
+            ></dl
+          ><p class="dump-path">sd:/3ds/MK64/dump/</p
+          ><p
+            >Share diagnostic folders privately. Keep ROMs, O2R archives, saves and memory captures
+            out of public issues.</p
+          ></div
+        ></section
+      >
+      <section class="finish-section paper-section" aria-labelledby="finish-title"
+        ><div
+          ><p class="eyebrow">THE NEXT LAP</p><h2 id="finish-title">Still on the track.</h2
+          ><p>An ongoing native port by EstebanPdN.<br />There’s more racing ahead.</p
+          ><a class="inline-link" href="index.html#progress">Follow collection progress</a></div
+        ><div class="finish-progress"
+          ><strong>65<span>%</span></strong
+          ><p>PORT DEVELOPMENT</p
+          ><div
+            role="progressbar"
+            aria-label="Port development progress"
+            aria-valuenow="65"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            ><span></span></div></div
+      ></section>
+      <footer class="kart-footer"
+        ><p
+          >Native port by EstebanPdN, built on SpaghettiKart and the N64 decompilation and 3DS
+          homebrew communities.<br />Mario Kart 64 and original artwork © Nintendo. Independent fan
+          project, not affiliated with Nintendo or Harbour Masters.</p
+        ><div
+          ><a href="index.html#collection">← Back to collection</a
+          ><a
+            href="https://github.com/EstebanPdN/mario-kart-64-3ds#credits"
+            target="_blank"
+            rel="noreferrer"
+            >Source &amp; credits</a
+          ></div
+        ></footer
+      > </main
+    ><dialog
+      id="gallery-lightbox"
+      data-screen="upper"
+      class="lightbox"
+      aria-labelledby="lightbox-title"
+      ><div class="lightbox-header"
+        ><p id="lightbox-title">Koopa Troopa Beach · VS race</p
+        ><button id="lightbox-close" type="button" aria-label="Close gallery">×</button></div
+      ><div class="gallery-screen-controls" role="group" aria-label="Choose screen"
+        ><span class="gallery-screen-label">View</span
+        ><button
+          type="button"
+          data-gallery-screen="upper"
+          aria-pressed="true"
+          aria-controls="lightbox-image"
+          ><svg
+            class="gallery-screen-icon"
+            viewBox="0 0 24 32"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="2" width="18" height="12" rx="1" fill="currentColor" />
+            <path d="M5 17h14" />
+            <rect x="5" y="20" width="14" height="10" rx="1" fill="none" /></svg
+          ><span>Upper screen</span></button
+        ><button
+          type="button"
+          data-gallery-screen="lower"
+          aria-pressed="false"
+          aria-controls="lightbox-image"
+          ><svg
+            class="gallery-screen-icon"
+            viewBox="0 0 24 32"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect x="3" y="2" width="18" height="12" rx="1" fill="none" />
+            <path d="M5 17h14" />
+            <rect x="5" y="20" width="14" height="10" rx="1" fill="currentColor" /></svg
+          ><span>Lower screen</span></button
+        ></div
+      ><div class="lightbox-screen"
+        ><video
+          id="lightbox-video"
+          controls
+          muted
+          playsinline
+          preload="none"
+          width="720"
+          height="240"
+          hidden
+          aria-label="Selected gameplay clip"
+        ></video
+        ><svg
+          id="lightbox-image"
+          data-gallery-display
+          data-screen="upper"
+          viewBox="0 0 400 240"
+          role="img"
+          aria-label="Koopa Troopa Beach · VS race"
+        >
+          <image
+            href="assets/captures/mario-kart-64/06-koopa-troopa-beach.webp"
+            width="720"
+            height="240"
+          /></svg></div
+      ><div class="lightbox-controls"
+        ><p id="lightbox-counter">1 / 12 · Upper screen</p
+        ><div
+          ><button type="button" id="lightbox-previous" aria-label="Previous image">←</button
+          ><button type="button" id="lightbox-next" aria-label="Next image">→</button></div
+        ></div
+      ></dialog
+    ><svg class="svg-defs" aria-hidden="true" width="0" height="0">
+      <defs>
+        <symbol id="kart-github" viewBox="0 0 24 24">
+          <path
+            d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.58 4.94.36.31.68.92.68 1.86v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"
+          />
+        </symbol>
+        <symbol id="kart-discord" viewBox="0 0 24 24">
+          <path
+            d="M19.7 5.4a18 18 0 0 0-4.4-1.4l-.5 1a16 16 0 0 0-5.6 0l-.5-1a18 18 0 0 0-4.4 1.4C1.5 9.6.7 13.7 1.1 17.7a18 18 0 0 0 5.4 2.7l1.1-1.9-1.7-.8.4-.3a13 13 0 0 0 11.4 0l.4.3-1.7.8 1.1 1.9a18 18 0 0 0 5.4-2.7c.5-4.7-.8-8.8-3.2-12.3ZM8.4 14.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm7.2 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"
+          />
+        </symbol>
+      </defs></svg></body
+></html>

@@ -1,0 +1,41 @@
+{
+  "css_source": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap",
+  "download_date": "2026-09-30",
+  "assets": [
+    {
+      "url": "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2",
+      "file": "b63651df977d08650ff2.woff2",
+      "sha256": "b63651df977d08650ff2e598a3979a490f114b59353605e091dd3fdb530f530e",
+      "bytes": 20780
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaBTMnFcQ.woff2",
+      "file": "20fc9b6fc618e7c3c68d.woff2",
+      "sha256": "20fc9b6fc618e7c3c68d3ac750a2a5dfbceb8521675458d2cea580b5693e4798",
+      "bytes": 39152
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2",
+      "file": "511ce967375fd2d92448.woff2",
+      "sha256": "511ce967375fd2d924483d798f1086a533259fc675181f62944ec1176fe8786d",
+      "bytes": 35464
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2",
+      "file": "2d06f2c340ecb52c5515.woff2",
+      "sha256": "2d06f2c340ecb52c55153ec56093dc70b167699d7206246570f8ad4800190825",
+      "bytes": 28908
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2",
+      "file": "d107f72673f443b44018.woff2",
+      "sha256": "d107f72673f443b440185eea74262d7aecbe8fb70150e397334e2ab202c5d301",
+      "bytes": 13040
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/nunito/OFL.txt",
+      "file": "nunito-OFL.txt",
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65"
+    }
+  ]
+}

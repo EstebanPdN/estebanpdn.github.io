@@ -1,0 +1,59 @@
+{
+  "manual": "https://www.nintendo.co.jp/clvs/manuals/common/pdf/CLV-P-SAAEE.pdf",
+  "artwork_archive": "https://zelda-temple.net/media-and-downloads/official-artwork/the-legend-of-zelda-a-link-to-the-past",
+  "artwork_copyright": "Nintendo; original illustrations, not AI-generated",
+  "assets": [
+    {
+      "file": "magical_mirror.png",
+      "url": "https://zelda-temple.net/images/igallery/resized/101-200/Magical_Mirror-158-800-600-100.png"
+    },
+    {
+      "file": "alttp_map.png",
+      "url": "https://zelda-temple.net/images/igallery/resized/101-200/ALTTP_Map-134-800-600-100.png"
+    },
+    {
+      "file": "alttp_compass.png",
+      "url": "https://zelda-temple.net/images/igallery/resized/101-200/ALTTP_Compass-127-800-600-100.png"
+    },
+    {
+      "file": "book_of_mudora.png",
+      "url": "https://zelda-temple.net/images/igallery/resized/101-200/Book_of_Mudora-143-800-600-100.png"
+    },
+    {
+      "file": "lanternlttp.png",
+      "url": "https://zelda-temple.net/images/igallery/resized/101-200/Lanternlttp-155-800-600-100.png"
+    },
+    {
+      "file": "alttp_link_running_artwork.png",
+      "url": "https://zelda-temple.net/images/igallery/resized/1-100/ALttP_Link_Running_Artwork-75-800-600-100.png"
+    }
+  ],
+  "screen_previews": "Cropped without upscaling from owner project showcase assets/screens/a-link-to-the-past.png",
+  "restored_artwork": [
+    {
+      "file": "master-sword-4x.webp",
+      "source": "https://zelda-temple.net/images/igallery/resized/101-200/ALTTP_Master_Sword-110-800-600-100.jpg",
+      "original_dimensions": [
+        748,
+        600
+      ],
+      "output_dimensions": [
+        2992,
+        2400
+      ]
+    },
+    {
+      "file": "alttp_link_running_artwork-4x.webp",
+      "source": "https://zelda-temple.net/images/igallery/resized/1-100/ALttP_Link_Running_Artwork-75-800-600-100.png",
+      "original_dimensions": [
+        501,
+        454
+      ],
+      "output_dimensions": [
+        2004,
+        1816
+      ]
+    }
+  ],
+  "upscaler": "Local RealESRGAN_x4plus (official xinntao weights); Apple MPS; 4x; existing alpha resampled separately. No generated replacement artwork."
+}

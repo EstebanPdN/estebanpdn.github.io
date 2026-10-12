@@ -1,0 +1,12 @@
+{
+  "family": "System",
+  "original_file": "VGASYS.FON",
+  "source": "https://cs.gettysburg.edu/~duncjo01/archive/fonts/windows/3.1/VGASYS.FON",
+  "identification": "https://vtda.org/docs/computing/Microsoft/OS/030-31645_Microsoft_Windows_3.1_Resource_Kit_1992.pdf",
+  "source_sha256": "7baefa14ef8ef2355374d0b5061043dd5f4f8c33ff57680366e4a725f91646f8",
+  "bitmap_height": 16,
+  "bitmap_ascent": 13,
+  "glyphs": 219,
+  "pixels_preserved": 6410,
+  "processing": "Exact source bitmap rows converted to rectangular TrueType outlines; no smoothing or added glyphs."
+}

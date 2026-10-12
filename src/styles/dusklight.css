@@ -1,0 +1,1660 @@
+@font-face {
+  font-family: Twilight Serif;
+  src: url('assets/dusklight/cormorant-garamond.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 28px;
+}
+body {
+  margin: 0;
+  background: #141916;
+  color: #e9e5d2;
+  font:
+    20px/1.6 Twilight Serif,
+    Georgia,
+    serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+a,
+button,
+summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #b5d5bb;
+  outline-offset: 7px;
+}
+h1,
+h2,
+h3,
+p,
+figure,
+dl,
+dd {
+  margin: 0;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  border: 0;
+}
+p + p {
+  margin-top: 18px;
+}
+[hidden] {
+  display: none !important;
+}
+.theme-sun {
+  display: none;
+}
+:root[data-theme='dark'] .theme-sun {
+  display: block;
+}
+:root[data-theme='dark'] .theme-moon {
+  display: none;
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 30;
+  background: #fff;
+  color: #26372d;
+  padding: 12px 18px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.reveal-pending {
+  opacity: 0;
+}
+::selection {
+  background: #afa173;
+  color: #1c241d;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.twilight-page {
+  max-width: 1440px;
+  margin: auto;
+  background: #1c211c;
+  box-shadow: 0 0 100px #0004;
+  overflow: hidden;
+}
+.twilight-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+  padding: 21px 5.3%;
+  border-bottom: 1px solid #9e925d3d;
+  font:
+    11px/1.5 'DM Sans',
+    Arial,
+    sans-serif;
+  letter-spacing: 0.4px;
+}
+.twilight-nav > span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #a69f85;
+}
+.twilight-nav a:hover {
+  color: #d5c58a;
+}
+.twilight-cover {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 65% 35%, #58543b55, transparent 60%),
+    linear-gradient(130deg, #272b24, #141a16 70%);
+  min-height: 650px;
+}
+.twilight-cover-copy {
+  padding: 76px 4% 65px 11%;
+  position: relative;
+  z-index: 2;
+  align-self: center;
+}
+.twilight-eyebrow {
+  font:
+    10px/1.7 'DM Sans',
+    Arial;
+  letter-spacing: 3px;
+  color: #b4ab8b;
+}
+.twilight-cover h1 {
+  margin: 29px 0 23px;
+  max-width: 475px;
+}
+.twilight-cover h1 img {
+  width: 100%;
+}
+.twilight-verse {
+  font-size: clamp(48px, 5.5vw, 73px);
+  font-weight: 500;
+  line-height: 1.06;
+  color: #eee9ce;
+  letter-spacing: -1.2px;
+}
+.twilight-rule {
+  display: block;
+  width: 125px;
+  height: 1px;
+  background: linear-gradient(90deg, #bdae70, transparent);
+  margin: 30px 0;
+  position: relative;
+}
+.twilight-rule:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  background: #bdae70;
+  left: -1px;
+  top: -2px;
+}
+.twilight-intro {
+  font-size: 21px;
+  line-height: 1.55;
+  color: #c1bea4;
+}
+.twilight-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 13px 23px;
+  min-height: 47px;
+  border: 1px solid #ad9c5e;
+  box-shadow: inset 0 0 0 3px #ad9c5e14;
+  background: #ad9c5e16;
+  font:
+    12px/1.5 'DM Sans',
+    Arial;
+  letter-spacing: 0.2px;
+  color: #ebe4c3;
+  margin-top: 29px;
+  transition:
+    background 0.25s,
+    border-color 0.25s;
+}
+.twilight-button:hover {
+  background: #ad9c5e35;
+  border-color: #d3c17c;
+}
+.twilight-button > span {
+  font-size: 17px;
+  line-height: 1;
+}
+.twilight-small-status {
+  font:
+    9px/1.6 'DM Sans',
+    Arial;
+  letter-spacing: 1px;
+  color: #aaa68d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px !important;
+}
+.twilight-small-status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #b1b899;
+}
+.twilight-cover-art {
+  position: relative;
+  align-self: center;
+  padding: 10px 8% 15px 0;
+  display: grid;
+  place-items: center;
+  min-height: 580px;
+}
+.twilight-cover-art > img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 550px;
+  object-fit: contain;
+  filter: drop-shadow(12px 18px 24px #0008);
+}
+.twilight-cover-art figcaption {
+  font:
+    9px/1.5 'DM Sans',
+    Arial;
+  letter-spacing: 2px;
+  color: #97977f;
+  padding-top: 17px;
+  position: relative;
+  z-index: 1;
+}
+.twilight-moon {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border: 1px solid #b4a7671c;
+  border-radius: 50%;
+  top: 11%;
+  left: 2%;
+  background: radial-gradient(circle, #b5a16825, transparent 70%);
+}
+.twilight-moon:after {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #b4a76714;
+  border-radius: 50%;
+}
+.twilight-cover-foot {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 23px 5.3%;
+  border-top: 1px solid #9e925d36;
+  font:
+    8px/1.6 'DM Sans',
+    Arial;
+  letter-spacing: 1.8px;
+  color: #a7a68a;
+}
+.gamecube-interface {
+  background: #080e0f;
+  padding: 44px 5.3% 0;
+  position: relative;
+  border-top: 1px solid #c4b47a50;
+}
+.cube-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.cube-heading .twilight-eyebrow {
+  font-size: 8px;
+  max-width: 190px;
+}
+.cube-heading h2 {
+  font-size: 38px;
+  font-weight: 500;
+  color: #dee7df;
+  line-height: 1.15;
+}
+.cube-heading > span {
+  font:
+    8px/1.4 'DM Sans',
+    Arial;
+  letter-spacing: 1.8px;
+  color: #718b8a;
+}
+.cube-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+  max-width: 1110px;
+  margin: 28px auto 0;
+  min-height: 500px;
+}
+.cube-stage {
+  padding: 25px 20px 0;
+}
+.cube-menu {
+  position: relative;
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  transform: perspective(800px) rotateX(11deg) rotateY(-9deg) rotateZ(8deg);
+  margin: 0 auto 25px;
+  isolation: isolate;
+}
+.cube-glass {
+  position: absolute;
+  inset: 0;
+  border-radius: 27px;
+  background:
+    linear-gradient(
+      172deg,
+      #a9f7ff45 0%,
+      #12d5c335 19%,
+      #09354113 45%,
+      #009cc733 84%,
+      #5cf6ff55 95%
+    ),
+    linear-gradient(35deg, #061e24, #19332c 45%, #042d41 70%);
+  border: 7px solid #45cacc30;
+  box-shadow:
+    inset 0 5px 5px #f0ffffa0,
+    inset 9px 0 18px #168ab59c,
+    inset -10px 0 7px #41f2dd8a,
+    inset 0 -10px 13px #00bbb9aa,
+    0 4px 10px #002222,
+    0 25px 35px #0008,
+    0 0 50px #0dc3b514;
+}
+.cube-glass:after {
+  content: '';
+  position: absolute;
+  inset: 39px;
+  border: 4px ridge #25adb757;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #23ca702b, #031924a6 45%, #140d232b);
+  box-shadow:
+    inset 4px 4px 5px #001417b0,
+    3px 3px 7px #7ceae968,
+    inset -4px -2px 6px #0095b255;
+}
+.cube-reflection {
+  position: absolute;
+  inset: 0;
+  border-radius: 27px;
+  background:
+    linear-gradient(148deg, transparent 3%, #dfffff30 8%, transparent 15%),
+    linear-gradient(38deg, transparent 65%, #15d7c326 80%, transparent 83%);
+  z-index: 1;
+  pointer-events: none;
+}
+.cube-menu button {
+  position: absolute;
+  background: transparent;
+  color: #d9eee7;
+  font:
+    600 18px/1.4 'Nunito',
+    Arial;
+  text-shadow: 1px 2px 2px #031d21;
+  border-radius: 4px;
+  padding: 4px 9px;
+  z-index: 3;
+  white-space: nowrap;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+.cube-menu button:hover,
+.cube-menu button[aria-selected='true'] {
+  color: #fff;
+  background: #50dfcf13;
+}
+.cube-menu button[aria-selected='true']:after {
+  content: '';
+  position: absolute;
+  background: #d6fff0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  left: calc(50% - 2px);
+  bottom: -2px;
+  box-shadow: 0 0 6px #b6fff4;
+}
+.cube-top {
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cube-right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(90deg) translateY(-22px);
+}
+.cube-bottom {
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cube-left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-90deg) translateY(-26px);
+}
+.cube-center {
+  position: absolute;
+  inset: 30%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  opacity: 0.62;
+  color: #9eada0;
+  font:
+    8px/1 'DM Sans',
+    Arial;
+  letter-spacing: 3px;
+}
+.cube-center svg {
+  width: 85px;
+  fill: #a0b09846;
+  filter: drop-shadow(0 1px 3px #bef8e53d);
+}
+.cube-selector-hint {
+  font:
+    8px/1.6 'DM Sans',
+    Arial;
+  letter-spacing: 1.3px;
+  text-align: center;
+  color: #849f9a;
+  margin: 35px -10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+.cube-selector-hint kbd {
+  font:
+    10px/1 'Nunito',
+    Arial;
+  border: 1px solid #84a799;
+  border-radius: 50%;
+  padding: 4px 5px;
+  color: #d4f2d8;
+}
+.cube-selector-hint > span {
+  border-left: 1px solid #52645e;
+  padding-left: 13px;
+  font-size: 8px;
+  color: #657a76;
+}
+.cube-pages {
+  min-width: 0;
+  align-self: center;
+  min-height: 300px;
+  padding-top: 8px;
+}
+.cube-file-label {
+  font:
+    9px/1.5 'DM Sans',
+    Arial;
+  letter-spacing: 2.5px;
+  color: #6c9996;
+}
+.cube-pages h3 {
+  font:
+    500 clamp(34px, 3.7vw, 48px)/1.13 Twilight Serif,
+    Georgia;
+  margin: 19px 0 24px;
+  color: #e0e9dc;
+}
+.cube-pages [role='tabpanel'] > p:not(.cube-file-label) {
+  color: #9caaa2;
+  font:
+    15px/1.8 'Nunito',
+    Arial;
+  max-width: 390px;
+}
+.cube-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 45px;
+  margin-top: 29px;
+  color: #cce6d8;
+  font:
+    11px/1.6 'DM Sans',
+    Arial;
+  border-bottom: 1px solid #587972;
+  padding-bottom: 8px;
+  transition: color 0.2s;
+}
+.cube-link:hover {
+  color: #fff;
+}
+.cube-link span {
+  color: #6e9f95;
+}
+.cube-menu-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 19px 0;
+  border-top: 1px solid #35504c;
+  font:
+    8px/1.5 'DM Sans',
+    Arial;
+  letter-spacing: 1.7px;
+  color: #6f8882;
+  margin-top: 15px;
+}
+.twilight-folio {
+  position: relative;
+  padding: 37px 4.2% 20px;
+  margin: 50px 4.5%;
+  border: 1px solid #938152;
+  box-shadow:
+    inset 0 0 0 5px #353322,
+    inset 0 0 0 6px #88784b,
+    0 8px 15px #0003;
+  background: #474532;
+  background-image:
+    linear-gradient(110deg, #353520b0, #595135c9 54%, #363823c9),
+    url('assets/dusklight/manual-moss-texture.webp');
+  background-size:
+    auto,
+    160px 160px;
+  color: #e8dfbe;
+}
+.twilight-folio:before,
+.twilight-folio:after {
+  content: '';
+  position: absolute;
+  left: 13px;
+  right: 13px;
+  top: 13px;
+  height: 19px;
+  border-top: 1px solid #b8a46c80;
+  border-left: 1px solid #b8a46c80;
+  border-right: 1px solid #b8a46c80;
+  border-radius: 12px 12px 0 0;
+  pointer-events: none;
+}
+.twilight-folio:after {
+  top: auto;
+  bottom: 13px;
+  transform: rotate(180deg);
+}
+.folio-heading {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  border: 3px double #b5a16a;
+  padding: 11px 18px;
+  background: linear-gradient(90deg, #10170f, #292b1d);
+  box-shadow:
+    0 0 0 2px #262719,
+    0 3px 8px #191e173b;
+  margin-bottom: 34px;
+}
+.folio-heading h2 {
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #eae3cc;
+}
+.folio-heading > span:first-child {
+  font-size: 18px;
+  color: #bfa875;
+  padding-right: 16px;
+  border-right: 1px solid #847247;
+}
+.folio-heading > span:last-child {
+  margin-left: auto;
+  font:
+    8px/1.6 'DM Sans',
+    Arial;
+  letter-spacing: 1.5px;
+  color: #b8ac88;
+  text-align: right;
+}
+.folio-kicker {
+  font:
+    8px/1.7 'DM Sans',
+    Arial;
+  letter-spacing: 2px;
+  color: #c2b27e;
+}
+.twilight-prologue-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  padding: 15px 2% 10px;
+  min-height: 480px;
+}
+.twilight-prologue-copy {
+  position: relative;
+  z-index: 1;
+  padding-right: 25px;
+}
+.twilight-folio h3 {
+  font-size: clamp(36px, 4.4vw, 57px);
+  font-weight: 500;
+  line-height: 1.08;
+  margin: 17px 0 27px;
+  color: #f0e8cb;
+  letter-spacing: -0.5px;
+}
+.twilight-prologue-copy > p:not(.folio-kicker) {
+  font-size: 21px;
+  line-height: 1.55;
+  max-width: 475px;
+}
+.folio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font:
+    10px/1.8 'DM Sans',
+    Arial;
+  color: #ded0a0;
+  border-bottom: 1px solid #ad96687a;
+  padding-bottom: 5px;
+  margin-top: 26px;
+  transition: color 0.2s;
+}
+.folio-link:hover {
+  color: #fff5d4;
+}
+.epona-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding-top: 10px;
+}
+.epona-art img {
+  height: 480px;
+  width: 100%;
+  object-fit: contain;
+  max-width: none;
+  filter: drop-shadow(0 15px 15px #161b1555);
+}
+.epona-art figcaption {
+  font:
+    8px/1.6 'DM Sans',
+    Arial;
+  letter-spacing: 1.3px;
+  color: #b4a981;
+  text-align: center;
+  padding-top: 12px;
+}
+.folio-foot {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 22px;
+  padding-top: 15px;
+  border-top: 1px solid #a7966550;
+  font:
+    8px/1.5 'DM Sans',
+    Arial;
+  letter-spacing: 1.7px;
+  color: #b6aa83;
+}
+.folio-page {
+  border: 1px solid #a79665aa;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font:
+    14px/1 Twilight Serif,
+    Georgia;
+  color: #ded2aa;
+  letter-spacing: 0;
+  flex: none;
+}
+.origin-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+  padding: 12px 2% 18px;
+}
+.gamecube-hardware img {
+  width: 100%;
+  filter: drop-shadow(8px 20px 10px #151b176b);
+}
+.gamecube-hardware figcaption {
+  font:
+    8px/1.5 'DM Sans',
+    Arial;
+  letter-spacing: 1.5px;
+  text-align: center;
+  padding-top: 32px;
+  color: #b4a981;
+}
+.origin-copy h3 {
+  font-size: 46px;
+}
+.origin-copy > p:not(.folio-kicker) {
+  font-size: 20px;
+  line-height: 1.55;
+}
+.booklet-link {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-top: 1px solid #a7966560;
+  padding-top: 28px;
+  margin-top: 29px;
+}
+.booklet-link > img {
+  width: 83px;
+  height: 140px;
+  object-fit: contain;
+  box-shadow: 3px 4px 6px #151d1550;
+  flex: none;
+}
+.booklet-link strong {
+  font-size: 20px;
+  line-height: 1.2;
+  display: block;
+  font-weight: 500;
+}
+.booklet-link span {
+  font:
+    8px/1.6 'DM Sans',
+    Arial;
+  display: block;
+  margin-top: 10px;
+  color: #b4a981;
+}
+.booklet-link .folio-link {
+  font-size: 9px;
+  margin-top: 16px;
+}
+.twilight-artwork {
+  padding: 40px 5.3% 34px;
+  background: #141c19;
+  border-top: 1px solid #a7966560;
+  border-bottom: 1px solid #a7966560;
+}
+.art-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+.art-heading h2 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-top: 13px;
+}
+.art-heading [role='tablist'] {
+  display: flex;
+  gap: 5px;
+}
+.art-heading button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #91845e88;
+  padding: 9px 17px;
+  font:
+    11px/1.5 'DM Sans',
+    Arial;
+  color: #a7a993;
+}
+.art-heading button[aria-selected='true'] {
+  color: #f0e7c3;
+  border-color: #91845e88;
+  background: #bca86d12;
+}
+.art-heading button:hover {
+  color: #fff;
+}
+.twilight-art-stage {
+  position: relative;
+  height: 520px;
+  border: 3px double #948458;
+  background: #101913;
+  box-shadow:
+    0 0 0 6px #17201a,
+    inset 0 0 70px #0006;
+  isolation: isolate;
+}
+.twilight-art-stage > figure {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+.twilight-art-stage img {
+  width: 100%;
+  height: calc(100% - 43px);
+  object-fit: contain;
+  background: radial-gradient(ellipse, #66634b, #253027 65%, #141c19);
+}
+.twilight-art-stage > figure:first-child img {
+  object-fit: cover;
+}
+.twilight-art-stage .story-figure img {
+  background: #252b21;
+  object-fit: contain;
+}
+.twilight-art-stage .rider-figure img {
+  padding: 25px;
+  background: radial-gradient(ellipse, #777454, #323a29 65%, #171f19);
+}
+.twilight-art-stage figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 22px;
+  font:
+    8px/1.6 'DM Sans',
+    Arial;
+  letter-spacing: 1.7px;
+  background: #111a15;
+  color: #d4c9a0;
+}
+.twilight-art-stage figcaption > span:last-child {
+  color: #8c9988;
+  font-size: 7px;
+}
+.art-caption {
+  font:
+    10px/1.8 'Nunito',
+    Arial;
+  color: #a2a78d;
+  margin-top: 22px;
+  text-align: center;
+}
+.twilight-record {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 12px 2% 18px;
+}
+.twilight-record-copy > p:not(.folio-kicker) {
+  font-size: 20px;
+  line-height: 1.55;
+}
+.twilight-record dl {
+  margin-top: 30px;
+  border-top: 1px solid #a7966560;
+  padding-top: 18px;
+  font:
+    11px/1.7 'DM Sans',
+    Arial;
+}
+.twilight-record dl div {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.twilight-record dt {
+  color: #b7a97e;
+}
+.twilight-record dd {
+  color: #e7dcba;
+  text-align: right;
+}
+.twilight-progress-record {
+  text-align: center;
+  padding: 38px 30px;
+  border: 1px solid #a7966575;
+  background: #272d2180;
+  box-shadow:
+    inset 0 0 0 5px #4e4d3330,
+    inset 0 0 0 6px #a7966527;
+}
+.twilight-progress-record > span {
+  font:
+    9px/1.5 'DM Sans',
+    Arial;
+  letter-spacing: 2px;
+  color: #b8ac88;
+}
+.twilight-progress-record strong {
+  display: block;
+  font:
+    400 116px/1.1 Twilight Serif,
+    Georgia;
+  color: #e3d09a;
+  margin: 12px 0 20px;
+  font-variant-numeric: lining-nums;
+}
+.twilight-progress-record small {
+  font-size: 35px;
+  margin-left: 8px;
+}
+.twilight-progress-meter {
+  height: 8px;
+  border: 1px solid #95815277;
+  background: #111b13;
+}
+.twilight-progress-meter > span {
+  display: block;
+  height: 100%;
+  background: #c1ae6f;
+  box-shadow: 0 0 5px #cbba80;
+}
+.twilight-progress-record p {
+  font-size: 16px;
+  color: #b9b095;
+  margin-top: 20px;
+}
+.twilight-progress-record .folio-link {
+  font-size: 9px;
+}
+.twilight-help .folio-heading {
+  margin-bottom: 15px;
+}
+.twilight-questions details {
+  border-bottom: 1px solid #a7966570;
+}
+.twilight-questions summary {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 23px 6px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #e7dfbf;
+}
+.twilight-questions summary::-webkit-details-marker {
+  display: none;
+}
+.twilight-questions summary > span:first-child {
+  font:
+    8px/1.5 'DM Sans',
+    Arial;
+  color: #c2b27e;
+}
+.twilight-questions summary > b {
+  margin-left: auto;
+  font:
+    22px/1 Twilight Serif,
+    Georgia;
+  color: #c2b27e;
+  font-weight: 400;
+  transition: transform 0.3s;
+}
+.twilight-questions details[open] summary > b {
+  transform: rotate(45deg);
+}
+.twilight-questions .answer {
+  padding: 0 35px 25px;
+  max-width: 920px;
+  color: #d1c8a7;
+  font-size: 19px;
+  line-height: 1.6;
+}
+.twilight-community {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0 16px;
+}
+.twilight-community h3 {
+  font-size: 33px;
+  line-height: 1.2;
+  margin: 10px 0 12px;
+}
+.twilight-community p:not(.folio-kicker) {
+  font-size: 18px;
+  line-height: 1.55;
+  max-width: 650px;
+}
+.twilight-community > a {
+  margin: 0;
+  flex: none;
+}
+.community-icon {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+.twilight-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 26px;
+  padding: 15px 5.3% 36px;
+  color: #b7b59b;
+  font:
+    10px/1.7 'DM Sans',
+    Arial;
+}
+.twilight-footer > span {
+  font:
+    18px/1.3 'DM Sans',
+    Arial;
+  color: #dfdfc8;
+}
+.twilight-footer p {
+  width: 100%;
+  text-align: center;
+  color: #888e78;
+  font-size: 8px;
+  margin-top: 3px;
+  max-width: 850px;
+  margin-inline: auto;
+}
+@media (min-width: 1600px) {
+  .twilight-cover-copy {
+    padding-block: 95px;
+  }
+  .twilight-cover-art > img {
+    height: 620px;
+  }
+  .twilight-cover {
+    min-height: 740px;
+  }
+}
+@media (max-width: 1000px) {
+  .twilight-cover-copy {
+    padding-top: 55px;
+    padding-bottom: 50px;
+  }
+  .twilight-verse {
+    font-size: 58px;
+  }
+  .twilight-cover h1 {
+    margin-block: 25px;
+  }
+  .twilight-intro {
+    font-size: 19px;
+  }
+  .twilight-cover-art {
+    min-height: 500px;
+    padding-right: 5%;
+  }
+  .twilight-cover-art > img {
+    height: 480px;
+  }
+  .twilight-moon {
+    width: 350px;
+    height: 350px;
+  }
+  .twilight-cover {
+    min-height: 590px;
+  }
+  .twilight-cover-foot {
+    letter-spacing: 1px;
+    font-size: 7px;
+  }
+  .cube-layout {
+    gap: 35px;
+  }
+  .cube-stage {
+    padding-inline: 15px;
+  }
+  .cube-menu {
+    width: 310px;
+    max-width: 100%;
+  }
+  .cube-menu button {
+    font-size: 16px;
+  }
+  .cube-center svg {
+    width: 70px;
+  }
+  .cube-pages h3 {
+    font-size: 41px;
+  }
+  .cube-pages [role='tabpanel'] > p:not(.cube-file-label) {
+    font-size: 14px;
+  }
+  .cube-selector-hint {
+    display: block;
+  }
+  .cube-selector-hint kbd {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  .cube-selector-hint > span {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin-top: 12px;
+  }
+  .twilight-prologue-layout {
+    min-height: 430px;
+  }
+  .twilight-folio h3 {
+    font-size: 44px;
+  }
+  .twilight-prologue-copy > p:not(.folio-kicker) {
+    font-size: 19px;
+  }
+  .epona-art img {
+    height: 430px;
+  }
+  .origin-layout {
+    gap: 35px;
+  }
+  .origin-copy > p:not(.folio-kicker) {
+    font-size: 18px;
+  }
+  .booklet-link {
+    gap: 18px;
+  }
+  .booklet-link > img {
+    width: 66px;
+    height: 111px;
+  }
+  .twilight-record {
+    gap: 40px;
+  }
+  .twilight-progress-record {
+    padding: 30px 20px;
+  }
+  .twilight-community {
+    gap: 25px;
+  }
+}
+@media (max-width: 760px) {
+  .twilight-nav > span {
+    display: none;
+  }
+  .twilight-cover {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .twilight-cover-copy {
+    text-align: center;
+    padding: 43px 7% 12px;
+  }
+  .twilight-cover h1 {
+    max-width: 450px;
+    margin: 25px auto;
+  }
+  .twilight-verse {
+    font-size: 57px;
+  }
+  .twilight-rule {
+    margin: 24px auto;
+  }
+  .twilight-small-status {
+    justify-content: center;
+  }
+  .twilight-intro {
+    font-size: 21px;
+  }
+  .twilight-cover-art {
+    min-height: 450px;
+    padding: 10px 6% 28px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+  }
+  .twilight-cover-art > img {
+    height: 450px;
+  }
+  .twilight-cover-art figcaption {
+    font-size: 7px;
+  }
+  .twilight-moon {
+    left: 15%;
+    top: 5%;
+    width: 370px;
+    height: 370px;
+  }
+  .twilight-cover-foot {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-block: 20px;
+    gap: 8px 20px;
+  }
+  .twilight-cover-foot > span:last-child {
+    display: none;
+  }
+  .cube-heading {
+    display: block;
+    text-align: center;
+  }
+  .cube-heading .twilight-eyebrow {
+    max-width: none;
+    font-size: 8px;
+  }
+  .cube-heading h2 {
+    margin: 12px 0;
+    font-size: 36px;
+  }
+  .cube-heading > span {
+    font-size: 7px;
+  }
+  .cube-layout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    min-height: 0;
+    margin-top: 30px;
+  }
+  .cube-stage {
+    padding: 18px 25px 0;
+  }
+  .cube-menu {
+    width: 330px;
+    margin-bottom: 0;
+  }
+  .cube-pages {
+    min-height: 270px;
+    padding: 0 7% 30px;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
+  .cube-pages h3 {
+    font-size: 42px;
+    margin: 16px 0 20px;
+  }
+  .cube-pages [role='tabpanel'] > p:not(.cube-file-label) {
+    font-size: 15px;
+    margin-inline: auto;
+  }
+  .cube-link {
+    margin-top: 22px;
+  }
+  .cube-selector-hint {
+    display: flex;
+    font-size: 7px;
+    margin-top: 32px;
+  }
+  .cube-selector-hint > span {
+    display: inline;
+    border-left: 1px solid #52645e;
+    padding-left: 11px;
+    margin-top: 0;
+    font-size: 7px;
+  }
+  .cube-menu-foot {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .cube-menu-foot > span:nth-child(2) {
+    display: none;
+  }
+  .twilight-folio {
+    margin: 33px 4%;
+    padding: 32px 5% 19px;
+  }
+  .folio-heading {
+    padding: 10px 12px;
+    gap: 11px;
+    margin-bottom: 25px;
+  }
+  .folio-heading h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .folio-heading > span:first-child {
+    font-size: 15px;
+    padding-right: 10px;
+  }
+  .folio-heading > span:last-child {
+    display: none;
+  }
+  .twilight-prologue-layout {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 6px 3% 8px;
+  }
+  .twilight-prologue-copy {
+    padding: 0;
+  }
+  .twilight-folio h3 {
+    font-size: 44px;
+    margin: 14px 0 23px;
+  }
+  .twilight-prologue-copy > p:not(.folio-kicker) {
+    font-size: 20px;
+  }
+  .epona-art img {
+    height: 380px;
+  }
+  .epona-art figcaption {
+    font-size: 7px;
+  }
+  .origin-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 10px 3% 10px;
+  }
+  .gamecube-hardware {
+    max-width: 480px;
+    margin: auto;
+  }
+  .gamecube-hardware figcaption {
+    padding-top: 22px;
+  }
+  .origin-copy > p:not(.folio-kicker) {
+    font-size: 20px;
+  }
+  .booklet-link {
+    gap: 24px;
+  }
+  .booklet-link > img {
+    width: 85px;
+    height: 143px;
+  }
+  .booklet-link strong {
+    font-size: 22px;
+  }
+  .art-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+  .art-heading h2 {
+    font-size: 43px;
+  }
+  .art-heading [role='tablist'] {
+    width: 100%;
+  }
+  .art-heading button {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+  }
+  .twilight-art-stage {
+    height: 390px;
+  }
+  .twilight-art-stage > figure:first-child img {
+    object-fit: contain;
+  }
+  .twilight-art-stage figcaption {
+    padding: 15px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .twilight-art-stage figcaption > span:last-child {
+    font-size: 6px;
+  }
+  .art-caption {
+    font-size: 10px;
+    padding-inline: 5px;
+  }
+  .twilight-record {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 6px 3% 8px;
+  }
+  .twilight-record-copy > p:not(.folio-kicker) {
+    font-size: 20px;
+  }
+  .twilight-record dl {
+    font-size: 10px;
+  }
+  .twilight-progress-record {
+    padding: 28px 22px;
+  }
+  .twilight-progress-record strong {
+    font-size: 105px;
+  }
+  .twilight-questions summary {
+    font-size: 23px;
+    gap: 16px;
+    padding-block: 20px;
+  }
+  .twilight-questions .answer {
+    font-size: 18px;
+    padding-left: 28px;
+    padding-right: 6px;
+  }
+  .twilight-community {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding-top: 32px;
+  }
+  .twilight-community h3 {
+    font-size: 32px;
+  }
+  .twilight-community p:not(.folio-kicker) {
+    font-size: 19px;
+  }
+  .twilight-footer {
+    font-size: 9px;
+    gap: 18px;
+    padding-top: 5px;
+  }
+  .twilight-footer > span {
+    display: none;
+  }
+  .twilight-footer p {
+    font-size: 8px;
+    text-align: left;
+    margin-top: 4px;
+  }
+}
+@media (max-width: 430px) {
+  .twilight-cover h1 {
+    width: 100%;
+  }
+  .twilight-verse {
+    font-size: 51px;
+  }
+  .twilight-cover-art {
+    min-height: 340px;
+  }
+  .twilight-cover-art > img {
+    height: 345px;
+  }
+  .twilight-moon {
+    width: 280px;
+    height: 280px;
+    left: 12%;
+  }
+  .cube-stage {
+    padding-inline: 22px;
+  }
+  .cube-menu {
+    width: 270px;
+  }
+  .cube-menu button {
+    font-size: 15px;
+  }
+  .cube-glass {
+    border-width: 6px;
+    border-radius: 22px;
+  }
+  .cube-glass:after {
+    inset: 32px;
+  }
+  .cube-right {
+    transform: translateY(-50%) rotate(90deg) translateY(-17px);
+  }
+  .cube-left {
+    transform: translateY(-50%) rotate(-90deg) translateY(-21px);
+  }
+  .cube-selector-hint {
+    font-size: 6px;
+    gap: 5px;
+    margin-top: 27px;
+  }
+  .cube-selector-hint > span {
+    font-size: 6px;
+    padding-left: 7px;
+  }
+  .cube-pages {
+    min-height: 310px;
+  }
+  .cube-pages h3 {
+    font-size: 36px;
+  }
+  .cube-pages [role='tabpanel'] > p:not(.cube-file-label) {
+    font-size: 14px;
+  }
+  .folio-heading h2 {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+  .twilight-folio h3 {
+    font-size: 39px;
+  }
+  .folio-kicker {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+  .epona-art img {
+    height: 300px;
+  }
+  .twilight-art-stage {
+    height: 350px;
+  }
+  .twilight-art-stage figcaption {
+    gap: 7px;
+    font-size: 6px;
+    padding-inline: 10px;
+  }
+  .twilight-questions summary {
+    font-size: 21px;
+  }
+  .twilight-progress-record strong {
+    font-size: 92px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-pending {
+    opacity: 1;
+  }
+  * {
+    transition: none !important;
+  }
+}
+
+/* Centre the side labels within the glass rails, independent of text width. */
+.cube-left,
+.cube-right {
+  top: 50%;
+  width: 32px;
+  height: calc(100% - 100px);
+  padding: 0 !important;
+  display: grid;
+  place-items: center;
+  writing-mode: vertical-rl;
+}
+.cube-left {
+  left: 14px;
+  transform: translateY(-50%) rotate(180deg);
+}
+.cube-right {
+  right: 14px;
+  transform: translateY(-50%);
+}
+.cube-menu {
+  translate: 0 -14px;
+}
+.cube-selector-hint kbd {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  line-height: 1;
+}
+.cube-menu button[aria-selected='true']:is(.cube-left, .cube-right):after {
+  left: calc(50% - 2px);
+  bottom: 4px;
+}
+
+/* One subdued sheet of moss paper, without repeating tile seams. */
+.twilight-folio {
+  background-image:
+    linear-gradient(110deg, #353520d9, #595135eb 54%, #363823eb),
+    url('assets/dusklight/manual-moss-texture.webp');
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 430px) {
+  .cube-left {
+    left: 11px;
+  }
+  .cube-right {
+    right: 11px;
+  }
+  .cube-left,
+  .cube-right {
+    width: 28px;
+    height: calc(100% - 86px);
+  }
+  .cube-menu {
+    translate: 0 -10px;
+  }
+}
+
+.cube-pages {
+  position: relative;
+  display: grid;
+  align-items: start;
+}
+.cube-pages > [role='tabpanel'],
+.cube-pages > [data-forge-motion-layer] {
+  grid-area: 1/1;
+  min-width: 0;
+}
+
+/* Compact phone rhythm and comfortable touch targets. */
+@media (max-width: 600px) {
+  .twilight-cover-copy {
+    padding-top: 28px;
+  }
+  .twilight-cover h1 {
+    margin-block: 20px;
+    max-width: 300px;
+  }
+  .twilight-verse {
+    font-size: 40px;
+  }
+  .twilight-intro {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .twilight-rule {
+    margin-block: 18px;
+  }
+  .twilight-cover-art {
+    min-height: 280px;
+    padding-top: 0;
+  }
+  .twilight-cover-art > img {
+    height: 280px;
+  }
+  .twilight-folio h3 {
+    font-size: 32px;
+  }
+  .twilight-prologue-copy > p:not(.folio-kicker),
+  .origin-copy > p:not(.folio-kicker),
+  .twilight-record-copy > p:not(.folio-kicker),
+  .twilight-community p:not(.folio-kicker) {
+    font-size: 17px;
+  }
+  .twilight-questions summary {
+    font-size: 19px;
+  }
+  .twilight-questions .answer {
+    font-size: 16px;
+  }
+}

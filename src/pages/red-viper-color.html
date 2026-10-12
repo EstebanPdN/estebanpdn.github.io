@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en"
+  ><head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" /><meta
+      name="theme-color"
+      content="#090607"
+    />
+    <meta
+      name="description"
+      content="Red Viper Color brings Virtual Boy color packs and automatic color to Nintendo 3DS. An experimental project based on Red Viper and VBoyColor, at 75% development."
+    />
+    <title>Red Viper Color · Esteban’s Forge</title>
+    <link rel="icon" href="assets/brand/estebans-forge-icon.png" type="image/png" />
+    <link rel="stylesheet" href="forge-header.css" /><link
+      rel="stylesheet"
+      href="red-viper-color.css"
+    /><link rel="stylesheet" href="page-transitions.css" />
+    <script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="interaction-motion.js"></script
+    ><script src="red-viper-color.js" defer></script
+    ><script src="forge-header.js" defer></script> </head
+  ><body data-game="viper">
+    <!-- forge-header -->
+    <a class="skip-link" href="#project-main">Skip to project</a>
+    <main class="vb-page" id="project-main"
+      ><div class="vb-space" aria-hidden="true"></div>
+      <section class="vb-hero" aria-labelledby="project-title">
+        <div class="vb-system-line"
+          ><span>VIRTUAL BOY → NINTENDO 3DS</span><span>ESTEBAN’S FORGE / 08</span></div
+        >
+        <div class="vb-hero-layout"
+          ><div class="vb-hero-copy">
+            <p class="vb-kicker"
+              ><span class="vb-led" aria-hidden="true"></span> IN DEVELOPMENT / 75%</p
+            >
+            <h1 id="project-title"
+              >Born in red.<br /><span>Reimagined<br />in color.</span></h1
+            >
+            <p class="vb-hero-intro"
+              >Red Viper Color brings hand-painted packs and automatic color to the Virtual Boy
+              emulator for Nintendo 3DS.</p
+            >
+            <div class="vb-actions"
+              ><a class="vb-button" href="#viper-gallery">View the gallery ↓</a
+              ><a class="vb-text-link" href="#viper-origins">Meet its foundations</a></div
+            > </div
+          ><figure class="vb-brand-panel"
+            ><div class="vb-brand-screen"
+              ><img
+                class="vb-brand-emblem"
+                src="assets/red-viper/emblem.png"
+                alt=""
+                width="208"
+                height="163" /><img
+                class="vb-brand-wordmark"
+                src="assets/red-viper/menu-wordmark.png"
+                alt="Red Viper Color"
+                width="330"
+                height="37" /></div
+            ><figcaption>VIRTUAL BOY EMULATOR <span>FOR NINTENDO 3DS</span></figcaption></figure
+          ></div
+        >
+        <div class="vb-hero-foot"
+          ><span>VIRTUAL BOY ROOTS<br /><b>NINTENDO 3DS DESTINATION</b></span
+          ><span class="vb-spectrum" aria-label="Color palette"
+            ><i></i><i></i><i></i><i></i><i></i><i></i></span
+          ><span>DEVELOPMENT<br /><b>75% / THE JOURNEY CONTINUES</b></span></div
+        >
+      </section>
+
+      <section class="vb-chapter vb-spectrum-chapter" aria-labelledby="spectrum-title">
+        <header class="vb-chapter-heading"
+          ><span>01 / COLOR MODE</span><h2 id="spectrum-title">Beyond the red.</h2
+          ><p>Familiar pixels. A fresh way to see them.</p></header
+        >
+        <div class="vb-features"
+          ><article
+            ><img
+              src="assets/red-viper/hardware-cartridge.png"
+              alt=""
+              width="120"
+              height="120"
+            /><span class="vb-file">COLOR / 01</span><h3>Hand-painted packs.</h3
+            ><p
+              >VBoyColor’s hand-painted packs bring chosen colors to familiar tiles, characters and
+              worlds. A matching pack gives each adventure its own palette.</p
+            ></article
+          ><article
+            ><img
+              src="assets/red-viper/hardware-controller.png"
+              alt=""
+              width="120"
+              height="120"
+            /><span class="vb-file">COLOR / 02</span><h3>Automatic color.</h3
+            ><p
+              >The combined color mode fills the parts a pack leaves unpainted. When a compatible
+              pack is missing, Auto gives the scene its own color interpretation.</p
+            ></article
+          ><article
+            ><img
+              src="assets/red-viper/hardware-headset.png"
+              alt=""
+              width="120"
+              height="120"
+            /><span class="vb-file">COLOR / 03</span><h3>Stereoscopic depth.</h3
+            ><p
+              >A separate color image is composed for each eye, preserving the original scene’s
+              stereo geometry. Color can be switched off to return to Red Viper’s original
+              rendering.</p
+            ></article
+          ></div
+        >
+        <p class="vb-small-note"
+          >The colors are an interpretation of the original graphics, shaped by color packs and
+          Auto.</p
+        >
+      </section>
+
+      <section
+        class="vb-chapter vb-gallery"
+        id="viper-gallery"
+        aria-labelledby="viper-gallery-title"
+      >
+        <header class="vb-chapter-heading"
+          ><span>02 / ON TWO SCREENS</span
+          ><h2 id="viper-gallery-title">A new view. A familiar console.</h2
+          ><p>Explore the new interface and captured gameplay.</p></header
+        >
+        <div class="vb-gallery-stage"
+          ><div class="vb-gallery-frame"
+            ><div class="vb-frame-bar"
+              ><span id="vb-gallery-title">The new menu</span
+              ><span id="vb-gallery-mode">MENU DESIGN</span></div
+            >
+            <button
+              class="vb-hardware"
+              type="button"
+              data-vb-open="left"
+              aria-label="Enlarge selected Nintendo 3DS upper screen"
+              ><svg
+                viewBox="140 90 1320 1420"
+                role="img"
+                aria-label="Nintendo 3DS with the new Red Viper Color interface"
+              >
+                <defs>
+                  <clipPath id="viper-console">
+                    <path
+                      d="M268.75 93.75L258.75 95.00L246.25 97.50L230.62 102.50L221.88 106.25L214.38 110.00L200.62 118.75L191.88 125.62L179.38 138.12L169.38 151.25L168.75 153.12L163.75 160.62L160.00 168.12L160.00 169.38L158.75 170.62L158.75 171.88L156.25 176.88L153.12 186.25L153.12 188.12L150.62 195.62L150.00 201.88L148.75 205.62L148.12 215.62L147.50 216.25L147.50 529.38L145.00 530.62L143.12 532.50L143.12 536.88L144.38 538.12L147.50 538.75L147.50 575.62L148.12 576.25L147.50 743.12L148.75 745.62L151.25 748.12L153.75 749.38L156.88 750.00L172.50 750.62L167.50 753.12L163.12 756.25L157.50 762.50L156.25 766.88L153.75 769.38L150.00 776.25L149.38 781.25L148.75 781.88L148.75 786.88L148.12 787.50L148.12 813.12L148.75 813.75L149.38 820.62L151.88 825.62L151.88 1379.38L152.50 1380.00L153.12 1390.00L153.75 1390.62L153.75 1393.75L154.38 1394.38L154.38 1396.88L155.00 1397.50L156.88 1406.88L160.62 1418.12L163.75 1424.38L163.75 1425.62L171.88 1440.62L182.50 1455.00L187.50 1460.00L187.50 1460.62L191.88 1464.38L191.88 1465.00L206.25 1476.88L221.88 1486.25L240.00 1493.75L256.88 1498.12L270.62 1500.00L456.25 1500.62L460.00 1501.25L1140.62 1501.25L1143.75 1500.62L1329.38 1500.00L1343.12 1498.12L1360.00 1493.75L1378.12 1486.25L1386.88 1481.25L1398.75 1473.12L1413.12 1460.00L1422.50 1448.75L1430.00 1437.50L1435.62 1426.88L1435.62 1425.62L1439.38 1418.12L1443.12 1406.88L1443.12 1405.00L1443.75 1404.38L1443.75 1402.50L1445.62 1396.88L1445.62 1393.75L1446.25 1393.12L1446.88 1386.25L1447.50 1385.62L1447.50 1380.00L1448.12 1379.38L1448.12 825.62L1450.62 820.62L1451.25 813.75L1451.88 813.12L1451.88 787.50L1451.25 786.88L1451.25 781.88L1450.62 781.25L1450.62 778.75L1449.38 775.00L1446.25 769.38L1443.75 766.88L1443.75 765.00L1442.50 763.75L1442.50 762.50L1436.88 756.25L1432.50 753.12L1427.50 750.62L1443.75 750.00L1446.25 749.38L1448.75 748.12L1451.25 745.62L1452.50 743.12L1452.50 552.50L1453.12 551.88L1453.12 538.75L1456.88 537.50L1456.88 532.50L1455.62 531.25L1453.12 530.62L1453.12 516.25L1452.50 515.62L1452.50 216.25L1451.88 215.62L1451.88 210.62L1451.25 210.00L1451.25 205.62L1450.62 205.00L1450.62 201.88L1450.00 201.25L1449.38 195.62L1448.75 195.00L1447.50 188.12L1443.75 176.88L1442.50 175.00L1442.50 173.75L1436.25 160.62L1435.00 159.38L1431.88 153.12L1420.62 138.12L1408.12 125.62L1399.38 118.75L1390.00 112.50L1376.88 105.62L1360.62 99.38L1353.75 97.50L1345.00 95.62L1331.25 93.75Z"
+                    />
+                  </clipPath>
+                </defs>
+                <image
+                  href="assets/devices/new-nintendo-3ds-xl-neutral.webp"
+                  width="1600"
+                  height="1600"
+                  clip-path="url(#viper-console)"
+                />
+                <svg
+                  id="vb-left-image"
+                  viewBox="0 0 800 480"
+                  x="365"
+                  y="204"
+                  width="871"
+                  height="522"
+                  preserveAspectRatio="none"
+                >
+                  <image
+                    href="assets/red-viper/captures/new-menu-left.webp"
+                    width="800"
+                    height="480"
+                  /></svg
+                ><svg
+                  id="vb-right-image"
+                  viewBox="0 0 320 240"
+                  x="453"
+                  y="886"
+                  width="696"
+                  height="522"
+                  preserveAspectRatio="none"
+                >
+                  <image href="assets/red-viper/new-home-menu.png" width="320" height="240" />
+                </svg></svg
+              ><span>EXPAND UPPER SCREEN</span></button
+            > </div
+          ><div class="vb-gallery-controls"
+            ><p class="vb-file">SELECT A SCENE</p
+            ><p id="vb-gallery-caption" class="vb-gallery-caption"
+              >The approved new splash and Home menu, shown as a Nintendo 3DS interface preview.
+              Emulator integration is still pending.</p
+            >
+            <div class="vb-scene-rail" aria-label="Red Viper Color development scenes"
+              ><button
+                class="vb-scene"
+                type="button"
+                aria-pressed="true"
+                data-vb-scene="new-menu"
+                data-title="The new menu"
+                data-mode="Menu design"
+                data-caption="The approved new splash and Home menu, shown as a Nintendo 3DS interface preview. Emulator integration is still pending."
+                ><img
+                  src="assets/red-viper/captures/new-menu-left.webp"
+                  alt=""
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                /><span>01 / The new menu</span></button
+              >
+              <button
+                class="vb-scene"
+                type="button"
+                aria-pressed="false"
+                data-vb-scene="tennis"
+                data-title="Mario’s Tennis"
+                data-mode="Color pack"
+                data-caption="A brown court, a green garden and a familiar serve. The upper screen is a documented color-pack capture; the lower screen previews the new menu design."
+                ><img
+                  src="assets/red-viper/captures/tennis-screen.webp"
+                  alt=""
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                /><span>02 / Mario’s Tennis</span></button
+              >
+              <button
+                class="vb-scene"
+                type="button"
+                aria-pressed="false"
+                data-vb-scene="wario"
+                data-title="Virtual Boy Wario Land"
+                data-mode="Color pack"
+                data-caption="Wario’s yellow helmet, purple clothing and a quiet cave. Captured from an earlier color-pack build during stereo and input checks."
+                ><img
+                  src="assets/red-viper/captures/wario-screen.webp"
+                  alt=""
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                /><span>03 / Wario Land</span></button
+              >
+              <button
+                class="vb-scene"
+                type="button"
+                aria-pressed="false"
+                data-vb-scene="jack"
+                data-title="Jack Bros."
+                data-mode="Color pack"
+                data-caption="The Forest of Pirates, seen through a color pack. The upper view is a documented gameplay capture; the lower view previews the new menu design."
+                ><img
+                  src="assets/red-viper/captures/jack-screen.webp"
+                  alt=""
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                /><span>04 / Jack Bros.</span></button
+              >
+              <button
+                class="vb-scene"
+                type="button"
+                aria-pressed="false"
+                data-vb-scene="vertical"
+                data-title="Vertical Force"
+                data-mode="Color pack"
+                data-caption="A cyan ship, a dark starfield and a blue-gray carrier. An earlier color-pack build, checked for scene composition and stereo geometry."
+                ><img
+                  src="assets/red-viper/captures/vertical-screen.webp"
+                  alt=""
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                /><span>05 / Vertical Force</span></button
+              >
+              <button
+                class="vb-scene"
+                type="button"
+                aria-pressed="false"
+                data-vb-scene="bowling"
+                data-title="Virtual Bowling"
+                data-mode="Pack + Auto"
+                data-caption="Purple lanes and orange pins. The combined pack + Auto build supplies color to the parts beyond the painted pack."
+                ><img
+                  src="assets/red-viper/captures/bowling-screen.webp"
+                  alt=""
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                /><span>06 / Virtual Bowling</span></button
+              >
+              <button
+                class="vb-scene"
+                type="button"
+                aria-pressed="false"
+                data-vb-scene="golf"
+                data-title="Golf"
+                data-mode="Pack + Auto"
+                data-caption="Violet trees, a warm landscape and a gold course display. A combined pack + Auto capture from direction-selection testing."
+                ><img
+                  src="assets/red-viper/captures/golf-screen.webp"
+                  alt=""
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                /><span>07 / Golf</span></button
+              >
+            </div>
+            <div class="vb-gallery-browse"
+              ><span>SELECT A SCENE / ← →</span
+              ><div
+                ><button type="button" data-vb-step="-1" aria-label="Previous scene">←</button
+                ><button type="button" data-vb-step="1" aria-label="Next scene">→</button></div
+              ></div
+            >
+          </div></div
+        >
+        <p class="vb-small-note"
+          >Gameplay captures come from Azahar on macOS. The new lower-screen menu is a design
+          preview pending integration, composited onto a Nintendo 3DS photograph. Earlier pack
+          builds and the combined Auto build retain their own labels.
+          <a href="assets/red-viper/captures/provenance.json">Capture provenance</a></p
+        >
+      </section>
+
+      <section class="vb-chapter vb-origins" id="viper-origins" aria-labelledby="origins-title">
+        <header class="vb-chapter-heading"
+          ><span>03 / THE FOUNDATIONS</span><h2 id="origins-title">Built on their work.</h2
+          ><p>Three foundations, one path to Nintendo 3DS.</p></header
+        >
+        <div class="vb-origin-grid"
+          ><article
+            ><span class="vb-origin-number">01</span><h3>r3Ddragon</h3
+            ><p
+              >danielps’s original Nintendo 3DS Virtual Boy emulator, continuing Reality Boy and Red
+              Dragon. The original splash artwork was made by Morintari, and the control scheme by
+              nevumx.</p
+            ><a
+              class="vb-text-link"
+              href="https://github.com/mrdanielps/r3Ddragon"
+              target="_blank"
+              rel="noreferrer"
+              >Visit r3Ddragon →</a
+            ></article
+          ><article
+            ><span class="vb-origin-number">02</span><h3>Red Viper</h3
+            ><p
+              >The Nintendo 3DS foundation by Floogle / skyfloogle: the Virtual Boy core, dynamic
+              recompiler and original renderer. This Color project builds on version 1.3.4.</p
+            ><a
+              class="vb-text-link"
+              href="https://github.com/skyfloogle/red-viper"
+              target="_blank"
+              rel="noreferrer"
+              >Visit Red Viper <span aria-hidden="true">→</span></a
+            ></article
+          ><article
+            ><span class="vb-origin-number">03</span><h3>VBoyColor</h3
+            ><p
+              >yuk27’s color work provides the painted packs and the reference for Auto, stereo
+              color matching and depth-based coloring. Red Viper Color adapts that work to Nintendo
+              3DS.</p
+            ><a
+              class="vb-text-link"
+              href="https://github.com/yuk27/VBoyColor"
+              target="_blank"
+              rel="noreferrer"
+              >Visit VBoyColor <span aria-hidden="true">→</span></a
+            ></article
+          ></div
+        >
+        <p class="vb-small-note"
+          >Red Viper Color and its new interface: EstebanPdN. Further thanks to David Tucker /
+          Reality Boy, the Red Dragon contributors, CidVonHighwind / VirtualBoyGo, Beetle VB /
+          Mednafen and the upstream contributors. Original credits and license notices are
+          preserved.
+          <a
+            href="https://archive.org/details/Virtual_Boy_Instruction_Book_1985_Nintendo/page/n25/mode/2up"
+            target="_blank"
+            rel="noreferrer"
+            >Original Virtual Boy instruction book</a
+          >.</p
+        >
+      </section>
+
+      <section class="vb-chapter vb-progress" id="viper-progress" aria-labelledby="progress-title">
+        <div
+          ><p class="vb-file">04 / THE NEXT CHAPTER</p
+          ><h2 id="progress-title">Still finding<br />its colors.</h2
+          ><p
+            >The color integration is taking shape. The next steps are visual checks across more
+            scenes, followed by testing on Nintendo 3DS hardware.</p
+          ><a class="vb-text-link" href="index.html#progress"
+            >Follow the Forge projects <span aria-hidden="true">→</span></a
+          ></div
+        ><div class="vb-progress-display"
+          ><span>DEVELOPMENT / ESTEBAN’S PROJECT STATUS</span><strong>75<span>%</span></strong
+          ><div
+            class="vb-progress-meter"
+            role="progressbar"
+            aria-label="Red Viper Color development progress"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            ><span style="width:75%"></span></div
+          ><p>IN DEVELOPMENT / UNRELEASED</p></div
+        >
+      </section>
+      <section class="vb-chapter vb-faq" aria-labelledby="vb-faq-title"
+        ><header class="vb-chapter-heading"
+          ><span>05 / QUESTIONS & ANSWERS</span
+          ><h2 id="vb-faq-title">Before you look inside.</h2></header
+        ><details
+          ><summary>How does the color mode work?</summary
+          ><p
+            >A compatible pack supplies its painted colors. Auto fills the remaining parts, or
+            colors the scene when a compatible pack is missing. The setting can be saved per game or
+            globally.</p
+          ></details
+        ><details
+          ><summary>Do all games use the same palette?</summary
+          ><p
+            >No. Packs are matched to the game’s identity, while Auto interprets its scene. A
+            missing or incompatible pack falls back to Auto; each game and scene still needs its own
+            visual review.</p
+          ></details
+        ><details
+          ><summary>Can I download Red Viper Color yet?</summary
+          ><p
+            >It remains an experimental project in development. Follow the Forge updates for a
+            future release and hardware-testing news.</p
+          ></details
+        ><a class="vb-button" href="index.html#info"
+          >Stay close to the Forge <span aria-hidden="true">→</span></a
+        ></section
+      >
+      <footer class="vb-footer"
+        ><span>ESTEBAN’S FORGE / RED VIPER COLOR</span><a href="credits.html">Credits</a
+        ><a href="index.html#collection">Back to Collection</a></footer
+      >
+    </main>
+    <dialog id="vb-lightbox" aria-labelledby="vb-lightbox-title"
+      ><div class="vb-frame-bar"
+        ><span id="vb-lightbox-title">The new menu / UPPER SCREEN</span
+        ><button id="vb-lightbox-close" type="button" aria-label="Close gallery">×</button></div
+      ><svg
+        id="vb-lightbox-image"
+        viewBox="0 0 800 480"
+        role="img"
+        aria-label="Selected upper screen"
+      >
+        <image href="assets/red-viper/captures/new-menu-left.webp" width="800" height="480" /></svg
+      ><p>RED VIPER COLOR / GALLERY</p></dialog
+    >
+  </body></html
+>
