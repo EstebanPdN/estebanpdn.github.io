@@ -35,6 +35,11 @@ jobs:
       - name: Install locked dependencies
         run: npm ci
 
+      - name: Install video metadata probe for asset checks
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
       - name: Check generated records and formatting
         run: |
           npm run provenance:check

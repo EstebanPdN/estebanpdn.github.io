@@ -16,7 +16,7 @@ GitHub Pages no procesa las fuentes de este proyecto. La acción de CI compila l
 
 ## Flujo automatizado
 
-`.github/workflows/pages.yml` se ejecuta al enviar cambios a `main` o al iniciarse manualmente. Antes de publicar, el job prepara Node.js, instala exactamente lo descrito en `package-lock.json`, revisa el formato, ejecuta la suite local, instala Chromium y WebKit para la prueba de navegador, compila el sitio y comprueba la navegación. Solo si esos pasos pasan se configura Pages, se carga `dist/` y se crea el despliegue con `GITHUB_TOKEN` de alcance limitado al job.
+`.github/workflows/pages.yml` se ejecuta al enviar cambios a `main` o al iniciarse manualmente. Antes de publicar, el job prepara Node.js y FFmpeg, instala exactamente lo descrito en `package-lock.json`, revisa el formato, ejecuta la suite local, instala Chromium y WebKit para la prueba de navegador, compila el sitio y comprueba la navegación. Solo si esos pasos pasan se configura Pages, se carga `dist/` y se crea el despliegue con `GITHUB_TOKEN` de alcance limitado al job.
 
 Los permisos de workflow se declaran de forma explícita. No hay claves API del sitio en el repositorio ni configuración de dominio personalizado. La publicación del sitio de cuenta depende de que el repositorio público se llame `estebanpdn.github.io`.
 

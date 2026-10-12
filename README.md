@@ -9,6 +9,7 @@ El código de navegación conserva las rutas públicas originales. Al navegar de
 - Node.js 22 o posterior.
 - Python 3 para compilar las rutas estáticas.
 - npm 10 o posterior.
+- FFmpeg (su herramienta `ffprobe`) para la prueba de recursos de vídeo.
 
 ## Desarrollo local
 
