@@ -15,13 +15,13 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 VOID = set("area base br col embed hr img input link meta param source track wbr".split())
 PROJECTS = {
-    "kart": ("mario-kart-64.html", 65, "mario-kart-64-3ds"),
+    "kart": ("mario-kart-64.html", 80, "mario-kart-64-3ds"),
     "minish": ("the-minish-cap.html", 100, "zelda-tmc-3ds"),
     "alttp": ("a-link-to-the-past.html", 100, "zelda-alttp-3ds"),
     "doom": ("legend-of-doom.html", 100, "legend-of-doom-3ds"),
-    "starwing": ("star-fox.html", 70, "starwing-3ds"),
+    "starwing": ("star-fox.html", 80, "starwing-3ds"),
     "dusklight": ("dusklight.html", 10, None),
-    "sm64ds": ("super-mario-64-ds.html", 35, None),
+    "sm64ds": ("super-mario-64-ds.html", 75, None),
     "viper": ("red-viper-color.html", 75, None),
 }
 
