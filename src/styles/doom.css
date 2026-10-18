@@ -2356,3 +2356,11 @@ body[data-game='doom'] {
     font-size: 12px;
   }
 }
+
+/* Move the welcome logo left where it sits above the heading. The phone
+   two-column layout keeps its existing gap so the logo cannot cover the title. */
+@media (min-width: 601px) {
+  .game-logo {
+    transform: translateX(-40%);
+  }
+}

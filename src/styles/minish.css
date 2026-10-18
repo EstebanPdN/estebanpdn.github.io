@@ -284,7 +284,8 @@ summary:focus-visible {
   position: relative;
   padding-bottom: 10px;
 }
-.cover-copy h1 {
+.cover-copy h1,
+.cover-copy > .port-release {
   width: 345px;
   max-width: 70%;
   margin: 0 0 6px 34px;
@@ -1207,7 +1208,8 @@ body:has(.lightbox[open]) {
     width: 195px;
     bottom: 77px;
   }
-  .cover-copy h1 {
+  .cover-copy h1,
+  .cover-copy > .port-release {
     width: 370px;
   }
   .cover-ribbon {
@@ -1227,7 +1229,8 @@ body:has(.lightbox[open]) {
   .cover-layout {
     min-height: 575px;
   }
-  .cover-copy h1 {
+  .cover-copy h1,
+  .cover-copy > .port-release {
     width: 300px;
   }
   .cover-copy > h2 {
@@ -1419,7 +1422,8 @@ body:has(.lightbox[open]) {
   .cover-copy {
     margin-left: 34%;
   }
-  .cover-copy h1 {
+  .cover-copy h1,
+  .cover-copy > .port-release {
     max-width: 100%;
     width: 280px;
     margin-left: 0;
@@ -1796,7 +1800,8 @@ body:has(.lightbox[open]) {
     margin: 0;
     padding-bottom: 0;
   }
-  .cover-copy h1 {
+  .cover-copy h1,
+  .cover-copy > .port-release {
     width: 245px;
     max-width: 80%;
     margin: 0 auto 10px;
@@ -3294,7 +3299,8 @@ body {
   .cover-layout {
     min-height: 540px;
   }
-  .cover-copy h1 {
+  .cover-copy h1,
+  .cover-copy > .port-release {
     max-width: 78%;
     width: 230px;
   }
@@ -3335,4 +3341,10 @@ body {
   .faq-list summary h3 {
     font-size: 19px;
   }
+}
+
+/* The release labels share the logo box at every responsive breakpoint. */
+.cover-copy > .port-release {
+  justify-content: center;
+  margin-top: 0.5rem;
 }

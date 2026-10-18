@@ -28,3 +28,19 @@ Direct loading and animated navigation use the same destination pages. The build
 `tools/source-map.json` maps published JavaScript filenames to maintained source files. `src/app/index-state.js` is inserted into the homepage controller rather than shipped as a separate script.
 
 GitHub Actions builds from `main` and deploys only `dist/`. The site has no database or server process. Static URLs and filenames are part of its compatibility contract.
+
+## Public port versions
+
+`public/data/port-releases.json` owns the displayed stable and experimental port
+versions, their release links and the verification date. It describes public
+distribution, independently of development percentages and upstream versions.
+`tools/port_releases.py` expands explicit `port-status` and `port-release` HTML
+comment markers during the build. Collection cards, progress cards and project
+headers therefore use the same records without browser requests or listeners.
+`src/styles/port-releases.css` owns the shared release labels; project themes
+retain their layout and visual identity. Unknown project markers fail the build.
+
+When a public release changes, verify its GitHub tag and channel, update the
+registry and any version-specific download instructions, and rebuild both hosted
+editions. Unreleased projects retain a null stable release instead of borrowing
+an upstream or private candidate version.

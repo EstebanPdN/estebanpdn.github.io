@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-10-18",
+  "scope": "Public releases of EstebanPdN ports; local candidates and upstream versions are excluded.",
+  "ports": {
+    "minish": {
+      "page": "the-minish-cap.html",
+      "stable": { "version": "v2.1", "url": "https://github.com/EstebanPdN/zelda-tmc-3ds/releases/tag/v2.1" },
+      "experimental": { "version": "v2.2-E1", "url": "https://github.com/EstebanPdN/zelda-tmc-3ds/releases/tag/v2.2-E1" }
+    },
+    "alttp": {
+      "page": "a-link-to-the-past.html",
+      "stable": { "version": "v3.2", "url": "https://github.com/EstebanPdN/zelda-alttp-3ds/releases/tag/v3.2" }
+    },
+    "doom": {
+      "page": "legend-of-doom.html",
+      "stable": { "version": "v1.0", "url": "https://github.com/EstebanPdN/legend-of-doom-3ds/releases/tag/v1.0" }
+    },
+    "kart": {
+      "page": "mario-kart-64.html",
+      "stable": { "version": "v1.5", "url": "https://github.com/EstebanPdN/mario-kart-64-3ds/releases/tag/v1.5" }
+    },
+    "starwing": {
+      "page": "star-fox.html",
+      "stable": { "version": "v1.0", "url": "https://github.com/EstebanPdN/starwing-3ds/releases/tag/v1.0" }
+    },
+    "sm64ds": { "page": "super-mario-64-ds.html", "stable": null },
+    "dusklight": { "page": "dusklight.html", "stable": null },
+    "viper": { "page": "red-viper-color.html", "stable": null }
+  }
+}
