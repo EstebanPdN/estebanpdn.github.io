@@ -2364,8 +2364,8 @@ body[data-game='doom'] {
   }
 }
 
-/* Phones read from top to bottom: centered artwork, heading, then copy.
-   Reset the desktop translation so the artwork stays within the welcome window. */
+/* Keep phone artwork above the heading and aligned with its left edge.
+   Use the content edge so the alignment holds at every phone width. */
 @media (max-width: 600px) {
   .welcome-body {
     display: block;
@@ -2375,7 +2375,7 @@ body[data-game='doom'] {
     width: 200px;
     max-width: 100%;
     max-height: 155px;
-    margin: 20px auto 25px;
+    margin: 20px 0 25px;
     transform: none;
   }
   .welcome-body h1 {
