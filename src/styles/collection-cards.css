@@ -44,10 +44,11 @@
 #dual .released-mosaic {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, clamp(300px, 25vw, 320px));
+  grid-auto-rows: clamp(300px, 25vw, 320px);
   gap: 20px;
 }
 #dual .development-mosaic {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: 320px;
   gap: 20px;
 }
@@ -672,5 +673,12 @@
   }
   #dual .game-channel .channel-status {
     font-size: 7px;
+  }
+}
+
+/* The fifth published port fills the final desktop shelf. */
+@media (min-width: 681px) {
+  #dual .released-mosaic .game-starwing {
+    grid-column: 1 / -1;
   }
 }

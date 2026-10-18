@@ -145,11 +145,11 @@ def check_site(directory):
     require(index is not None, "Missing index.html")
     if index:
         tiles = [node for node in index.nodes if node.has_class("game-channel")]
-        expected_tiles = ["minish", "doom", "alttp", "kart", "sm64ds", "dusklight", "starwing", "viper"]
+        expected_tiles = ["minish", "doom", "alttp", "kart", "starwing", "sm64ds", "dusklight", "viper"]
         require(len(tiles) == 8, f"Collection must contain exactly eight tiles, found {len(tiles)}")
         for group_class, keys, title_id, title in (
-            ("released-mosaic", expected_tiles[:4], "library-title", "Released Ports"),
-            ("development-mosaic", expected_tiles[4:], "development-library-title", "Ports in Development"),
+            ("released-mosaic", expected_tiles[:5], "library-title", "Released Ports"),
+            ("development-mosaic", expected_tiles[5:], "development-library-title", "Ports in Development"),
         ):
             group = next((node for node in index.nodes if node.has_class(group_class)), None)
             links = [node.attrs.get("href") for node in group.all() if node.has_class("game-channel")] if group else []
