@@ -5,7 +5,8 @@
 - Show verified public port versions in collection cards, progress cards and project headers.
 - Distinguish stable and experimental releases, and identify ports without a public release.
 - Centralize release metadata in a documented build-time registry shared with the ChatGPT-hosted edition.
-- Center The Minish Cap release labels beneath its logo at each responsive breakpoint, and move the Legend of Doom welcome logo another 20% left.
+- Center The Minish Cap release labels beneath its logo at each responsive breakpoint, and move the Legend of Doom welcome logo another 20% left on desktop.
+- Stack the Legend of Doom welcome logo above its heading and description on phones.
 
 ## [1.0.0] — 2026-10-12
 
