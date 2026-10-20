@@ -2,7 +2,7 @@
 
 EstebanPdN’s static Nintendo 3DS project portfolio. [Visit the site](https://estebanpdn.github.io/).
 
-This project was developed with the help of [OpenAI Codex](https://openai.com/codex/). Learn more about the development process [here](AI_DEVELOPMENT.md).
+This project was developed with the help of [OpenAI Codex](https://openai.com/codex/) and [Claude Code](https://claude.com/product/claude-code). Learn more about the development process [here](AI_DEVELOPMENT.md).
 
 ## Run locally
 
