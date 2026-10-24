@@ -100,7 +100,7 @@ for (const [engineName, browserType] of [
       await page.locator('details.art-credits summary').click();
       await page.locator('main a[href="credits.html"]').first().click();
       await page.waitForURL('**/credits.html');
-      await page.getByRole('heading', { name: 'Credits', exact: true }).waitFor();
+      await page.getByRole('heading', { name: 'Image credits', exact: true }).waitFor();
       assert.equal(
         await page.evaluate(() => document === window.__forgeOriginalDocument),
         true,
@@ -117,7 +117,7 @@ for (const [engineName, browserType] of [
         'The theme survives page transitions',
       );
 
-      await page.locator('#main-content a[href="index.html#collection"]').first().click();
+      await page.locator('main a[href="index.html#collection"]').first().click();
       await page.waitForURL('**/index.html#collection');
       assert.equal(
         await page.evaluate(() => document === window.__forgeOriginalDocument),
@@ -126,7 +126,7 @@ for (const [engineName, browserType] of [
       );
       await page.goBack();
       await page.waitForURL('**/credits.html');
-      await page.getByRole('heading', { name: 'Credits', exact: true }).waitFor();
+      await page.getByRole('heading', { name: 'Image credits', exact: true }).waitFor();
       assert.equal(
         await page.evaluate(() => document === window.__forgeOriginalDocument),
         true,
