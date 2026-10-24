@@ -8,7 +8,11 @@ const root = new URL('../dist/', import.meta.url);
 const dist = decodeURIComponent(root.pathname);
 const server = await serve(dist);
 const routes = (await readdir(dist)).filter((file) => file.endsWith('.html')).sort();
-assert.equal(routes.length, 10, 'The published route set should contain the ten documented pages');
+assert.equal(
+  routes.length,
+  12,
+  'The published route set includes the Blog index and Mario Kart post',
+);
 
 for (const [engineName, browserType] of [
   ['Chromium', chromium],
@@ -96,7 +100,7 @@ for (const [engineName, browserType] of [
       await page.locator('details.art-credits summary').click();
       await page.locator('main a[href="credits.html"]').first().click();
       await page.waitForURL('**/credits.html');
-      await page.getByRole('heading', { name: 'Who made these assets?' }).waitFor();
+      await page.getByRole('heading', { name: 'Credits', exact: true }).waitFor();
       assert.equal(
         await page.evaluate(() => document === window.__forgeOriginalDocument),
         true,
@@ -122,7 +126,7 @@ for (const [engineName, browserType] of [
       );
       await page.goBack();
       await page.waitForURL('**/credits.html');
-      await page.getByRole('heading', { name: 'Who made these assets?' }).waitFor();
+      await page.getByRole('heading', { name: 'Credits', exact: true }).waitFor();
       assert.equal(
         await page.evaluate(() => document === window.__forgeOriginalDocument),
         true,

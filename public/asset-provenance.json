@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "project": "Esteban’s Forge · v1.0.0",
   "generatedBy": "tools/build-provenance.mjs",
-  "assetFileCount": 443,
+  "assetFileCount": 460,
   "counts": {
     "context-only-permission-not-established": 122,
     "license-named-in-source-record-recheck-rights-holder": 9,
     "permission-unknown-explicitly-documented": 1,
-    "source-and-permission-not-documented": 181,
-    "source-recorded-permission-not-established": 130
+    "source-and-permission-not-documented": 183,
+    "source-recorded-permission-not-established": 145
   },
   "reviewScope": "This inventory records bundled evidence and file hashes. It does not independently verify copyright ownership, the continued availability of source pages, or permissions beyond the terms recorded in source manifests.",
   "attributionNotice": "A credit or source link does not by itself grant permission to copy, adapt, or redistribute a work. Unknown permissions remain unknown.",
@@ -459,6 +459,253 @@
       "sha256": "e6e820db38b51ad9b9e07262843b2d9ac9f8ae2da79f8f6371e9b10a4a75b7d8",
       "evidence": [],
       "permissionStatus": "source-and-permission-not-documented"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/cover-owner.png",
+      "bytes": 534987,
+      "sha256": "ac2e0f56c7e3891a273b41fd93bf0a7727d020876d8f1f139ec189904e034eb2",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.14.file",
+          "details": {
+            "file": "cover-owner.png"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/epic-banner.webp",
+      "bytes": 340472,
+      "sha256": "92ad46ce45e8828543330be675ddfc42929f8949a66ca5d03e4972e95593591e",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.10.file",
+          "details": {
+            "file": "epic-banner.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/extractor-window.webp",
+      "bytes": 504024,
+      "sha256": "a5c83e7cd11f9ac4cfe0e7d2deaee8a692309f35d52adc004817d2a2e7a4200b",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.11.file",
+          "details": {
+            "file": "extractor-window.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/map-comparison.png",
+      "bytes": 54099,
+      "sha256": "c8e0dad7da7d616c764f173c08aa3977cd11686c2add7cb9648f8055600ba221",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.9.file",
+          "details": {
+            "file": "map-comparison.png"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/menu-maps-bottom.webp",
+      "bytes": 347852,
+      "sha256": "8d1cdbd57da60d0d16818efec5bcded26c6a88caea82c8dfdfae168d94e1cb9c",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.2.file",
+          "details": {
+            "file": "menu-maps-bottom.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/menu-maps-top.webp",
+      "bytes": 543146,
+      "sha256": "8adfcf54159d78173db4ca5c5e66fdad20fc91f46a400e84201cc1a38c8584ea",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.1.file",
+          "details": {
+            "file": "menu-maps-top.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/options-bottom.webp",
+      "bytes": 226564,
+      "sha256": "33799f6d3a48686a1742baffa1d1f9dcd16cae7bf464ebb48095b1be1bd14619",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.4.file",
+          "details": {
+            "file": "options-bottom.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/options-top.webp",
+      "bytes": 293376,
+      "sha256": "4785d4b1f485b0227e81b4068470c24bb7d766336e3975fec3f9bcce159bc6b4",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.3.file",
+          "details": {
+            "file": "options-top.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/portrait-comparison.png",
+      "bytes": 85575,
+      "sha256": "752b719366f483d4d83f72bdc3b4e945bedbedcc4ab4ed0757d422efcb5a8829",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.12.file",
+          "details": {
+            "file": "portrait-comparison.png"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/settings-icons.png",
+      "bytes": 29610,
+      "sha256": "5c52e0b27ad2d5cb914a2731ee9a352bdeb833672391568fe4463807d88eb17f",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.0.file",
+          "details": {
+            "file": "settings-icons.png"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/snow-race-bottom.webp",
+      "bytes": 198904,
+      "sha256": "eeeb0cde40c802617402a26fdf1689a08a3939de8621e4742a4b01e806dbcf83",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.8.file",
+          "details": {
+            "file": "snow-race-bottom.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/snow-race-top.webp",
+      "bytes": 326372,
+      "sha256": "6562b80bf37b6c86f6e09a49b22197236673a96a260a1b44084d45b64bcfa7cf",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.7.file",
+          "details": {
+            "file": "snow-race-top.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/solo-battle.webp",
+      "bytes": 766664,
+      "sha256": "db72539ce724f0d2b7b28d534a3b15811cd27a8be10ee3bb5f3e4a4ee7f1c3c3",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.6.file",
+          "details": {
+            "file": "solo-battle.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/solo-race.webp",
+      "bytes": 597094,
+      "sha256": "07ba70343fdc4ea39aaa9ae5bec9ff984ff152cc444fce8edb3b657e9c4a35ed",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.5.file",
+          "details": {
+            "file": "solo-race.webp"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/sources.json",
+      "bytes": 4887,
+      "sha256": "7654bb43904fe8b91d2e14d0a9eb6a7bdee20fcb8a1bcf64bd1a7453567017b9",
+      "evidence": [],
+      "permissionStatus": "source-and-permission-not-documented"
+    },
+    {
+      "path": "public/assets/blog/mk64-v2/texture-comparison.png",
+      "bytes": 45000,
+      "sha256": "4b4d22ea8d3007876f4bffef90d7baf1570ff5b7bf92a70e10ed378235272a17",
+      "evidence": [
+        {
+          "record": "public/assets/blog/mk64-v2/sources.json",
+          "match": "path",
+          "field": "assets.13.file",
+          "details": {
+            "file": "texture-comparison.png"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
     },
     {
       "path": "public/assets/brand/estebans-forge-icon.png",
@@ -3059,6 +3306,13 @@
         }
       ],
       "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/icons/worms3d.png",
+      "bytes": 102938,
+      "sha256": "0b4bb93bd5fa0e10a1aecc2b31a157d907ef09baa1ea51513378d6037ec0d05c",
+      "evidence": [],
+      "permissionStatus": "source-and-permission-not-documented"
     },
     {
       "path": "public/assets/info/discord-community.png",

@@ -22,5 +22,7 @@
   "minish.js": "src/features/games/minish.js",
   "red-viper-color.js": "src/features/games/red-viper-color.js",
   "starfox.js": "src/features/games/starfox.js",
-  "workshop-pages.js": "src/features/games/workshop-pages.js"
+  "workshop-pages.js": "src/features/games/workshop-pages.js",
+  "blog-post.js": "src/features/blog/blog-post.js",
+  "tracker-feed.mjs": "src/features/community/tracker-feed.mjs"
 }

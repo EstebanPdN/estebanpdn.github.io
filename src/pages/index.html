@@ -3,58 +3,54 @@
   ><head
     ><meta charset="utf-8" /><meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://media.discordapp.net; font-src 'self'; connect-src 'self' https://discord.com https://decomp.dev https://api.github.com https://raw.githubusercontent.com https://n64decomp.github.io https://sat-r.github.io https://zelda.deco.mp https://zelda64.dev; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
-    /><meta name="referrer" content="strict-origin-when-cross-origin" /><meta
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://media.discordapp.net; font-src 'self'; connect-src 'self' https://discord.com https://decomp.dev https://api.github.com https://raw.githubusercontent.com https://n64decomp.github.io https://sat-r.github.io https://zelda.deco.mp https://zelda64.dev https://worms-3d.estebanpdn.chatgpt.site; frame-src https://worms-3d.estebanpdn.chatgpt.site; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" /><meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" /><meta
       name="viewport"
-      content="width=device-width,initial-scale=1"
-    /><meta name="theme-color" content="#edf3f5" /><meta
+      content="width=device-width,initial-scale=1" /><meta
+      name="theme-color"
+      content="#edf3f5" /><meta
       name="description"
-      content="Esteban’s Forge. Nintendo 3DS ports, projects, and a second life for the classics."
-    /><title>Esteban’s Forge · Nintendo 3DS Ports</title
+      content="Esteban’s Forge. Nintendo 3DS ports, projects, and a second life for the classics." /><title
+      >Esteban’s Forge · Nintendo 3DS Ports</title
     ><link rel="stylesheet" href="styles.css" /><link
       rel="stylesheet"
-      href="forge-header.css"
-    /><link rel="stylesheet" href="dual.css" /><link
+      href="forge-header.css" /><link rel="stylesheet" href="dual.css" /><link
       rel="stylesheet"
-      href="scene.css"
-    /><script src="theme.js"></script
+      href="scene.css" /><script src="theme.js"></script
     ><script src="page-transitions.js"></script
     ><script src="welcome-init.js"></script
     ><script src="app.js" defer></script
     ><script src="dual.js?v=20260930-welcome1" defer></script
     ><link rel="stylesheet" href="community.css" /><link
       rel="stylesheet"
-      href="collection-cards.css"
-    /><script src="community.js" type="module"></script
+      href="collection-cards.css" /><script src="community.js" type="module"></script
     ><link rel="stylesheet" href="page-transitions.css" /><link
       rel="stylesheet"
-      href="interaction-motion.css"
-    /><script src="interaction-motion.js"></script
+      href="interaction-motion.css" /><script src="interaction-motion.js"></script
     ><script src="forge-header.js" defer></script
     ><script src="info-community.js" defer></script
     ><link
       rel="icon"
       type="image/svg+xml"
-      href="/icons/hub-20261014/estebans-forge/favicon.svg"
-    /><link
+      href="/icons/hub-20261014/estebans-forge/favicon.svg" /><link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/icons/hub-20261014/estebans-forge/favicon-32.png"
-    /><link
+      href="/icons/hub-20261014/estebans-forge/favicon-32.png" /><link
       rel="icon"
       sizes="16x16 32x32 48x48"
-      href="/icons/hub-20261014/estebans-forge/favicon.ico"
-    /><link
+      href="/icons/hub-20261014/estebans-forge/favicon.ico" /><link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png"
-    /><link
+      href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png" /><link
       rel="apple-touch-icon-precomposed"
       sizes="180x180"
-      href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png"
-    /><link rel="manifest" href="/manifest.webmanifest?v=hub-20261014" />
-  </head>
+      href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png" /><link
+      rel="manifest"
+      href="/manifest.webmanifest?v=hub-20261014" />
+    <link rel="stylesheet" href="forge-surface.css"
+  /></head>
   <body
     ><!-- forge-header --><main>
       <section id="dual" class="view dual" data-game="kart">
@@ -469,7 +465,7 @@
                         height="992"
                       /></svg
                     ><span class="channel-status is-development"
-                      >In development · 75% · Unreleased</span
+                      >In development · 35% · Unreleased</span
                     ><span class="channel-details"
                       ><span class="channel-platform">Nintendo DS → Nintendo 3DS</span
                       ><strong>Super Mario 64 DS</strong
@@ -569,20 +565,17 @@
               </div>
             </section></div
           ><section id="dual-progress" class="dual-progress" aria-labelledby="progress-title" hidden
-            ><div class="progress-heading"
+            ><div class="progress-heading forge-section-heading"
               ><p class="eyebrow">IN THE WORKSHOP</p
               ><h1 id="progress-title"
                 >What’s cooking
                 <span class="cooking-icon" role="img" aria-label="Frying pan">🍳</span></h1
-              ><p
-                >Check the status of my ports<br />
-                and the decompilation projects I follow.</p
-              ></div
+              ><p>Check the status of my ports and the decompilation projects I follow.</p></div
             ><div class="progress-filters" aria-label="Project type"
               ><button type="button" data-progress-filter="ports" aria-pressed="true"
                 >My ports <span>08</span></button
               ><button type="button" data-progress-filter="community" aria-pressed="false"
-                >Decompilations <span>20</span></button
+                >Decompilations <span><!-- COMMUNITY_COUNT --></span></button
               ></div
             ><p class="progress-context" id="progress-context"
               >My work adapting games to Nintendo 3DS.</p
@@ -595,7 +588,7 @@
                   open
                   ><summary
                     ><span class="progress-group-label"
-                      >Completed ports <span class="progress-group-count">3</span
+                      >Completed ports <span class="progress-group-count">4</span
                       ><small>Ready for your Nintendo 3DS</small></span
                     ><span class="progress-disclosure-action"
                       ><span class="progress-action-hide"
@@ -633,7 +626,7 @@
                           aria-valuenow="100"
                           ><span style="width:100%"></span
                         ></div>
-                        <p class="port-note">Future improvements planned.</p></div
+                        <p class="port-note">Future Improvements Planned.</p></div
                       ></article
                     >
                     <article class="progress-card port-alttp">
@@ -662,7 +655,7 @@
                           aria-valuenow="100"
                           ><span style="width:100%"></span
                         ></div>
-                        <p class="port-note">Future improvements planned.</p></div
+                        <p class="port-note">Future Improvements Planned.</p></div
                       ></article
                     >
                     <article class="progress-card port-doom">
@@ -691,14 +684,43 @@
                           aria-valuenow="100"
                           ><span style="width:100%"></span
                         ></div>
-                        <p class="port-note">A finished adventure.</p></div
+                        <p class="port-note">Finished Product.</p></div
+                      ></article
+                    >
+                    <article class="progress-card port-kart">
+                      <div class="progress-art game-icon"
+                        ><img src="assets/icons/mk64.webp" alt="" loading="lazy" decoding="async"
+                      /></div>
+                      <div class="progress-content"
+                        ><h3
+                          ><a href="mario-kart-64.html"
+                            >Mario Kart 64<span
+                              class="progress-open"
+                              aria-hidden="true"
+                            ></span></a></h3
+                        ><p>Nintendo 64 → Nintendo 3DS</p>
+                        <div class="progress-meta"
+                          ><span class="port-status is-complete"
+                            ><!-- port-status: kart completed --></span
+                          ><strong>100<small>%</small></strong></div
+                        >
+                        <div
+                          class="port-progress"
+                          role="progressbar"
+                          aria-label="Mario Kart 64 progress"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          aria-valuenow="100"
+                          ><span style="width:100%"></span
+                        ></div>
+                        <p class="port-note">Future Improvements Planned.</p></div
                       ></article
                     ></div
                   ></details
                 ><section class="progress-ongoing" aria-labelledby="ports-ongoing-title"
                   ><div class="progress-group-heading"
                     ><h2 id="ports-ongoing-title"
-                      >In development <span class="progress-group-count">5</span></h2
+                      >In development <span class="progress-group-count">4</span></h2
                     ><p>Closest to completion first</p></div
                   ><div class="progress-grid">
                     <article class="progress-card port-viper"
@@ -741,57 +763,28 @@
                       <div class="progress-content"
                         ><h3
                           ><a href="star-fox.html"
-                            >Starwing 3DS<span
+                            >Star Fox / Starwing 3DS<span
                               class="progress-open"
                               aria-hidden="true"
                             ></span></a></h3
                         ><p>Super Nintendo → Nintendo 3DS</p>
                         <div class="progress-meta"
                           ><span class="port-status"><!-- port-status: starwing --></span
-                          ><strong>80<small>%</small></strong></div
+                          ><strong>70<small>%</small></strong></div
                         >
                         <div
                           class="port-progress"
                           role="progressbar"
-                          aria-label="Starwing 3DS progress"
+                          aria-label="Star Fox / Starwing 3DS progress"
                           aria-valuemin="0"
                           aria-valuemax="100"
-                          aria-valuenow="80"
-                          ><span style="width:80%"></span
+                          aria-valuenow="70"
+                          ><span style="width:70%"></span
                         ></div>
-                        <p class="port-note"
-                          >First public release available. Development continues.</p
-                        ></div
+                        <p class="port-note">Version 1.1 released. Development continues.</p></div
                       ></article
                     >
-                    <article class="progress-card port-kart">
-                      <div class="progress-art game-icon"
-                        ><img src="assets/icons/mk64.webp" alt="" loading="lazy" decoding="async"
-                      /></div>
-                      <div class="progress-content"
-                        ><h3
-                          ><a href="mario-kart-64.html"
-                            >Mario Kart 64<span
-                              class="progress-open"
-                              aria-hidden="true"
-                            ></span></a></h3
-                        ><p>Nintendo 64 → Nintendo 3DS</p>
-                        <div class="progress-meta"
-                          ><span class="port-status"><!-- port-status: kart --></span
-                          ><strong>80<small>%</small></strong></div
-                        >
-                        <div
-                          class="port-progress"
-                          role="progressbar"
-                          aria-label="Mario Kart 64 progress"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                          aria-valuenow="80"
-                          ><span style="width:80%"></span
-                        ></div>
-                        <p class="port-note">The race continues.</p></div
-                      ></article
-                    >
+
                     <article class="progress-card port-sm64ds">
                       <div class="progress-art game-icon game-icon-logo"
                         ><img
@@ -810,7 +803,7 @@
                         ><p>Nintendo DS → Nintendo 3DS</p>
                         <div class="progress-meta"
                           ><span class="port-status"><!-- port-status: sm64ds --></span
-                          ><strong>75<small>%</small></strong></div
+                          ><strong>35<small>%</small></strong></div
                         >
                         <div
                           class="port-progress"
@@ -818,8 +811,8 @@
                           aria-label="Super Mario 64 DS progress"
                           aria-valuemin="0"
                           aria-valuemax="100"
-                          aria-valuenow="75"
-                          ><span style="width:75%"></span
+                          aria-valuenow="35"
+                          ><span style="width:35%"></span
                         ></div>
                         <p class="port-note">A new adventure on the horizon.</p></div
                       ></article
@@ -859,7 +852,11 @@
                 <div class="community-toolbar"
                   ><div
                     ><span class="community-live-dot" aria-hidden="true"></span
-                    ><span>Following 20 classics</span></div
+                    ><span
+                      >Following
+                      <!-- COMMUNITY_COUNT -->
+                      classics</span
+                    ></div
                   ><p id="community-sync" role="status"
                     >Updates automatically when you visit · refreshes hourly</p
                   ></div
@@ -889,15 +886,15 @@
               ></div
             ></section
           ><section id="dual-info" class="dual-info" aria-labelledby="info-title" hidden>
-            <header class="info-heading"
+            <header class="info-heading forge-section-heading"
               ><p class="eyebrow">FROM THE FORGE</p
-              ><h1 id="info-title">A little news.<br />A place to connect.</h1
+              ><h1 id="info-title">A little news. A place to connect.</h1
               ><p>Notes from the workshop, new adventures and the people behind them.</p></header
             >
             <div class="info-links"
               ><a
                 class="info-card info-discord"
-                href="https://discord.gg/BjbzfRYpV"
+                href="https://discord.gg/zy8BqH5ss"
                 target="_blank"
                 rel="noreferrer"
                 ><span class="info-card-body"
@@ -939,7 +936,9 @@
                 ></a
               ></div
             >
-            <p class="info-foot">More stories from the workshop will find a home here.</p>
+            <p class="info-foot"
+              >Read project stories and release notes on the <a href="blog.html">Blog</a>.</p
+            >
           </section></div
         ><footer class="dual-footer"
           ><span>esteban’s <b>forge.</b></span

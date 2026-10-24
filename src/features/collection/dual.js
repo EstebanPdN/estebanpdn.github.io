@@ -751,6 +751,7 @@ function setDualPage(page) {
 }
 document.querySelectorAll('[data-dual-page]').forEach((button) =>
   button.addEventListener('click', () => {
+    if (button.dataset.dualPage === 'blog') return;
     history.replaceState(null, '', '#' + button.dataset.dualPage);
     setDualPage(button.dataset.dualPage);
     chime();

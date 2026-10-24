@@ -3,6 +3,9 @@ import { readFileSync } from 'node:fs';
 import {
   percentage,
   readDecomp,
+  readTracker,
+  decompURL,
+  catalogKey,
   readBadge,
   refreshProjects,
   renderCard,
@@ -78,8 +81,8 @@ assert.equal(missing.projects.game.progress.value, undefined, 'Missing data cann
 const calls = [];
 const fake = async (url) => {
   calls.push(url);
-  const data = url.includes('decomp.dev/projects')
-    ? { projects: [report] }
+  const data = url.includes('decomp.dev/')
+    ? report
     : url.includes('/commits?')
       ? [
           {
@@ -99,7 +102,7 @@ const fake = async (url) => {
 };
 const live = await refreshProjects([game, { ...game, id: 'second' }], {}, fake);
 assert.equal(
-  calls.filter((u) => u.includes('decomp.dev/projects')).length,
+  calls.filter((u) => u.includes('decomp.dev/team/game/US.json?mode=overview')).length,
   1,
   'Shared sources fetched once',
 );
@@ -123,8 +126,8 @@ assert.ok(!hostile.includes('<img src=x'));
 const catalog = JSON.parse(
   readFileSync(new URL('../public/data/community-projects.json', import.meta.url)),
 );
-assert.equal(catalog.length, 20);
-assert.equal(new Set(catalog.map((p) => p.id)).size, 20);
+assert.equal(catalog.length, 21);
+assert.equal(new Set(catalog.map((p) => p.id)).size, 21);
 assert.ok(
   catalog.find((p) => p.id === 'advance').repo === 'SAT-R/sa2',
   'Follow the current Sonic Advance repository',
@@ -170,5 +173,60 @@ assert.equal(
   'Grouping never loses or duplicates a card',
 );
 console.log(
-  'PASS: source metrics/versions, stale fallback, independent activity, request deduplication, release status, safe rendering, all 20 icons, completion groups, descending progress, stable ties, unknown metrics and collapsed state.',
+  'PASS: source metrics/versions, stale fallback, independent activity, request deduplication, release status, safe rendering, all 21 icons, completion groups, descending progress, stable ties, unknown metrics and collapsed state.',
+);
+
+const tracker = {
+  id: 'worms3d',
+  name: 'Worms 3D',
+  platform: 'GameCube',
+  owner: 'EstebanPdN',
+  url: 'https://worms-3d.estebanpdn.chatgpt.site',
+  progress: {
+    type: 'tracker',
+    url: 'https://worms-3d.estebanpdn.chatgpt.site/progress.json',
+    version: 'GameCube PAL',
+    label: 'Exact bytes',
+  },
+  related: [],
+};
+const publicData = {
+  schema: 1,
+  game: 'Worms 3D',
+  version: 'GameCube PAL',
+  updated_at: '2026-10-23T16:52:28Z',
+  summary: { exact_bytes: 25, total_bytes: 100, percent: 25 },
+};
+assert.equal(readTracker(tracker, publicData).value, 25);
+assert.throws(
+  () =>
+    readTracker(tracker, {
+      ...publicData,
+      summary: { exact_bytes: 25, total_bytes: 100, percent: 75 },
+    }),
+  'Reject inconsistent headline/byte totals',
+);
+assert.throws(() => readTracker(tracker, { ...publicData, version: 'Other game version' }));
+const trackerCalls = [];
+const trackerLive = await refreshProjects([tracker], {}, async (url) => {
+  trackerCalls.push(url);
+  return { ok: true, json: async () => publicData };
+});
+assert.deepEqual(
+  trackerCalls,
+  [tracker.progress.url],
+  'A tracker uses only its public feed, with no invented GitHub endpoint',
+);
+assert.equal(trackerLive.projects.worms3d.progress.value, 25);
+const trackerCard = renderCard(tracker, trackerLive.projects.worms3d);
+assert.ok(!trackerCard.includes('github.com/undefined'));
+assert.ok(trackerCard.includes('Tracker updated'));
+assert.equal(decompURL(game), 'https://decomp.dev/team/game/US.json?mode=overview');
+assert.notEqual(
+  catalogKey([game]),
+  catalogKey([{ ...game, progress: { ...game.progress, version: 'JP' } }]),
+  'Source changes invalidate a browser cache',
+);
+console.log(
+  'PASS: individual report endpoints, tracker version/byte consistency, public tracker rendering and cache invalidation.',
 );

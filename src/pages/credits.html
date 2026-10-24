@@ -1,63 +1,24 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
-    />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Asset sources, credits, license notes, and unresolved permissions for Esteban’s Forge."
-    />
-    <title>Credits &amp; asset sources · Esteban’s Forge</title>
-
-    <script src="page-transitions.js"></script>
-    <link rel="stylesheet" href="page-transitions.css" />
-    <link rel="stylesheet" href="interaction-motion.css" />
-    <script src="interaction-motion.js"></script>
-    <link rel="stylesheet" href="forge-header.css" />
-    <script src="forge-header.js" defer></script>
-    <style>
-      :root {
-        color-scheme: light dark;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: #f3f6f8;
-        color: #22333d;
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-      }
-
-      html[data-theme="dark"] { color-scheme: dark; background: #11191e; color: #e2e9ed; }
-
-      * { box-sizing: border-box; }
-      body { margin: 0; line-height: 1.65; }
-      main { width: min(880px, calc(100% - 36px)); margin: 0 auto; padding: clamp(54px, 9vw, 104px) 0 88px; }
-      .back-link, .resource-links a { color: #126d72; }
-      html[data-theme="dark"] .back-link, html[data-theme="dark"] .resource-links a { color: #79ced0; }
-      .back-link { font-size: 0.95rem; text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
-      .eyebrow { margin: 44px 0 8px; font-size: 0.78rem; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
-      h1 { margin: 0; font-size: clamp(2.25rem, 7vw, 4.25rem); letter-spacing: -0.055em; line-height: 1.05; }
-      h2 { margin: 0 0 9px; font-size: 1.22rem; line-height: 1.25; }
-      p { margin: 10px 0; }
-      .lede { max-width: 67ch; margin-top: 18px; font-size: 1.08rem; }
-      .notice { margin: 28px 0; padding: 20px 22px; border-left: 4px solid #b76b35; border-radius: 8px; background: #f7e9dc; color: #422c1e; }
-      html[data-theme="dark"] .notice { background: #30251e; color: #f0dfd1; }
-      .notice p:last-child { margin-bottom: 0; }
-      .section { margin: 34px 0; padding: 24px; border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 14px; background: color-mix(in srgb, currentColor 3%, transparent); }
-      .resource-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-      .resource-links a { display: inline-block; padding: 10px 14px; border: 1px solid currentColor; border-radius: 9px; font-weight: 700; text-decoration: none; }
-      .resource-links a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
-      .status-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; margin: 16px 0 0; padding: 0; list-style: none; }
-      .status-list li { padding: 13px 15px; border-radius: 9px; background: color-mix(in srgb, currentColor 5%, transparent); }
-      .status-list strong { display: block; margin-bottom: 3px; }
-      .source-note { font-size: 0.94rem; }
-      footer { margin-top: 54px; padding-top: 18px; border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent); font-size: 0.93rem; }
-      :focus-visible { outline: 3px solid #24777b; outline-offset: 3px; }
-    </style>
-    <link
+    /><meta name="referrer" content="strict-origin-when-cross-origin" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    /><title>Credits · Esteban’s Forge</title
+    ><link rel="stylesheet" href="styles.css" /><link
+      rel="stylesheet"
+      href="forge-surface.css"
+    /><link rel="stylesheet" href="credits.css" /><script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><link rel="stylesheet" href="page-transitions.css" /><link
+      rel="stylesheet"
+      href="interaction-motion.css"
+    /><script src="interaction-motion.js"></script
+    ><link rel="stylesheet" href="forge-header.css" /><script src="forge-header.js" defer></script
+    ><link
       rel="icon"
       type="image/svg+xml"
       href="/icons/hub-20261014/estebans-forge/favicon.svg"
@@ -78,107 +39,215 @@
       rel="apple-touch-icon-precomposed"
       sizes="180x180"
       href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png"
-    /><link rel="manifest" href="/manifest.webmanifest?v=hub-20261014" />
-  </head>
-  <body>
-    <!-- forge-header -->
-    <main id="main-content">
-      <a class="back-link" href="index.html#collection">← Back to Esteban’s Forge</a>
-      <p class="eyebrow">Credits · sources · permissions</p>
-      <h1>Who made these assets?</h1>
-      <p class="lede">
-        This portfolio brings together original project work, owner-supplied references, game
-        artwork, product photographs, manuals, captures, software, and fonts. The register below
-        records the available source evidence for every file shipped in <code>assets/</code>.
-      </p>
-
-      <aside class="notice" aria-labelledby="permission-note-title">
-        <h2 id="permission-note-title">A credit is not a reuse licence</h2>
-        <p>
-          Nintendo, Sega, Atari, id Software, and other rights holders retain rights to their games,
-          characters, logos, manuals, and promotional artwork. An archive, shop page, search result,
-          or attribution does not establish permission to reproduce those materials. Some
-          permissions for the original portfolio assets could not be verified; their sources and
-          uncertainty are recorded rather than described as cleared.
-        </p>
-        <p>
-          The files remain because Esteban chose to preserve the current portfolio resources and
-          publish their attribution evidence with the project. That decision is not a claim that
-          every right or licence has been independently confirmed.
-        </p>
-      </aside>
-
-      <section class="section" aria-labelledby="ledger-title">
-        <h2 id="ledger-title">Per-file provenance register</h2>
-        <p>
-          Each entry includes its exact relative path, SHA-256 digest, the closest matching source
-          note, and a careful permission status. Source links point to the material recorded by the
-          project; a named licence still needs confirmation against the rights holder and the
-          intended use.
-        </p>
-        <div class="resource-links">
-          <a href="asset-provenance.json">Open the complete machine-readable register (JSON)</a>
+    /><link rel="manifest" href="/manifest.webmanifest?v=hub-20261014" /> </head
+  ><body class="forge-surface"
+    ><!-- forge-header --><main class="credits-main"
+      ><a href="index.html#collection">← Back to Esteban’s Forge</a><h1>Image credits</h1
+      ><p
+        >Front view of the black New Nintendo 3DS XL: Nintendo promotional material, found at
+        <a href="https://curatedcollectables.ca/products/new-nintendo-3ds-xl-console-black-loose"
+          >Curated Collectables</a
+        >. The image is 2560 × 2560 pixels. The portfolio uses the original image with screenshots
+        overlaid in HTML.</p
+      ><p
+        >A Link to the Past logo:
+        <a href="https://zeldawiki.wiki/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past">Zelda Wiki</a
+        >. Logos and hardware © their respective owners.</p
+      ><p
+        >Artwork for Mario Kart 64, The Minish Cap, A Link to the Past, Legend of Doom, and Star
+        Fox/Starwing: files selected and supplied by Esteban for this portfolio. They are used in
+        the collection cards and carousel backgrounds. The original files are stored in
+        <code>assets/artwork/</code>.</p
+      ><p
+        >Screenshots and promotional material: files from Esteban’s Forge projects. Games,
+        characters, and trademarks belong to their respective owners.</p
+      ><p
+        >The screenshots show different stages of development. This portfolio presents the projects
+        visually; it does not show a live gameplay session.</p
+      ><p
+        >Dusklight logo and Midna icon: existing project artwork supplied with Esteban’s Dusklight
+        project. Super Mario 64 DS promotional artwork:
+        <a href="https://www.nintendo.com/en-gb/Games/Nintendo-DS/Super-Mario-64-DS-273179.html"
+          >Nintendo’s official game page</a
+        >. The original artwork is preserved.</p
+      ><p
+        >Game-page galleries are previews assembled from the portfolio’s existing development images
+        and artwork. Final selected captures will replace these previews.</p
+      ><p
+        >The Legend of Doom desktop interface is inspired by the Windows 3.1 Program Manager
+        reference supplied by Esteban. Its DOOM cover artwork and gold NES Zelda manual cover were
+        also selected and supplied by Esteban. DOOM artwork belongs to its respective owners; Zelda
+        artwork and characters belong to Nintendo. The NES Link sprite sheet is credited to Mister
+        Mike, as marked on the supplied source sheet.</p
+      ><h2>Real hardware photography</h2
+      ><p
+        >Nintendo GameCube and controller:
+        <a href="https://commons.wikimedia.org/wiki/File:GameCube-Console-Set.png"
+          >Evan-Amos, Wikimedia Commons</a
+        >, public domain. Photos are proportionally resized for display.</p
+      ><p
+        >Sony PVM-4300 / KX-45ED1 Trinitron monitor:
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Direct_front_view_of_Sony_PVM-4300_(KX-45ED1).jpg"
+          >Shank Mods</a
+        >, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The
+        photograph is cropped with an SVG mask, with project images composited over its screen in
+        HTML. The original photograph is included alongside the site assets; the photographic
+        adaptation retains the same license.</p
+      ><p
+        >Frontal translucent Game Boy Advance photograph:
+        <a href="https://www.mariowiki.com/File:GBA_Handheld.png"
+          >Super Mario Wiki, sourced from Wikimedia Commons</a
+        >, public domain according to its file page. The original transparent photograph is
+        proportionally resized, with project previews composited over its display in HTML. A Link to
+        the Past Super Nintendo cartridge photograph:
+        <a href="https://www.powerupgaming.ca/products/snes-gm-lozlttp">Power Up Gaming catalogue</a
+        >; the image is preserved, with the outer white margins excluded from its display viewport.
+        The cartridge, game artwork, and trademarks belong to Nintendo.</p
+      ><p
+        >Original blue Nintendo DS photograph:
+        <a href="https://commons.wikimedia.org/wiki/File:Nintendo-DS-Fat-Blue.png"
+          >Evan-Amos, Wikimedia Commons</a
+        >, public domain. Original photograph with project artwork and status overlaid on its
+        screens in HTML/SVG.</p
+      ><p
+        >Super Mario 64 DS title logo: Nintendo, via
+        <a href="https://www.mariowiki.com/Gallery:Super_Mario_64_DS"
+          >Super Mario Wiki’s original artwork gallery</a
+        >. Game logos and trademarks belong to Nintendo.</p
+      ><h2>Original manuals and visual references</h2
+      ><p
+        >Star Fox enemy dossiers: page 26 of the
+        <a href="https://www.nintendo.co.jp/clvs/manuals/common/pdf/CLV-P-SADGE.pdf"
+          >original Nintendo manual</a
+        >, © Nintendo. The SNES photograph and Star Fox cover detail were supplied by Esteban; only
+        the Super FX emblem from that cover is shown. These are visual references, not feature
+        claims for the port.</p
+      ><p
+        >Additional artwork, console-interface references, and sprite sheets for Mario Kart 64,
+        Super Mario 64 DS, A Link to the Past and The Minish Cap were supplied by Esteban. Game art,
+        characters and console-interface designs belong to Nintendo and their respective owners.
+        Original credit notices are retained in the supplied sprite sheets.</p
+      ><h2>The workshop journals</h2
+      ><p
+        >Super Mario 64 DS character artwork and level-start portraits: Nintendo, via
+        <a href="https://www.mariowiki.com/Gallery:Super_Mario_64_DS"
+          >Super Mario Wiki’s artwork gallery</a
+        >. The retained in-game pixel logo and green paper reference come from the original game and
+        <a
+          href="https://www.nintendo.com/eu/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_SuperMario64DS_EN.pdf"
+          >Nintendo’s original DS booklet</a
+        >. The original Power Star sprite is by Nintendo,
+        <a href="https://www.mariowiki.com/File:SM64DS_Star_map_icon.png"
+          >ripped by Storice and preserved by Super Mario Wiki</a
+        >. The menu uses
+        <a href="https://www.fontstruct.com/fontstructions/show/255896/nintendo_ds_1"
+          >Nintendo DS by cheezonpeaz41</a
+        >, a recreation of the DS system font, under
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/"
+          >Creative Commons Attribution Share Alike 3.0</a
+        >; its original font, license and readme are included. The retained Pixelify Sans file and
+        Cormorant Garamond are distributed under the SIL Open Font License.</p
+      ><p
+        >Dusklight original Twilight Princess artwork: Nintendo, via
+        <a
+          href="https://zelda-temple.net/media-and-downloads/official-artwork/the-legend-of-zelda-twilight-princess"
+          >Zelda Temple’s original artwork archive</a
+        >. The cover and dark paper reference are from the
+        <a href="https://manuall.co.uk/nintendo-gamecube-the-legend-of-zelda-twilight-princess/"
+          >original GameCube instruction booklet</a
+        >, with its scan credit retained. These artworks are original-game references and do not
+        depict Dusklight running on Nintendo 3DS. Asset source manifests and font licenses accompany
+        both journals.</p
+      ><p
+        >Collection card backdrops: Super Mario 64 DS uses a Nintendo-branded promotional wallpaper
+        preserved by
+        <a href="https://superluigibros.com/nintendo-ds-desktop-wallpaper/">Super Luigi Bros</a>;
+        its original source file is retained and the card viewport excludes the footer branding.
+        Dusklight uses the original Link, Wolf Link and Midna illustration from
+        <a href="https://www.nintendo.co.jp/wiiu/azaj/index.html"
+          >Nintendo’s official Twilight Princess HD website</a
+        >, with its two artwork layers aligned as on Nintendo’s page. Both cards retain one separate
+        project logo.</p
+      ><section class="credits-section"
+        ><h2>Nintendo DS menu reference</h2
+        ><p
+          >The Super Mario 64 DS page uses native menu sprites extracted from an owner-supplied
+          Nintendo DS reference. The Nintendo UI pixels are preserved, with quieter LCD lines; the
+          original system screens keep their light palette in both themes. Clock numerals and the
+          battery retain their native reference pixels. The note document and wireless indicator are
+          custom pixel icons. The Discord button uses the original Discord symbol in its original
+          proportions, in black or white for the selected theme. The game logo is based on the
+          high-resolution
           <a
-            href="https://github.com/estebanpdn/estebanpdn.github.io/blob/main/docs/ASSET-CREDITS.md"
-          >
-            Read the source-by-source report
-          </a>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="status-title">
-        <h2 id="status-title">How the register describes permission</h2>
-        <ul class="status-list">
-          <li
-            ><strong>Licence named in a source record</strong>The record names terms; the rights
-            holder and coverage still need checking.</li
-          >
-          <li
-            ><strong>Source recorded, permission not established</strong>A source is identified,
-            with no reuse grant recorded.</li
-          >
-          <li
-            ><strong>Permission explicitly unknown</strong>The source notes itself say that the
-            permission or licence is unknown.</li
-          >
-          <li
-            ><strong>Context only or no source note</strong>The manifests do not establish a
-            file-specific source or permission.</li
-          >
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="credits-title">
-        <h2 id="credits-title">Creators and source families</h2>
-        <p>
-          The project records source links for archived Nintendo artwork and manuals, console and
-          cartridge photographs, development captures, community game icons, and original interface
-          references. Its font records name Pixelify Sans, DM Sans, Nunito, Cormorant Garamond,
-          Fondamento, Barlow Semi Condensed, and Nintendo DS by cheezonpeaz41. Where bundled font
-          licence text is present, it remains alongside the relevant files.
-        </p>
-        <p>
-          The Sony PVM-4300 photograph is attributed to Shank Mods under CC BY-SA 4.0 in the project
-          record. The blue Nintendo DS and Game Boy Advance photos are recorded as public-domain
-          photographs by Evan-Amos. Other hardware images include a shop-catalogue cartridge photo
-          whose reuse terms are not stated in the source record. The Star Fox Arwing model credits
-          lllll440 and records CC BY 4.0; the per-file register links that source and the noted
-          terms.
-        </p>
-        <p class="source-note">
-          Artwork archives, manuals, supplied project files, and image hosts are not necessarily the
-          original rights holders. Please use the register to follow each chain of evidence and
-          check the original licence text before reusing an asset.
-        </p>
-      </section>
-
-      <footer>
-        <p
-          >All third-party marks and works remain with their respective owners. No blanket licence
-          is granted for this repository’s source code or bundled media.</p
+            href="https://www.mariowiki.com/Gallery:Super_Mario_64_DS"
+            target="_blank"
+            rel="noreferrer"
+            >original Nintendo artwork</a
+          >. <a href="assets/mario-ds/ui/sources.json">UI asset sources and processing</a>.</p
+        ></section
+      ><p
+        >Star Fox typography: <a href="https://github.com/eifetx/Pixelify-Sans">Pixelify Sans</a>,
+        distributed under the SIL Open Font License. Its original font and license accompany the
+        site.</p
+      ><p
+        >Progress and carousel software icons use the owner’s original HOME Menu artwork for Minish
+        Cap, A Link to the Past and Star Fox, and the approved Legend of Doom logo. Community game
+        icons are framed crops of original cover artwork preserved by the
+        <a href="https://github.com/libretro-thumbnails/libretro-thumbnails"
+          >Libretro thumbnail archive</a
+        >. Game artwork belongs to Nintendo, Sega and its respective creators. The originals and
+        crop source manifest are included in
+        <a href="assets/icons/sources.json">the game icon source manifest</a>. The tile frames
+        follow Nintendo’s
+        <a
+          href="https://www.nintendo.com/en-gb/Hardware/Nintendo-3DS-Family/Instant-Software/HOME-Menu/HOME-Menu-115164.html"
+          >3DS HOME Menu</a
         >
-        <p><a class="back-link" href="index.html#collection">Return to the collection</a></p>
-      </footer>
-    </main>
-  </body>
-</html>
+        and
+        <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/1147/p/603/c/183"
+          >Wii U Menu</a
+        >
+        references.</p
+      ><section class="credits-section"
+        ><h2>Red Viper Color</h2
+        ><p
+          >Red Viper Color and its new menu artwork: EstebanPdN. The portfolio uses the approved
+          Angular wordmark and menu designs from the project’s Python-authored interface package.
+          Gameplay screenshots come from documented Azahar sessions on macOS.</p
+        ><p
+          >Original 3DS emulator:
+          <a href="https://github.com/mrdanielps/r3Ddragon" target="_blank" rel="noreferrer"
+            >r3Ddragon / danielps</a
+          >; original splash by Morintari and control scheme by nevumx. 3DS foundation:
+          <a href="https://github.com/skyfloogle/red-viper" target="_blank" rel="noreferrer"
+            >Red Viper / Floogle</a
+          >. Color reference:
+          <a href="https://github.com/yuk27/VBoyColor" target="_blank" rel="noreferrer"
+            >VBoyColor / yuk27</a
+          >, with VirtualBoyGo / CidVonHighwind and Beetle VB / Mednafen. Further credits: Reality
+          Boy / David Tucker and Red Dragon contributors. Original notices remain in the emulator
+          project.</p
+        ></section
+      ><p
+        >Worms 3D tracker logo: the original artwork from
+        <a href="https://worms-3d.estebanpdn.chatgpt.site" target="_blank" rel="noreferrer"
+          >Esteban’s published Worms 3D tracker</a
+        >. Worms 3D and its artwork belong to Team17 and their respective owners.</p
+      ><p
+        >Mario Kart 64 v2.0 blog: gameplay stills supplied by Esteban, original settings icons by
+        EstebanPdN, a render of Epic0522’s 3D banner model, an owner-supplied extractor screenshot
+        in a decorative window, and an illustrative comparison of original and adapted interface
+        artwork. The original Mario and Luigi portraits in the blog comparison were reduced to 80%
+        resolution and enlarged again at the owner’s request; replacement portraits are unchanged.
+        Replacement artwork is from
+        <a
+          href="https://evilgames.eu/texture-packs/mk64-reloaded.htm"
+          target="_blank"
+          rel="noreferrer"
+          >MK64 Reloaded by GhostlyDark and its contributors</a
+        >. <a href="assets/blog/mk64-v2/sources.json">Blog image provenance</a>.</p
+      ></main
+    ></body
+  ></html
+>

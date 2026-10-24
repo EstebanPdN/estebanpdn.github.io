@@ -115,9 +115,11 @@
       entrySound?.pause();
     }
     const page =
-      document.querySelector('#dual') && ['#progress', '#info'].includes(location.hash)
-        ? location.hash.slice(1)
-        : 'collection';
+      document.body.dataset.section === 'blog'
+        ? 'blog'
+        : document.querySelector('#dual') && ['#progress', '#info'].includes(location.hash)
+          ? location.hash.slice(1)
+          : 'collection';
     document
       .querySelectorAll('.site-header [data-dual-page]')
       .forEach((button) =>
@@ -136,6 +138,13 @@
         entrySound?.pause();
       } else if (welcomePending) playWelcomeSound();
       else chime();
+    } else if (button.dataset.dualPage === 'blog') {
+      document.dispatchEvent(
+        new CustomEvent('forge:navigate', {
+          detail: { url: new URL('blog.html', location.href).href },
+        }),
+      );
+      chime();
     } else if (button.dataset.dualPage && !document.querySelector('#dual')) {
       document.dispatchEvent(
         new CustomEvent('forge:navigate', {

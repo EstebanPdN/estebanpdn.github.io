@@ -1,9 +1,10 @@
-import { REFRESH_MS, refreshProjects, renderCatalog } from './community-data.mjs';
+import { REFRESH_MS, refreshProjects, renderCatalog, catalogKey } from './community-data.mjs';
+import { WORMS_FEED, readWormsTracker } from './tracker-feed.mjs';
 
 const panel = document.getElementById('progress-community');
 const grid = document.getElementById('community-grid');
 const status = document.getElementById('community-sync');
-const storageKey = 'forge-community-v1';
+const storageKey = 'forge-community-v2';
 let catalog,
   snapshot,
   running,
@@ -11,6 +12,15 @@ let catalog,
   cachedAttempt = 0;
 const selected = () => !panel.hidden && !document.getElementById('dual-progress').hidden;
 const stopped = () => typeof scope !== 'undefined' && scope.signal.aborted;
+const sourceFetch = (url, options = {}) =>
+  url === WORMS_FEED
+    ? readWormsTracker(
+        document,
+        window,
+        options.signal,
+        typeof scope !== 'undefined' ? scope.signal : null,
+      )
+    : fetch(url, options);
 function readCache() {
   try {
     return JSON.parse(localStorage.getItem(storageKey));
@@ -59,7 +69,8 @@ async function load() {
   catalog = projects;
   const cached = readCache();
   const validCache =
-    cached?.schemaVersion === 1 &&
+    cached?.schemaVersion === 2 &&
+    cached.catalogKey === catalogKey(projects) &&
     cached.projects &&
     Number.isFinite(Date.parse(cached.attemptedAt));
   snapshot =
@@ -88,7 +99,7 @@ async function update() {
         status.textContent = `Last source check ${new Date(cachedAttempt).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })} · refreshes hourly`;
         return;
       }
-      snapshot = await refreshProjects(catalog, snapshot.projects, fetch);
+      snapshot = await refreshProjects(catalog, snapshot.projects, sourceFetch);
       if (stopped()) return;
       cachedAttempt = Date.parse(snapshot.attemptedAt);
       saveCache(snapshot);
@@ -112,5 +123,10 @@ new MutationObserver(update).observe(document.getElementById('dual-progress'), {
   subtree: true,
 });
 document.addEventListener('visibilitychange', update);
+window.addEventListener('online', () => {
+  lastAttempt = 0;
+  cachedAttempt = 0;
+  update();
+});
 setInterval(update, 60000);
 update();

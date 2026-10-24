@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en"
+  ><head
+    ><meta charset="utf-8" /><meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://media.discordapp.net; font-src 'self'; connect-src 'self' https://discord.com https://decomp.dev https://api.github.com https://raw.githubusercontent.com https://n64decomp.github.io https://sat-r.github.io https://zelda.deco.mp https://zelda64.dev; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" /><meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" /><meta
+      name="viewport"
+      content="width=device-width,initial-scale=1" /><meta
+      name="theme-color"
+      content="#f7f9fa" /><meta
+      name="description"
+      content="The story behind Mario Kart 64 v2.0 for Nintendo 3DS: new solo modes, graphics, controls, performance improvements and updates." /><title
+      >Mario Kart 64 v2.0 · Esteban’s Forge</title
+    ><link rel="stylesheet" href="styles.css" /><link
+      rel="stylesheet"
+      href="forge-header.css" /><link rel="stylesheet" href="blog.css" /><link
+      rel="stylesheet"
+      href="page-transitions.css" /><link
+      rel="stylesheet"
+      href="interaction-motion.css" /><script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="interaction-motion.js"></script
+    ><script src="forge-header.js" defer></script
+    ><link
+      rel="icon"
+      type="image/svg+xml"
+      href="/icons/hub-20261014/estebans-forge/favicon.svg" /><link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/hub-20261014/estebans-forge/favicon-32.png" /><link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      href="/icons/hub-20261014/estebans-forge/favicon.ico" /><link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png" /><link
+      rel="apple-touch-icon-precomposed"
+      sizes="180x180"
+      href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png" /><link
+      rel="manifest"
+      href="/manifest.webmanifest?v=hub-20261014" />
+    <link rel="stylesheet" href="forge-surface.css" /><link
+      rel="stylesheet"
+      href="blog-kart.css" /><script src="blog-post.js" defer></script></head
+  ><body data-section="blog" data-post-theme="kart"
+    ><!-- forge-header --><a class="blog-skip" href="#blog-main">Skip to content</a>
+    <main id="blog-main" class="blog-main blog-post-main">
+      <nav class="blog-breadcrumb" aria-label="Post navigation"
+        ><a href="blog.html">← All Posts</a><span>MARIO KART 64 / 001</span></nav
+      >
+      <article class="blog-post">
+        <header class="blog-post-heading"
+          ><div class="blog-meta"
+            ><span class="blog-category">RELEASE NOTES</span
+            ><time datetime="2026-10-23">October 23, 2026</time><span>10 min read</span></div
+          ><h1>Mario Kart 64 <span>v2.0</span></h1
+          ><p class="blog-post-deck">New menus, tiny pixels,<br />and a LOT of work on Old 3DS.</p
+          ><div class="blog-post-byline"
+            ><span class="blog-author"
+              ><img src="assets/brand/estebans-forge-icon.png" width="32" height="32" alt="" /><span
+                >EstebanPdN</span
+              ></span
+            ><span>Nintendo 64 → Nintendo 3DS</span></div
+          ></header
+        >
+        <figure class="blog-post-cover"
+          ><img
+            src="assets/blog/mk64-v2/cover-owner.png"
+            alt="Mario Kart 64’s original cast racing together"
+            width="760"
+            height="570"
+            fetchpriority="high"
+        /></figure>
+        <div class="blog-post-layout">
+          <aside class="blog-contents"
+            ><p class="blog-eyebrow">IN THIS POST</p
+            ><nav aria-label="On this page"
+              ><a href="#the-update">The update</a><a href="#graphics">New textures</a
+              ><a href="#gameplay">Thank you, Epic</a><a href="#performance">The Old 3DS work</a
+              ><a href="#updates">Getting started</a
+              ><a href="#credits">Credits &amp; what’s next</a></nav
+            ><a class="blog-contents-project" href="mario-kart-64.html"
+              >Explore the project →</a
+            ></aside
+          >
+          <div class="blog-prose">
+            <section id="the-update"
+              ><p class="blog-eyebrow">ONE MORE LAP</p><h2>Version 2.0 is finally here!!!</h2>
+              <p
+                >Hey everyone! After a LOT of work, Mario Kart 64 3DS finally has a new update! I’ve
+                spent a ton of time on this version, from the graphics and menus to rendering, audio
+                and memory handling. And there are quite a few new things to play with too.</p
+              >
+              <p
+                >If you’ve been following the Discord chat, you’ve probably seen bits of this taking
+                shape: new textures, tiny settings icons, maps, glitches that looked funny until I
+                had to fix them… This post is a chance to put it all together and show you what I’ve
+                been working on.</p
+              >
+            </section>
+            <section id="graphics"
+              ><p class="blog-eyebrow">01 / GRAPHICS &amp; MENUS</p><h2>New textures.</h2>
+              <p
+                >One of the first things I wanted to improve was how the game looks on the 3DS
+                screen. I took artwork from
+                <a
+                  href="https://evilgames.eu/texture-packs/mk64-reloaded.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                  >MK64 Reloaded, by GhostlyDark and its contributors</a
+                >, and downscaled it to fit the 3DS interface. A lot of the new textures come from
+                their work, so a big thank-you to them!</p
+              >
+              <p
+                >The upper screen is 400 × 240 and the lower one is 320 × 240. After reducing the
+                textures, they obviously don’t have all the detail of the full-size pack, but I
+                still think they look much better than the Nintendo 64 originals. The maps are
+                clearer, buttons like Options and Data look better, and so do the characters in the
+                selection menu. Here are a few examples:</p
+              >
+              <figure class="blog-media" id="portrait-comparison"
+                ><a
+                  href="assets/blog/mk64-v2/texture-comparison.png"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open texture comparison"
+                  ><img
+                    src="assets/blog/mk64-v2/texture-comparison.png"
+                    alt="Original artwork on the left and new textures on the right: Options, Mario and Luigi"
+                    width="1100"
+                    height="1050"
+                    loading="lazy"
+                    decoding="async" /></a
+              ></figure>
+              <p
+                >You can turn these changes off, of course. <strong>Original</strong> keeps the
+                original textures, <strong>Menu</strong> uses the new artwork in the menus and
+                interface, and <strong>Improved</strong> changes the racers too. Pick whichever look
+                you like most.</p
+              >
+              <h3>The maps took a while too.</h3>
+              <p
+                >All sixteen course maps and the four battle maps have been improved. Since they now
+                appear on the lower screen while you’re choosing a course, they get a lot more
+                attention, so I wanted them to look better. That lower-screen menu map was one of
+                the ideas I took from Epic’s port, and I think it’s a really good one. Thank you,
+                Epic!</p
+              >
+              <p
+                >Many of the maps came from the texture pack, but I still had to edit quite a few of
+                them, and I redrew some parts myself to make everything fit.</p
+              >
+              <figure class="blog-media blog-bottom-screen" id="map-comparison"
+                ><a
+                  href="assets/blog/mk64-v2/menu-maps-bottom.webp"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open the lower-screen map"
+                  ><img
+                    src="assets/blog/mk64-v2/menu-maps-bottom.webp"
+                    alt="Course maps in the lower-screen selection menu"
+                    width="1064"
+                    height="793"
+                    loading="lazy"
+                    decoding="async" /></a
+              ></figure>
+              <h3>New menu icons.</h3>
+              <p
+                >The Options and Pause menus got a lot of attention. I made a whole set of little
+                pixel-art icons for the settings, trying to keep the shaded gray style of the
+                original menus. Some of those drawings fit into just 12 × 12 pixels.</p
+              >
+              <figure class="blog-media blog-pixel-sheet"
+                ><a
+                  href="assets/blog/mk64-v2/settings-icons.png"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open the menu icons"
+                  ><img
+                    src="assets/blog/mk64-v2/settings-icons.png"
+                    alt="The new pixel-art settings icons"
+                    width="1000"
+                    height="850"
+                    loading="lazy"
+                    decoding="async" /></a
+                ><figcaption
+                  >I know they’re not perfect, but this is what I managed with my limited pixel-art
+                  skills. I’m not a fan of AI-generated pixel art, so I wanted to make these
+                  myself.</figcaption
+                ></figure
+              >
+              <p
+                >I also reworked the menus and added a lot of options. There are
+                <strong>Performance, Quality and Custom</strong> profiles, animated hints, and an
+                advanced mode with more settings to play with. Some of these additions are mine, and
+                others were merged and adapted from Epic’s port.</p
+              >
+              <figure class="blog-media blog-bottom-screen"
+                ><a
+                  href="assets/blog/mk64-v2/options-bottom.webp"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open the complete Options menu"
+                  ><img
+                    src="assets/blog/mk64-v2/options-bottom.webp"
+                    alt="The complete lower-screen Options menu with the Display tab selected"
+                    width="1064"
+                    height="793"
+                    loading="lazy"
+                    decoding="async" /></a
+              ></figure>
+            </section>
+            <section id="gameplay"
+              ><p class="blog-eyebrow">02 / MORE WAYS TO PLAY</p><h2>A big thank-you to Epic.</h2>
+              <p
+                >Epic0522 made his own version of this port with a lot of fixes and additions.
+                Seeing someone take my work and keep improving it was really cool. I’ve merged and
+                adapted several of those features for 2.0, and I want to give him credit for
+                them.</p
+              >
+              <p
+                >You can now play <strong>Solo VS against seven CPUs</strong> and
+                <strong>Solo Battle against three CPUs</strong>. There are random cups with four
+                different courses, an <strong>AUTO</strong> driving and spectator mode, and optional
+                <strong>Modern Logic</strong> that changes CPU and item behavior.</p
+              >
+              <div class="blog-media-pair"
+                ><figure class="blog-media"
+                  ><img
+                    src="assets/blog/mk64-v2/solo-race.webp"
+                    width="1330"
+                    height="1586"
+                    alt="A solo race against CPU opponents"
+                    loading="lazy"
+                    decoding="async" /></figure
+                ><figure class="blog-media"
+                  ><img
+                    src="assets/blog/mk64-v2/solo-battle.webp"
+                    width="1330"
+                    height="1586"
+                    alt="Solo Battle against three CPU opponents"
+                    loading="lazy"
+                    decoding="async" /></figure
+              ></div>
+              <p id="controls"
+                >The rear view, updated reverse behavior with Modern Logic, adjustable
+                <strong>2×–5× C-Stick Turbo</strong>, configurable SELECT actions and
+                touch-adjustable volume are also among the features I adapted from
+                <a
+                  href="https://github.com/Epic0522/MarioKart64-3DSPort-Complete"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Epic’s version</a
+                >. The scrolling maps, extra HUD information and warnings for incoming threats are
+                part of that work too, along with other fixes and ideas.</p
+              >
+              <p>He also made the 3D banner used by this release:</p>
+              <figure class="blog-media blog-banner" id="epic-banner"
+                ><a
+                  href="assets/blog/mk64-v2/epic-banner.webp"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open Epic’s banner model"
+                  ><img
+                    src="assets/blog/mk64-v2/epic-banner.webp"
+                    alt="A render of Epic0522’s 3D Mario Kart 64 banner model"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async" /></a
+                ><figcaption>Epic’s 3D banner model.</figcaption></figure
+              >
+              <p
+                >That’s something I really like about this community. We take these ports and keep
+                improving them, and the people playing are the ones who benefit. So thank you, Epic!
+                These new modes are for solo play. Local and online multiplayer are still
+                unavailable in this release.</p
+              >
+            </section>
+            <section id="performance"
+              ><p class="blog-eyebrow">03 / THE OLD 3DS WORK</p
+              ><h2>This part was hard.<br />Really hard.</h2>
+              <p
+                >The Old 3DS took a HUGE amount of work. I spent a lot of time reducing repeated
+                texture loading and decoding, reusing rendering work, keeping memory under control
+                and improving audio scheduling.</p
+              >
+              <div class="blog-release-note blog-performance-summary"
+                ><span class="blog-release-mark">15–20<small>FPS</small></span
+                ><div
+                  ><p
+                    >On my Old 3DS, I’ve been seeing around <strong>15–20 FPS</strong>. I played for
+                    about an hour to test it, and honestly, I still found it enjoyable. There are
+                    occasional stutters, and you can tell it isn’t running at 60 FPS. But on the
+                    small screen I can still enjoy it, and I think it’s reached a pretty acceptable
+                    point.</p
+                  ></div
+                ></div
+              >
+              <figure class="blog-media"
+                ><div class="blog-screens"
+                  ><a
+                    href="assets/blog/mk64-v2/snow-race-top.webp"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Open upper gameplay screen"
+                    ><img
+                      src="assets/blog/mk64-v2/snow-race-top.webp"
+                      alt="Mario racing through Frappe Snowland"
+                      width="1330"
+                      height="793"
+                      loading="lazy"
+                      decoding="async" /></a
+                  ><a
+                    href="assets/blog/mk64-v2/snow-race-bottom.webp"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Open lower gameplay screen"
+                    ><img
+                      src="assets/blog/mk64-v2/snow-race-bottom.webp"
+                      alt="Standings and course map on the lower screen"
+                      width="1064"
+                      height="793"
+                      loading="lazy"
+                      decoding="async" /></a></div
+              ></figure>
+              <p
+                >Something I want to explain about these ports is that having the decompiled source
+                is an incredible help, but it doesn’t make bringing an N64 game to the 3DS easy.
+                Even though the 3DS is more powerful overall, the two machines work very
+                differently. The game code can be compiled for the 3DS, but the graphics and audio
+                still need work specific to that hardware.</p
+              >
+              <p
+                >In this port, the CPU has to interpret and adapt the N64 graphics commands for the
+                3DS GPU. On a powerful PC, there’s usually much more room for that extra work. The
+                New 3DS has a faster CPU, more cores and more memory to work with too. On the Old
+                3DS, with its much tighter CPU and RAM limits, it’s a different story.</p
+              >
+              <p>Here’s a look at where the time was going, and how the two versions compare.</p>
+              <div class="kart-perf-study" id="performance-chart">
+                <h3 id="perf-title">Where the milliseconds went.</h3>
+                <figure class="kart-perf" aria-labelledby="perf-title">
+                  <div class="kart-perf-stats"
+                    ><div
+                      ><span>Graphics interpreter<br />per drawn frame</span
+                      ><strong>37.6 <small>ms</small></strong></div
+                    ><div
+                      ><span>Audio<br />per game tick</span
+                      ><strong>9.0 <small>ms</small></strong></div
+                    ><div
+                      ><span>Game logic<br />per game tick</span
+                      ><strong>8.7 <small>ms</small></strong></div
+                    ><div
+                      ><span>HUD / submission<br />per drawn frame</span
+                      ><strong>8.1 <small>ms</small></strong></div
+                    ></div
+                  >
+                  <div class="kart-perf-reference" aria-label="30 FPS reference">
+                    <div class="kart-perf-reference-label"><strong>30 FPS Goal</strong></div>
+                    <div class="kart-perf-track" role="img" aria-label="33.3 ms, 30 FPS"
+                      ><span class="kart-perf-reference-bar" style="--ms:33.333"></span
+                    ></div>
+                    <div class="kart-perf-total"><strong>33.3 ms</strong><small>30 FPS</small></div>
+                  </div>
+                  <p class="kart-perf-budget"
+                    >The dashed line represents the
+                    <strong>33.3 ms frame budget for 30 FPS</strong>.</p
+                  >
+                  <table class="kart-perf-table"
+                    ><caption class="blog-visually-hidden"
+                      >Mario Kart 64 performance across versions 1.5 and 2.0, on Old and New
+                      Nintendo 3DS.</caption
+                    ><thead
+                      ><tr
+                        ><th scope="col">Test</th><th scope="col">Time spent / 180 ms scale</th
+                        ><th scope="col">Time / FPS</th></tr
+                      ></thead
+                    ><tbody>
+                      <tr class="kart-perf-simple-row"
+                        ><th scope="row">One Player Race<small>Version 1.5</small></th
+                        ><td
+                          ><div
+                            class="kart-perf-track"
+                            role="img"
+                            aria-label="Game logic: 13.8 ms, Audio: 23.1 ms, Graphics interpreter: 43.6 ms, HUD and submission: 8.1 ms"
+                            ><span
+                              class="kart-perf-logic"
+                              style="--ms:13.8"
+                              title="Game logic: 13.8 ms"
+                              >13.8</span
+                            ><span class="kart-perf-audio" style="--ms:23.1" title="Audio: 23.1 ms"
+                              >23.1</span
+                            ><span
+                              class="kart-perf-render"
+                              style="--ms:43.6"
+                              title="Graphics interpreter: 43.6 ms"
+                              >43.6</span
+                            ><span
+                              class="kart-perf-hud"
+                              style="--ms:8.1"
+                              title="HUD and submission: 8.1 ms"
+                              >8.1</span
+                            ></div
+                          ></td
+                        ><td class="kart-perf-total"
+                          ><strong>88.6 ms</strong><small>≈ 11.3 FPS</small></td
+                        ></tr
+                      >
+                      <tr class="kart-perf-simple-row"
+                        ><th scope="row">Race Start · 8 Karts<small>Version 1.5</small></th
+                        ><td
+                          ><div
+                            class="kart-perf-track"
+                            role="img"
+                            aria-label="Game logic: 23 ms, Audio: 26.1 ms, Graphics interpreter: 109.5 ms, HUD and submission: 8.1 ms"
+                            ><span class="kart-perf-logic" style="--ms:23" title="Game logic: 23 ms"
+                              >23</span
+                            ><span class="kart-perf-audio" style="--ms:26.1" title="Audio: 26.1 ms"
+                              >26.1</span
+                            ><span
+                              class="kart-perf-render"
+                              style="--ms:109.5"
+                              title="Graphics interpreter: 109.5 ms"
+                              >109.5</span
+                            ><span
+                              class="kart-perf-hud"
+                              style="--ms:8.1"
+                              title="HUD and submission: 8.1 ms"
+                              >8.1</span
+                            ></div
+                          ></td
+                        ><td class="kart-perf-total"
+                          ><strong>166.7 ms</strong><small>6 FPS</small></td
+                        ></tr
+                      >
+                      <tr class="kart-perf-simple-row kart-perf-blocks"
+                        ><th scope="row">Old 3DS<small>Version 2.0</small></th
+                        ><td
+                          ><div
+                            class="kart-perf-track"
+                            role="img"
+                            aria-label="50–66.7 ms, 15–20 FPS"
+                            ><span class="kart-perf-session" style="--ms:66.7"></span></div></td
+                        ><td class="kart-perf-total"
+                          ><strong>50–66.7 ms</strong><small>15–20 FPS</small></td
+                        ></tr
+                      >
+                      <tr class="kart-perf-simple-row kart-perf-blocks"
+                        ><th scope="row">New 3DS<small>Version 2.0</small></th
+                        ><td
+                          ><div
+                            class="kart-perf-track"
+                            role="img"
+                            aria-label="16.7–25 ms, 40–60 FPS"
+                            ><span class="kart-perf-session" style="--ms:25"></span></div></td
+                        ><td class="kart-perf-total"
+                          ><strong>16.7–25 ms</strong><small>40–60 FPS</small></td
+                        ></tr
+                      >
+                    </tbody></table
+                  ><ul class="kart-perf-legend" aria-label="Bar colours"
+                    ><li><i class="kart-perf-logic"></i>Game logic</li
+                    ><li><i class="kart-perf-audio"></i>Audio</li
+                    ><li><i class="kart-perf-render"></i>Graphics interpreter</li
+                    ><li><i class="kart-perf-hud"></i>HUD / submission</li></ul
+                  >
+                </figure>
+              </div>
+              <p
+                >Version 1.5 presented about 11 FPS on my Old 3DS. To draw 30 frames per second, the
+                whole frame needs to fit into about 33.3 milliseconds. The graphics interpreter was
+                taking a big part of that time, and I still had the game logic, audio and everything
+                else to deal with. The starts were especially rough, with all eight karts on
+                screen.</p
+              >
+              <p
+                >Improving the audio scheduling and reducing repeated resource and rendering work
+                all helped. Taking audio work off the main core gave the renderer more room, but it
+                wasn’t one magic switch that fixed everything. I had to work on several parts of the
+                port together.</p
+              >
+              <p
+                >Maybe a much bigger rewrite, or rebuilding the engine around the 3DS and reusing
+                the original assets, could take it further. But that would be an enormous amount of
+                work, well beyond what I want to take on for this project.</p
+              >
+              <p
+                >I use tools like
+                <a href="https://openai.com/codex/" target="_blank" rel="noreferrer">Codex</a> and
+                <a href="https://claude.ai/" target="_blank" rel="noreferrer">Claude</a> for
+                projects like this, and they’ve helped me a LOT. That still doesn’t make the
+                hardware limits disappear. Old 3DS performance was already a challenge for the Super
+                Mario 64 port back in 2020, long before today’s AI coding tools. There were reports
+                of slowdowns then, and getting consistently smooth performance on this hardware is
+                still difficult. I have a lot of respect for the people who made those ports, the
+                original decompilation, and everyone who has kept improving them.</p
+              >
+              <p
+                >Being realistic, I don’t want to keep spending more and more time trying to squeeze
+                performance out of this port. I’m happy with where it is now, and I’d rather focus
+                on fixing the bugs that people find.</p
+              >
+            </section>
+            <section id="updates"
+              ><p class="blog-eyebrow">04 / GETTING THE UPDATE</p
+              ><h2>A little easier to keep up.</h2>
+              <p
+                >I added an in-game updater with <strong>Stable and Experimental</strong> channels,
+                so you can get future updates from the game itself.</p
+              >
+              <h3>A desktop extractor too.</h3>
+              <p
+                >I also made a little extractor for <strong>Windows, macOS and Linux</strong>. It
+                prepares the game data on your computer, so you don’t have to leave the 3DS doing
+                that part. Here’s how it looks:</p
+              >
+              <figure class="blog-media blog-extractor"
+                ><div class="blog-mac-bar" aria-hidden="true"
+                  ><span class="blog-mac-controls"><i></i><i></i><i></i></span
+                  ><span>MK64 Extractor</span></div
+                ><a
+                  href="assets/blog/mk64-v2/extractor-window.webp"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open the MK64 Extractor screenshot"
+                  ><img
+                    src="assets/blog/mk64-v2/extractor-window.webp"
+                    alt="MK64 Extractor running on macOS, ready to choose or drop a ROM"
+                    width="1014"
+                    height="952"
+                    loading="lazy"
+                    decoding="async" /></a
+              ></figure>
+              <p
+                >Download the package for your system from the release page and unpack the whole
+                folder. The portable packages include what they need to run, so you don’t have to
+                install Python or a compiler. Keep the supporting files together when you open the
+                app.</p
+              >
+              <ol class="blog-install-steps"
+                ><li
+                  >Drag in your own unmodified <strong>USA ROM</strong>, or click
+                  <strong>CHOOSE ROM</strong>. It accepts <code>.z64</code>, <code>.n64</code> and
+                  <code>.v64</code> files.</li
+                ><li
+                  >Choose where to save <code>mk64.o2r</code>. The extractor checks the ROM and
+                  verifies the archive after creating it.</li
+                ><li
+                  >Copy <code>mk64.o2r</code> and your game ROM as <code>mk64.z64</code> into
+                  <code>SD:/3ds/MK64/</code>, then launch the port.</li
+                ></ol
+              >
+              <p
+                >Everything runs locally on your computer. The extractor doesn’t upload the ROM, and
+                it doesn’t download the game for you. The packages are for Windows x64, macOS Apple
+                Silicon and Linux x64.</p
+              >
+              <p
+                >If you find a bug, please tell me which console you’re using, your settings and
+                what you were doing when it happened. You can press <kbd>L + R + SELECT</kbd> while
+                the problem is visible to create a diagnostic dump in
+                <code>sd:/3ds/MK64/dump/</code>. Send memory captures privately.</p
+              >
+              <div class="blog-actions"
+                ><a
+                  class="blog-primary-action"
+                  href="https://github.com/EstebanPdN/mario-kart-64-3ds/releases/tag/v2.0"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Get version 2.0 <span aria-hidden="true">→</span></a
+                ><a href="mario-kart-64.html#install">Installation guide</a></div
+              >
+            </section>
+            <section id="credits"
+              ><p class="blog-eyebrow">05 / WHAT’S NEXT</p
+              ><h2>Some fixes.<br />Then, hopefully, a little more.</h2>
+              <p
+                >For now, I want to see how 2.0 behaves with more people playing it and fix the bugs
+                that turn up. Testing on my own only goes so far. With more consoles, settings and
+                play sessions, people will probably find things I missed.</p
+              >
+              <p
+                >After that, I’d like to add <strong>stereoscopic 3D</strong>, and eventually
+                <strong>multiplayer</strong>. I haven’t settled on exactly how I’m going to do those
+                yet, so I don’t have a date to give you. They’re things I want to work towards, not
+                features I’m saying are ready today.</p
+              >
+              <p
+                >A big thank-you to Epic0522 for the features, fixes, banner and ideas adapted into
+                this release; to GhostlyDark and the MK64 Reloaded contributors for their artwork;
+                and to
+                <a
+                  href="https://github.com/HarbourMasters/SpaghettiKart"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Harbour Masters</a
+                >, the Mario Kart 64 decompilation contributors and the 3DS homebrew community for
+                the work this port builds on.</p
+              >
+              <p
+                >And thank you to everyone who has tested it, shared suggestions or just been
+                excited about the next update. I’ve put a lot of love into this one, and I really
+                hope you guys enjoy it!!! ❤️</p
+              >
+            </section>
+            <div class="blog-post-source"
+              ><p
+                >Release details:
+                <a
+                  href="https://github.com/EstebanPdN/mario-kart-64-3ds/releases/tag/v2.0"
+                  target="_blank"
+                  rel="noreferrer"
+                  >v2.0 changelog</a
+                >. Artwork:
+                <a
+                  href="https://evilgames.eu/texture-packs/mk64-reloaded.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                  >MK64 Reloaded and contributor credits</a
+                >. Technical context:
+                <a
+                  href="https://github.com/EstebanPdN/mario-kart-64-3ds/blob/v2.0/platform/3ds/docs/ARCHITECTURE.md"
+                  target="_blank"
+                  rel="noreferrer"
+                  >port architecture</a
+                >,
+                <a
+                  href="https://github.com/sm64-port/sm64_3ds/issues/6"
+                  target="_blank"
+                  rel="noreferrer"
+                  >2020 Old 3DS slowdown report</a
+                >
+                and
+                <a
+                  href="https://github.com/Epic0522/Super-Mario-64-3ds-port---Ultimate"
+                  target="_blank"
+                  rel="noreferrer"
+                  >a current SM64 port’s stated targets</a
+                >.</p
+              ><p></p
+            ></div>
+          </div>
+        </div>
+      </article>
+      <nav class="blog-post-end" aria-label="Continue exploring"
+        ><a href="blog.html">← All Posts</a
+        ><a href="index.html#collection">Explore the collection →</a></nav
+      >
+    </main>
+    <footer class="blog-footer"
+      ><span>esteban’s <b>forge.</b></span
+      ><span>A second life for the classics.</span><a href="credits.html">Credits</a></footer
+    ></body
+  ></html
+>
