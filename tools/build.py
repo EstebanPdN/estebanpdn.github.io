@@ -52,6 +52,7 @@ def copy_runtime_sources(staged):
 def version_runtime_imports(staged):
     community = staged / 'community.js'
     source = community.read_text().replace("'./community-data.mjs'", f"'./community-data.mjs?v={digest(staged / 'community-data.mjs')}'")
+    source = source.replace("'./tracker-feed.mjs'", f"'./tracker-feed.mjs?v={digest(staged / 'tracker-feed.mjs')}'")
     for name in ('community-projects.json', 'community-snapshot.json'):
         source = source.replace(f"'data/{name}'", f"'data/{name}?v={digest(staged / 'data' / name)}'")
     community.write_text(source)

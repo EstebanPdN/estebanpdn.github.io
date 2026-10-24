@@ -353,5 +353,23 @@
       }
     ],
     "image": "assets/icons/mm.webp"
+  },
+  {
+    "id": "worms3d",
+    "name": "Worms 3D",
+    "platform": "GameCube",
+    "owner": "EstebanPdN",
+    "url": "https://worms-3d.estebanpdn.chatgpt.site",
+    "mark": "W3D",
+    "image": "assets/icons/worms3d.png",
+    "progress": {
+      "type": "tracker",
+      "url": "https://worms-3d.estebanpdn.chatgpt.site/progress.json",
+      "label": "Exact instruction bytes · project tracker",
+      "version": "GameCube PAL · GWMP8P · rev. 0"
+    },
+    "note": "Source recovery tracked on Esteban’s published project site. A matching-code percentage is separate from a complete game or a native 3DS port.",
+    "noPortNote": "Whole-game reconstruction and native 3DS acceptance remain separate milestones.",
+    "related": []
   }
 ]

@@ -14,3 +14,10 @@ The independent baseline is a local copy of the previous site at commit `a03017d
 The visual test ignores font antialiasing differences and allows at most 0.005% changed visible pixels per screenshot. It requires identical page dimensions and writes screenshots under `.review/visual/`, outside Git. The new credits page did not exist in the baseline and was reviewed separately in the browser.
 
 The provenance register reports the evidence found in project manifests. A cited source or named license does not by itself prove that every rights holder authorized redistribution. Unverified permissions remain explicitly marked.
+
+## Blog and progress update — 2026-10-23
+
+- `npm test` passes with 12 static routes, 864 local references, all eight owner progress values, the public tracker feed and scene cleanup checks.
+- `npm run format:check` passes. The asset register includes the article images and their source records.
+- The built Blog index, article navigation and final links were reviewed in the running site at desktop and phone widths. The removed screenshot paragraph is absent; release and technical links remain.
+- The GitHub Actions browser gate covers all 12 routes in Chromium and WebKit before Pages publication.

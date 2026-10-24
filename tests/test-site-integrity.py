@@ -15,13 +15,13 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 VOID = set("area base br col embed hr img input link meta param source track wbr".split())
 PROJECTS = {
-    "kart": ("mario-kart-64.html", 80, "mario-kart-64-3ds"),
+    "kart": ("mario-kart-64.html", 100, "mario-kart-64-3ds"),
     "minish": ("the-minish-cap.html", 100, "zelda-tmc-3ds"),
     "alttp": ("a-link-to-the-past.html", 100, "zelda-alttp-3ds"),
     "doom": ("legend-of-doom.html", 100, "legend-of-doom-3ds"),
-    "starwing": ("star-fox.html", 80, "starwing-3ds"),
+    "starwing": ("star-fox.html", 70, "starwing-3ds"),
     "dusklight": ("dusklight.html", 10, None),
-    "sm64ds": ("super-mario-64-ds.html", 75, None),
+    "sm64ds": ("super-mario-64-ds.html", 35, None),
     "viper": ("red-viper-color.html", 75, None),
 }
 
@@ -112,7 +112,7 @@ def check_site(directory):
             require(panel_route or unquote(parts.fragment) in documents[destination].ids,
                     f"{location}: missing fragment: {value}")
 
-    require(bool(documents), f"No HTML found in {directory}; run scripts/build.py first.")
+    require(bool(documents), f"No HTML found in {directory}; run tools/build.py first.")
     for path, document in documents.items():
         banners = [node for node in document.nodes if node.has_class('forge-header-band')]
         require(len(banners) == 1, f"{path.name}: needs one shared system bar")
@@ -120,7 +120,7 @@ def check_site(directory):
             banner = banners[0]
             require('data-forge-persistent' in banner.attrs, f"{path.name}: system bar must survive scene changes")
             controls = [node for node in banner.all() if 'data-dual-page' in node.attrs]
-            require([node.attrs['data-dual-page'] for node in controls] == ['collection', 'progress', 'info'], f"{path.name}: inconsistent primary navigation")
+            require([node.attrs['data-dual-page'] for node in controls] == ['collection', 'progress', 'blog', 'info'], f"{path.name}: inconsistent primary navigation")
             require(all(any(node.has_class(name) for node in banner.all()) for name in ('brand', 'battery', 'theme-toggle', 'sound')), f"{path.name}: missing shared system controls")
             require(any('data-clock' in node.attrs for node in banner.all()), f"{path.name}: missing shared clock")
         header_styles = [node for node in document.nodes if node.tag == 'link' and urlsplit(node.attrs.get('href', '')).path == 'forge-header.css']

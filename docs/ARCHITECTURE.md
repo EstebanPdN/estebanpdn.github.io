@@ -21,6 +21,7 @@ Direct loading and animated navigation use the same destination pages. The build
 - `src/features/collection/`: collection cards and behavior.
 - `src/features/community/`: community data and information views.
 - `src/features/games/`: game-specific controllers and experiences.
+- `src/features/blog/`: animated post navigation and game-specific articles.
 - `src/shared/`: header, gallery, and shared interactions.
 - `src/styles/`: common and page-specific styles.
 - `src/partials/`: HTML fragments expanded at build time.
@@ -44,3 +45,9 @@ When a public release changes, verify its GitHub tag and channel, update the
 registry and any version-specific download instructions, and rebuild both hosted
 editions. Unreleased projects retain a null stable release instead of borrowing
 an upstream or private candidate version.
+
+## Blog and live project progress
+
+The shared header opens `blog.html` between Progress and Info. Posts remain individual static routes registered with the scene runtime, so direct links, history and the saved theme work on GitHub Pages. `blog.css` owns the index and shared article layout; `blog-kart.css` applies the Mario Kart presentation. Author posts in `src/pages/` and their media manifests under `public/assets/blog/`.
+
+Community cards refresh public per-version reports and repository activity independently. Worms 3D uses its public tracker feed and an origin-checked iframe bridge. The browser keeps dated data when a source is unavailable and refreshes after reconnecting. `node tools/refresh-community.mjs --watch --build` updates the local publication snapshot hourly; it does not commit or publish.

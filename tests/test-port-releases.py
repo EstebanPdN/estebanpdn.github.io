@@ -11,7 +11,7 @@ from port_releases import render_release_metadata
 class PortReleaseTests(unittest.TestCase):
     def test_stable_and_experimental_channels_are_distinct(self):
         html = render_release_metadata('<!-- port-release: minish -->', ROOT)
-        self.assertIn('Stable release · v2.1', html)
+        self.assertIn('Stable release · v2.2', html)
         self.assertIn('Experimental · v2.2-E1', html)
         self.assertIn('/releases/tag/v2.2-E1', html)
 

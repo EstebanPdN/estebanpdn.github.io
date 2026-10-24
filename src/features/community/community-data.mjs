@@ -1,6 +1,9 @@
 // Public sources only. Progress, repository activity, and PC releases are independent.
 export const REFRESH_MS = 60 * 60 * 1000;
-export const DECOMP_INDEX = 'https://decomp.dev/projects';
+export const decompURL = (project) =>
+  `https://decomp.dev/${project.repo}/${project.progress.version}.json?mode=overview`;
+export const catalogKey = (catalog) =>
+  JSON.stringify(catalog.map((p) => [p.id, p.repo, p.url, p.progress]));
 const escape = (value) =>
   String(value ?? '').replace(
     /[&<>"']/g,
@@ -51,6 +54,34 @@ export function readReadme(project, text) {
     source: `https://github.com/${project.repo}#readme`,
   };
 }
+
+export function readTracker(project, data) {
+  if (data?.schema !== 1 || data.game !== 'Worms 3D' || data.version !== project.progress.version)
+    throw Error('Unexpected tracker version');
+  const { exact_bytes: exact, total_bytes: total, percent: reported } = data.summary ?? {};
+  if (
+    !Number.isSafeInteger(exact) ||
+    !Number.isSafeInteger(total) ||
+    total <= 0 ||
+    exact < 0 ||
+    exact > total
+  )
+    throw Error('Invalid tracker byte totals');
+  const value = percentage((exact / total) * 100);
+  if (value === null || Math.abs(value - Number(reported)) > 0.00001)
+    throw Error('Inconsistent tracker percentage');
+  if (!Number.isFinite(Date.parse(data.updated_at))) throw Error('Missing tracker update date');
+  return {
+    value,
+    version: data.version,
+    label: project.progress.label,
+    source: project.url,
+    reportAt: data.updated_at,
+    exactBytes: exact,
+    totalBytes: total,
+  };
+}
+
 export async function refreshProjects(catalog, previous = {}, fetcher = fetch, now = Date.now()) {
   const checkedAt = new Date(now).toISOString();
   const requests = new Map();
@@ -61,6 +92,7 @@ export async function refreshProjects(catalog, previous = {}, fetcher = fetch, n
         (async () => {
           const response = await fetcher(url, {
             headers: { Accept: type === 'json' ? 'application/json' : 'text/plain' },
+            cache: 'no-store',
             signal: AbortSignal.timeout(15000),
             credentials: 'omit',
             referrerPolicy: 'no-referrer',
@@ -71,17 +103,13 @@ export async function refreshProjects(catalog, previous = {}, fetcher = fetch, n
       );
     return requests.get(url);
   };
-  const index = get(DECOMP_INDEX).then((data) => {
-    if (!Array.isArray(data.projects)) throw Error('Invalid project index');
-    return new Map(data.projects.map((p) => [`${p.owner}/${p.repo}`.toLowerCase(), p]));
-  });
-  // Attach a handler immediately, including when the first projects use badges.
-  index.catch(() => {});
   const settled = async (old, task) => {
     try {
       return { ...(await task()), checkedAt, stale: false };
-    } catch {
-      return old ? { ...old, stale: true } : { checkedAt: null, stale: true };
+    } catch (error) {
+      return old
+        ? { ...old, stale: true, error: error.message }
+        : { checkedAt: null, stale: true, error: error.message };
     }
   };
   const entries = await Promise.all(
@@ -89,21 +117,28 @@ export async function refreshProjects(catalog, previous = {}, fetcher = fetch, n
       const old = previous[project.id] ?? {};
       const progressTask = settled(old.progress, async () => {
         const spec = project.progress;
-        if (spec.type === 'decomp')
-          return readDecomp(project, (await index).get(project.repo.toLowerCase()));
+        if (spec.type === 'decomp') return readDecomp(project, await get(decompURL(project)));
+        if (spec.type === 'tracker') return readTracker(project, await get(spec.url));
         if (spec.type === 'readme') return readReadme(project, await get(spec.url, 'text'));
         return readBadge(project, await get(spec.url, spec.type === 'shield' ? 'json' : 'text'));
       });
       // Latest default-branch commit; a report commit can be older than the repository.
-      const activityTask = settled(old.activity, async () => {
-        const commits = await get(
-          `https://api.github.com/repos/${project.repo}/commits?per_page=1`,
-        );
-        const commit = commits[0];
-        if (!commit?.commit?.committer?.date || !commit.html_url)
-          throw Error('No repository activity');
-        return { date: commit.commit.committer.date, url: commit.html_url };
-      });
+      const activityTask = project.repo
+        ? settled(old.activity, async () => {
+            const commits = await get(
+              `https://api.github.com/repos/${project.repo}/commits?per_page=1`,
+            );
+            const commit = commits[0];
+            if (!commit?.commit?.committer?.date || !commit.html_url)
+              throw Error('No repository activity');
+            return {
+              date: commit.commit.committer.date,
+              url: commit.html_url,
+              sha: commit.sha?.slice(0, 7),
+              message: commit.commit.message?.split('\n')[0],
+            };
+          })
+        : Promise.resolve({ checkedAt: null, stale: false });
       const relatedTask = Promise.all(
         project.related.map(async (related) => {
           const key = related.repo ?? related.name;
@@ -146,7 +181,12 @@ export async function refreshProjects(catalog, previous = {}, fetcher = fetch, n
       return [project.id, { progress, activity, related: Object.fromEntries(related) }];
     }),
   );
-  return { schemaVersion: 1, attemptedAt: checkedAt, projects: Object.fromEntries(entries) };
+  return {
+    schemaVersion: 2,
+    catalogKey: catalogKey(catalog),
+    attemptedAt: checkedAt,
+    projects: Object.fromEntries(entries),
+  };
 }
 const dateText = (value) =>
   value && Number.isFinite(Date.parse(value))
@@ -176,10 +216,23 @@ export function renderCatalog(catalog, states = {}, completedOpen = true) {
 export function renderCard(project, state = {}) {
   const progress = state.progress ?? {},
     activity = state.activity ?? {};
+  const projectURL = project.url ?? `https://github.com/${project.repo}${project.sourcePath ?? ''}`;
+  const author = project.owner ?? project.repo?.split('/')[0] ?? '';
+  const activityText = project.repo
+    ? activity.date
+      ? link(
+          activity.url,
+          `Last commit ${escape(dateText(activity.date))}${activity.sha ? ` · ${escape(activity.sha)}` : ''}`,
+        )
+      : link(`https://github.com/${project.repo}/commits`, `Repository activity`)
+    : progress.reportAt
+      ? link(projectURL, `Tracker updated ${escape(dateText(progress.reportAt))}`)
+      : link(projectURL, 'Open progress tracker');
   const value = percentage(progress.value),
     available = value !== null;
   const source =
     progress.source ??
+    project.url ??
     project.progress.page ??
     (project.progress.type === 'decomp'
       ? `https://github.com/${project.repo}#readme`
@@ -202,5 +255,5 @@ export function renderCard(project, state = {}) {
       return `<div class="community-related-item">${link(url, `${escape(item.kind)} <span aria-hidden="true"></span>`, 'community-badge')}<span>${link(url, escape(item.name))} · ${escape(status)}${release}${info.stale ? ' · cached' : ''}</span></div>`;
     })
     .join('');
-  return `<article class="progress-card community-card" data-community-id="${escape(project.id)}"><div class="progress-art game-icon">${art}</div><div class="progress-content"><h3>${link(`https://github.com/${project.repo}${project.sourcePath ?? ''}`, `${escape(project.name)}<span class="progress-open" aria-hidden="true"></span>`)}</h3><p>${escape(project.platform)} · ${escape(project.repo.split('/')[0])}</p><div class="progress-meta"><span>${available && value === 100 ? '100% of this metric' : available ? 'In progress' : 'Source available'}</span><strong>${metric}</strong></div>${bar}<p class="community-measure">${link(source, escape(progress.label ?? project.progress.label ?? (available ? 'Matching code · decomp.dev' : 'No public progress metric')))}<br><span>${escape(progress.version ?? project.progress.version)}</span></p><p class="community-activity">${activity.date ? link(activity.url, `Last commit ${escape(dateText(activity.date))}`) : link(`https://github.com/${project.repo}/commits`, `Repository activity`)}${activity.stale && activity.date ? ' · cached' : ''}</p><p class="community-check">${progress.checkedAt && available ? `${progress.stale ? 'Cached' : 'Checked'} ${escape(dateText(progress.checkedAt))}` : 'Live percentage unavailable'}${progress.reportAt ? ` · Report ${escape(dateText(progress.reportAt))}` : ''}</p>${project.note ? `<p class="community-detail">${escape(project.note)}</p>` : ''}${related ? `<div class="community-related">${related}</div>` : '<p class="community-no-port">No PC project linked yet.</p>'}</div></article>`;
+  return `<article class="progress-card community-card" data-community-id="${escape(project.id)}"><div class="progress-art game-icon">${art}</div><div class="progress-content"><h3>${link(projectURL, `${escape(project.name)}<span class="progress-open" aria-hidden="true"></span>`)}</h3><p>${escape(project.platform)} · ${escape(author)}</p><div class="progress-meta"><span>${available && value === 100 ? '100% of this metric' : available ? 'In progress' : 'Source available'}</span><strong>${metric}</strong></div>${bar}<p class="community-measure">${link(source, escape(progress.label ?? project.progress.label ?? (available ? 'Matching code · decomp.dev' : 'No public progress metric')))}<br><span>${escape(progress.version ?? project.progress.version)}</span></p><p class="community-activity">${activityText}${activity.stale && activity.date ? ' · cached' : ''}</p>${activity.message ? `<p class="community-commit-message">${escape(activity.message)}</p>` : ''}<p class="community-check">${progress.checkedAt && available ? `${progress.stale ? 'Cached' : 'Checked'} ${escape(dateText(progress.checkedAt))}` : 'Live percentage unavailable'}${progress.reportAt ? ` · Report ${escape(dateText(progress.reportAt))}` : ''}</p>${project.note ? `<p class="community-detail">${escape(project.note)}</p>` : ''}${related ? `<div class="community-related">${related}</div>` : `<p class="community-no-port">${escape(project.noPortNote ?? 'No PC project linked yet.')}</p>`}</div></article>`;
 }

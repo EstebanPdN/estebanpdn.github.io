@@ -1,6 +1,7 @@
 {
-  "schemaVersion": 1,
-  "attemptedAt": "2026-10-09T05:54:33.293Z",
+  "schemaVersion": 2,
+  "catalogKey": "[[\"tp\",\"zeldaret/tp\",null,{\"type\":\"decomp\",\"version\":\"GZ2E01\"}],[\"mk64\",\"n64decomp/mk64\",null,{\"type\":\"svg\",\"url\":\"https://n64decomp.github.io/mk64/total_progress.svg\",\"label\":\"Total progress · repository badge\",\"version\":\"Repository total\"}],[\"sm64\",\"n64decomp/sm64\",null,{\"type\":\"readme\",\"url\":\"https://raw.githubusercontent.com/n64decomp/sm64/master/README.md\",\"label\":\"Full decompilation · repository README\",\"version\":\"JP / US / EU / Shindou / iQue\"}],[\"oot\",\"zeldaret/oot\",null,{\"type\":\"shield\",\"url\":\"https://zelda.deco.mp/assets/csv/progress-oot-shield.json\",\"label\":\"Decompilation · team badge\",\"version\":\"Team aggregate\",\"page\":\"https://zelda.deco.mp/games/oot\"}],[\"tmc\",\"zeldaret/tmc\",null,{\"type\":\"shield\",\"url\":\"https://zelda64.dev/assets/csv/progress-tmc-shield.json\",\"label\":\"Decompilation · team badge\",\"version\":\"Team aggregate\",\"page\":\"https://zelda64.dev/games/tmc\"}],[\"galaxy\",\"SMGCommunity/Petari\",null,{\"type\":\"decomp\",\"version\":\"RMGK01\"}],[\"tww\",\"zeldaret/tww\",null,{\"type\":\"decomp\",\"version\":\"GZLE01\"}],[\"sunshine\",\"doldecomp/sms\",null,{\"type\":\"decomp\",\"version\":\"GMSJ01\"}],[\"mkdd\",\"doldecomp/mkdd\",null,{\"type\":\"decomp\",\"version\":\"MarioClub_us\"}],[\"melee\",\"doldecomp/melee\",null,{\"type\":\"decomp\",\"version\":\"GALE01\"}],[\"galaxy2\",\"SMGCommunity/Garigari\",null,{\"type\":\"decomp\",\"version\":\"SB4E01\"}],[\"mkw\",\"doldecomp/mkw\",null,{\"type\":\"decomp\",\"version\":\"RMCP01\"}],[\"brawl\",\"doldecomp/brawl\",null,{\"type\":\"decomp\",\"version\":\"RSBE01_02\"}],[\"sports\",\"doldecomp/ogws\",null,{\"type\":\"decomp\",\"version\":\"RSPE01_01\"}],[\"sfa\",\"zcanann/SFA-Decomp\",null,{\"type\":\"decomp\",\"version\":\"GSAE01\"}],[\"ss\",\"zeldaret/ss\",null,{\"type\":\"decomp\",\"version\":\"SOUE01\"}],[\"lm\",\"SomeJakeGuy/lm-decomp\",null,{\"type\":\"decomp\",\"version\":\"GLME01\"}],[\"sadx\",\"doldecomp/sadx\",null,{\"type\":\"decomp\",\"version\":\"GXSE8P\"}],[\"advance\",\"SAT-R/sa2\",null,{\"type\":\"shield\",\"url\":\"https://sat-r.github.io/sa2/reports/progress-sa1-shield-matching.json\",\"label\":\"Matching code · team badge\",\"version\":\"Sonic Advance · Europe\"}],[\"mm\",\"zeldaret/mm\",null,{\"type\":\"shield\",\"url\":\"https://zelda.deco.mp/assets/csv/progress-mm-shield.json\",\"label\":\"Decompilation · team badge\",\"version\":\"US 1.0\",\"page\":\"https://zelda.deco.mp/games/mm\"}],[\"worms3d\",null,\"https://worms-3d.estebanpdn.chatgpt.site\",{\"type\":\"tracker\",\"url\":\"https://worms-3d.estebanpdn.chatgpt.site/progress.json\",\"label\":\"Exact instruction bytes · project tracker\",\"version\":\"GameCube PAL · GWMP8P · rev. 0\"}]]",
+  "attemptedAt": "2026-10-23T22:33:59.191Z",
   "projects": {
     "tp": {
       "progress": {
@@ -10,13 +11,15 @@
         "source": "https://decomp.dev/zeldaret/tp/GZ2E01",
         "reportAt": "2026-06-23T19:52:55Z",
         "reportCommit": "c8fa8c9e2aab72cf4e5db0e5d1c84a9ea6ee6eb0",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
         "date": "2026-06-23T19:52:55Z",
         "url": "https://github.com/zeldaret/tp/commit/c8fa8c9e2aab72cf4e5db0e5d1c84a9ea6ee6eb0",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "sha": "c8fa8c9",
+        "message": "Link d_cursor_mng for all Wii versions (#3164)",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
@@ -25,7 +28,7 @@
           "tag": "v2.0.3",
           "date": "2026-09-30T07:06:44Z",
           "url": "https://github.com/TwilitRealm/dusklight/releases/tag/v2.0.3",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
@@ -36,13 +39,15 @@
         "version": "Repository total",
         "label": "Total progress · repository badge",
         "source": "https://n64decomp.github.io/mk64/total_progress.svg",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
         "date": "2026-08-12T03:18:46Z",
         "url": "https://github.com/n64decomp/mk64/commit/58cfcb022e10f83bc3b889d7e97508cae6837098",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "sha": "58cfcb0",
+        "message": "Clarify vehicle ticking and fix some func spellings (#781)",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
@@ -51,7 +56,7 @@
           "tag": "1.0.0",
           "date": "2026-02-25T02:26:04Z",
           "url": "https://github.com/HarbourMasters/SpaghettiKart/releases/tag/1.0.0",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
@@ -62,20 +67,22 @@
         "version": "JP / US / EU / Shindou / iQue",
         "label": "Full decompilation · repository README",
         "source": "https://github.com/n64decomp/sm64#readme",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
         "date": "2023-08-17T13:21:59Z",
         "url": "https://github.com/n64decomp/sm64/commit/9921382a68bb0c865e5e45eb594d9c64db59b1af",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "sha": "9921382",
+        "message": "ique hotfix",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
         "sm64pc/sm64ex": {
           "status": "Source project",
           "url": "https://github.com/sm64pc/sm64ex",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
@@ -86,28 +93,30 @@
         "version": "Team aggregate",
         "label": "Decompilation · team badge",
         "source": "https://zelda.deco.mp/games/oot",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-08T18:51:17Z",
-        "url": "https://github.com/zeldaret/oot/commit/ceeb6f35cf690faf6bd96b33e14e4b45ce35441e",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-18T12:31:57Z",
+        "url": "https://github.com/zeldaret/oot/commit/14759abf9abb4295de142cdc1452998630ea70fb",
+        "sha": "14759ab",
+        "message": "fix z_bg_haka_trap regressions (#2838)",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
         "HarbourMasters/Shipwright": {
           "status": "Release",
-          "tag": "9.3.0",
-          "date": "2026-10-06T02:44:55Z",
-          "url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.3.0",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "tag": "9.3.1",
+          "date": "2026-10-18T21:06:27Z",
+          "url": "https://github.com/HarbourMasters/Shipwright/releases/tag/9.3.1",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         },
         "Zelda64Recomp/Zelda64Recomp": {
           "status": "Ocarina of Time support in development",
           "url": "https://github.com/Zelda64Recomp/Zelda64Recomp",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
@@ -118,22 +127,24 @@
         "version": "Team aggregate",
         "label": "Decompilation · team badge",
         "source": "https://zelda64.dev/games/tmc",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
         "date": "2026-09-27T17:57:44Z",
         "url": "https://github.com/zeldaret/tmc/commit/6fb6dfb4a7efbe24d0fd1dda5097af6131faacde",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "sha": "6fb6dfb",
+        "message": "Merge pull request #708 from Henny022p/link-fire",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
         "999sian/tmc": {
           "status": "Release",
-          "tag": "v0.9.5",
-          "date": "2026-09-28T06:56:37Z",
-          "url": "https://github.com/999sian/tmc/releases/tag/v0.9.5",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "tag": "v0.9.6",
+          "date": "2026-10-20T00:39:05Z",
+          "url": "https://github.com/999sian/tmc/releases/tag/v0.9.6",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
@@ -144,60 +155,66 @@
         "version": "RMGK01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/SMGCommunity/Petari/RMGK01",
-        "reportAt": "2026-10-09T02:09:11Z",
-        "reportCommit": "679dc500aaaf2eaa3fce86c3f75fcc32806bed21",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-23T19:18:26Z",
+        "reportCommit": "dae9c38434ccae1e5b518f3fecdbd01a5f9b3dc4",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-09T02:09:11Z",
-        "url": "https://github.com/SMGCommunity/Petari/commit/679dc500aaaf2eaa3fce86c3f75fcc32806bed21",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-23T19:18:26Z",
+        "url": "https://github.com/SMGCommunity/Petari/commit/dae9c38434ccae1e5b518f3fecdbd01a5f9b3dc4",
+        "sha": "dae9c38",
+        "message": "Merge pull request #2168 from Gonzalo-kebab/master",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
         "AstroCore": {
           "status": "Announced · in development",
           "url": "https://github.com/SMGCommunity/Petari#readme",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
     },
     "tww": {
       "progress": {
-        "value": 79.13999,
+        "value": 79.7416,
         "version": "GZLE01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/zeldaret/tww/GZLE01",
-        "reportAt": "2026-10-08T23:57:36Z",
-        "reportCommit": "342d447b6b6b3bafe7a0dc42d6b1e36b2de172e0",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-23T22:00:35Z",
+        "reportCommit": "98153338b05ed71e7cf36537759cb67895898bf9",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-08T23:57:36Z",
-        "url": "https://github.com/zeldaret/tww/commit/342d447b6b6b3bafe7a0dc42d6b1e36b2de172e0",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-23T22:00:35Z",
+        "url": "https://github.com/zeldaret/tww/commit/98153338b05ed71e7cf36537759cb67895898bf9",
+        "sha": "9815333",
+        "message": "Tiny Cleanups (#1248)",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
     },
     "sunshine": {
       "progress": {
-        "value": 47.816765,
+        "value": 50.252254,
         "version": "GMSJ01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/doldecomp/sms/GMSJ01",
-        "reportAt": "2026-10-08T18:48:24Z",
-        "reportCommit": "74127b25cd32de6d6d959c607b198eaaa799a718",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-23T21:42:57Z",
+        "reportCommit": "5504e2a671641eb32dd899cadcf78001c54f4308",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-08T18:48:24Z",
-        "url": "https://github.com/doldecomp/sms/commit/74127b25cd32de6d6d959c607b198eaaa799a718",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-23T21:42:57Z",
+        "url": "https://github.com/doldecomp/sms/commit/5504e2a671641eb32dd899cadcf78001c54f4308",
+        "sha": "5504e2a",
+        "message": "beam is closer",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
@@ -206,7 +223,7 @@
           "tag": "hd-cutscenes-ai-v1",
           "date": "2026-10-03T07:14:53Z",
           "url": "https://github.com/chasem-dev/sms-pc-port/releases/tag/hd-cutscenes-ai-v1",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
@@ -219,13 +236,15 @@
         "source": "https://decomp.dev/doldecomp/mkdd/MarioClub_us",
         "reportAt": "2026-10-05T11:46:59Z",
         "reportCommit": "1d2918ca577817ba431baddb78dda24831e0e0bb",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
         "date": "2026-10-05T11:46:59Z",
         "url": "https://github.com/doldecomp/mkdd/commit/1d2918ca577817ba431baddb78dda24831e0e0bb",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "sha": "1d2918c",
+        "message": "Merge pull request #83 from cristian64/symbol_order_skip_incomplete",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
@@ -236,72 +255,80 @@
         "version": "GALE01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/doldecomp/melee/GALE01",
-        "reportAt": "2026-10-08T21:35:52Z",
-        "reportCommit": "79b13a32467f7c4f91d6f831f0b9f891b7fb1146",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-23T16:24:18Z",
+        "reportCommit": "a62c7a3290a06df87e57151b3aa90aea9f9d7c56",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-08T21:35:52Z",
-        "url": "https://github.com/doldecomp/melee/commit/79b13a32467f7c4f91d6f831f0b9f891b7fb1146",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-23T16:39:21Z",
+        "url": "https://github.com/doldecomp/melee/commit/24e685d57535c478a2e94802c85b31c2ba54ee67",
+        "sha": "24e685d",
+        "message": "refactor(ftSandbag): replace raw motion state literal with named constant (#3678)",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
     },
     "galaxy2": {
       "progress": {
-        "value": 15.625395,
+        "value": 18.118374,
         "version": "SB4E01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/SMGCommunity/Garigari/SB4E01",
-        "reportAt": "2026-10-02T14:59:52Z",
-        "reportCommit": "6bff50a405a858638f39e944ad3f7919f056cea5",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-23T21:45:20Z",
+        "reportCommit": "e5693bd14db41f837fda20894a2ef0fc0eed1f4b",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-02T14:59:52Z",
-        "url": "https://github.com/SMGCommunity/Garigari/commit/6bff50a405a858638f39e944ad3f7919f056cea5",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-23T21:45:20Z",
+        "url": "https://github.com/SMGCommunity/Garigari/commit/e5693bd14db41f837fda20894a2ef0fc0eed1f4b",
+        "sha": "e5693bd",
+        "message": "Import `GravityFollower` and `TargetHolder` from Petari",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
     },
     "mkw": {
       "progress": {
-        "value": 5.7731543,
+        "value": 5.7764297,
         "version": "RMCP01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/doldecomp/mkw/RMCP01",
-        "reportAt": "2026-10-05T23:52:20Z",
-        "reportCommit": "fa12730868423728a76d2f47024b45549589e931",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-16T01:39:58Z",
+        "reportCommit": "8b9b5ee653da28663e498039e52f5d19f929a011",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-05T23:52:20Z",
-        "url": "https://github.com/doldecomp/mkw/commit/fa12730868423728a76d2f47024b45549589e931",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-16T01:39:58Z",
+        "url": "https://github.com/doldecomp/mkw/commit/8b9b5ee653da28663e498039e52f5d19f929a011",
+        "sha": "8b9b5ee",
+        "message": "mkw: Match several KartObjectProxy methods",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
     },
     "brawl": {
       "progress": {
-        "value": 1.2475284,
+        "value": 1.271048,
         "version": "RSBE01_02",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/doldecomp/brawl/RSBE01_02",
-        "reportAt": "2026-10-07T22:10:18Z",
-        "reportCommit": "2f12ddeee813b6ff8a52568c2c463330d51b5720",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-23T20:05:59Z",
+        "reportCommit": "1769bcba8601466cea571a044f93829a52080db4",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-07T22:10:18Z",
-        "url": "https://github.com/doldecomp/brawl/commit/2f12ddeee813b6ff8a52568c2c463330d51b5720",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-23T20:05:59Z",
+        "url": "https://github.com/doldecomp/brawl/commit/1769bcba8601466cea571a044f93829a52080db4",
+        "sha": "1769bcb",
+        "message": "Add BrawlHeaders mirror Action, move includes (#150)",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
@@ -312,15 +339,17 @@
         "version": "RSPE01_01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/doldecomp/ogws/RSPE01_01",
-        "reportAt": "2026-09-19T21:27:59Z",
-        "reportCommit": "27fa94a593096eed7442efc4e70981fd52025b9c",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-15T07:44:15Z",
+        "reportCommit": "f5a1bb5ed7692a9e09e737bc1236f592274dcf73",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-09-19T21:27:59Z",
-        "url": "https://github.com/doldecomp/ogws/commit/27fa94a593096eed7442efc4e70981fd52025b9c",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-15T07:44:15Z",
+        "url": "https://github.com/doldecomp/ogws/commit/f5a1bb5ed7692a9e09e737bc1236f592274dcf73",
+        "sha": "f5a1bb5",
+        "message": "RPAudio Rev 0 configuration (#173)",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
@@ -333,60 +362,66 @@
         "source": "https://decomp.dev/zcanann/SFA-Decomp/GSAE01",
         "reportAt": "2026-10-07T00:00:05Z",
         "reportCommit": "9b4063e5c363fca5173a8ef565532287dc1396d0",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
         "date": "2026-10-07T00:00:05Z",
         "url": "https://github.com/zcanann/SFA-Decomp/commit/9b4063e5c363fca5173a8ef565532287dc1396d0",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "sha": "9b4063e",
+        "message": "Integrate staging",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
         "JackPriceBurns/foxhollow": {
           "status": "Release",
-          "tag": "v1.0.21",
-          "date": "2026-10-09T02:33:47Z",
-          "url": "https://github.com/JackPriceBurns/foxhollow/releases/tag/v1.0.21",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "tag": "v1.0.24",
+          "date": "2026-10-20T23:37:28Z",
+          "url": "https://github.com/JackPriceBurns/foxhollow/releases/tag/v1.0.24",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
     },
     "ss": {
       "progress": {
-        "value": 26.801357,
+        "value": 28.01935,
         "version": "SOUE01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/zeldaret/ss/SOUE01",
-        "reportAt": "2026-10-04T09:33:58Z",
-        "reportCommit": "3a93d428e870227349d77e8c860e230533a38f2f",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-20T02:56:23Z",
+        "reportCommit": "96f2dd5497c4ceb595de76fd897fbb1542b27323",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-04T09:33:58Z",
-        "url": "https://github.com/zeldaret/ss/commit/3a93d428e870227349d77e8c860e230533a38f2f",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-20T02:56:23Z",
+        "url": "https://github.com/zeldaret/ss/commit/96f2dd5497c4ceb595de76fd897fbb1542b27323",
+        "sha": "96f2dd5",
+        "message": "Merge pull request #367 from elijah-thomas774/bases",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
     },
     "lm": {
       "progress": {
-        "value": 18.179987,
+        "value": 18.422207,
         "version": "GLME01",
         "label": "Matching code · decomp.dev",
         "source": "https://decomp.dev/SomeJakeGuy/lm-decomp/GLME01",
-        "reportAt": "2026-10-06T22:43:39Z",
-        "reportCommit": "c347326b12c38281c5528d36bda6334997fa8d3c",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "reportAt": "2026-10-21T01:03:26Z",
+        "reportCommit": "b0f75e963e9ee6d84220ef0b2222fa46d06c887e",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-10-06T22:43:39Z",
-        "url": "https://github.com/SomeJakeGuy/lm-decomp/commit/c347326b12c38281c5528d36bda6334997fa8d3c",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-21T01:03:26Z",
+        "url": "https://github.com/SomeJakeGuy/lm-decomp/commit/b0f75e963e9ee6d84220ef0b2222fa46d06c887e",
+        "sha": "b0f75e9",
+        "message": "Merge pull request #20 from SomeJakeGuy/ArrayChanges",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {}
@@ -394,19 +429,22 @@
     "sadx": {
       "progress": {
         "checkedAt": null,
-        "stale": true
+        "stale": true,
+        "error": "Source returned 404"
       },
       "activity": {
         "date": "2024-08-01T04:03:08Z",
         "url": "https://github.com/doldecomp/sadx/commit/4c2b833be9b4b63d57d761beb647cb8d9acbedb6",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "sha": "4c2b833",
+        "message": "Merge pull request #7 from InputEvelution/exi",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
         "FraGag/sadx_decomp": {
           "status": "Source project",
           "url": "https://github.com/FraGag/sadx_decomp",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         }
       }
@@ -417,14 +455,15 @@
         "version": "Sonic Advance · Europe",
         "label": "Matching code · team badge",
         "source": "https://sat-r.github.io/sa2/reports/progress-sa1-shield-matching.json",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
         "date": "2026-07-21T09:23:11Z",
         "url": "https://github.com/SAT-R/sa2/commit/393357f7c9d46b5c10b6c41a57b80fe3b58f3c8d",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
-        "stale": false
+        "checkedAt": "2026-10-23T22:29:49.264Z",
+        "stale": true,
+        "error": "Source returned 403"
       },
       "related": {}
     },
@@ -434,13 +473,15 @@
         "version": "US 1.0",
         "label": "Decompilation · team badge",
         "source": "https://zelda.deco.mp/games/mm",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "activity": {
-        "date": "2026-09-26T21:38:01Z",
-        "url": "https://github.com/zeldaret/mm/commit/56fa21dd0031a17cfc9e355f609542617598a265",
-        "checkedAt": "2026-10-09T05:54:33.293Z",
+        "date": "2026-10-21T01:33:26Z",
+        "url": "https://github.com/zeldaret/mm/commit/710e1a7d50a1f987f5fc55abca37f7fdcc8ee43d",
+        "sha": "710e1a7",
+        "message": "Document `EnInsect` (#1861)",
+        "checkedAt": "2026-10-23T22:33:59.191Z",
         "stale": false
       },
       "related": {
@@ -449,7 +490,7 @@
           "tag": "5.0.1",
           "date": "2026-08-25T17:54:43Z",
           "url": "https://github.com/2ship2harkinian/2ship2harkinian/releases/tag/5.0.1",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
+          "checkedAt": "2026-10-23T22:33:59.191Z",
           "stale": false
         },
         "Zelda64Recomp/Zelda64Recomp": {
@@ -457,10 +498,29 @@
           "tag": "v1.2.2",
           "date": "2025-08-27T00:58:35Z",
           "url": "https://github.com/Zelda64Recomp/Zelda64Recomp/releases/tag/v1.2.2",
-          "checkedAt": "2026-10-09T05:54:33.293Z",
-          "stale": false
+          "checkedAt": "2026-10-23T22:29:49.264Z",
+          "stale": true,
+          "error": "Source returned 403"
         }
       }
+    },
+    "worms3d": {
+      "progress": {
+        "value": 29.07243671834555,
+        "version": "GameCube PAL · GWMP8P · rev. 0",
+        "label": "Exact instruction bytes · project tracker",
+        "source": "https://worms-3d.estebanpdn.chatgpt.site",
+        "reportAt": "2026-10-23T16:52:28.423159+00:00",
+        "exactBytes": 1024308,
+        "totalBytes": 3523296,
+        "checkedAt": "2026-10-23T22:33:59.191Z",
+        "stale": false
+      },
+      "activity": {
+        "checkedAt": null,
+        "stale": false
+      },
+      "related": {}
     }
   }
 }

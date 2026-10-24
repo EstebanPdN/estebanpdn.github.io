@@ -13,6 +13,8 @@
     'super-mario-64-ds.html',
     'credits.html',
     'red-viper-color.html',
+    'blog.html',
+    'blog-mario-kart-64-v2-0.html',
   ]);
   const prepared = new Map(),
     images = new Map(),
@@ -247,6 +249,8 @@
       name = route(url);
     const colors = {
       'index.html': dark ? '#1b1b1d' : '#f7f9fa',
+      'blog.html': dark ? '#1b1b1d' : '#f7f9fa',
+      'blog-mario-kart-64-v2-0.html': dark ? '#1b1b1d' : '#f7f9fa',
       'the-minish-cap.html': dark ? '#243921' : '#426521',
       'a-link-to-the-past.html': '#10271f',
       'legend-of-doom.html': '#086563',
@@ -564,6 +568,7 @@
       await bounded(document.fonts.ready, 1000);
       if (!root.matches('.welcome-pending,.welcome-open')) await enter();
       else root.classList.remove('forge-entering');
+      if (document.body.dataset.section === 'blog' && currentURL.hash) restoreFragment(currentURL);
       resolve();
     };
     if (document.readyState === 'loading')

@@ -1,24 +1,4 @@
-/* One HOME Menu material for the collection, carousel and Progress artwork. */
-#dual {
-  --home-rim-background: linear-gradient(145deg, #fff 0%, #eaf0f4 43%, #c1cad3 100%);
-  --home-rim-border: #8b98a7a6;
-  --home-rim-highlight: #fff;
-  --home-rim-lowlight: #8797a07a;
-  --home-rim-shadow: #26384420;
-  --home-rim-inset: #53616c55;
-  --home-rim-surface: #f6f7f9;
-  --home-rim-focus: #4b8195;
-}
-[data-theme='dark'] #dual {
-  --home-rim-background: linear-gradient(145deg, #5b6670 0%, #3d4852 43%, #242e37 100%);
-  --home-rim-border: #8293a18f;
-  --home-rim-highlight: #e7f3fc66;
-  --home-rim-lowlight: #111a23b3;
-  --home-rim-shadow: #0006;
-  --home-rim-inset: #18232dd9;
-  --home-rim-surface: #e8edf0;
-  --home-rim-focus: #b4d6e2;
-}
+/* HOME Menu colours are shared with the Blog in forge-surface.css. */
 #dual .game-icon,
 #dual .game-channel {
   background: var(--home-rim-background);
@@ -676,9 +656,12 @@
   }
 }
 
-/* The fifth published port fills the final desktop shelf. */
-@media (min-width: 681px) {
-  #dual .released-mosaic .game-starwing {
+/* A released fifth port keeps the same full-width shelf treatment as GitHub. */
+#dual .released-mosaic .game-starwing {
+  grid-column: 1 / -1;
+}
+@media (max-width: 1200px) {
+  #dual .development-mosaic .game-viper {
     grid-column: 1 / -1;
   }
 }

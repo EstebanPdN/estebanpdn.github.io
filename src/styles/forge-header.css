@@ -529,3 +529,18 @@
     height: 40px;
   }
 }
+
+/* Four primary sections keep comfortable targets on narrow phones. */
+@media (max-width: 600px) {
+  .forge-header-band .dual-navigation {
+    gap: 2px;
+  }
+  .forge-header-band .dual-navigation button {
+    padding-inline: 15px;
+  }
+}
+@media (max-width: 359px) {
+  .forge-header-band .dual-navigation button {
+    padding-inline: 12px;
+  }
+}

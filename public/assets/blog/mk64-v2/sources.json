@@ -1,0 +1,140 @@
+{
+  "game": "Mario Kart 64 3DS v2.0",
+  "date": "2026-10-23",
+  "gameplay": "Stills from the recording supplied by Esteban. Exterior black margins cropped; no generated game content. Not evidence of physical-console FPS.",
+  "comparison": "texture-comparison.png: Illustrative comparison requested by the owner. Options: original58x19 nearest-sampled to87x29 versus actual87x29 replacement. Mario and Luigi originals: actual64x64 frame00 reduced to51x51 and enlarged back to64x64 at the owner’s explicit request. This deliberate presentation adjustment is not a claim about the original game’s stored resolution. Replacement portraits and Options pixels are unchanged.",
+  "artwork_source": "https://evilgames.eu/texture-packs/mk64-reloaded.htm",
+  "credits": [
+    "Nintendo and respective game artwork creators",
+    "GhostlyDark and MK64 Reloaded contributors",
+    "EstebanPdN: original port settings icons and supplied gameplay",
+    "Epic0522: 3D banner model"
+  ],
+  "assets": [
+    {
+      "file": "settings-icons.png",
+      "dimensions": [
+        1000,
+        850
+      ],
+      "sha256": "5c52e0b27ad2d5cb914a2731ee9a352bdeb833672391568fe4463807d88eb17f"
+    },
+    {
+      "file": "menu-maps-top.webp",
+      "dimensions": [
+        1330,
+        793
+      ],
+      "sha256": "8adfcf54159d78173db4ca5c5e66fdad20fc91f46a400e84201cc1a38c8584ea"
+    },
+    {
+      "file": "menu-maps-bottom.webp",
+      "dimensions": [
+        1064,
+        793
+      ],
+      "sha256": "8d1cdbd57da60d0d16818efec5bcded26c6a88caea82c8dfdfae168d94e1cb9c"
+    },
+    {
+      "file": "options-top.webp",
+      "dimensions": [
+        1330,
+        793
+      ],
+      "sha256": "4785d4b1f485b0227e81b4068470c24bb7d766336e3975fec3f9bcce159bc6b4"
+    },
+    {
+      "file": "options-bottom.webp",
+      "dimensions": [
+        1064,
+        793
+      ],
+      "sha256": "33799f6d3a48686a1742baffa1d1f9dcd16cae7bf464ebb48095b1be1bd14619"
+    },
+    {
+      "file": "solo-race.webp",
+      "dimensions": [
+        1330,
+        1586
+      ],
+      "sha256": "07ba70343fdc4ea39aaa9ae5bec9ff984ff152cc444fce8edb3b657e9c4a35ed"
+    },
+    {
+      "file": "solo-battle.webp",
+      "dimensions": [
+        1330,
+        1586
+      ],
+      "sha256": "db72539ce724f0d2b7b28d534a3b15811cd27a8be10ee3bb5f3e4a4ee7f1c3c3"
+    },
+    {
+      "file": "snow-race-top.webp",
+      "dimensions": [
+        1330,
+        793
+      ],
+      "sha256": "6562b80bf37b6c86f6e09a49b22197236673a96a260a1b44084d45b64bcfa7cf"
+    },
+    {
+      "file": "snow-race-bottom.webp",
+      "dimensions": [
+        1064,
+        793
+      ],
+      "sha256": "eeeb0cde40c802617402a26fdf1689a08a3939de8621e4742a4b01e806dbcf83"
+    },
+    {
+      "file": "map-comparison.png",
+      "dimensions": [
+        1100,
+        1060
+      ],
+      "sha256": "c8e0dad7da7d616c764f173c08aa3977cd11686c2add7cb9648f8055600ba221"
+    },
+    {
+      "file": "epic-banner.webp",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "sha256": "92ad46ce45e8828543330be675ddfc42929f8949a66ca5d03e4972e95593591e"
+    },
+    {
+      "file": "extractor-window.webp",
+      "dimensions": [
+        1014,
+        952
+      ],
+      "sha256": "a5c83e7cd11f9ac4cfe0e7d2deaee8a692309f35d52adc004817d2a2e7a4200b"
+    },
+    {
+      "file": "portrait-comparison.png",
+      "dimensions": [
+        1100,
+        1390
+      ],
+      "sha256": "752b719366f483d4d83f72bdc3b4e945bedbedcc4ab4ed0757d422efcb5a8829"
+    },
+    {
+      "file": "texture-comparison.png",
+      "dimensions": [
+        1100,
+        1050
+      ],
+      "sha256": "4b4d22ea8d3007876f4bffef90d7baf1570ff5b7bf92a70e10ed378235272a17"
+    },
+    {
+      "file": "cover-owner.png",
+      "dimensions": [
+        760,
+        570
+      ],
+      "sha256": "ac2e0f56c7e3891a273b41fd93bf0a7727d020876d8f1f139ec189904e034eb2"
+    }
+  ],
+  "extractor": "Owner-supplied 1014x952 screenshot. The website adds a decorative Mac-style title bar and white rounded frame in HTML/CSS; those elements are not part of the screenshot.",
+  "banner": "Local render of the original Epic0522 banner glTF, its original logo atlas and checker flag pose 00. Unlit materials retain texture colours. This is a model render, not a screenshot of the 3DS HOME Menu.",
+  "banner_source": "https://github.com/Epic0522/MarioKart64-3DSPort-Complete/tree/main/platform/3ds/assets/banner",
+  "performance_chart": "Version 1.5 and 2.0 presentation and timings supplied or confirmed by Esteban during editorial review. One Player Race totals 88.6 ms. Race Start with eight karts totals 166.7 ms, matching the owner’s 6 FPS test result; the HUD contribution stays at 8.1 ms. The 30 FPS goal is a separate reference. Final results use green striped bars: Old 3DS 15–20 FPS; New 3DS 40–60 FPS.",
+  "cover": "Nintendo artwork supplied and selected by Esteban on2026-10-23,760x570. Preserved without resampling."
+}

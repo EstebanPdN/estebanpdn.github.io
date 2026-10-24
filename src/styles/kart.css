@@ -1210,7 +1210,7 @@ kbd {
 .finish-progress [role='progressbar'] > span {
   display: block;
   height: 100%;
-  width: 80%;
+  width: 100%;
   background: repeating-linear-gradient(90deg, #365b9d 0 13px, #5177b5 13px 15px);
 }
 .kart-footer {
@@ -2981,4 +2981,14 @@ kbd {
   .cup-tab {
     min-width: 0;
   }
+}
+
+.release-story-link {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+.release-story-link a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }

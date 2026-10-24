@@ -4,6 +4,8 @@ EstebanPdN’s static Nintendo 3DS project portfolio. [Visit the site](https://e
 
 This project was developed with the help of [OpenAI Codex](https://openai.com/codex/) and [Claude Code](https://claude.com/product/claude-code). Learn more about the development process [here](AI_DEVELOPMENT.md).
 
+[Read the Mario Kart 64 v2.0 post](https://estebanpdn.github.io/blog-mario-kart-64-v2-0.html).
+
 ## Run locally
 
 Requires Node.js 22+, npm 10+, Python 3, and `ffprobe` (from FFmpeg).

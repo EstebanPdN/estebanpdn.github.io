@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Add the Blog navigation, Mario Kart 64 v2.0 article, gameplay images and texture comparisons.
+- Match the approved Forge headings, dotted backgrounds, gray blog cards and dark credits page.
+- Update public port versions and completion notes, and add live Worms 3D progress with refresh tooling.
+
 - Show verified public port versions in collection cards, progress cards and project headers.
 - Distinguish stable and experimental releases, and identify ports without a public release.
 - Centralize release metadata in a documented build-time registry shared with the ChatGPT-hosted edition.
