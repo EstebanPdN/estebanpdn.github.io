@@ -10,8 +10,8 @@ const server = await serve(dist);
 const routes = (await readdir(dist)).filter((file) => file.endsWith('.html')).sort();
 assert.equal(
   routes.length,
-  12,
-  'The published route set includes the Blog index and Mario Kart post',
+  13,
+  'The published route set includes the Blog pages and development statement',
 );
 
 for (const [engineName, browserType] of [
