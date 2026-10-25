@@ -4205,3 +4205,12 @@
 .console-showcase {
   touch-action: pan-y pinch-zoom;
 }
+
+.info-foot.info-development {
+  opacity: 1;
+  font-size: 15px;
+}
+.info-development a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
