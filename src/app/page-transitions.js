@@ -14,6 +14,7 @@
     'credits.html',
     'red-viper-color.html',
     'blog.html',
+    'development.html',
     'blog-mario-kart-64-v2-0.html',
   ]);
   const prepared = new Map(),

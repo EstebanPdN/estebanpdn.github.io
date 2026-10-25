@@ -114,12 +114,11 @@
       stopWelcomeSound();
       entrySound?.pause();
     }
-    const page =
-      document.body.dataset.section === 'blog'
-        ? 'blog'
-        : document.querySelector('#dual') && ['#progress', '#info'].includes(location.hash)
-          ? location.hash.slice(1)
-          : 'collection';
+    const page = ['blog', 'info'].includes(document.body.dataset.section)
+      ? document.body.dataset.section
+      : document.querySelector('#dual') && ['#progress', '#info'].includes(location.hash)
+        ? location.hash.slice(1)
+        : 'collection';
     document
       .querySelectorAll('.site-header [data-dual-page]')
       .forEach((button) =>
