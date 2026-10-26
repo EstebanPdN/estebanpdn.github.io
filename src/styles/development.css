@@ -1,0 +1,280 @@
+/* The development journal keeps the Forge's framed, neutral surfaces. */
+.development-main {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 48px clamp(24px, 4vw, 64px) 80px;
+  font:
+    400 18px/1.85 Nunito,
+    'DM Sans',
+    sans-serif;
+}
+.development-back {
+  display: inline-block;
+  margin-bottom: 26px;
+  font-size: 13px;
+  font-weight: 800;
+}
+.development-main a {
+  color: #426f7b;
+  text-underline-offset: 4px;
+}
+:root[data-theme='dark'] .development-main a {
+  color: #aed0d7;
+}
+.development-main .development-meta {
+  font-size: 13px;
+  margin-bottom: 26px;
+}
+.development-main h1 {
+  max-width: 1040px;
+  margin: 0 0 32px;
+  font:
+    800 clamp(38px, 4.3vw, 62px)/1.1 'DM Sans',
+    Nunito,
+    sans-serif;
+  letter-spacing: -2px;
+}
+.development-main .development-cover {
+  margin: 0;
+}
+.development-cover-inner {
+  overflow: hidden;
+  border: 1px solid var(--home-rim-inset);
+  border-radius: 20px;
+  background: #222;
+}
+.development-main .development-cover img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.15;
+  object-fit: cover;
+  object-position: center 42%;
+  border-radius: 0;
+}
+.development-authorship {
+  margin: 20px 0 38px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--forge-muted);
+}
+.development-copy p {
+  margin: 0 0 23px;
+}
+.development-copy p:last-child {
+  margin-bottom: 0;
+}
+.development-copy strong {
+  font-weight: 800;
+}
+.development-intro {
+  max-width: 1040px;
+  margin-bottom: 44px;
+}
+#development-statement {
+  counter-reset: development-section;
+}
+.development-section {
+  counter-increment: development-section;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 224px;
+  gap: 48px;
+  align-items: start;
+  padding: 42px 0;
+  border-top: 1px solid var(--forge-line);
+  scroll-margin-top: calc(var(--forge-header-height) + 30px);
+}
+.development-section h2 {
+  margin: 0 0 27px;
+  font:
+    800 clamp(25px, 2.3vw, 31px)/1.25 'DM Sans',
+    Nunito,
+    sans-serif;
+  letter-spacing: -0.8px;
+}
+.development-section h2::before {
+  content: counter(development-section, decimal-leading-zero);
+  display: block;
+  margin-bottom: 13px;
+  font:
+    800 11px/1.4 Nunito,
+    sans-serif;
+  letter-spacing: 2px;
+  color: var(--forge-muted);
+}
+.development-aside {
+  display: grid;
+  gap: 12px;
+  position: static;
+}
+/* Compact tool links echo the Collection's project selector buttons. */
+.development-main .development-tool {
+  display: block;
+  color: var(--forge-ink);
+  text-decoration: none;
+  border-radius: 18px;
+}
+.development-tool-inner {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: center;
+  min-height: 76px;
+  padding: 12px;
+  border: 1px solid #79848f26;
+  border-radius: 18px;
+  background: linear-gradient(140deg, #f4f5f6, #e8eaed);
+  box-shadow:
+    0 5px 12px #3448580a,
+    inset 0 1px 0 #fff;
+}
+.development-tool-mark {
+  grid-row: 1 / 3;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 4px solid #8799a4;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 1px 1px #fff6,
+    0 2px 4px #0003;
+}
+.development-tool-mark img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.development-mark-openai {
+  background: #252528;
+}
+.development-mark-claude {
+  background: #f4eadf;
+}
+.development-mark-atlas img {
+  width: 40px;
+  height: 40px;
+}
+.development-tool-maker {
+  align-self: end;
+  color: var(--forge-muted);
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+.development-tool strong {
+  align-self: start;
+  font:
+    800 16px/1.4 'DM Sans',
+    Nunito,
+    sans-serif;
+  letter-spacing: -0.3px;
+}
+.development-tool:hover .development-tool-inner {
+  border-color: var(--home-rim-focus);
+}
+.development-callout {
+  margin: 30px 0;
+}
+.development-callout p {
+  margin: 0;
+  padding: 24px 27px;
+  border: 1px solid var(--home-rim-inset);
+  border-radius: 20px;
+  background: #f3f4f6;
+  font-weight: 700;
+}
+:root[data-theme='dark'] .development-tool-inner {
+  background: linear-gradient(140deg, #323235, #272729);
+  border-color: #ffffff0a;
+  box-shadow:
+    0 5px 12px #0002,
+    inset 0 1px 0 #ffffff0c;
+}
+:root[data-theme='dark'] .development-callout p {
+  background: #29292d;
+}
+.development-page {
+  --home-rim-background: linear-gradient(145deg, #fff 0%, #eeeeef 43%, #c5c5cc 100%);
+  --home-rim-border: #91919ba6;
+  --home-rim-inset: #5b5b6655;
+}
+:root[data-theme='dark'] .development-page {
+  --home-rim-background: linear-gradient(145deg, #626267 0%, #424247 43%, #262629 100%);
+  --home-rim-border: #92929a8f;
+  --home-rim-highlight: #f2f2fc66;
+  --home-rim-lowlight: #111116b3;
+  --home-rim-shadow: #0006;
+  --home-rim-inset: #17171fd9;
+}
+@media (max-width: 1100px) {
+  .development-section {
+    grid-template-columns: minmax(0, 1fr) 184px;
+    gap: 28px;
+  }
+}
+@media (max-width: 760px) {
+  .development-main {
+    padding: 34px 24px 55px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  .development-main h1 {
+    letter-spacing: -1.4px;
+    margin-bottom: 26px;
+  }
+  .development-main .development-cover img {
+    aspect-ratio: 1.5;
+    object-position: center;
+  }
+  .development-section {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 34px 0;
+  }
+  .development-aside {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .development-tool-inner {
+    grid-template-columns: 40px minmax(0, 1fr);
+    column-gap: 9px;
+    padding: 10px;
+    min-height: 66px;
+    border-radius: 16px;
+  }
+  .development-tool-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .development-tool-mark img {
+    width: 25px;
+    height: 25px;
+  }
+  .development-mark-atlas img {
+    width: 32px;
+    height: 32px;
+  }
+  .development-tool strong {
+    font-size: 14px;
+  }
+  .development-tool-maker {
+    font-size: 8px;
+    letter-spacing: 0.3px;
+  }
+  .development-authorship {
+    font-size: 14px;
+    margin: 18px 0 30px;
+  }
+  .development-callout p {
+    padding: 20px;
+  }
+}
+@media (max-width: 389px) {
+  .development-main {
+    padding-inline: 18px;
+  }
+}

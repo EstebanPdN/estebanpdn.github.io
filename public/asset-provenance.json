@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "project": "Esteban’s Forge · v1.0.0",
   "generatedBy": "tools/build-provenance.mjs",
-  "assetFileCount": 460,
+  "assetFileCount": 465,
   "counts": {
-    "context-only-permission-not-established": 122,
+    "context-only-permission-not-established": 123,
     "license-named-in-source-record-recheck-rights-holder": 9,
     "permission-unknown-explicitly-documented": 1,
     "source-and-permission-not-documented": 183,
-    "source-recorded-permission-not-established": 145
+    "source-recorded-permission-not-established": 149
   },
   "reviewScope": "This inventory records bundled evidence and file hashes. It does not independently verify copyright ownership, the continued availability of source pages, or permissions beyond the terms recorded in source manifests.",
   "attributionNotice": "A credit or source link does not by itself grant permission to copy, adapt, or redistribute a work. Unknown permissions remain unknown.",
@@ -459,6 +459,91 @@
       "sha256": "e6e820db38b51ad9b9e07262843b2d9ac9f8ae2da79f8f6371e9b10a4a75b7d8",
       "evidence": [],
       "permissionStatus": "source-and-permission-not-documented"
+    },
+    {
+      "path": "public/assets/blog/development/claude.svg",
+      "bytes": 2005,
+      "sha256": "36d216f45d3c8adb8c409f9f183c1656927b6abf2441482afc619f62e2a0e233",
+      "evidence": [
+        {
+          "record": "public/assets/blog/development/sources.json",
+          "match": "path",
+          "field": "assets.2.file",
+          "details": {
+            "file": "claude.svg",
+            "usage": "Brand identification beside the corresponding article section."
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/development/code-atlas.png",
+      "bytes": 9028,
+      "sha256": "d23803315a3c0399b58ffbe75e83911dd585564db0a6511e2ed73e28ec3ac119",
+      "evidence": [
+        {
+          "record": "public/assets/blog/development/sources.json",
+          "match": "path",
+          "field": "assets.3.file",
+          "details": {
+            "file": "code-atlas.png",
+            "usage": "Brand identification beside the corresponding article section."
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/development/link-digging-code.png",
+      "bytes": 1765318,
+      "sha256": "82dc9a1b3fd021e0d556d18bfaa192498e83d1d69a5409b938302e9a7e6b1724",
+      "evidence": [
+        {
+          "record": "public/assets/blog/development/sources.json",
+          "match": "path",
+          "field": "assets.0.file",
+          "details": {
+            "file": "link-digging-code.png",
+            "usage": "Cover of the development blog post and its card in the blog index."
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/development/openai.svg",
+      "bytes": 2455,
+      "sha256": "6e3ba71f36714eaa7ce57c89454ed4a36bc2e70ba124fd33ea28ce53a7991dcc",
+      "evidence": [
+        {
+          "record": "public/assets/blog/development/sources.json",
+          "match": "path",
+          "field": "assets.1.file",
+          "details": {
+            "file": "openai.svg",
+            "usage": "Brand identification beside the corresponding article section."
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/blog/development/sources.json",
+      "bytes": 1488,
+      "sha256": "3db881a5d63eb249c5e34c0ada1d0f77eba1c0ac027117ba95081813ab122d59",
+      "evidence": [
+        {
+          "record": "public/assets/blog/development/sources.json",
+          "match": "directory",
+          "details": {
+            "title": "How I develop these projects",
+            "source": "Image supplied and selected by Esteban for the development blog post.",
+            "notes": "Original Link attachment preserved without resampling. The card and framed hero use CSS cover crops. Link and The Legend of Zelda belong to Nintendo and their respective creators."
+          }
+        }
+      ],
+      "permissionStatus": "context-only-permission-not-established"
     },
     {
       "path": "public/assets/blog/mk64-v2/cover-owner.png",

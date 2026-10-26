@@ -1,0 +1,33 @@
+{
+  "title": "How I develop these projects",
+  "date": "2026-10-25",
+  "source": "Image supplied and selected by Esteban for the development blog post.",
+  "notes": "Original Link attachment preserved without resampling. The card and framed hero use CSS cover crops. Link and The Legend of Zelda belong to Nintendo and their respective creators.",
+  "assets": [
+    {
+      "file": "link-digging-code.png",
+      "dimensions": [
+        1200,
+        798
+      ],
+      "sha256": "82dc9a1b3fd021e0d556d18bfaa192498e83d1d69a5409b938302e9a7e6b1724",
+      "usage": "Cover of the development blog post and its card in the blog index."
+    },
+    {
+      "file": "openai.svg",
+      "sha256": "6e3ba71f36714eaa7ce57c89454ed4a36bc2e70ba124fd33ea28ce53a7991dcc",
+      "usage": "Brand identification beside the corresponding article section."
+    },
+    {
+      "file": "claude.svg",
+      "sha256": "36d216f45d3c8adb8c409f9f183c1656927b6abf2441482afc619f62e2a0e233",
+      "usage": "Brand identification beside the corresponding article section."
+    },
+    {
+      "file": "code-atlas.png",
+      "sha256": "d23803315a3c0399b58ffbe75e83911dd585564db0a6511e2ed73e28ec3ac119",
+      "usage": "Brand identification beside the corresponding article section."
+    }
+  ],
+  "brands": "OpenAI and Claude marks reused from existing Code Atlas provider artwork. Code Atlas icon reused from its web app. Marks identify the tools mentioned by the author; their respective owners retain their rights."
+}

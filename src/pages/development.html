@@ -11,7 +11,10 @@
     ><link rel="stylesheet" href="styles.css" /><link
       rel="stylesheet"
       href="forge-surface.css"
-    /><link rel="stylesheet" href="credits.css" /><script src="theme.js"></script
+    /><link rel="stylesheet" href="blog.css" /><link
+      rel="stylesheet"
+      href="development.css"
+    /><script src="theme.js"></script
     ><script src="page-transitions.js"></script
     ><link rel="stylesheet" href="page-transitions.css" /><link
       rel="stylesheet"
@@ -40,126 +43,249 @@
       sizes="180x180"
       href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png"
     /><link rel="manifest" href="/manifest.webmanifest?v=hub-20261014" /> </head
-  ><body class="forge-surface" data-section="info"
+  ><body class="forge-surface development-page" data-section="blog"
     ><!-- forge-header -->
-    <main class="credits-main" aria-labelledby="development-title">
-      <a href="index.html#info">← Back to Info</a>
+    <main class="development-main" aria-labelledby="development-title">
+      <a class="development-back" href="blog.html">← All Posts</a>
+      <div class="development-meta"
+        ><span class="blog-category">DEVELOPMENT</span
+        ><time datetime="2026-10-20">October 20, 2026</time
+        ><span class="blog-author"
+          ><img src="assets/brand/estebans-forge-icon.png" width="32" height="32" alt="" /><span
+            >EstebanPdN</span
+          ></span
+        ></div
+      >
       <article id="development-statement">
-        <p><em>(This text was entirely written by me)</em></p>
-        <h1 id="development-title">How I develop these projects</h1>
-        <p
-          >So, I use Codex and Claude a lot during development. They help me with all my research,
-          debugging, tests and documentation. They do write and modify a big chunk of the code.</p
+        <header class="development-heading"
+          ><h1 id="development-title">How I develop these projects</h1>
+          <figure class="development-cover forge-rim"
+            ><div class="development-cover-inner"
+              ><img
+                src="assets/blog/development/link-digging-code.png"
+                alt="Link digging into computer code"
+                width="1200"
+                height="798"
+                fetchpriority="high" /></div
+          ></figure>
+          <p class="development-authorship"><em>(This text was entirely written by me)</em></p>
+        </header>
+        <div class="development-intro development-copy"
+          ><p
+            >So, I use <strong>Codex and Claude</strong> a lot during development. They help me with
+            all my research, debugging, tests and documentation. They do write and modify a big
+            chunk of the code.</p
+          >
+          <p
+            >So here I want to explain how I use it, what I do myself, etc. For those who are
+            interested.</p
+          ></div
         >
-        <p
-          >So here I want to explain how I use it, what I do myself, etc. For those who are
-          interested.</p
-        >
-        <h2>Research and planning</h2>
-        <p
-          >Before I start a project, I research its code, every existing work, and technical stuff.
-          I use Codex and Claude Code to help investigate all this.</p
-        >
-        <p
-          >Then I try to see if project meets the limits of the hardware, which is usually the
-          Nintendo 3DS. All this helps me decide whether the project is doable and what problems I
-          will face.</p
-        >
-        <p>Then I create a roadmap, I decide the goals, the approach and order of the work, etc.</p>
-        <h2>Why I use Codex and Claude Code</h2>
-        <p
-          >I am a young developer, and I work on these projects on my own. I have studied computer
-          science for four years +. So I still have a lot to learn, and I want to keep improving my
-          skills.</p
-        >
-        <p
-          >Doing every task by hand feels like a step backward to me. I prefer to delegate repeated
-          work that AI can do as well or much better than me. I still need to understand the
-          changes, make decisions, and test the results.</p
-        >
-        <p
-          >To me, refusing these tools just because people don&#x27;t like them or just because
-          there is a lot of people that do slop out there, it would feel like writing programs by
-          hand on paper like back in the day, while everyone else uses computers. I would not do
-          that just to prove everyone that I am a &quot;real programmer.&quot;</p
-        >
-        <p
-          >Some tasks involve the same change across 20 or 30 files. I know how to do many of these
-          tasks by myself, but this can take hours. Codex and Claude Code can help me do it in
-          minutes...</p
-        >
-        <p
-          >They also help me check super large logs and memory dumps. These files have information
-          about bugs and crashes. Finding out the issue could take a lot of time, but they can find
-          it super fast for me.</p
-        >
-        <p
-          >And this saves time that I can spend improving the project or working on new projects.
-          Without this, I would just not have enough time, so I would not even start any of
-          these.</p
-        >
-        <p
-          >These projects are a way for me to learn and to allow me to bring back games I want to
-          play in a new way.</p
-        >
-        <h2>The work I do myself</h2>
-        <p
-          >Of course, I make the final decisions about the project lol. I check the bugs and
-          problems, tests stuff, etc. I also modify the code by hand to improve the structure and to
-          fix small things (usually visual things).</p
-        >
-        <p
-          >I make most of the graphics by hand. I do the pixel art with tools like as Photoshop (or
-          the ArtCraft Suite lol).</p
-        >
-        <p
-          >I usually don&#x27;t use AI-generated images, especially for pixel art, it looks awfull.
-          I rather do it myself.</p
-        >
-        <p
-          >I am pretty perfectionist, especially with visual details. I care about the UI, things
-          like spacing, colors, and how everything fits. I want the result to feel consistent and
-          look good, almost like an official product.</p
-        >
-        <h2>Code organization and documentation</h2>
-        <p
-          >I have a set of rules to organize the code, documents, and my Gits. I use these rules to
-          guide Codex and Claude Code.</p
-        >
-        <p
-          >I have them in
-          <a href="https://code-atlas.estebanpdn.chatgpt.site/" target="_blank" rel="noreferrer"
-            >Code Atlas</a
-          >. Check it out, it has material from a bunch of free coding books and my own
-          investigation of tools and more stuff I use to document, and improve my projects.</p
-        >
-        <h2>What I think about AI and quality</h2>
-        <p>Of course I don&#x27;t consider my ports &quot;AI slop.&quot;</p>
-        <p
-          >I think everyone knows how slop looks like, broken projects, generic UIs, bad
-          performance, no support at all, etc. There is a lot of this rn online, so I understand why
-          people are concerned about the future, now anyone &quot;codes&quot;.</p
-        >
-        <p
-          >But I try to put as much time as I can into research and documentation. The work
-          doesn&#x27;t end after Codex or Claude Code give me an answer.</p
-        >
-        <p
-          >My goal is always to publish something that works well and looks good. I also want to
-          keep fixing and improving it after release.</p
-        >
-        <p>These projects matter to me. I use them to learn, and I care about the result.</p>
-        <h2>Disclamer</h2>
-        <p
-          >You are more than welcome to disagree with me and my use of AI. You can also call this
-          method &quot;vibe coding&quot;, &quot;slop&quot;, or whatever you want.</p
-        >
-        <p
-          >But please avoid hate speech, personal attacks, or fights with other people over this.
-          You don&#x27;t have to agree but treat other people with respect. If you don&#x27;t like
-          these, just ignore them :)</p
-        >
-      </article>
-    </main></body
+        <section class="development-section" id="research-and-planning"
+          ><div class="development-copy"
+            ><h2>Research and planning</h2>
+            <p
+              >Before I start a project, I research its code, every existing work, and technical
+              stuff. I use <strong>Codex and Claude</strong> Code to help investigate all this.</p
+            >
+            <p
+              >Then I try to see if project meets the limits of the hardware, which is usually the
+              Nintendo 3DS. All this helps me decide whether the project is doable and what problems
+              I will face.</p
+            >
+            <p
+              >Then I create a roadmap, I decide the goals, the approach and order of the work,
+              etc.</p
+            ></div
+          >
+        </section>
+        <section class="development-section" id="why-i-use-codex-and-claude-code"
+          ><div class="development-copy"
+            ><h2>Why I use Codex and Claude Code</h2>
+            <p
+              >I am a young developer, and I work on these projects on my own. I have studied
+              computer science for four years +. So I still have a lot to learn, and I want to keep
+              improving my skills.</p
+            >
+            <p
+              >Doing every task by hand feels like a step backward to me. I prefer to delegate
+              repeated work that AI can do as well or much better than me.
+              <strong
+                >I still need to understand the changes, make decisions, and test the
+                results.</strong
+              ></p
+            >
+            <p
+              >To me, refusing these tools just because people don&#x27;t like them or just because
+              there is a lot of people that do slop out there, it would feel like writing programs
+              by hand on paper like back in the day, while everyone else uses computers. I would not
+              do that just to prove everyone that I am a &quot;real programmer.&quot;</p
+            >
+            <p
+              >Some tasks involve the same change across 20 or 30 files. I know how to do many of
+              these tasks by myself, but this can take hours. <strong>Codex and Claude</strong> Code
+              can help me do it in minutes...</p
+            >
+            <p
+              >They also help me check super large logs and memory dumps. These files have
+              information about bugs and crashes. Finding out the issue could take a lot of time,
+              but they can find it super fast for me.</p
+            >
+            <p
+              >And this saves time that I can spend improving the project or working on new
+              projects. Without this, I would just not have enough time, so I would not even start
+              any of these.</p
+            >
+            <p
+              >These projects are a way for me to learn and to allow me to bring back games I want
+              to play in a new way.</p
+            ></div
+          >
+          <aside
+            class="development-aside"
+            data-development-decoration
+            aria-label="AI tools mentioned in this section"
+            ><a
+              class="development-tool"
+              href="https://openai.com/codex/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="development-tool-inner"
+                ><span class="development-tool-mark development-mark-openai"
+                  ><img
+                    src="assets/blog/development/openai.svg"
+                    alt=""
+                    width="88"
+                    height="88"
+                    loading="lazy"
+                /></span>
+                <span class="development-tool-maker">OpenAI</span><strong>Codex</strong></span
+              ></a
+            ><a
+              class="development-tool"
+              href="https://claude.com/product/claude-code"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="development-tool-inner"
+                ><span class="development-tool-mark development-mark-claude"
+                  ><img
+                    src="assets/blog/development/claude.svg"
+                    alt=""
+                    width="88"
+                    height="88"
+                    loading="lazy"
+                /></span>
+                <span class="development-tool-maker">Anthropic</span
+                ><strong>Claude Code</strong></span
+              ></a
+            ></aside
+          >
+        </section>
+        <section class="development-section" id="the-work-i-do-myself"
+          ><div class="development-copy"
+            ><h2>The work I do myself</h2>
+            <p
+              >Of course, I make the final decisions about the project lol. I check the bugs and
+              problems, tests stuff, etc. I also modify the code by hand to improve the structure
+              and to fix small things (usually visual things).</p
+            >
+            <p
+              ><strong>I make most of the graphics by hand.</strong> I do the pixel art with tools
+              like as Photoshop (or the ArtCraft Suite lol).</p
+            >
+            <p
+              >I usually don&#x27;t use AI-generated images, especially for pixel art, it looks
+              awfull. I rather do it myself.</p
+            >
+            <p
+              >I am pretty perfectionist, especially with visual details. I care about the UI,
+              things like spacing, colors, and how everything fits. I want the result to feel
+              consistent and look good, almost like an official product.</p
+            ></div
+          >
+        </section>
+        <section class="development-section" id="code-organization-and-documentation"
+          ><div class="development-copy"
+            ><h2>Code organization and documentation</h2>
+            <p
+              >I have a set of rules to organize the code, documents, and my Gits. I use these rules
+              to guide <strong>Codex and Claude</strong> Code.</p
+            >
+            <p
+              >I have them in
+              <a href="https://code-atlas.estebanpdn.chatgpt.site/" target="_blank" rel="noreferrer"
+                >Code Atlas</a
+              >. Check it out, it has material from a bunch of free coding books and my own
+              investigation of tools and more stuff I use to document, and improve my projects.</p
+            ></div
+          >
+          <aside class="development-aside" data-development-decoration aria-label="Code Atlas"
+            ><a
+              class="development-tool"
+              href="https://code-atlas.estebanpdn.chatgpt.site/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="development-tool-inner"
+                ><span class="development-tool-mark development-mark-atlas"
+                  ><img
+                    src="assets/blog/development/code-atlas.png"
+                    alt=""
+                    width="88"
+                    height="88"
+                    loading="lazy"
+                /></span>
+                <span class="development-tool-maker">From the Forge</span
+                ><strong>Code Atlas</strong></span
+              ></a
+            ></aside
+          >
+        </section>
+        <section class="development-section" id="what-i-think-about-ai-and-quality"
+          ><div class="development-copy"
+            ><h2>What I think about AI and quality</h2>
+            <p>Of course I don&#x27;t consider my ports &quot;AI slop.&quot;</p>
+            <p
+              >I think everyone knows how slop looks like, broken projects, generic UIs, bad
+              performance, no support at all, etc. There is a lot of this rn online, so I understand
+              why people are concerned about the future, now anyone &quot;codes&quot;.</p
+            >
+            <p
+              >But I try to put as much time as I can into research and documentation. The work
+              doesn&#x27;t end after Codex or Claude Code give me an answer.</p
+            >
+            <div class="development-callout forge-rim"
+              ><p
+                >My goal is always to publish something that works well and looks good. I also want
+                to keep fixing and improving it after release.</p
+              ></div
+            >
+            <p
+              ><strong>These projects matter to me.</strong> I use them to learn, and I care about
+              the result.</p
+            ></div
+          >
+        </section>
+        <section class="development-section" id="disclamer"
+          ><div class="development-copy"
+            ><h2>Disclamer</h2>
+            <p
+              >You are more than welcome to disagree with me and my use of AI. You can also call
+              this method &quot;vibe coding&quot;, &quot;slop&quot;, or whatever you want.</p
+            >
+            <p
+              >But please avoid hate speech, personal attacks, or fights with other people over
+              this. You don&#x27;t have to agree but treat other people with respect. If you
+              don&#x27;t like these, just ignore them :)</p
+            ></div
+          >
+        </section>
+      </article></main
+    ><footer class="blog-footer"
+      ><span>esteban’s <b>forge.</b></span
+      ><span>A second life for the classics.</span><a href="credits.html">Credits</a></footer
+    ></body
   ></html
 >

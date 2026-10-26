@@ -2,7 +2,7 @@
 
 This register is generated from `public/assets/` and its source manifests by `npm run provenance`. It includes every media, font, manifest, and JSON file in that directory, with its SHA-256 digest, available evidence, and permission status based on that evidence.
 
-Inventoried files: **460**.
+Inventoried files: **465**.
 
 ## Understanding the status
 
@@ -51,6 +51,11 @@ Inventoried files: **460**.
 | `public/assets/artwork/the-minish-cap.png` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `1ecebdd65e36bbe7aa9ad9677776dfc5f1e5736adc745ccd5ac332ef3d425f20` |
 | `public/assets/audio/05-terminal.mp3` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `b24ebb13a6a1e8645d4f082a1f4ae80641bcca3a20967ef0b8ff0d1d978136dc` |
 | `public/assets/audio/forge-entry.mp3` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `e6e820db38b51ad9b9e07262843b2d9ac9f8ae2da79f8f6371e9b10a4a75b7d8` |
+| `public/assets/blog/development/claude.svg` | Brand identification beside the corresponding article section. | A source or provenance record exists, but no reuse license was found for this file. | `36d216f45d3c8adb8c409f9f183c1656927b6abf2441482afc619f62e2a0e233` |
+| `public/assets/blog/development/code-atlas.png` | Brand identification beside the corresponding article section. | A source or provenance record exists, but no reuse license was found for this file. | `d23803315a3c0399b58ffbe75e83911dd585564db0a6511e2ed73e28ec3ac119` |
+| `public/assets/blog/development/link-digging-code.png` | Cover of the development blog post and its card in the blog index. | A source or provenance record exists, but no reuse license was found for this file. | `82dc9a1b3fd021e0d556d18bfaa192498e83d1d69a5409b938302e9a7e6b1724` |
+| `public/assets/blog/development/openai.svg` | Brand identification beside the corresponding article section. | A source or provenance record exists, but no reuse license was found for this file. | `6e3ba71f36714eaa7ce57c89454ed4a36bc2e70ba124fd33ea28ce53a7991dcc` |
+| `public/assets/blog/development/sources.json` | Image supplied and selected by Esteban for the development blog post. | Only project context is recorded; no file-specific source or permission is confirmed. | `3db881a5d63eb249c5e34c0ada1d0f77eba1c0ac027117ba95081813ab122d59` |
 | `public/assets/blog/mk64-v2/cover-owner.png` | No individual source is identified for this file in the records. | A source or provenance record exists, but no reuse license was found for this file. | `ac2e0f56c7e3891a273b41fd93bf0a7727d020876d8f1f139ec189904e034eb2` |
 | `public/assets/blog/mk64-v2/epic-banner.webp` | No individual source is identified for this file in the records. | A source or provenance record exists, but no reuse license was found for this file. | `92ad46ce45e8828543330be675ddfc42929f8949a66ca5d03e4972e95593591e` |
 | `public/assets/blog/mk64-v2/extractor-window.webp` | No individual source is identified for this file in the records. | A source or provenance record exists, but no reuse license was found for this file. | `a5c83e7cd11f9ac4cfe0e7d2deaee8a692309f35d52adc004817d2a2e7a4200b` |

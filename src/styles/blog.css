@@ -844,3 +844,27 @@ a:focus-visible {
   --home-rim-shadow: #0006;
   --home-rim-inset: #17171fd9;
 }
+
+.blog-feature + .blog-feature {
+  margin-top: 28px;
+}
+.blog-development .blog-feature-art > img {
+  object-fit: cover;
+  object-position: center;
+}
+.development-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+  margin: 0 0 28px;
+}
+.development-cover {
+  margin: 0 0 32px;
+}
+.development-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
