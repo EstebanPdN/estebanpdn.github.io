@@ -75,10 +75,7 @@
 }
 .development-section {
   counter-increment: development-section;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 224px;
-  gap: 48px;
-  align-items: start;
+  display: block;
   padding: 42px 0;
   border-top: 1px solid var(--forge-line);
   scroll-margin-top: calc(var(--forge-header-height) + 30px);
@@ -102,13 +99,17 @@
   color: var(--forge-muted);
 }
 .development-aside {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
+  margin-top: 26px;
   position: static;
 }
 /* Compact tool links echo the Collection's project selector buttons. */
 .development-main .development-tool {
   display: block;
+  flex: 0 1 224px;
+  max-width: 100%;
   color: var(--forge-ink);
   text-decoration: none;
   border-radius: 18px;
@@ -208,12 +209,6 @@
   --home-rim-shadow: #0006;
   --home-rim-inset: #17171fd9;
 }
-@media (max-width: 1100px) {
-  .development-section {
-    grid-template-columns: minmax(0, 1fr) 184px;
-    gap: 28px;
-  }
-}
 @media (max-width: 760px) {
   .development-main {
     padding: 34px 24px 55px;
@@ -229,14 +224,14 @@
     object-position: center;
   }
   .development-section {
-    grid-template-columns: 1fr;
-    gap: 26px;
     padding: 34px 0;
   }
   .development-aside {
-    position: static;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
+  }
+  .development-main .development-tool {
+    flex-basis: calc(50% - 7px);
+    min-width: 136px;
   }
   .development-tool-inner {
     grid-template-columns: 40px minmax(0, 1fr);
