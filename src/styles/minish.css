@@ -136,17 +136,6 @@ summary:focus-visible {
 .skip-link:focus {
   top: 10px;
 }
-.forge-strip {
-  min-height: 70px;
-  padding: 12px max(28px, calc((100vw - 1260px) / 2));
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  background: #243d1def;
-  color: #efe9c8;
-  border-bottom: 3px solid #adc15b66;
-  box-shadow: 0 3px 10px #18301a35;
-}
 .forge-mark {
   display: flex;
   align-items: center;
@@ -163,21 +152,6 @@ summary:focus-visible {
 }
 .forge-mark b {
   font-weight: 700;
-}
-.strip-edition {
-  margin: auto;
-  font-size: 11px;
-  letter-spacing: 2.4px;
-  color: #bac696;
-}
-.forge-strip nav {
-  display: flex;
-  gap: 25px;
-  font-size: 15px;
-  font-weight: 600;
-}
-.forge-strip nav a:hover {
-  color: #fff;
 }
 .theme-toggle {
   border: 1px solid #b8ca8266;
@@ -568,12 +542,6 @@ summary:focus-visible {
   font: 500 18px var(--body);
   color: var(--ink);
 }
-.hardware-spread {
-  display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  gap: 30px;
-  align-items: center;
-}
 .gallery-selector {
   border-right: 1px solid #9d7a334f;
   padding-right: 25px;
@@ -802,99 +770,11 @@ summary:focus-visible {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.world-spread {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  position: relative;
-  margin: 75px 0 70px;
-}
-.forest-window {
-  position: relative;
-  transform: rotate(-2deg);
-  border: 9px solid #b59444;
-  outline: 2px solid #3b3016;
-  box-shadow: 0 10px 20px #15291a6b;
-}
-.forest-window > img {
-  width: 100%;
-  aspect-ratio: 1564/2046;
-  object-fit: cover;
-}
-.forest-window figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 25px 20px 13px;
-  background: linear-gradient(transparent, #19382bea);
-  color: #f1efbd;
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-.world-paper {
-  margin: 0 0 0 -24px;
-  transform: rotate(1deg);
-  z-index: 1;
-}
-.world-paper .folio-inner {
-  padding: 44px 44px 38px;
-}
-.world-paper .page-leaf {
-  position: absolute;
-  right: 28px;
-  top: 23px;
-  width: 53px;
-  height: 53px;
-}
 .small-chapter {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.8px;
   color: #88722f;
-}
-.world-paper h2 {
-  font: 400 clamp(37px, 3.5vw, 49px)/1.16 var(--display);
-  color: var(--green);
-  margin: 25px 0;
-}
-.world-paper h2 em {
-  font-size: 0.86em;
-  color: #9b6b24;
-  font-style: normal;
-}
-.world-opening {
-  font: 400 22px/1.5 var(--display);
-  margin-bottom: 19px;
-}
-.world-paper p:not(.small-chapter):not(.world-opening) {
-  font-size: 19px;
-  line-height: 1.5;
-}
-.kinstone-note {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 17px;
-  margin: 29px -13px 26px;
-  padding: 18px 14px;
-  background: #fffbd87d;
-  border-block: 1px solid #b9984a77;
-}
-.kinstone-note > img {
-  width: 84px;
-  flex-shrink: 0;
-  transform: rotate(-10deg);
-}
-.kinstone-note h3 {
-  font: 400 20px/1.2 var(--display);
-  color: var(--green);
-  margin-bottom: 7px;
-}
-.kinstone-note p {
-  font-size: 16px !important;
-  line-height: 1.4 !important;
 }
 .ink-link {
   font-size: 16px;
@@ -1113,9 +993,6 @@ summary:focus-visible {
   background-image:
     linear-gradient(#d7c28f56, #dbc69360), url('assets/minish/manual-paper-4x.webp');
 }
-:root[data-theme='dark'] .forge-strip {
-  background: #172b1b;
-}
 :root[data-theme='dark'] .contents {
   background: #fff9d236;
 }
@@ -1283,10 +1160,6 @@ body:has(.lightbox[open]) {
   .chapter-aside {
     display: none;
   }
-  .hardware-spread {
-    grid-template-columns: 125px minmax(0, 1fr);
-    gap: 18px;
-  }
   .gallery-selector {
     padding-right: 14px;
   }
@@ -1297,36 +1170,6 @@ body:has(.lightbox[open]) {
   .gallery-annotation .preview-note {
     max-width: 145px;
     padding-left: 15px;
-  }
-  .world-paper .folio-inner {
-    padding: 35px 30px 29px;
-  }
-  .world-paper h2 {
-    font-size: 38px;
-  }
-  .world-paper p:not(.small-chapter):not(.world-opening) {
-    font-size: 18px;
-  }
-  .world-opening {
-    font-size: 21px;
-  }
-  .world-paper .page-leaf {
-    right: 15px;
-    top: 15px;
-    width: 45px;
-    height: 45px;
-  }
-  .world-paper .small-chapter {
-    max-width: 160px;
-    font-size: 10px;
-  }
-  .kinstone-note {
-    margin: 22px -5px;
-    padding: 13px 10px;
-    gap: 12px;
-  }
-  .kinstone-note > img {
-    width: 62px;
   }
   .port-spread {
     gap: 32px;
@@ -1357,19 +1200,6 @@ body:has(.lightbox[open]) {
 @media (max-width: 760px) {
   html {
     scroll-padding-top: 14px;
-  }
-  .forge-strip {
-    min-height: 64px;
-    padding: 12px 20px;
-    gap: 17px;
-  }
-  .strip-edition {
-    display: none;
-  }
-  .forge-strip nav {
-    margin-left: auto;
-    gap: 15px;
-    font-size: 14px;
   }
   .forge-mark > span {
     font-size: 18px;
@@ -1521,11 +1351,6 @@ body:has(.lightbox[open]) {
     margin-top: 7px;
     max-width: 350px;
   }
-  .hardware-spread {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
   .hardware-plate {
     order: 0;
     width: calc(100% + 32px);
@@ -1602,63 +1427,6 @@ body:has(.lightbox[open]) {
   }
   .folio-bottom > span {
     display: none;
-  }
-  .world-spread {
-    grid-template-columns: 1fr;
-    margin: 45px 9px 38px;
-    gap: 0;
-  }
-  .forest-window {
-    width: 89%;
-    justify-self: start;
-    border-width: 7px;
-    transform: rotate(-2deg);
-  }
-  .forest-window > img {
-    aspect-ratio: 1/1.12;
-    object-position: 50% 76%;
-  }
-  .forest-window figcaption {
-    font-size: 10px;
-    bottom: auto;
-    top: 0;
-    padding: 13px 10px 24px;
-    background: linear-gradient(#173722aa, transparent);
-  }
-  .world-paper {
-    width: 92%;
-    margin: -40px 0 0;
-    justify-self: end;
-    transform: rotate(1deg);
-  }
-  .world-paper .folio-inner {
-    padding: 32px 27px 30px;
-  }
-  .world-paper h2 {
-    font-size: 39px;
-    margin: 20px 0;
-  }
-  .world-paper .small-chapter {
-    font-size: 10px;
-    max-width: 180px;
-  }
-  .world-paper .page-leaf {
-    width: 42px;
-    height: 42px;
-    right: 18px;
-    top: 19px;
-  }
-  .world-paper p:not(.small-chapter):not(.world-opening) {
-    font-size: 18px;
-  }
-  .world-opening {
-    font-size: 21px;
-  }
-  .kinstone-note > img {
-    width: 70px;
-  }
-  .kinstone-note {
-    margin: 24px -7px;
   }
   .ink-link {
     font-size: 16px;
@@ -1763,25 +1531,12 @@ body:has(.lightbox[open]) {
   }
 }
 @media (max-width: 480px) {
-  .forge-strip {
-    padding: 11px 15px;
-    gap: 11px;
-  }
-  .forge-strip nav {
-    gap: 13px;
-  }
-  .forge-strip nav a {
-    font-size: 13px;
-  }
   .forge-mark > span {
     font-size: 17px;
   }
   .forge-mark img {
     width: 24px;
     height: 24px;
-  }
-  .forge-strip .forge-mark {
-    gap: 6px;
   }
   .minish-journal {
     width: calc(100% - 16px);
@@ -1934,9 +1689,6 @@ body:has(.lightbox[open]) {
     width: calc(100% + 24px);
     margin-inline: -12px;
   }
-  .hardware-spread {
-    gap: 22px;
-  }
   .gallery-annotation {
     padding: 13px 10px;
     gap: 10px;
@@ -1949,34 +1701,6 @@ body:has(.lightbox[open]) {
   }
   .gallery-annotation .preview-note {
     padding-left: 0;
-  }
-  .world-spread {
-    margin-inline: 5px;
-  }
-  .world-paper {
-    width: 95%;
-  }
-  .forest-window {
-    width: 94%;
-  }
-  .world-paper .folio-inner {
-    padding: 30px 23px 29px;
-  }
-  .world-paper h2 {
-    font-size: 35px;
-  }
-  .world-opening {
-    font-size: 19px;
-  }
-  .kinstone-note {
-    gap: 12px;
-    padding: 13px 10px;
-  }
-  .kinstone-note > img {
-    width: 53px;
-  }
-  .kinstone-note h3 {
-    font-size: 20px;
   }
   .port-spread .companion-notes > p {
     font-size: 19px;
@@ -3329,8 +3053,7 @@ body {
   .gallery-intro {
     font-size: 20px;
   }
-  .family-copy h3,
-  .world-paper h2 {
+  .family-copy h3 {
     font-size: 32px;
   }
   .family-copy > p:not(.small-chapter),

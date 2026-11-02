@@ -978,18 +978,6 @@ hr {
   margin-bottom: 30px;
   font-size: 10px;
 }
-.key-combo {
-  margin: 12px 0 25px;
-  white-space: nowrap;
-}
-.key-combo kbd {
-  display: inline-block;
-  padding: 6px 10px;
-  border: 1px solid #a5b99d;
-  font-size: 19px;
-  color: white;
-  box-shadow: 2px 2px #687463;
-}
 .terminal-cursor {
   animation: blink 1.3s steps(1) infinite;
 }
@@ -1501,9 +1489,6 @@ hr {
   }
   .diagnostic-screen > p:first-child {
     margin-bottom: 18px;
-  }
-  .key-combo {
-    margin: 12px 0 20px;
   }
   .support-copy h2 {
     font-size: 27px;
@@ -2069,11 +2054,6 @@ hr {
   font:
     10px/1.2 'Courier New',
     monospace;
-}
-.terminal-window-marks {
-  margin-left: auto;
-  white-space: nowrap;
-  color: #ddd;
 }
 .terminal-body {
   padding: 20px 15px 22px;

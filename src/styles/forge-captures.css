@@ -14,15 +14,6 @@
   line-height: 1.15;
   margin: 10px 0 22px;
 }
-.capture-story {
-  columns: 2;
-  column-gap: 36px;
-}
-.capture-story p {
-  margin: 0 0 18px;
-  break-inside: avoid;
-  line-height: 1.65;
-}
 .capture-source {
   font-size: 13px;
   line-height: 1.6;
@@ -94,9 +85,6 @@
 @media (max-width: 650px) {
   .capture-inner {
     padding: 28px 18px;
-  }
-  .capture-story {
-    columns: 1;
   }
   .capture-grid {
     grid-template-columns: 1fr;
@@ -742,10 +730,6 @@ body[data-game='starwing'] #gallery .gallery-thumbs.scene-thumbs > .gallery-thum
     gap: 10px;
   }
   #gallery-lightbox .lightbox-controls > p {
-    font-size: 11px;
-  }
-  #gallery-lightbox .lightbox-description {
-    padding: 12px 0 0;
     font-size: 11px;
   }
 }

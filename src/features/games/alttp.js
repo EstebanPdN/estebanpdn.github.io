@@ -64,19 +64,19 @@
     map: [
       'THE LOWER SCREEN',
       'Never lose your way.',
-      'Follow your position on a live overworld map, or check the floor you are exploring inside a dungeon. Hyrule stays close at hand.',
+      'Follow your position on a live overworld map, or check the floor you are exploring inside a dungeon, each with its own colors. Hyrule stays close at hand.',
       'Overworld map · Dungeon floors · Gear',
     ],
     items: [
       'EQUIPMENT & TOUCH',
       'The right tool. Within reach.',
-      'Select an item on the lower touchscreen and keep track of your equipment without covering the adventure on the upper display.',
-      'Touch item selection · Equipment overview',
+      'Select an item on the lower touchscreen and keep track of your equipment without covering the adventure on the upper display. L and R can cycle items too.',
+      'Touch item grid · Equipment page · L/R switching',
     ],
     screen: [
       'YOUR OWN PERSPECTIVE',
       'A little more room to explore.',
-      'Choose Wide, Original or Stretch in Settings → Screen. Each ROM profile remembers its own display preferences and saves.',
+      'Choose Wide, Original or Stretch, plus camera, zoom and top HUD, in Settings → Screen. Each ROM profile remembers its own display preferences and saves.',
       '400 × 240 Wide · 256 × 224 Original · Stretch',
     ],
   };
@@ -131,6 +131,32 @@
         document.getElementById('mode-title').textContent = modes[button.dataset.mode][0];
         document.getElementById('mode-copy').textContent = modes[button.dataset.mode][1];
       });
+    }),
+  );
+
+  // Feature clips load and play only while they are on screen.
+  const clips = [...document.querySelectorAll('[data-in-view-video]')];
+  if (clips.length && 'IntersectionObserver' in window && !reduced.matches) {
+    const clipObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(({ target, isIntersecting }) => {
+          if (isIntersecting) target.play().catch(() => {});
+          else target.pause();
+        });
+      },
+      { threshold: 0.35 },
+    );
+    clips.forEach((clip) => clipObserver.observe(clip));
+  } else clips.forEach((clip) => (clip.controls = true));
+
+  const languageHome = document.getElementById('language-home');
+  document.querySelectorAll('[data-language]').forEach((button) =>
+    button.addEventListener('click', () => {
+      document
+        .querySelectorAll('[data-language]')
+        .forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+      languageHome.src = `assets/alttp/languages/home-${button.dataset.language}.webp`;
+      languageHome.alt = `The startup home menu in ${button.dataset.languageName}`;
     }),
   );
 

@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Rebuild the A Link to the Past page for v4.0 with current captures, gameplay clips, the startup home, languages, mods, randomizer and all fifteen quality-of-life options.
+- Replace the A Link to the Past and Mario Kart 64 homepage clips with higher-quality recordings of their current versions.
+- Hold the homepage console and backdrop back until they are ready, and remove the old composite screen image shown during slow loads.
+- Remove unused images, videos, fonts, scripts, stylesheets and CSS rules.
+- Replace the expired Discord invitation across the site.
+
 - Add the Blog navigation, Mario Kart 64 v2.0 article, gameplay images and texture comparisons.
 - Match the approved Forge headings, dotted backgrounds, gray blog cards and dark credits page.
 - Update public port versions and completion notes, and add live Worms 3D progress with refresh tooling.

@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-10-23",
+  "verified_at": "2026-11-02",
   "scope": "Public releases of EstebanPdN ports; local candidates and upstream versions are excluded.",
   "ports": {
     "minish": {
@@ -16,8 +16,12 @@
     "alttp": {
       "page": "a-link-to-the-past.html",
       "stable": {
-        "version": "v3.2",
-        "url": "https://github.com/EstebanPdN/zelda-alttp-3ds/releases/tag/v3.2"
+        "version": "v4.0",
+        "url": "https://github.com/EstebanPdN/zelda-alttp-3ds/releases/tag/v4.0"
+      },
+      "experimental": {
+        "version": "v4.1-E4",
+        "url": "https://github.com/EstebanPdN/zelda-alttp-3ds/releases/tag/v4.1-E4"
       }
     },
     "doom": {

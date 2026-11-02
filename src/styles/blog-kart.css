@@ -480,10 +480,6 @@ body[data-post-theme='kart'] {
 [data-post-theme='kart'] .blog-media-pair .blog-media {
   margin-bottom: 22px;
 }
-[data-post-theme='kart'] .blog-performance-note .blog-release-mark {
-  font-size: clamp(26px, 4vw, 40px);
-  white-space: nowrap;
-}
 @media (max-width: 600px) {
   [data-post-theme='kart'] .blog-media-pair {
     grid-template-columns: 1fr;
@@ -572,12 +568,6 @@ body[data-post-theme='kart'] {
 [data-post-theme='kart'] .kart-perf h3 {
   margin: 0 0 10px;
   font-size: clamp(25px, 2.5vw, 32px);
-}
-[data-post-theme='kart'] .kart-perf-intro {
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0 0 22px;
-  color: #686071;
 }
 [data-post-theme='kart'] .kart-perf-stats {
   display: grid;
@@ -746,12 +736,6 @@ body[data-post-theme='kart'] {
   height: 12px;
   display: block;
 }
-[data-post-theme='kart'] .kart-perf-budget-key::before {
-  content: '';
-  height: 18px;
-  border-left: 2px dashed #514a63;
-  margin-right: 2px;
-}
 [data-post-theme='kart'] .kart-perf figcaption {
   font-size: 12px;
   line-height: 1.7;
@@ -775,17 +759,10 @@ body[data-post-theme='kart'] {
 :root[data-theme='dark'] [data-post-theme='kart'] .kart-perf-stats > div:nth-child(3) {
   border-top-color: var(--perf-audio);
 }
-:root[data-theme='dark']
-  [data-post-theme='kart']
-  .kart-perf
-  :is(.kart-perf-intro, thead, tbody small, figcaption) {
-  color: #c8bdce;
-}
 :root[data-theme='dark'] [data-post-theme='kart'] .kart-perf-track {
   background: #ffffff08;
 }
-:root[data-theme='dark'] [data-post-theme='kart'] .kart-perf-track::after,
-:root[data-theme='dark'] [data-post-theme='kart'] .kart-perf-budget-key::before {
+:root[data-theme='dark'] [data-post-theme='kart'] .kart-perf-track::after {
   border-color: #fff0bb;
 }
 :root[data-theme='dark'] [data-post-theme='kart'] .kart-perf-track > .kart-perf-session {
@@ -933,13 +910,6 @@ body[data-post-theme='kart'] {
   }
 }
 /* Paired version rows distinguish recalled estimates from recorded profiling. */
-[data-post-theme='kart'] .kart-perf-stat-label {
-  margin: 0 0 10px;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: var(--blog-muted);
-}
 [data-post-theme='kart'] .kart-perf-table th:last-child {
   width: 104px;
 }
@@ -960,35 +930,8 @@ body[data-post-theme='kart'] {
   font-weight: 800;
   color: var(--blog-muted);
 }
-[data-post-theme='kart'] .kart-perf-table .kart-perf-version {
-  display: table;
-  padding: 2px 5px;
-  border: 1px solid var(--blog-line);
-  margin-top: 5px;
-}
-[data-post-theme='kart'] .kart-perf-version.is-estimate {
-  border-style: dashed !important;
-}
-[data-post-theme='kart'] .kart-perf-pair-end > * {
-  padding-bottom: 22px !important;
-}
-[data-post-theme='kart'] .kart-perf-pair-start {
-  border-top: 1px solid var(--blog-line);
-}
-[data-post-theme='kart'] .kart-perf-final {
-  border-top: 2px solid var(--blog-line);
-}
 [data-post-theme='kart'] .kart-perf-track > .kart-perf-session {
   background: repeating-linear-gradient(135deg, #78ad7280 0 7px, #78ad7250 7px 14px);
-}
-[data-post-theme='kart'] .kart-perf-track > .kart-perf-goal {
-  background: repeating-linear-gradient(
-    135deg,
-    var(--perf-logic) 0 8px,
-    var(--perf-audio) 8px 16px,
-    var(--perf-render) 16px 24px
-  );
-  border: 1px solid #514a6366;
 }
 [data-post-theme='kart'] .kart-perf-stats > div:nth-child(1) {
   border-top-color: var(--perf-render);
@@ -1023,12 +966,6 @@ body[data-post-theme='kart'] {
   }
   [data-post-theme='kart'] .kart-perf-table .kart-perf-total small {
     font-size: 10px;
-  }
-  [data-post-theme='kart'] .kart-perf-pair-start {
-    padding-top: 14px;
-  }
-  [data-post-theme='kart'] .kart-perf-pair-end > * {
-    padding-bottom: 4px !important;
   }
 }
 /* Lead with the owner's Old 3DS play test, then explain the rendering work. */

@@ -245,7 +245,8 @@ def check_site(directory):
             require(all(node.attrs.get("data-gallery-feature") in scenes for node in feature_links),
                     f"{filename}: a feature card references a missing gallery scene")
             require("preview" in page.source.casefold(), f"{filename}: legacy preview imagery needs its preview label")
-            require(page.with_id("capture-journal") is not None, f"{filename}: completed port needs its gameplay journal")
+            journal = "new" if key == "alttp" else "capture-journal"
+            require(page.with_id(journal) is not None, f"{filename}: completed port needs its gameplay section")
         elif key == "viper":
             require(page.with_id("viper-gallery") is not None and len([node for node in page.nodes if node.has_class("vb-scene")]) == 7, "Red Viper Color needs its menu preview and six captured scenes")
             require("design preview" in page.root.text().casefold() and "azahar" in page.root.text().casefold(), "Red Viper Color must distinguish menu designs from Azahar captures")

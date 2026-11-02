@@ -55,7 +55,7 @@
     pending = true;
     try {
       const response = await fetch(
-        'https://discord.com/api/v10/invites/zy8BqH5ss?with_counts=true&with_expiration=true',
+        'https://discord.com/api/v10/invites/BjbzfRYpV?with_counts=true&with_expiration=true',
         { cache: 'no-store' },
       );
       if (!response.ok) throw new Error('Community unavailable');

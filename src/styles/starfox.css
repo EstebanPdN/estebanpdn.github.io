@@ -1030,11 +1030,6 @@ code {
   stroke: currentColor;
   stroke-width: 1.5;
 }
-.lightbox-description {
-  padding: 0 24px 20px;
-  font-size: 12px;
-  color: #c7d6df;
-}
 @media (min-width: 1600px) {
   .sf-page {
     max-width: 1530px;

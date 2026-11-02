@@ -6,18 +6,18 @@ const consoleMedia = {
     description: 'One more lap.\nThis time, on two screens.',
     logo: ['logos/mario-kart-64.png', 667, 374, '40 75 610 270'],
     top: [
-      'captures/mario-kart-64/06-koopa-troopa-beach.mp4',
+      'captures/mario-kart-64/v2-luigi-raceway.mp4',
       720,
       240,
       '0 0 400 240',
-      'captures/mario-kart-64/06-koopa-troopa-beach.webp',
+      'captures/mario-kart-64/v2-luigi-raceway.webp',
     ],
     bottom: [
-      'captures/mario-kart-64/06-koopa-troopa-beach.mp4',
+      'captures/mario-kart-64/v2-luigi-raceway.mp4',
       720,
       240,
       '400 0 320 240',
-      'captures/mario-kart-64/06-koopa-troopa-beach.webp',
+      'captures/mario-kart-64/v2-luigi-raceway.webp',
     ],
   },
   minish: {
@@ -46,18 +46,18 @@ const consoleMedia = {
     description: 'Two worlds.\nAn adventure worth revisiting.',
     logo: ['logos/a-link-to-the-past.png', 1200, 1066, '0 0 1200 1066'],
     top: [
-      'captures/a-link-to-the-past/12-village-outcasts.mp4',
+      'captures/a-link-to-the-past/v4-light-world.mp4',
       720,
       240,
       '0 0 400 240',
-      'captures/a-link-to-the-past/12-village-outcasts.webp',
+      'captures/a-link-to-the-past/v4-light-world.webp',
     ],
     bottom: [
-      'captures/a-link-to-the-past/12-village-outcasts.mp4',
+      'captures/a-link-to-the-past/v4-light-world.mp4',
       720,
       240,
       '400 0 320 240',
-      'captures/a-link-to-the-past/12-village-outcasts.webp',
+      'captures/a-link-to-the-past/v4-light-world.webp',
     ],
   },
   starwing: {
@@ -622,6 +622,11 @@ document.querySelector('.collection-link').addEventListener('click', (event) => 
 const mediaFiles = new Set(Object.keys(consoleMedia).flatMap(projectFiles));
 mediaFiles.forEach(readyImage);
 showConsoleProject('kart', { animate: false });
+// The hero stays hidden until the console, its screens and the backdrop can appear together.
+Promise.allSettled([
+  readyImage('devices/new-nintendo-3ds-xl-neutral.webp'),
+  readyProject('kart'),
+]).then(() => document.documentElement.classList.add('stage-ready'));
 
 // Exit first, then enter. A single worker coalesces repeated clicks to the latest destination.
 const pageStage = document.getElementById('dual-pages');

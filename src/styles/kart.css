@@ -2191,9 +2191,6 @@ kbd {
 .cup-tab[aria-selected='true']:hover {
   background: #fff4a9;
 }
-.course-panel {
-  background: none;
-}
 .course-select {
   --cup-paper: #dfedc8;
   background: conic-gradient(

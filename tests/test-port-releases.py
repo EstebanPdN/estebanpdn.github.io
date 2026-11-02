@@ -16,7 +16,7 @@ class PortReleaseTests(unittest.TestCase):
         self.assertIn('/releases/tag/v2.2-E1', html)
 
     def test_completion_does_not_hide_public_version(self):
-        self.assertEqual(render_release_metadata('<!-- port-status: alttp completed -->', ROOT), 'Completed · v3.2')
+        self.assertEqual(render_release_metadata('<!-- port-status: alttp completed -->', ROOT), 'Completed · v4.0')
 
     def test_unreleased_ports_do_not_borrow_upstream_versions(self):
         for project in ('sm64ds', 'dusklight', 'viper'):
