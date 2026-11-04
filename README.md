@@ -2,6 +2,8 @@
 
 EstebanPdN’s static Nintendo 3DS project portfolio. [Visit the site](https://estebanpdn.github.io/).
 
+[![Support EstebanPdN on Ko-fi](public/assets/brand/kofi.svg)](https://ko-fi.com/estebanpdn)
+
 This project was developed with the help of [OpenAI Codex](https://openai.com/codex/) and [Claude Code](https://claude.com/product/claude-code). Learn more about the development process [here](AI_DEVELOPMENT.md).
 
 [Read the Mario Kart 64 v2.0 post](https://estebanpdn.github.io/blog-mario-kart-64-v2-0.html).
