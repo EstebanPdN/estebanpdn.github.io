@@ -28,8 +28,8 @@
   gap: 20px;
 }
 #dual .development-mosaic {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: 320px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 320px);
   gap: 20px;
 }
 #dual .game-channel {
@@ -266,6 +266,21 @@
   --card-ink: #413928;
   --card-muted: #695b48;
   --card-art-position: 50% 36%;
+}
+#dual .game-worms {
+  --card-base: #d9e9f6;
+  --card-ink: #1f3d5c;
+  --card-muted: #4b6680;
+  --card-art-position: 50% 40%;
+}
+[data-theme='dark'] #dual .game-worms {
+  --card-base: #18324f;
+  --card-ink: #eaf4ff;
+  --card-muted: #b9cfe6;
+}
+#dual .game-worms .channel-logo {
+  width: 120px;
+  height: 60px;
 }
 #dual .game-starwing {
   --card-base: #dce9ed;
@@ -659,9 +674,4 @@
 /* A released fifth port keeps the same full-width shelf treatment as GitHub. */
 #dual .released-mosaic .game-starwing {
   grid-column: 1 / -1;
-}
-@media (max-width: 1200px) {
-  #dual .development-mosaic .game-viper {
-    grid-column: 1 / -1;
-  }
 }

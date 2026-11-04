@@ -23,6 +23,7 @@ PROJECTS = {
     "dusklight": ("dusklight.html", 10, None),
     "sm64ds": ("super-mario-64-ds.html", 35, None),
     "viper": ("red-viper-color.html", 75, None),
+    "worms": ("worms-3d.html", 50, None),
 }
 
 
@@ -145,8 +146,8 @@ def check_site(directory):
     require(index is not None, "Missing index.html")
     if index:
         tiles = [node for node in index.nodes if node.has_class("game-channel")]
-        expected_tiles = ["minish", "doom", "alttp", "kart", "starwing", "sm64ds", "dusklight", "viper"]
-        require(len(tiles) == 8, f"Collection must contain exactly eight tiles, found {len(tiles)}")
+        expected_tiles = ["minish", "doom", "alttp", "kart", "starwing", "sm64ds", "dusklight", "viper", "worms"]
+        require(len(tiles) == 9, f"Collection must contain exactly nine tiles, found {len(tiles)}")
         for group_class, keys, title_id, title in (
             ("released-mosaic", expected_tiles[:5], "library-title", "Released Ports"),
             ("development-mosaic", expected_tiles[5:], "development-library-title", "Ports in Development"),
@@ -165,16 +166,16 @@ def check_site(directory):
             require(any(node.has_class("channel-wallpaper") for node in tile.all()), f"Collection {key}: original wallpaper missing")
             require(any(node.has_class("channel-logo") for node in tile.all()), f"Collection {key}: original logo missing")
             asset_name = "starwing" if key == "starwing" else filename.removesuffix(".html")
-            artwork = {"sm64ds": "assets/mario-ds/collection-ds-scene.jpg", "dusklight": "assets/dusklight/collection-amber-twilight.webp", "viper": "assets/red-viper/virtual-boy-tile.png"}.get(key, f"assets/artwork/{asset_name}.png")
+            artwork = {"sm64ds": "assets/mario-ds/collection-ds-scene.jpg", "dusklight": "assets/dusklight/collection-amber-twilight.webp", "viper": "assets/red-viper/virtual-boy-tile.png", "worms": "assets/worms/wallpaper.webp"}.get(key, f"assets/artwork/{asset_name}.png")
             # The owner requested a clean alpha variant; its original is retained.
-            logo = {"sm64ds": "assets/logos/super-mario-64-ds-clean.svg", "viper": "assets/red-viper/menu-wordmark.png"}.get(key, f"assets/logos/{asset_name}.png")
+            logo = {"sm64ds": "assets/logos/super-mario-64-ds-clean.svg", "viper": "assets/red-viper/menu-wordmark.png", "worms": "assets/worms/logo.webp"}.get(key, f"assets/logos/{asset_name}.png")
             require(any(node.has_class("channel-wallpaper") and node.attrs.get("src") == artwork for node in tile.all()), f"Collection {key}: approved artwork changed")
             require(any(node.tag == "image" and node.attrs.get("href") == logo for node in tile.all()), f"Collection {key}: approved logo changed")
         rail = [node.attrs.get("data-console") for node in index.nodes if node.has_class("rail-project")]
         require(rail == ["alttp", "minish", "kart", "doom", "starwing"], f"Carousel games/order changed: {rail}")
         ports = index.with_id("progress-ports")
         cards = [node for node in ports.all() if node.has_class("progress-card")] if ports else []
-        require(len(cards) == 8, f"Owner progress must show eight projects, found {len(cards)}")
+        require(len(cards) == 9, f"Owner progress must show nine projects, found {len(cards)}")
         for key, (filename, value, _) in PROJECTS.items():
             card = next((node for node in cards if node.has_class("port-" + key)), None)
             require(card is not None, f"Missing progress card: {key}")
@@ -250,6 +251,10 @@ def check_site(directory):
         elif key == "viper":
             require(page.with_id("viper-gallery") is not None and len([node for node in page.nodes if node.has_class("vb-scene")]) == 7, "Red Viper Color needs its menu preview and six captured scenes")
             require("design preview" in page.root.text().casefold() and "azahar" in page.root.text().casefold(), "Red Viper Color must distinguish menu designs from Azahar captures")
+        elif key == "worms":
+            require(page.with_id("worms-gallery") is not None and len([node for node in page.nodes if node.has_class("w3-scene")]) >= 3, "Worms 3D needs its capture gallery")
+            text = page.root.text().casefold()
+            require("20–25 fps" in text and "lower screen" in text and "ultimate mayhem" in text, "Worms 3D must state its frame rate, lower-screen status and Ultimate Mayhem plans")
         else:
             require("development captures will appear here" in page.root.text().casefold(), f"{filename}: unreleased project needs its forthcoming-captures message")
 
@@ -257,7 +262,7 @@ def check_site(directory):
         print("FAIL: site integration checks")
         print("\n".join(f"  - {message}" for message in errors))
         return 1
-    print(f"PASS: {len(documents)} HTML pages, {references} local references, eight collection links in two groups, eight exact progress values, and project navigation/repositories.")
+    print(f"PASS: {len(documents)} HTML pages, {references} local references, nine collection links in two groups, nine exact progress values, and project navigation/repositories.")
     return 0
 
 

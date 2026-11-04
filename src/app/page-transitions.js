@@ -13,6 +13,7 @@
     'super-mario-64-ds.html',
     'credits.html',
     'red-viper-color.html',
+    'worms-3d.html',
     'blog.html',
     'development.html',
     'blog-mario-kart-64-v2-0.html',
@@ -260,6 +261,7 @@
       'dusklight.html': '#141916',
       'super-mario-64-ds.html': dark ? '#181c21' : '#e7e7e7',
       'red-viper-color.html': '#090607',
+      'worms-3d.html': '#4b90ee',
       'credits.html': dark ? '#171718' : '#f5f4ec',
     };
     const layer = document.createElement('div');
@@ -378,6 +380,7 @@
       starwing: '.hero-copy > *,.hero-fleet,.hero-foot',
       dusklight: '.twilight-cover-copy > *,.twilight-cover-art,.twilight-cover-foot',
       viper: '.vb-hero-copy > *,.vb-brand-panel,.vb-hero-foot',
+      worms: '.w3-hero-copy > *,.w3-gauge-wrap,.w3-fact',
       sm64ds: '.ds-window-bar,.ds-hero-content > *,.ds-group,.ds-dual-menu',
     };
     const selector = selectors[document.body.dataset.game];

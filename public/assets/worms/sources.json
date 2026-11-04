@@ -1,0 +1,118 @@
+{
+  "project": "Worms 3D for New Nintendo 3DS page",
+  "status": "Integrated into the Worms 3D page and Forge collection card",
+  "license": "Worms 3D and its artwork belong to Team17 and their respective owners. Development captures are owner-supplied from EstebanPdN's port. No open redistribution license asserted.",
+  "assets": [
+    {
+      "file": "logo.webp",
+      "title": "Worms 3D logo",
+      "source": "Esteban's published Worms 3D tracker (assets/logo-hd.png)",
+      "url": "https://worms-3d.estebanpdn.chatgpt.site",
+      "processing": "Resized to 1200 px wide, WebP"
+    },
+    {
+      "file": "wallpaper.webp",
+      "title": "Worms 3D promotional wallpaper",
+      "source": "Esteban's published Worms 3D tracker (assets/wallpaper.png)",
+      "credit": "Team17 / Sega",
+      "processing": "Cropped to remove the hosting footer, resized, WebP"
+    },
+    {
+      "file": "icon.webp",
+      "title": "Worms 3D progress icon",
+      "source": "Crop of the tracker wallpaper",
+      "credit": "Team17 / Sega",
+      "processing": "Square crop, 256 px, WebP"
+    },
+    {
+      "file": "medallions.webp",
+      "title": "Tracker menu medallions",
+      "source": "Esteban's published Worms 3D tracker (assets/menu-medallions-originals.png)",
+      "processing": "Resized, WebP"
+    },
+    {
+      "file": "LilitaOne-Regular.ttf",
+      "title": "Lilita One",
+      "author": "Juan Montoreano",
+      "license": "SIL Open Font License 1.1 (LilitaOne-OFL.txt)",
+      "source": "Esteban's published Worms 3D tracker"
+    },
+    {
+      "file": "LilitaOne-OFL.txt",
+      "title": "Lilita One license",
+      "license": "SIL Open Font License 1.1"
+    },
+    {
+      "file": "captures/menu.webp",
+      "title": "Main menu",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (port-capturas/3ds/2026-11-02-menu.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "captures/match.webp",
+      "title": "Quick match",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (2026-11-02-partida.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "captures/target.webp",
+      "title": "Quick match, frame 2000",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (2026-11-02-p4-f2000.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "captures/fortress.webp",
+      "title": "Quick match, frame 4000",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (2026-11-02-p4-f4000.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "captures/bridge.webp",
+      "title": "Quick match, frame 1800",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (2026-11-02-partida-1800.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "captures/tower.webp",
+      "title": "Quick match, VRAM textures",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (2026-11-02-v3-texturas-vram.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "captures/camp.webp",
+      "title": "Quick match",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (2026-11-02-k4-volcado-LRA.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "captures/pause.webp",
+      "title": "Pause menu",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (2026-11-02-pausa-geometria-residente.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "captures/save.webp",
+      "title": "Save game",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-02 (2026-11-02-s1-guardar.png)",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "mods/hat-render.webp",
+      "title": "Ultimate Mayhem military cap fitting render",
+      "provenance": "Owner mod render, 2026-11-04",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "mods/military-cap-3ds.webp",
+      "title": "Military cap in a match",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-04",
+      "processing": "Lossless WebP"
+    },
+    {
+      "file": "mods/safari-hat-3ds.webp",
+      "title": "Headwear test in a match",
+      "provenance": "Owner port capture, Azahar on macOS, 2026-11-04",
+      "processing": "Lossless WebP"
+    }
+  ]
+}

@@ -22,5 +22,6 @@
   "starfox.js": "src/features/games/starfox.js",
   "workshop-pages.js": "src/features/games/workshop-pages.js",
   "blog-post.js": "src/features/blog/blog-post.js",
-  "tracker-feed.mjs": "src/features/community/tracker-feed.mjs"
+  "tracker-feed.mjs": "src/features/community/tracker-feed.mjs",
+  "worms3d.js": "src/features/games/worms3d.js"
 }

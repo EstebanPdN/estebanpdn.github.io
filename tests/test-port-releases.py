@@ -19,7 +19,7 @@ class PortReleaseTests(unittest.TestCase):
         self.assertEqual(render_release_metadata('<!-- port-status: alttp completed -->', ROOT), 'Completed · v4.0')
 
     def test_unreleased_ports_do_not_borrow_upstream_versions(self):
-        for project in ('sm64ds', 'dusklight', 'viper'):
+        for project in ('sm64ds', 'dusklight', 'viper', 'worms'):
             html = render_release_metadata(f'<!-- port-release: {project} -->', ROOT)
             self.assertIn('No public release yet', html)
             self.assertNotIn('<a ', html)

@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en"
+  ><head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" /><meta
+      name="theme-color"
+      content="#397cca" />
+    <meta
+      name="description"
+      content="Worms 3D for New Nintendo 3DS: a native port of the GameCube classic, rebuilt from recovered source. 50% development, 20–25 fps on New 3DS, with mods and Ultimate Mayhem additions on the way." />
+    <title>Worms 3D · Esteban’s Forge</title>
+
+    <link rel="stylesheet" href="forge-header.css" /><link
+      rel="stylesheet"
+      href="worms3d.css" /><link rel="stylesheet" href="page-transitions.css" />
+    <script src="theme.js"></script
+    ><script src="page-transitions.js"></script
+    ><script src="interaction-motion.js"></script
+    ><script src="worms3d.js" defer></script
+    ><script src="forge-header.js" defer></script>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/icons/hub-20261014/estebans-forge/favicon.svg" /><link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/hub-20261014/estebans-forge/favicon-32.png" /><link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      href="/icons/hub-20261014/estebans-forge/favicon.ico" /><link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png" /><link
+      rel="apple-touch-icon-precomposed"
+      sizes="180x180"
+      href="/icons/hub-20261014/estebans-forge/apple-touch-icon.png" /><link
+      rel="manifest"
+      href="/manifest.webmanifest?v=hub-20261014" />
+    <link rel="stylesheet" href="port-releases.css" /></head
+  ><body data-game="worms">
+    <!-- forge-header -->
+    <a class="skip-link" href="#project-main">Skip to project</a>
+    <main class="w3-page" id="project-main"
+      ><div class="w3-wallpaper" aria-hidden="true"></div>
+      <section class="w3-hero" aria-labelledby="project-title">
+        <div class="w3-hero-copy">
+          <p class="w3-platform"
+            ><span>Nintendo GameCube</span><b aria-hidden="true">→</b
+            ><span>New Nintendo 3DS</span></p
+          >
+          <img
+            class="w3-logo"
+            src="assets/worms/logo.webp"
+            alt="Worms 3D"
+            width="1200"
+            height="600"
+          />
+          <h1 id="project-title">Worms 3D, in the palm of your hand.</h1>
+          <!-- port-release: worms -->
+          <p class="w3-intro"
+            >The GameCube classic, running natively on New Nintendo 3DS. Rebuilt from recovered
+            source code, drawn by the 3DS GPU and already playable from the main menu to the last
+            explosion.</p
+          >
+          <div class="w3-actions"
+            ><a class="w3-button" href="#worms-gallery"
+              ><span class="w3-medal w3-medal-binoculars" aria-hidden="true"></span>See it
+              running</a
+            ><a class="w3-button w3-button-gold" href="#worms-mods"
+              ><span class="w3-medal w3-medal-sheep" aria-hidden="true"></span>Mods &amp; Mayhem</a
+            ></div
+          >
+        </div>
+        <div class="w3-gauge-wrap">
+          <div
+            class="w3-gauge"
+            role="progressbar"
+            aria-label="Worms 3D for New Nintendo 3DS development progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="50"
+            ><svg viewBox="0 0 240 240" aria-hidden="true">
+              <circle class="w3-ring-interior" cx="120" cy="120" r="98" />
+              <circle class="w3-ring-track" cx="120" cy="120" r="106" />
+              <circle
+                class="w3-ring-fill"
+                cx="120"
+                cy="120"
+                r="106"
+                pathLength="100"
+                stroke-dasharray="50 100"
+                transform="rotate(-90 120 120)"
+              /></svg
+            ><div class="w3-gauge-value"
+              ><span>Development</span><strong>50<small>%</small></strong></div
+            ></div
+          >
+          <p class="w3-gauge-card"
+            ><b>In development · Unreleased</b><span>Esteban’s project status</span></p
+          >
+        </div>
+      </section>
+
+      <div class="w3-facts" aria-label="Port at a glance"
+        ><div class="w3-fact"
+          ><span class="w3-medal w3-medal-shotgun" aria-hidden="true"></span
+          ><p><strong>20–25 fps</strong><span>on New Nintendo 3DS</span></p></div
+        ><div class="w3-fact"
+          ><span class="w3-medal w3-medal-arrow" aria-hidden="true"></span
+          ><p><strong>400 × 240</strong><span>upper screen, 5:3 camera</span></p></div
+        ><div class="w3-fact"
+          ><span class="w3-medal w3-medal-finger" aria-hidden="true"></span
+          ><p><strong>Lower screen</strong><span>interface coming soon</span></p></div
+        ><div class="w3-fact"
+          ><span class="w3-medal w3-medal-scarf" aria-hidden="true"></span
+          ><p><strong>Mod support</strong><span>.worms packages</span></p></div
+        ></div
+      >
+
+      <section class="w3-panel w3-gallery" id="worms-gallery" aria-labelledby="gallery-title">
+        <header class="w3-heading"
+          ><span>01 / On the console</span><h2 id="gallery-title">Turn by turn, on 3DS.</h2
+          ><p>Development captures of the port, straight from the upper screen.</p></header
+        >
+        <div class="w3-gallery-stage"
+          ><button
+            class="w3-hardware"
+            type="button"
+            id="w3-open"
+            aria-label="Enlarge the selected upper-screen capture"
+            ><svg
+              viewBox="140 90 1320 1420"
+              role="img"
+              aria-label="New Nintendo 3DS XL running Worms 3D"
+            >
+              <defs>
+                <clipPath id="worms-console">
+                  <path
+                    d="M268.75 93.75L258.75 95.00L246.25 97.50L230.62 102.50L221.88 106.25L214.38 110.00L200.62 118.75L191.88 125.62L179.38 138.12L169.38 151.25L168.75 153.12L163.75 160.62L160.00 168.12L160.00 169.38L158.75 170.62L158.75 171.88L156.25 176.88L153.12 186.25L153.12 188.12L150.62 195.62L150.00 201.88L148.75 205.62L148.12 215.62L147.50 216.25L147.50 529.38L145.00 530.62L143.12 532.50L143.12 536.88L144.38 538.12L147.50 538.75L147.50 575.62L148.12 576.25L147.50 743.12L148.75 745.62L151.25 748.12L153.75 749.38L156.88 750.00L172.50 750.62L167.50 753.12L163.12 756.25L157.50 762.50L156.25 766.88L153.75 769.38L150.00 776.25L149.38 781.25L148.75 781.88L148.75 786.88L148.12 787.50L148.12 813.12L148.75 813.75L149.38 820.62L151.88 825.62L151.88 1379.38L152.50 1380.00L153.12 1390.00L153.75 1390.62L153.75 1393.75L154.38 1394.38L154.38 1396.88L155.00 1397.50L156.88 1406.88L160.62 1418.12L163.75 1424.38L163.75 1425.62L171.88 1440.62L182.50 1455.00L187.50 1460.00L187.50 1460.62L191.88 1464.38L191.88 1465.00L206.25 1476.88L221.88 1486.25L240.00 1493.75L256.88 1498.12L270.62 1500.00L456.25 1500.62L460.00 1501.25L1140.62 1501.25L1143.75 1500.62L1329.38 1500.00L1343.12 1498.12L1360.00 1493.75L1378.12 1486.25L1386.88 1481.25L1398.75 1473.12L1413.12 1460.00L1422.50 1448.75L1430.00 1437.50L1435.62 1426.88L1435.62 1425.62L1439.38 1418.12L1443.12 1406.88L1443.12 1405.00L1443.75 1404.38L1443.75 1402.50L1445.62 1396.88L1445.62 1393.75L1446.25 1393.12L1446.88 1386.25L1447.50 1385.62L1447.50 1380.00L1448.12 1379.38L1448.12 825.62L1450.62 820.62L1451.25 813.75L1451.88 813.12L1451.88 787.50L1451.25 786.88L1451.25 781.88L1450.62 781.25L1450.62 778.75L1449.38 775.00L1446.25 769.38L1443.75 766.88L1443.75 765.00L1442.50 763.75L1442.50 762.50L1436.88 756.25L1432.50 753.12L1427.50 750.62L1443.75 750.00L1446.25 749.38L1448.75 748.12L1451.25 745.62L1452.50 743.12L1452.50 552.50L1453.12 551.88L1453.12 538.75L1456.88 537.50L1456.88 532.50L1455.62 531.25L1453.12 530.62L1453.12 516.25L1452.50 515.62L1452.50 216.25L1451.88 215.62L1451.88 210.62L1451.25 210.00L1451.25 205.62L1450.62 205.00L1450.62 201.88L1450.00 201.25L1449.38 195.62L1448.75 195.00L1447.50 188.12L1443.75 176.88L1442.50 175.00L1442.50 173.75L1436.25 160.62L1435.00 159.38L1431.88 153.12L1420.62 138.12L1408.12 125.62L1399.38 118.75L1390.00 112.50L1376.88 105.62L1360.62 99.38L1353.75 97.50L1345.00 95.62L1331.25 93.75Z"
+                  />
+                </clipPath>
+              </defs>
+              <image
+                href="assets/devices/new-nintendo-3ds-xl-neutral.webp"
+                width="1600"
+                height="1600"
+                clip-path="url(#worms-console)"
+              />
+              <svg
+                id="w3-upper"
+                viewBox="0 0 400 240"
+                x="365"
+                y="204"
+                width="871"
+                height="522"
+                preserveAspectRatio="none"
+              >
+                <image href="assets/worms/captures/menu.webp" width="400" height="240" />
+              </svg>
+              <g class="w3-lower-screen">
+                <rect x="453" y="886" width="696" height="522" fill="#0b2a52" />
+                <rect x="453" y="886" width="696" height="522" fill="url(#w3-lower-glow)" />
+                <defs>
+                  <radialGradient id="w3-lower-glow" cx="50%" cy="38%" r="70%">
+                    <stop offset="0" stop-color="#3f86d6" />
+                    <stop offset="1" stop-color="#0b2a52" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+                <text x="801" y="1120" text-anchor="middle">LOWER-SCREEN</text>
+                <text x="801" y="1190" text-anchor="middle">INTERFACE</text>
+                <text class="w3-lower-small" x="801" y="1260" text-anchor="middle">
+                  COMING SOON
+                </text>
+              </g></svg
+            ><span>Expand upper screen</span></button
+          ><div class="w3-gallery-controls"
+            ><div class="w3-caption-card"
+              ><p class="w3-kicker" id="w3-gallery-mode">Main menu</p
+              ><h3 id="w3-gallery-title">The main menu</h3
+              ><p id="w3-gallery-caption"
+                >Quick Start, Single Player, Multiplayer and Options, laid out for the 400 × 240
+                upper screen.</p
+              ></div
+            >
+            <div class="w3-scene-rail" aria-label="Worms 3D development captures"
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="true"
+                data-w3-scene="menu"
+                data-title="The main menu"
+                data-mode="Main menu"
+                data-caption="Quick Start, Single Player, Multiplayer and Options, laid out for the 400 × 240 upper screen."
+                ><img src="assets/worms/captures/menu.webp" alt="" width="400" height="240" /><span
+                  >01</span
+                ></button
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="false"
+                data-w3-scene="match"
+                data-title="Clive is up!"
+                data-mode="Quick match"
+                data-caption="A full match: terrain, worms, names, health, radar, wind and turn timer, all drawn by the 3DS GPU."
+                ><img src="assets/worms/captures/match.webp" alt="" width="400" height="240" /><span
+                  >02</span
+                ></button
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="false"
+                data-w3-scene="target"
+                data-title="Owen is next"
+                data-mode="Quick match"
+                data-caption="Rain, sea and a bullseye platform. The port keeps the original rules and turn structure intact."
+                ><img
+                  src="assets/worms/captures/target.webp"
+                  alt=""
+                  width="400"
+                  height="240"
+                /><span>03</span></button
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="false"
+                data-w3-scene="fortress"
+                data-title="Storm over the fort"
+                data-mode="Long session"
+                data-caption="Thousands of frames into a match, with the camera wide open over the island’s ruins."
+                ><img
+                  src="assets/worms/captures/fortress.webp"
+                  alt=""
+                  width="400"
+                  height="240"
+                /><span>04</span></button
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="false"
+                data-w3-scene="bridge"
+                data-title="Rope bridge"
+                data-mode="Quick match"
+                data-caption="Oil drums, a rope bridge and a giant cannon. Geometry stays resident on the GPU between frames."
+                ><img
+                  src="assets/worms/captures/bridge.webp"
+                  alt=""
+                  width="400"
+                  height="240"
+                /><span>05</span></button
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="false"
+                data-w3-scene="tower"
+                data-title="Under the tower"
+                data-mode="Quick match"
+                data-caption="Stone, moss and a worm with a bazooka. Textures are cached in VRAM for steadier frame times."
+                ><img src="assets/worms/captures/tower.webp" alt="" width="400" height="240" /><span
+                  >06</span
+                ></button
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="false"
+                data-w3-scene="camp"
+                data-title="Hold the high ground"
+                data-mode="Quick match"
+                data-caption="CPU against Human, with the HUD in the original GameCube layout."
+                ><img src="assets/worms/captures/camp.webp" alt="" width="400" height="240" /><span
+                  >07</span
+                ></button
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="false"
+                data-w3-scene="pause"
+                data-title="Game paused"
+                data-mode="Pause menu"
+                data-caption="The in-match pause menu: continue, or quit back to the front end."
+                ><img src="assets/worms/captures/pause.webp" alt="" width="400" height="240" /><span
+                  >08</span
+                ></button
+              ><button
+                class="w3-scene"
+                type="button"
+                aria-pressed="false"
+                data-w3-scene="save"
+                data-title="Save game"
+                data-mode="Options"
+                data-caption="Options, schemes and saving. Progress is written to the SD card and survives a restart."
+                ><img src="assets/worms/captures/save.webp" alt="" width="400" height="240" /><span
+                  >09</span
+                ></button
+              ></div
+            >
+            <div class="w3-browse"
+              ><span>Select a capture · ← →</span
+              ><div
+                ><button type="button" data-w3-step="-1" aria-label="Previous capture">←</button
+                ><button type="button" data-w3-step="1" aria-label="Next capture">→</button></div
+              ></div
+            >
+          </div></div
+        >
+        <p class="w3-note"
+          >Development captures from the port running in Azahar on macOS, composited onto a New
+          Nintendo 3DS XL photograph. The lower screen is shown as it is today: its interface has
+          not been built yet.</p
+        >
+      </section>
+
+      <section class="w3-panel w3-port" id="worms-port" aria-labelledby="port-title">
+        <header class="w3-heading"
+          ><span>02 / The 3DS port</span><h2 id="port-title">Not emulated. Rebuilt.</h2
+          ><p>The game’s own code, compiled for the New Nintendo 3DS processor.</p></header
+        >
+        <div class="w3-cards"
+          ><article class="w3-card"
+            ><span class="w3-medal w3-medal-binoculars" aria-hidden="true"></span
+            ><h3>From recovered source</h3
+            ><p
+              >Worms 3D’s GameCube code is being recovered function by function. The port compiles
+              that code for the 3DS ARM processor, keeping the original game rules, AI and
+              scripts.</p
+            ></article
+          ><article class="w3-card"
+            ><span class="w3-medal w3-medal-shotgun" aria-hidden="true"></span
+            ><h3>Drawn by the 3DS GPU</h3
+            ><p
+              >The GameCube graphics calls are translated to the 3DS PICA200 through citro3d.
+              Lighting runs in the vertex shader, and level geometry, textures and render state are
+              cached on the GPU.</p
+            ></article
+          ><article class="w3-card"
+            ><span class="w3-medal w3-medal-arrow" aria-hidden="true"></span
+            ><h3>Made for the upper screen</h3
+            ><p
+              >The full game runs on the 400 × 240 upper screen, with the camera widened for its 5:3
+              shape. Menus, videos, languages, matches and saves all work.</p
+            ></article
+          ><article class="w3-card"
+            ><span class="w3-medal w3-medal-finger" aria-hidden="true"></span
+            ><h3>Bring your own game</h3
+            ><p
+              >No game files are included. A small macOS extractor turns your own Worms 3D disc
+              image into a single <code>assets.worms</code> package that the port reads from the SD
+              card.</p
+            ></article
+          ></div
+        >
+        <div class="w3-performance"
+          ><div class="w3-fps"
+            ><span class="w3-kicker">Measured on New Nintendo 3DS</span
+            ><strong>20–25<small>fps</small></strong
+            ><p
+              >Matches already run between 20 and 25 frames per second on real New 3DS hardware,
+              without trouble. Optimization continues.</p
+            ></div
+          ><div class="w3-screens"
+            ><div class="w3-screen-row is-ready"
+              ><b>Upper screen</b><span>The whole game, playable</span></div
+            ><div class="w3-screen-row is-pending"
+              ><b>Lower screen</b
+              ><span>No interface yet — weapons, map and team info planned</span></div
+            ></div
+          ></div
+        >
+      </section>
+
+      <section class="w3-panel w3-mods" id="worms-mods" aria-labelledby="mods-title">
+        <header class="w3-heading"
+          ><span>03 / Mods &amp; Ultimate Mayhem</span
+          ><h2 id="mods-title">More worms. More mayhem.</h2
+          ><p>This port is built to be modded.</p></header
+        >
+        <div class="w3-mods-layout"
+          ><div class="w3-mods-copy"
+            ><p
+              >Drop a <code>.worms</code> package into the <code>mods</code> folder on the SD card
+              and the port mounts it on top of the game: it can replace any original file or add new
+              ones, without touching your copy of the game.</p
+            ><p
+              >The plan goes far beyond the original: clothing and accessories for the worms, and
+              other content from <strong>Worms 3D’s sequel, Worms Ultimate Mayhem</strong>, ported
+              into this game.</p
+            >
+            <ul class="w3-mod-list"
+              ><li class="is-ready"
+                ><b>Ultimate Mayhem headwear</b
+                ><span
+                  >A military cap taken from Ultimate Mayhem, rebuilt in the GameCube format and
+                  worn in-game on 3DS.</span
+                ></li
+              ><li class="is-ready"
+                ><b>Dominicano voice bank</b
+                ><span
+                  >A brand-new speech bank with 66 lines, selectable like the original voices.</span
+                ></li
+              ><li
+                ><b>Worm wardrobe</b
+                ><span>Hats, glasses, outfits and more customization for every team.</span></li
+              ><li
+                ><b>More from Ultimate Mayhem</b
+                ><span>Further additions from the sequel, brought over to this port.</span></li
+              ></ul
+            ></div
+          ><div class="w3-mod-shots"
+            ><figure class="w3-mod-shot w3-mod-shot-wide"
+              ><img
+                src="assets/worms/mods/hat-render.webp"
+                alt="A worm wearing the Ultimate Mayhem military cap, seen from the side and the front"
+                width="600"
+                height="300"
+                loading="lazy"
+              /><figcaption>Ultimate Mayhem cap · model fitting</figcaption></figure
+            ><figure class="w3-mod-shot"
+              ><img
+                src="assets/worms/mods/military-cap-3ds.webp"
+                alt="A worm in a match wearing the military cap on 3DS"
+                width="450"
+                height="450"
+                loading="lazy"
+              /><figcaption>In a match, on 3DS</figcaption></figure
+            ><figure class="w3-mod-shot"
+              ><img
+                src="assets/worms/mods/safari-hat-3ds.webp"
+                alt="A worm wearing a wide hat in a match on 3DS"
+                width="400"
+                height="400"
+                loading="lazy"
+              /><figcaption>Headwear test, on 3DS</figcaption></figure
+            ></div
+          ></div
+        >
+      </section>
+
+      <section class="w3-panel w3-progress" id="worms-progress" aria-labelledby="progress-title">
+        <header class="w3-heading"
+          ><span>04 / The road ahead</span><h2 id="progress-title">Halfway there.</h2
+          ><p>What already works, and what comes next.</p></header
+        >
+        <div class="w3-road"
+          ><div class="w3-road-column"
+            ><h3>Working now</h3
+            ><ul
+              ><li>Boot, licence screens, logos and intro videos</li
+              ><li>Main menu, options and every language</li
+              ><li>Full matches with terrain, worms, weapons and HUD</li
+              ><li>Sound, music and worm voices</li
+              ><li>Saving and loading on the SD card</li
+              ><li>20–25 fps on New Nintendo 3DS</li
+              ><li>Mods loaded from the SD card</li></ul
+            ></div
+          ><div class="w3-road-column is-next"
+            ><h3>Up next</h3
+            ><ul
+              ><li>A lower-screen interface</li
+              ><li>More performance work</li
+              ><li>Worm clothing and accessories</li
+              ><li>More Ultimate Mayhem content</li
+              ><li>Long play sessions on real hardware</li
+              ><li>A first public release</li></ul
+            ></div
+          ></div
+        >
+        <p class="w3-note"
+          >The percentage is Esteban’s own project status for the 3DS port. The separate
+          <a href="https://worms-3d.estebanpdn.chatgpt.site" target="_blank" rel="noreferrer"
+            >Worms 3D decompilation tracker</a
+          >
+          measures exact recovered code, which is a different number.</p
+        >
+      </section>
+
+      <section class="w3-panel w3-faq" aria-labelledby="w3-faq-title"
+        ><header class="w3-heading"
+          ><span>05 / Questions &amp; answers</span
+          ><h2 id="w3-faq-title">Before the next turn.</h2></header
+        ><details
+          ><summary>Can I download it yet?</summary
+          ><p
+            >Not yet. The port is unreleased and around halfway through development. Follow the
+            Forge for the first release.</p
+          ></details
+        ><details
+          ><summary>Does it work on an original Nintendo 3DS?</summary
+          ><p
+            >The port targets New Nintendo 3DS and New Nintendo 2DS XL, which have the extra CPU
+            speed and memory it needs.</p
+          ></details
+        ><details
+          ><summary>Will the lower screen be used?</summary
+          ><p
+            >Yes. Today the game runs entirely on the upper screen and the lower screen has no
+            interface yet. A touch interface is planned.</p
+          ></details
+        ><details
+          ><summary>Do I need my own copy of the game?</summary
+          ><p
+            >Yes. No game files are included. The extractor builds the port’s data package from your
+            own Worms 3D disc image.</p
+          ></details
+        ><a class="w3-button" href="index.html#progress"
+          ><span class="w3-medal w3-medal-arrow" aria-hidden="true"></span>Follow the Forge
+          projects</a
+        ></section
+      >
+      <footer class="w3-footer"
+        ><span>Esteban’s Forge / Worms 3D</span><a href="credits.html">Credits</a
+        ><a href="index.html#collection">Back to Collection</a></footer
+      >
+    </main>
+    <dialog id="w3-lightbox" aria-labelledby="w3-lightbox-title"
+      ><div class="w3-lightbox-bar"
+        ><span id="w3-lightbox-title">The main menu / Upper screen</span
+        ><button id="w3-lightbox-close" type="button" aria-label="Close gallery">×</button></div
+      ><svg id="w3-lightbox-image" viewBox="0 0 400 240" role="img" aria-label="Selected capture">
+        <image href="assets/worms/captures/menu.webp" width="400" height="240" /></svg
+    ></dialog> </body
+></html>
