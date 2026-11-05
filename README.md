@@ -5,7 +5,7 @@ EstebanPdN’s static Nintendo 3DS project portfolio. [Visit the site](https://e
 <p>
   <a href="https://estebanpdn.github.io/"><img src="public/assets/brand/website.svg" alt="Website" width="142" height="46"></a>
   <a href="https://discord.gg/zy8BqH5ss"><img src="public/assets/brand/discord-official.svg" alt="Join Discord" width="166" height="46"></a>
-  <a href="https://ko-fi.com/estebanpdn"><img src="public/assets/brand/kofi.svg" alt="Support on Ko-fi" width="190" height="46"></a>
+  <!-- <a href="https://ko-fi.com/estebanpdn"><img src="public/assets/brand/kofi.svg" alt="Support on Ko-fi" width="190" height="46"></a> -->
   <a href="https://www.patreon.com/c/EstebanPdN"><img src="public/assets/brand/patreon.svg" alt="Support on Patreon" width="216" height="46"></a>
 </p>
 
