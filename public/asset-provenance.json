@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "project": "Esteban’s Forge · v1.0.0",
   "generatedBy": "tools/build-provenance.mjs",
-  "assetFileCount": 419,
+  "assetFileCount": 423,
   "counts": {
     "context-only-permission-not-established": 115,
     "license-named-in-source-record-recheck-rights-holder": 7,
-    "source-and-permission-not-documented": 173,
+    "source-and-permission-not-documented": 177,
     "source-recorded-permission-not-established": 124
   },
   "reviewScope": "This inventory records bundled evidence and file hashes. It does not independently verify copyright ownership, the continued availability of source pages, or permissions beyond the terms recorded in source manifests.",
@@ -809,9 +809,37 @@
       "permissionStatus": "source-recorded-permission-not-established"
     },
     {
+      "path": "public/assets/brand/discord-official.svg",
+      "bytes": 1613,
+      "sha256": "70d74ff1eef87b828e8251f108d88852b5e7bcba6e8817f89596dd07b8ae3e6b",
+      "evidence": [],
+      "permissionStatus": "source-and-permission-not-documented"
+    },
+    {
       "path": "public/assets/brand/estebans-forge-icon.png",
       "bytes": 1471,
       "sha256": "dabcfd2731bd9ceae00d544067e0c3c23ac05648d33de47c9307cb8f93743dd4",
+      "evidence": [],
+      "permissionStatus": "source-and-permission-not-documented"
+    },
+    {
+      "path": "public/assets/brand/kofi.svg",
+      "bytes": 3682,
+      "sha256": "f129272ba6537e9427a78060fb79cd7feb09fe3de792bd6c3b6840b3a6468ce4",
+      "evidence": [],
+      "permissionStatus": "source-and-permission-not-documented"
+    },
+    {
+      "path": "public/assets/brand/patreon.svg",
+      "bytes": 811,
+      "sha256": "65f57fd8b166c53be3329be56bcb5b758076448e58846379ca03326de2ced5e3",
+      "evidence": [],
+      "permissionStatus": "source-and-permission-not-documented"
+    },
+    {
+      "path": "public/assets/brand/website.svg",
+      "bytes": 6355,
+      "sha256": "cc6d444736c90467f93e3d04d9f460e6b7c5d6e8c8eb56422392d05b8f050cec",
       "evidence": [],
       "permissionStatus": "source-and-permission-not-documented"
     },

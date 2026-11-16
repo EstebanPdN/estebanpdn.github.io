@@ -2,7 +2,7 @@
 
 This register is generated from `public/assets/` and its source manifests by `npm run provenance`. It includes every media, font, manifest, and JSON file in that directory, with its SHA-256 digest, available evidence, and permission status based on that evidence.
 
-Inventoried files: **419**.
+Inventoried files: **423**.
 
 ## Understanding the status
 
@@ -73,7 +73,11 @@ Inventoried files: **419**.
 | `public/assets/blog/mk64-v2/solo-race.webp` | No individual source is identified for this file in the records. | A source or provenance record exists, but no reuse license was found for this file. | `07ba70343fdc4ea39aaa9ae5bec9ff984ff152cc444fce8edb3b657e9c4a35ed` |
 | `public/assets/blog/mk64-v2/sources.json` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `7654bb43904fe8b91d2e14d0a9eb6a7bdee20fcb8a1bcf64bd1a7453567017b9` |
 | `public/assets/blog/mk64-v2/texture-comparison.png` | No individual source is identified for this file in the records. | A source or provenance record exists, but no reuse license was found for this file. | `4b4d22ea8d3007876f4bffef90d7baf1570ff5b7bf92a70e10ed378235272a17` |
+| `public/assets/brand/discord-official.svg` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `70d74ff1eef87b828e8251f108d88852b5e7bcba6e8817f89596dd07b8ae3e6b` |
 | `public/assets/brand/estebans-forge-icon.png` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `dabcfd2731bd9ceae00d544067e0c3c23ac05648d33de47c9307cb8f93743dd4` |
+| `public/assets/brand/kofi.svg` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `f129272ba6537e9427a78060fb79cd7feb09fe3de792bd6c3b6840b3a6468ce4` |
+| `public/assets/brand/patreon.svg` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `65f57fd8b166c53be3329be56bcb5b758076448e58846379ca03326de2ced5e3` |
+| `public/assets/brand/website.svg` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `cc6d444736c90467f93e3d04d9f460e6b7c5d6e8c8eb56422392d05b8f050cec` |
 | `public/assets/captures/a-link-to-the-past/01-title.webp` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `d89cad2dd437d1328597f7c891e392d14d9b19093304fa41e174862acc1524dc` |
 | `public/assets/captures/a-link-to-the-past/02-zelda-call.webp` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `3982fb441d1710d22a6f30b57f5cf93fe50a24439c5af8739e731d1bc1895b6d` |
 | `public/assets/captures/a-link-to-the-past/03-light-world.webp` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `fa154d8ccc7177145c433ff647be62fee433bca937fe85d17ca5abc75059fc36` |
