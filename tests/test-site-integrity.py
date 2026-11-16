@@ -20,10 +20,10 @@ PROJECTS = {
     "alttp": ("a-link-to-the-past.html", 100, "zelda-alttp-3ds"),
     "doom": ("legend-of-doom.html", 100, "legend-of-doom-3ds"),
     "starwing": ("star-fox.html", 70, "starwing-3ds"),
-    "dusklight": ("dusklight.html", 10, None),
-    "sm64ds": ("super-mario-64-ds.html", 35, None),
-    "viper": ("red-viper-color.html", 75, None),
-    "worms": ("worms-3d.html", 50, None),
+    "dusklight": ("dusklight.html", 45, None),
+    "sm64ds": ("super-mario-64-ds.html", 85, None),
+    "viper": ("red-viper-color.html", 50, None),
+    "worms": ("worms-3d.html", 70, None),
 }
 
 
