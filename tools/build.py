@@ -13,6 +13,7 @@ import subprocess
 import tempfile
 import time
 from port_releases import render_release_metadata
+from forge_store import render_store
 
 ROOT = Path(__file__).resolve().parents[1]
 SHARED_SCRIPTS = {'theme.js', 'page-transitions.js', 'interaction-motion.js', 'forge-header.js'}
@@ -62,7 +63,7 @@ def version_runtime_imports(staged):
 
 def prepare_page(file, header, policy):
     """Retain shared bootstrap scripts and collect scene-local controllers."""
-    html = render_release_metadata(file.read_text(), ROOT).replace('<!-- forge-header -->', header)
+    html = render_store(render_release_metadata(file.read_text(), ROOT), ROOT).replace('<!-- forge-header -->', header)
     scripts = []
 
     def collect(match):

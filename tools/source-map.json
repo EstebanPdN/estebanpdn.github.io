@@ -23,5 +23,7 @@
   "workshop-pages.js": "src/features/games/workshop-pages.js",
   "blog-post.js": "src/features/blog/blog-post.js",
   "tracker-feed.mjs": "src/features/community/tracker-feed.mjs",
-  "worms3d.js": "src/features/games/worms3d.js"
+  "worms3d.js": "src/features/games/worms3d.js",
+  "store-showcase.js": "src/features/store/store-showcase.js",
+  "forge-store.js": "src/features/store/forge-store.js"
 }

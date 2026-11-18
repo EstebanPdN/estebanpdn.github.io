@@ -1,0 +1,1526 @@
+{
+  "format": "portfolio-forge-store/1",
+  "catalog_revision": 3,
+  "catalog_updated": "2026-11-12",
+  "store": {
+    "version": "1.1",
+    "cia_bytes": 50254784,
+    "repository": "https://github.com/EstebanPdN/forge.store",
+    "release": "https://github.com/EstebanPdN/forge.store/releases/tag/v1.1"
+  },
+  "categories": [
+    {
+      "id": "all",
+      "label": "All",
+      "count": 36
+    },
+    {
+      "id": "forge",
+      "label": "Forge",
+      "count": 10
+    },
+    {
+      "id": "community",
+      "label": "Community",
+      "count": 9
+    },
+    {
+      "id": "emulators",
+      "label": "Emulators",
+      "count": 7
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "count": 11
+    }
+  ],
+  "apps": [
+    {
+      "id": "alttp",
+      "title": "A Link to the Past",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "SNES",
+      "status": "released",
+      "progress": null,
+      "stars": 792,
+      "tagline": "Native dual-screen Zelda 3 with languages, skins and a randomizer.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v4.1",
+        "date": "2026-11-11"
+      },
+      "repo": "EstebanPdN/zelda-alttp-3ds",
+      "page": "a-link-to-the-past.html",
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/alttp.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 7545792,
+      "banner": {
+        "art": "assets/forge-store/banners/alttp-art.webp",
+        "position": "50% 15%",
+        "logo": "assets/forge-store/banners/alttp-logo.webp",
+        "logo_scale": 1.38,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "minish",
+      "title": "The Minish Cap",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "GBA",
+      "status": "released",
+      "progress": null,
+      "stars": 813,
+      "tagline": "The Minish Cap in widescreen, with map and items on the touch screen.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v2.2",
+        "date": "2026-10-18"
+      },
+      "repo": "EstebanPdN/zelda-tmc-3ds",
+      "page": "the-minish-cap.html",
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/minish.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 3621824,
+      "banner": {
+        "art": "assets/forge-store/banners/minish-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/minish-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "mk64",
+      "title": "Mario Kart 64",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "N64",
+      "status": "released",
+      "progress": null,
+      "stars": 258,
+      "tagline": "Native Mario Kart 64 with touch menus, five HUDs and CPU rivals in every mode.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false,
+        "recommended": "n3ds"
+      },
+      "release": {
+        "tag": "v2.0",
+        "date": "2026-10-23"
+      },
+      "repo": "EstebanPdN/mario-kart-64-3ds",
+      "page": "mario-kart-64.html",
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/mk64.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 46179264,
+      "banner": {
+        "art": "assets/forge-store/banners/mk64-art.webp",
+        "position": "50% 45%",
+        "logo": "assets/forge-store/banners/mk64-logo.webp",
+        "logo_scale": 1.32,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "doom",
+      "title": "Legend of Doom",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "GZDoom",
+      "status": "released",
+      "progress": null,
+      "stars": 41,
+      "tagline": "The first Zelda reimagined as a GZDoom shooter, native on New 3DS.",
+      "compat": {
+        "o3ds": false,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v1.0",
+        "date": "2026-09-13"
+      },
+      "repo": "EstebanPdN/legend-of-doom-3ds",
+      "page": "legend-of-doom.html",
+      "needs": [],
+      "icon": "assets/forge-store/icons/doom.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 48624576,
+      "banner": {
+        "art": "assets/forge-store/banners/doom-art.webp",
+        "position": "50% 55%",
+        "logo": "assets/forge-store/banners/doom-logo.webp",
+        "logo_scale": 1.3,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "starwing",
+      "title": "Starwing",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "SNES",
+      "status": "released",
+      "progress": null,
+      "stars": 25,
+      "tagline": "SNES Star Fox running natively, with a touch interface and experimental 3D.",
+      "compat": {
+        "o3ds": "experimental",
+        "n3ds": true,
+        "stereo": "experimental"
+      },
+      "release": {
+        "tag": "v1.1",
+        "date": "2026-10-19"
+      },
+      "repo": "EstebanPdN/starwing-3ds",
+      "page": "star-fox.html",
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/starwing.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 4670400,
+      "banner": {
+        "art": "assets/forge-store/banners/starwing-art.webp",
+        "position": "50% 35%",
+        "logo": "assets/forge-store/banners/starwing-logo.webp",
+        "logo_scale": 1.02,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "mutiny",
+      "title": "Mutiny",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "Flash",
+      "status": "released",
+      "progress": null,
+      "stars": 2,
+      "tagline": "Nitrome's pirate artillery game on two screens, aimed with the stylus.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v1.0",
+        "date": "2026-11-07"
+      },
+      "repo": "EstebanPdN/mutiny-3ds",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/mutiny.webp",
+      "iconBackground": null,
+      "pixelIcon": true,
+      "download_bytes": 7541696,
+      "banner": {
+        "art": "assets/forge-store/banners/mutiny-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/mutiny-logo.webp",
+        "logo_scale": 1.12,
+        "pixel": true,
+        "gradient": null
+      }
+    },
+    {
+      "id": "sm64ds",
+      "title": "Super Mario 64 DS",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "NDS",
+      "status": "development",
+      "progress": 85,
+      "stars": 2,
+      "tagline": "Native Super Mario 64 DS with analog control, C-Stick camera and 3D.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": true
+      },
+      "release": null,
+      "repo": "EstebanPdN/sm64ds-3ds",
+      "page": "super-mario-64-ds.html",
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/sm64ds.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": null,
+      "banner": {
+        "art": "assets/forge-store/banners/sm64ds-art.webp",
+        "position": "50% 45%",
+        "logo": "assets/forge-store/banners/sm64ds-logo.webp",
+        "logo_scale": 1.1,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "rvc",
+      "title": "Red Viper Color",
+      "category": "emulators",
+      "tags": [
+        "emulators",
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "Virtual Boy",
+      "status": "development",
+      "progress": 50,
+      "stars": null,
+      "tagline": "Virtual Boy in full color, keeping its stereoscopic 3D.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": true
+      },
+      "release": null,
+      "repo": null,
+      "page": "red-viper-color.html",
+      "needs": [],
+      "icon": "assets/forge-store/icons/rvc.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": null,
+      "banner": {
+        "art": "assets/forge-store/banners/rvc-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/rvc-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "worms",
+      "title": "Worms 3D",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "GameCube",
+      "status": "development",
+      "progress": 70,
+      "stars": null,
+      "tagline": "Worms 3D rebuilt from its recovered code, native on New 3DS.",
+      "compat": {
+        "o3ds": false,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": null,
+      "repo": null,
+      "page": "worms-3d.html",
+      "needs": [
+        "data"
+      ],
+      "icon": "assets/forge-store/icons/worms.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": null,
+      "banner": {
+        "art": "assets/forge-store/banners/worms-art.webp",
+        "position": "50% 40%",
+        "logo": "assets/forge-store/banners/worms-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "dusklight",
+      "title": "Dusklight",
+      "category": "forge",
+      "tags": [
+        "forge"
+      ],
+      "author": "EstebanPdN",
+      "origin": "GameCube",
+      "status": "development",
+      "progress": 45,
+      "stars": 6,
+      "tagline": "Twilight Princess running natively on New 3DS. An early-stage project.",
+      "compat": {
+        "o3ds": false,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": null,
+      "repo": "EstebanPdN/dusklight-3ds",
+      "page": "dusklight.html",
+      "needs": [],
+      "icon": "assets/forge-store/icons/dusklight.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": null,
+      "banner": {
+        "art": "assets/forge-store/banners/dusklight-art.webp",
+        "position": "50% 40%",
+        "logo": "assets/forge-store/banners/dusklight-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": null
+      }
+    },
+    {
+      "id": "starhaven",
+      "title": "Star Haven",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "SecondaryLifer",
+      "origin": "N64",
+      "status": "released",
+      "progress": null,
+      "stars": 117,
+      "tagline": "Native Paper Mario with a map and partners on the touch screen.",
+      "compat": {
+        "o3ds": "experimental",
+        "n3ds": true,
+        "stereo": true,
+        "o3ds3dsx": false
+      },
+      "release": {
+        "tag": "v1.3.14",
+        "date": "2026-11-13"
+      },
+      "repo": "SecondaryLifer/StarHaven",
+      "page": null,
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/starhaven.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 10601408,
+      "banner": {
+        "art": "assets/forge-store/banners/starhaven-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#181733",
+          "#34336c",
+          "#e7b546"
+        ]
+      }
+    },
+    {
+      "id": "dk64",
+      "title": "Donkey Kong 64",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "oneup03",
+      "origin": "N64",
+      "status": "released",
+      "progress": null,
+      "stars": 23,
+      "tagline": "Donkey Kong 64 recompiled for 3DS with stereoscopic 3D. New 3DS recommended; use CIA on Old 3DS.",
+      "compat": {
+        "o3ds": "experimental",
+        "n3ds": true,
+        "stereo": true
+      },
+      "release": {
+        "tag": "rolling",
+        "date": "2026-11-15"
+      },
+      "repo": "oneup03/Donkey-Kong-64-3D",
+      "page": null,
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/dk64.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 5843904,
+      "banner": {
+        "art": "assets/forge-store/banners/dk64-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/dk64-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#32200b",
+          "#684215",
+          "#f5b927"
+        ]
+      }
+    },
+    {
+      "id": "banjo",
+      "title": "Banjo-Kazooie",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "oneup03",
+      "origin": "N64",
+      "status": "released",
+      "progress": null,
+      "stars": 25,
+      "tagline": "Banjo and Kazooie on 3DS, with 3D and camera options. New 3DS recommended; CIA preferred on Old 3DS.",
+      "compat": {
+        "o3ds": "experimental",
+        "n3ds": true,
+        "stereo": true
+      },
+      "release": {
+        "tag": "rolling",
+        "date": "2026-11-14"
+      },
+      "repo": "oneup03/BanjoRecomp3D",
+      "page": null,
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/banjo.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 7482304,
+      "banner": {
+        "art": "assets/forge-store/banners/banjo-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/banjo-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#07322e",
+          "#185a50",
+          "#f0c45a"
+        ]
+      }
+    },
+    {
+      "id": "goemon",
+      "title": "Mystical Ninja Goemon",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "oneup03",
+      "origin": "N64",
+      "status": "released",
+      "progress": null,
+      "stars": 15,
+      "tagline": "Mystical Ninja Starring Goemon recompiled, with touch HUD and 3D. New 3DS recommended.",
+      "compat": {
+        "o3ds": "experimental",
+        "n3ds": true,
+        "stereo": true
+      },
+      "release": {
+        "tag": "rolling",
+        "date": "2026-11-14"
+      },
+      "repo": "oneup03/Goemon64Recomp3D",
+      "page": null,
+      "needs": [
+        "rom"
+      ],
+      "icon": "assets/forge-store/icons/goemon.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 5422016,
+      "banner": {
+        "art": "assets/forge-store/banners/goemon-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#101b40",
+          "#354b89",
+          "#da6778"
+        ]
+      }
+    },
+    {
+      "id": "mkwii",
+      "title": "Mario Kart Wii Redux",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "Epic0522",
+      "origin": "Wii",
+      "status": "development",
+      "progress": null,
+      "stars": 33,
+      "tagline": "Epic0522’s Mario Kart Wii port. In development: no published downloads yet.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": null,
+      "repo": "Epic0522/MarioKartWii-3DS-Redux",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/mkwii.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": null,
+      "banner": {
+        "art": "assets/forge-store/banners/mkwii-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/mkwii-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#0b1b37",
+          "#27485b",
+          "#de5657"
+        ]
+      }
+    },
+    {
+      "id": "gd3ds",
+      "title": "Geometry Dash 3DS",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "AleFunky",
+      "origin": "Android / iOS",
+      "status": "released",
+      "progress": null,
+      "stars": 154,
+      "tagline": "Geometry Dash for 3DS with an editor, levels and stereoscopic 3D. See the repository for level packs.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v1.1",
+        "date": "2026-08-15"
+      },
+      "repo": "AleFunky/gd3ds",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/gd3ds.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 26616768,
+      "banner": {
+        "art": "assets/forge-store/banners/gd3ds-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#093650",
+          "#0f7189",
+          "#ffe947"
+        ]
+      }
+    },
+    {
+      "id": "xash3ds",
+      "title": "Half-Life 1",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "masterfeizz",
+      "origin": "PC",
+      "status": "released",
+      "progress": null,
+      "stars": 184,
+      "tagline": "Xash3D engine for Half-Life on 3DS. Requires the original data from your own copy of Half-Life.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v0.2",
+        "date": "2019-09-14"
+      },
+      "repo": "masterfeizz/Xash3DS",
+      "page": null,
+      "needs": [
+        "data"
+      ],
+      "icon": "assets/forge-store/icons/xash3ds.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 1756608,
+      "banner": {
+        "art": "assets/forge-store/banners/xash3ds-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#261b16",
+          "#5b3218",
+          "#e99023"
+        ]
+      }
+    },
+    {
+      "id": "ctrquake",
+      "title": "Quake · ctrQuake",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "masterfeizz",
+      "origin": "PC",
+      "status": "released",
+      "progress": null,
+      "stars": 105,
+      "tagline": "Native Quake for 3DS. Copy your game’s PAK files into /3ds/ctrQuake/id1/.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v0.8",
+        "date": "2016-09-13"
+      },
+      "repo": "masterfeizz/ctrQuake",
+      "page": null,
+      "needs": [
+        "data"
+      ],
+      "icon": "assets/forge-store/icons/ctrquake.webp",
+      "iconBackground": "#d5b88c",
+      "pixelIcon": false,
+      "download_bytes": 984000,
+      "banner": {
+        "art": "assets/forge-store/banners/ctrquake-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#1e1713",
+          "#4b3123",
+          "#ad6840"
+        ]
+      }
+    },
+    {
+      "id": "openlara",
+      "title": "OpenLara",
+      "category": "community",
+      "tags": [
+        "community"
+      ],
+      "author": "XProger",
+      "origin": "PS1 / PC",
+      "status": "released",
+      "progress": null,
+      "stars": 5151,
+      "tagline": "Open-source Tomb Raider engine. Requires original levels and sounds in /3ds/OpenLara/.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "latest",
+        "date": "2019-01-11"
+      },
+      "repo": "XProger/OpenLara",
+      "page": null,
+      "needs": [
+        "data"
+      ],
+      "icon": "assets/forge-store/icons/openlara.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 599718,
+      "banner": {
+        "art": "assets/forge-store/banners/openlara-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#141e29",
+          "#304555",
+          "#96b9b1"
+        ]
+      }
+    },
+    {
+      "id": "snes9x",
+      "title": "Snes9x",
+      "category": "emulators",
+      "tags": [
+        "emulators"
+      ],
+      "author": "bubble2k16 · matbo87 · willjow · Xeddius-Network",
+      "origin": "SNES",
+      "status": "released",
+      "progress": null,
+      "stars": 92,
+      "tagline": "Super Nintendo on 3DS. Updated bubble2k16 fork with save states, cheats and RetroAchievements.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v2.0",
+        "date": "2026-11-09"
+      },
+      "repo": "matbo87/snes9x_3ds",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/snes9x.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 3855296,
+      "banner": {
+        "art": "assets/forge-store/banners/snes9x-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/snes9x-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#26213c",
+          "#4e476a",
+          "#b5a7ed"
+        ]
+      }
+    },
+    {
+      "id": "daedalus",
+      "title": "DaedalusX64",
+      "category": "emulators",
+      "tags": [
+        "emulators"
+      ],
+      "author": "masterfeizz",
+      "origin": "N64",
+      "status": "released",
+      "progress": null,
+      "stars": 382,
+      "tagline": "Nintendo 64 emulator with dynamic recompilation. Compatibility and speed depend on the game; New 3DS recommended.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v1.0",
+        "date": "2022-10-16"
+      },
+      "repo": "masterfeizz/DaedalusX64-3DS",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/daedalus.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 938944,
+      "banner": {
+        "art": "assets/forge-store/banners/daedalus-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/daedalus-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#0a2234",
+          "#195065",
+          "#76c666"
+        ]
+      }
+    },
+    {
+      "id": "mgba",
+      "title": "mGBA",
+      "category": "emulators",
+      "tags": [
+        "emulators"
+      ],
+      "author": "mgba-emu",
+      "origin": "GBA",
+      "status": "released",
+      "progress": null,
+      "stars": 7594,
+      "tagline": "Game Boy, Game Boy Color and Game Boy Advance with saves and configurable controls. GBA works best on New 3DS.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "0.10.5",
+        "date": "2025-03-09"
+      },
+      "repo": "mgba-emu/mgba",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/mgba.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 1212768,
+      "banner": {
+        "art": "assets/forge-store/banners/mgba-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/mgba-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#1c183e",
+          "#453375",
+          "#b485e4"
+        ]
+      }
+    },
+    {
+      "id": "psx3d",
+      "title": "PSX3D",
+      "category": "emulators",
+      "tags": [
+        "emulators"
+      ],
+      "author": "BreadChaser",
+      "origin": "PS1",
+      "status": "released",
+      "progress": null,
+      "stars": 23,
+      "tagline": "PlayStation for Old and New 3DS: cover-art library, GPU rendering and touch controls. Copy your games to /roms/psx/.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": "experimental"
+      },
+      "release": {
+        "tag": "v0.5.2",
+        "date": "2026-10-25"
+      },
+      "repo": "BreadChaser/PSX3D",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/psx3d.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 9884608,
+      "banner": {
+        "art": "assets/forge-store/banners/psx3d-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#21133b",
+          "#652b6d",
+          "#ec9297"
+        ]
+      }
+    },
+    {
+      "id": "picodrive",
+      "title": "PicoDrive",
+      "category": "emulators",
+      "tags": [
+        "emulators"
+      ],
+      "author": "bubble2k16",
+      "origin": "Mega Drive",
+      "status": "released",
+      "progress": null,
+      "stars": 84,
+      "tagline": "Mega Drive, Master System and Mega CD optimized for Old 3DS. Mega CD requires your BIOS.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v0.94",
+        "date": "2018-03-24"
+      },
+      "repo": "bubble2k16/picodrive_3ds",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/picodrive.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 1372485,
+      "banner": {
+        "art": "assets/forge-store/banners/picodrive-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#0b163f",
+          "#163a80",
+          "#3787de"
+        ]
+      }
+    },
+    {
+      "id": "retroarch",
+      "title": "RetroArch",
+      "category": "emulators",
+      "tags": [
+        "emulators"
+      ],
+      "author": "libretro",
+      "origin": "Multi-system",
+      "status": "released",
+      "progress": null,
+      "stars": 14591,
+      "tagline": "Libretro emulator collection. Includes the official Homebrew Launcher frontend, cores and assets; requires free SD space.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v1.22.2",
+        "date": "2025-11-20"
+      },
+      "repo": "libretro/RetroArch",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/retroarch.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 117251536,
+      "banner": {
+        "art": "assets/forge-store/banners/retroarch-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#181d2a",
+          "#343c55",
+          "#83a0c8"
+        ]
+      }
+    },
+    {
+      "id": "checkpoint",
+      "title": "Checkpoint",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "BernardoGiordano",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 3123,
+      "tagline": "Back up and restore your 3DS and DS save files.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v5.3.0",
+        "date": "2026-10-13"
+      },
+      "repo": "BernardoGiordano/Checkpoint",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/checkpoint.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 2646976,
+      "banner": {
+        "art": "assets/forge-store/banners/checkpoint-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#101e30",
+          "#314d6a",
+          "#8fd4ed"
+        ]
+      }
+    },
+    {
+      "id": "nimbus",
+      "title": "Nimbus · Pretendo",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "PretendoNetwork",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 280,
+      "tagline": "Switch between Nintendo Network and Pretendo. Includes Nimbus resources; enable external modules and game patching in Luma3DS.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v2.2.0",
+        "date": "2026-10-04"
+      },
+      "repo": "PretendoNetwork/nimbus",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/nimbus.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 1399862,
+      "banner": {
+        "art": "assets/forge-store/banners/nimbus-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#251c3b",
+          "#4d3970",
+          "#a689ed"
+        ]
+      }
+    },
+    {
+      "id": "3dsdl",
+      "title": "3dsDL",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "ankushKun",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 240,
+      "tagline": "URL and QR downloads, file manager and file transfers from your phone over Wi-Fi.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v0.9.0",
+        "date": "2026-10-31"
+      },
+      "repo": "ankushKun/3dsDL",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/3dsdl.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 3052480,
+      "banner": {
+        "art": "assets/forge-store/banners/3dsdl-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/3dsdl-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#0b2940",
+          "#175a73",
+          "#eac251"
+        ]
+      }
+    },
+    {
+      "id": "universal",
+      "title": "Universal-Updater",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "Universal-Team",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 1332,
+      "tagline": "Install and update homebrew from Universal-DB and other Unistore catalogs.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v3.4.1",
+        "date": "2026-06-20"
+      },
+      "repo": "Universal-Team/Universal-Updater",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/universal.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 2479040,
+      "banner": {
+        "art": "assets/forge-store/banners/universal-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/universal-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#0d2545",
+          "#185b8f",
+          "#45beec"
+        ]
+      }
+    },
+    {
+      "id": "fourthtube",
+      "title": "FourthTube",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "erievs",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 193,
+      "tagline": "YouTube client for 3DS. Playback availability depends on changes to the service.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "b34.1",
+        "date": "2026-02-06"
+      },
+      "repo": "erievs/FourthTube",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/fourthtube.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 4707264,
+      "banner": {
+        "art": "assets/forge-store/banners/fourthtube-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/fourthtube-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#112d24",
+          "#215c44",
+          "#76c68c"
+        ]
+      }
+    },
+    {
+      "id": "anemone",
+      "title": "Anemone3DS",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "astronautlevel2",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 1172,
+      "tagline": "Theme and splash manager with previews and Theme Plaza downloads.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v3.0.1",
+        "date": "2024-06-18"
+      },
+      "repo": "astronautlevel2/Anemone3DS",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/anemone.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 1733568,
+      "banner": {
+        "art": "assets/forge-store/banners/anemone-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/anemone-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#12283d",
+          "#2b5476",
+          "#82c5f3"
+        ]
+      }
+    },
+    {
+      "id": "wumiibo",
+      "title": "Wumiibo",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "hax0kartik",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 499,
+      "tagline": "WumiiboHelper installs and manages Wumiibo for amiibo emulation. Follow the project’s Luma setup instructions.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v4.2",
+        "date": "2023-07-21"
+      },
+      "repo": "hax0kartik/wumiibo",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/wumiibo.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 28677056,
+      "banner": {
+        "art": "assets/forge-store/banners/wumiibo-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#1a3437",
+          "#2b5b64",
+          "#e4b44f"
+        ]
+      }
+    },
+    {
+      "id": "fbi",
+      "title": "FBI",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "Steveice10",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 176,
+      "tagline": "CIA installer and manager for titles, files and QR downloads.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "2.6.1",
+        "date": "2024-06-25"
+      },
+      "repo": "Steveice10/FBI",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/fbi.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 1192896,
+      "banner": {
+        "art": "assets/forge-store/banners/fbi-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#0a1a3a",
+          "#163f8a",
+          "#5aa2ff"
+        ]
+      }
+    },
+    {
+      "id": "recorder",
+      "title": "3DS Recorder",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "BolgarMaxym97",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 26,
+      "tagline": "Record both screens and audio to SD, convert to MP4 and send to your phone. Beta; requires Luma3DS external modules.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v1.3.0",
+        "date": "2026-11-16"
+      },
+      "repo": "BolgarMaxym97/3ds-recorder",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/recorder.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 2876352,
+      "banner": {
+        "art": "assets/forge-store/banners/recorder-art.webp",
+        "position": "50% 50%",
+        "logo": "assets/forge-store/banners/recorder-logo.webp",
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#151d2c",
+          "#324863",
+          "#eb646c"
+        ]
+      }
+    },
+    {
+      "id": "artic",
+      "title": "Azahar Artic Setup",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "azahar-emu",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 186,
+      "tagline": "Prepare your console for Artic and Azahar using your own console data.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v1.0.3",
+        "date": "2025-04-15"
+      },
+      "repo": "azahar-emu/ArticSetupTool",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/artic.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 370112,
+      "banner": {
+        "art": "assets/forge-store/banners/artic-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#252c25",
+          "#56634e",
+          "#dccb79"
+        ]
+      }
+    },
+    {
+      "id": "ftpd",
+      "title": "ftpd",
+      "category": "tools",
+      "tags": [
+        "tools"
+      ],
+      "author": "mtheall",
+      "origin": "3DS",
+      "status": "released",
+      "progress": null,
+      "stars": 1743,
+      "tagline": "FTP server to transfer files over Wi-Fi without removing the SD card.",
+      "compat": {
+        "o3ds": true,
+        "n3ds": true,
+        "stereo": false
+      },
+      "release": {
+        "tag": "v3.2.1",
+        "date": "2024-11-17"
+      },
+      "repo": "mtheall/ftpd",
+      "page": null,
+      "needs": [],
+      "icon": "assets/forge-store/icons/ftpd.webp",
+      "iconBackground": null,
+      "pixelIcon": false,
+      "download_bytes": 1344448,
+      "banner": {
+        "art": "assets/forge-store/banners/ftpd-art.webp",
+        "position": "50% 50%",
+        "logo": null,
+        "logo_scale": 1,
+        "pixel": false,
+        "gradient": [
+          "#081d18",
+          "#124b34",
+          "#4dc88c"
+        ]
+      }
+    }
+  ]
+}

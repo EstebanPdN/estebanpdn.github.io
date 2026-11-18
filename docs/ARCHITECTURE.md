@@ -51,3 +51,13 @@ an upstream or private candidate version.
 The shared header opens `blog.html` between Progress and Info. Posts remain individual static routes registered with the scene runtime, so direct links, history and the saved theme work on GitHub Pages. `blog.css` owns the index and shared article layout; `blog-kart.css` applies the Mario Kart presentation. Author posts in `src/pages/` and their media manifests under `public/assets/blog/`.
 
 Community cards refresh public per-version reports and repository activity independently. Worms 3D uses its public tracker feed and an origin-checked iframe bridge. The browser keeps dated data when a source is unavailable and refreshes after reconnecting. `node tools/refresh-community.mjs --watch --build` updates the local publication snapshot hourly; it does not commit or publish.
+
+## forge.store
+
+`forge-store.html` and the homepage section between the carousel and Released Ports
+render `public/data/forge-store-catalog.json` at build time through `tools/forge_store.py`
+(`<!-- forge-store: name -->` markers; unknown names fail the build). Refresh the snapshot,
+icons, banners and screenshots from a forge.store checkout with
+`python3 tools/sync-forge-store.py /path/to/forge.store`, then rebuild.
+`store-showcase.js` plays the two-screen showcase on both pages; `forge-store.js` filters the
+catalog. Butterscotch stays excluded, as on the rest of the site.

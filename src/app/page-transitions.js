@@ -17,6 +17,7 @@
     'blog.html',
     'development.html',
     'blog-mario-kart-64-v2-0.html',
+    'forge-store.html',
   ]);
   const prepared = new Map(),
     images = new Map(),
@@ -263,6 +264,7 @@
       'red-viper-color.html': '#090607',
       'worms-3d.html': '#4b90ee',
       'credits.html': dark ? '#171718' : '#f5f4ec',
+      'forge-store.html': dark ? '#1b1c1f' : '#f4f7f8',
     };
     const layer = document.createElement('div');
     layer.className = 'forge-route-backdrop';
