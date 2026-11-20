@@ -72,32 +72,18 @@
   margin-top: 18px;
   font-size: 15px;
 }
-.beta-downloads {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  margin: 18px 0;
-  padding: 0;
+.beta-guide {
+  border-top: 1px solid #ad9c5e65;
+  margin-top: 18px;
 }
-.beta-downloads a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 8px 12px;
-  border: 1px solid #ad9c5e85;
-  color: #f2e6bf;
-  font:
-    14px/1.5 'DM Sans',
-    Arial,
-    sans-serif;
-}
-.beta-downloads a:hover,
 .beta-guide summary:hover {
   background: #ad9c5e29;
 }
-.beta-guide {
-  border-top: 1px solid #ad9c5e65;
+.beta-guide pre {
+  margin: 8px 0;
+  padding: 9px 12px;
+  background: #151c16;
+  white-space: pre-wrap;
 }
 .beta-guide summary {
   min-height: 44px;

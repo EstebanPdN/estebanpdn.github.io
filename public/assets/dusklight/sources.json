@@ -20,7 +20,7 @@
     {
       "file": "public-beta-01-qr.png",
       "title": "DuskLight Public Beta 01 installer QR",
-      "source_url": "https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/DuskLight-Public-Beta-01.cia",
+      "source_url": "https://files.catbox.moe/q7h4fu.cia",
       "processing": "Generated locally with qrencode from the direct CIA download URL."
     },
     {

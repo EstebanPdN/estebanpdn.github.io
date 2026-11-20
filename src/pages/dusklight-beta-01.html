@@ -37,11 +37,7 @@
               <strong>Scan QR Code</strong>. You can also download the CIA and install it from your
               SD card.</p
             >
-            <a
-              class="twilight-button"
-              href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/DuskLight-Public-Beta-01.cia"
-              >Download CIA</a
-            >
+            <a class="twilight-button" href="https://files.catbox.moe/q7h4fu.cia">Download CIA</a>
           </div>
           <img
             class="beta-qr"
@@ -53,47 +49,30 @@
         <section class="beta-card" aria-labelledby="extractor-title">
           <h2 id="extractor-title">Prepare the game files</h2>
           <p
-            >Use the Forge 3DS Converter with your own GameCube Twilight Princess ISO. The converter
-            supports USA or PAL revision 0 (GZ2E01 or GZ2P01).</p
+            >Use the Dusklight extractor with your own GameCube Twilight Princess ISO (USA or PAL
+            revision 0, GZ2E01 or GZ2P01). It runs on Windows, macOS and Linux with Python 3.</p
           >
-          <ul class="beta-downloads" aria-label="Forge 3DS Converter downloads">
-            <li
-              ><a
-                href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/Forge-3DS-Converter-windows-x64.zip"
-                >Windows (64-bit)</a
-              ></li
-            >
-            <li
-              ><a
-                href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/Forge-3DS-Converter-mac-arm64.zip"
-                >macOS (Apple silicon)</a
-              ></li
-            >
-            <li
-              ><a
-                href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/Forge-3DS-Converter-mac-intel.zip"
-                >macOS (Intel)</a
-              ></li
-            >
-            <li
-              ><a
-                href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/Forge-3DS-Converter-linux-x64.tar.gz"
-                >Linux (64-bit)</a
-              ></li
-            >
-          </ul>
+          <a class="twilight-button" href="downloads/dusklight-beta-01-extractor.zip" download
+            >Download ROM extractor</a
+          >
           <details class="beta-guide">
-            <summary>How to use the converter</summary>
+            <summary>How to use the extractor</summary>
             <ol>
-              <li>Extract the complete download and open <strong>Forge 3DS Converter</strong>.</li>
               <li
-                >Select <strong>Dusklight</strong> and drop your ISO onto the app, or choose it with
-                the file picker.</li
+                >Extract the ZIP and put your ISO in the same folder as
+                <code>twilight_pack.py</code>. The command below assumes that the ISO is named
+                <code>twilight.iso</code>.</li
               >
-              <li>When conversion finishes, find <code>zelda.twilight</code> beside your ISO.</li>
               <li
-                >On the 3DS SD card, create <code>/3ds/DuskLight/</code> if needed. Copy the file to
-                <code>/3ds/DuskLight/zelda.twilight</code>, then launch Dusklight.</li
+                >Open a terminal in that folder and run:
+                <pre><code>python3 twilight_pack.py --input "twilight.iso" --output "zelda.twilight"</code></pre>
+                On Windows, use <code>py -3</code> in place of <code>python3</code>.
+              </li>
+              <li
+                >When the extractor finishes, copy <code>zelda.twilight</code> to
+                <code>/3ds/DuskLight/zelda.twilight</code> on the 3DS SD card. Create the
+                <code>DuskLight</code> folder inside <code>3ds</code> if needed, then launch
+                Dusklight.</li
               >
             </ol>
           </details>

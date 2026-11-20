@@ -1874,8 +1874,8 @@
     },
     {
       "path": "public/assets/dusklight/public-beta-01-qr.png",
-      "bytes": 701,
-      "sha256": "91e1a0d91fdd79aac6e7ce059b64e4bb9bdeb48ad177da19eae59b7c2468931c",
+      "bytes": 415,
+      "sha256": "71ef5c3c7a511ae5f6b806b7eb6bc2f0f077973fdf4b2d480ed2eb16e05c1c3d",
       "evidence": [
         {
           "record": "public/assets/dusklight/font-sources.json",
@@ -1892,7 +1892,7 @@
           "details": {
             "file": "public-beta-01-qr.png",
             "title": "DuskLight Public Beta 01 installer QR",
-            "source_url": "https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/DuskLight-Public-Beta-01.cia",
+            "source_url": "https://files.catbox.moe/q7h4fu.cia",
             "processing": "Generated locally with qrencode from the direct CIA download URL."
           }
         }
@@ -1901,8 +1901,8 @@
     },
     {
       "path": "public/assets/dusklight/sources.json",
-      "bytes": 7468,
-      "sha256": "0c4959137548ac57e67acd8139bb5d55aba5c54026c014b84f2763598b8cc5b1",
+      "bytes": 7388,
+      "sha256": "f8f5da1efeb62ca552d0db96c6965f5433d112b8f82210fcbd63c502432d77c2",
       "evidence": [
         {
           "record": "public/assets/dusklight/font-sources.json",
