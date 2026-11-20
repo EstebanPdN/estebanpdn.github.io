@@ -79,13 +79,21 @@
       oscillator.stop(audio.currentTime + 0.15);
     } catch {}
   }
-  window.ForgeUI = { chime, beginWelcomeSound, playWelcomeSound, playEntrySound };
+  function positionSelection(strip, selected) {
+    if (!selected?.offsetWidth) return;
+    strip.style.setProperty('--nav-selection-left', selected.offsetLeft + 'px');
+    strip.style.setProperty('--nav-selection-width', selected.offsetWidth + 'px');
+  }
+  window.ForgeUI = {
+    chime,
+    beginWelcomeSound,
+    playWelcomeSound,
+    playEntrySound,
+    positionSelection,
+  };
   const navigation = document.querySelector('.site-header .dual-navigation');
   function syncNavigation() {
-    const selected = navigation?.querySelector('button[aria-pressed="true"]');
-    if (!selected?.offsetWidth) return;
-    navigation.style.setProperty('--nav-selection-left', selected.offsetLeft + 'px');
-    navigation.style.setProperty('--nav-selection-width', selected.offsetWidth + 'px');
+    positionSelection(navigation, navigation?.querySelector('button[aria-pressed="true"]'));
   }
   if (navigation) {
     new MutationObserver(syncNavigation).observe(navigation, {

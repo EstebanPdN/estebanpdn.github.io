@@ -389,14 +389,14 @@
   position: relative;
   isolation: isolate;
 }
-.forge-header-band .nav-selection {
+:is(.forge-header-band, .store-tab-strip) .nav-selection {
   position: absolute;
   left: 0;
-  top: 0;
-  height: 100%;
+  top: var(--selection-inset, 0px);
+  height: calc(100% - 2 * var(--selection-inset, 0px));
   width: var(--nav-selection-width, 116px);
   transform: translateX(var(--nav-selection-left, 0px));
-  border-radius: 24px;
+  border-radius: var(--selection-radius, 24px);
   pointer-events: none;
   z-index: -1;
   background: linear-gradient(125deg, #fff, #ecf4f8);
@@ -404,12 +404,12 @@
     0 4px 10px #34495a10,
     inset 0 1px 0 #fff;
 }
-.forge-header-band .dual-navigation.is-ready .nav-selection {
+:is(.forge-header-band .dual-navigation, .store-tab-strip).is-ready .nav-selection {
   transition:
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.forge-header-band .nav-selection:after {
+:is(.forge-header-band, .store-tab-strip) .nav-selection:after {
   content: '';
   position: absolute;
   bottom: 4px;
@@ -428,14 +428,14 @@
 .forge-header-band .dual-navigation button:after {
   display: none;
 }
-:root[data-theme='dark'] .forge-header-band .nav-selection {
+:root[data-theme='dark'] :is(.forge-header-band, .store-tab-strip) .nav-selection {
   background: linear-gradient(145deg, #454548, #303033);
   box-shadow:
     0 4px 10px #0003,
     inset 0 1px 0 #ffffff12;
 }
 @media (prefers-reduced-motion: reduce) {
-  .forge-header-band .dual-navigation.is-ready .nav-selection {
+  :is(.forge-header-band .dual-navigation, .store-tab-strip).is-ready .nav-selection {
     transition: none;
   }
 }

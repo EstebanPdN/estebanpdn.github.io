@@ -257,7 +257,9 @@
             <div class="store-toolbar">
               <div class="store-tabs" role="group" aria-label="Filter by category"
                 ><span class="store-key" aria-hidden="true">L</span
-                ><div class="store-tab-strip"><!-- forge-store: tabs --></div
+                ><div class="store-tab-strip"
+                  ><span class="nav-selection" aria-hidden="true"></span
+                  ><!-- forge-store: tabs --></div
                 ><span class="store-key" aria-hidden="true">R</span></div
               >
               <label class="store-search"
@@ -268,9 +270,11 @@
                 ><input id="store-search" type="search" placeholder="Search" autocomplete="off"
               /></label>
             </div>
-            <!-- forge-store: catalog -->
-            <p class="store-empty" id="store-empty" hidden>No apps match that search.</p>
-            <p class="store-result" id="store-result" aria-live="polite"></p>
+            <div id="store-results">
+              <p class="store-result" id="store-result" role="status"></p>
+              <!-- forge-store: catalog -->
+              <p class="store-empty" id="store-empty" hidden>No apps match that search.</p>
+            </div>
           </div>
         </section>
 

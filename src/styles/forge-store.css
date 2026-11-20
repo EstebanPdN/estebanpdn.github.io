@@ -516,6 +516,9 @@
   font-weight: 900;
 }
 .store-tab-strip {
+  isolation: isolate;
+  --selection-inset: 5px;
+  --selection-radius: 11px;
   position: relative;
   display: flex;
   gap: 4px;
@@ -557,7 +560,7 @@
   color: var(--fs-ink);
 }
 [data-store-tab][aria-pressed='true'] {
-  background: var(--fs-surface-2);
+  background: transparent;
   color: var(--fs-ink);
 }
 [data-store-tab][aria-pressed='true'] svg {
@@ -762,7 +765,7 @@ a.store-app-link:hover .store-app-action svg {
   text-align: center;
 }
 .store-result {
-  margin: 14px 4px 0;
+  margin: 0 4px 12px;
   color: var(--fs-ink-soft);
   font-size: 13px;
   font-weight: 700;

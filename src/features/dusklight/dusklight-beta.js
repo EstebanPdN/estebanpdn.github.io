@@ -1,3 +1,44 @@
+const guide = document.querySelector('.guide-steps');
+const guideSteps = Array.from(guide.children);
+const guideControls = document.querySelector('.guide-controls');
+const previousStep = guideControls.querySelector('.guide-previous');
+const nextStep = guideControls.querySelector('.guide-next');
+const stepButtons = [...guideControls.querySelectorAll('[data-guide-step]')];
+const stepCount = guideControls.querySelector('.guide-count');
+let requestedStep = 0;
+
+function showGuideStep(index) {
+  guideSteps.forEach((step, position) => {
+    step.hidden = position !== index;
+  });
+  stepButtons.forEach((button, position) => {
+    if (position === index) button.setAttribute('aria-current', 'step');
+    else button.removeAttribute('aria-current');
+  });
+  stepCount.textContent = `Step ${index + 1} of ${guideSteps.length}`;
+}
+
+function updateGuideArrows() {
+  previousStep.setAttribute('aria-disabled', String(requestedStep === 0));
+  nextStep.setAttribute('aria-disabled', String(requestedStep === guideSteps.length - 1));
+}
+
+function selectGuideStep(index) {
+  if (index === requestedStep || index < 0 || index >= guideSteps.length) return;
+  requestedStep = index;
+  updateGuideArrows();
+  window.ForgeMotion.change(guide, [guide], () => showGuideStep(index));
+}
+
+previousStep.addEventListener('click', () => selectGuideStep(requestedStep - 1));
+nextStep.addEventListener('click', () => selectGuideStep(requestedStep + 1));
+stepButtons.forEach((button, index) => {
+  button.addEventListener('click', () => selectGuideStep(index));
+});
+showGuideStep(requestedStep);
+updateGuideArrows();
+guideControls.hidden = false;
+
 const form = document.querySelector('#beta-report');
 const status = form.querySelector('.beta-status');
 const progress = form.querySelector('progress');

@@ -157,6 +157,21 @@
         850
       ],
       "purpose": "Collection card backdrop only; original-game promotional art, not a Dusklight port capture"
+    },
+    {
+      "file": "converter-choose-iso.webp",
+      "title": "DuskLight port on the Forge 3DS Converter ISO picker",
+      "processing": "WebP from an existing local screenshot of the desktop app."
+    },
+    {
+      "file": "converter-ready.webp",
+      "title": "Forge 3DS Converter completion screen",
+      "processing": "WebP from a browser capture of the desktop renderer with a sample completion event."
+    },
+    {
+      "file": "converter-sd-folder.webp",
+      "title": "Example DuskLight folder on an SD card",
+      "processing": "WebP screenshot of a sample folder view showing the exact installation path."
     }
   ]
 }

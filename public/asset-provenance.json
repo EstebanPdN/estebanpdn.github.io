@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "project": "Esteban’s Forge · v1.0.0",
   "generatedBy": "tools/build-provenance.mjs",
-  "assetFileCount": 521,
+  "assetFileCount": 524,
   "counts": {
     "context-only-permission-not-established": 116,
     "license-named-in-source-record-recheck-rights-holder": 7,
     "source-and-permission-not-documented": 177,
-    "source-recorded-permission-not-established": 221
+    "source-recorded-permission-not-established": 224
   },
   "reviewScope": "This inventory records bundled evidence and file hashes. It does not independently verify copyright ownership, the continued availability of source pages, or permissions beyond the terms recorded in source manifests.",
   "attributionNotice": "A credit or source link does not by itself grant permission to copy, adapt, or redistribute a work. Unknown permissions remain unknown.",
@@ -1692,6 +1692,84 @@
       "permissionStatus": "source-recorded-permission-not-established"
     },
     {
+      "path": "public/assets/dusklight/converter-choose-iso.webp",
+      "bytes": 90084,
+      "sha256": "67871f1e9db3e93bcafe539d0ba1ecd12f7d686fa152d625120bd95865c9f346",
+      "evidence": [
+        {
+          "record": "public/assets/dusklight/font-sources.json",
+          "match": "directory",
+          "details": {
+            "source": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond",
+            "license": "SIL Open Font License 1.1"
+          }
+        },
+        {
+          "record": "public/assets/dusklight/sources.json",
+          "match": "path",
+          "field": "assets.8.file",
+          "details": {
+            "file": "converter-choose-iso.webp",
+            "title": "DuskLight port on the Forge 3DS Converter ISO picker",
+            "processing": "WebP from an existing local screenshot of the desktop app."
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/dusklight/converter-ready.webp",
+      "bytes": 89968,
+      "sha256": "073d2fa1c1d28109b69e905f8c068c6f4aa6338ba2919da1a29aea4ad7bd3852",
+      "evidence": [
+        {
+          "record": "public/assets/dusklight/font-sources.json",
+          "match": "directory",
+          "details": {
+            "source": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond",
+            "license": "SIL Open Font License 1.1"
+          }
+        },
+        {
+          "record": "public/assets/dusklight/sources.json",
+          "match": "path",
+          "field": "assets.9.file",
+          "details": {
+            "file": "converter-ready.webp",
+            "title": "Forge 3DS Converter completion screen",
+            "processing": "WebP from a browser capture of the desktop renderer with a sample completion event."
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
+      "path": "public/assets/dusklight/converter-sd-folder.webp",
+      "bytes": 10812,
+      "sha256": "6822f4c95e717e502206fe47dde38c8aa5446475571c642047e38b788859f88e",
+      "evidence": [
+        {
+          "record": "public/assets/dusklight/font-sources.json",
+          "match": "directory",
+          "details": {
+            "source": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond",
+            "license": "SIL Open Font License 1.1"
+          }
+        },
+        {
+          "record": "public/assets/dusklight/sources.json",
+          "match": "path",
+          "field": "assets.10.file",
+          "details": {
+            "file": "converter-sd-folder.webp",
+            "title": "Example DuskLight folder on an SD card",
+            "processing": "WebP screenshot of a sample folder view showing the exact installation path."
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
       "path": "public/assets/dusklight/cormorant-OFL.txt",
       "bytes": 4387,
       "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956",
@@ -1901,8 +1979,8 @@
     },
     {
       "path": "public/assets/dusklight/sources.json",
-      "bytes": 7388,
-      "sha256": "f8f5da1efeb62ca552d0db96c6965f5433d112b8f82210fcbd63c502432d77c2",
+      "bytes": 8020,
+      "sha256": "b9014a4a392cecd3b119e2372a6d94ce471b2ed51163cac5a0809ea7ce8e45cb",
       "evidence": [
         {
           "record": "public/assets/dusklight/font-sources.json",

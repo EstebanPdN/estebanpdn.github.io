@@ -82,8 +82,22 @@
     animation.finished.then(state.finish, state.finish);
     return finished;
   }
+  const dissolve = {
+    leave: (element) =>
+      element.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 150,
+        easing: 'ease-in-out',
+        fill: 'forwards',
+      }),
+    enter: (element) =>
+      element.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 290,
+        easing,
+        fill: 'both',
+      }),
+  };
   // A single worker keeps rapid tab requests from stacking or painting stale content.
-  function change(key, outgoing, commit, incoming = () => outgoing) {
+  function change(key, outgoing, commit, incoming = () => outgoing, motion = dissolve) {
     const existing = active.get(key);
     const request = { outgoing: outgoing.filter(Boolean), commit, incoming };
     if (existing?.kind === 'change') {
@@ -123,13 +137,7 @@
         state.current = state.pending;
         state.pending = null;
         state.committed = false;
-        state.animations = state.current.outgoing.filter(visible).map((element) =>
-          element.animate([{ opacity: 1 }, { opacity: 0 }], {
-            duration: 150,
-            easing: 'ease-in-out',
-            fill: 'forwards',
-          }),
-        );
+        state.animations = state.current.outgoing.filter(visible).map(motion.leave);
         await wait(state.animations);
         if (done) return;
         if (state.pending) {
@@ -139,16 +147,7 @@
         state.current.commit();
         state.committed = true;
         state.animations.forEach((animation) => animation.cancel());
-        state.animations = state.current
-          .incoming()
-          .filter(visible)
-          .map((element) =>
-            element.animate([{ opacity: 0 }, { opacity: 1 }], {
-              duration: 290,
-              easing,
-              fill: 'both',
-            }),
-          );
+        state.animations = state.current.incoming().filter(visible).map(motion.enter);
         await wait(state.animations);
         if (done) return;
         state.animations.forEach((animation) => animation.cancel());

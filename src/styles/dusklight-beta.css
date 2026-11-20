@@ -85,25 +85,31 @@
     sans-serif;
 }
 .beta-card p,
-.beta-guide ol {
+.guide-steps {
   color: #d5d1bb;
 }
 .beta-install {
   display: grid;
   gap: 19px;
-  grid-template-columns: minmax(0, 1fr) minmax(110px, 165px);
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 240px);
   align-items: center;
 }
+.beta-install-download {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+}
 .beta-qr {
-  width: min(100%, 248px);
-  margin-inline: auto;
-  align-self: center;
+  width: min(100%, 240px);
   image-rendering: pixelated;
   background: #fff;
 }
 .beta-card .twilight-button {
   margin-top: 18px;
   font-size: 15px;
+}
+.beta-install .beta-download {
+  margin-top: 0;
 }
 .beta-guide {
   border-top: 1px solid #ad9c5e65;
@@ -112,64 +118,92 @@
 .beta-guide summary:hover {
   background: #ad9c5e29;
 }
-.beta-guide pre {
-  margin: 8px 0;
-  padding: 9px 12px;
-  background: #151c16;
-  white-space: pre-wrap;
+.guide-heading,
+.guide-step h4 {
+  font:
+    600 27px/1.15 Twilight Serif,
+    Georgia,
+    serif;
+  color: #fff0c9;
+  margin: 0;
 }
-.beta-guide summary {
+.guide-heading {
+  padding-block: 16px;
+}
+.guide-step h4 {
+  margin-bottom: 10px;
+}
+.guide-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 14px;
+}
+.guide-controls button {
+  width: 44px;
+  height: 44px;
+  background: #151c16;
+  border: 1px solid #ad9c5e85;
+  color: #ffe6ad;
+  font-size: 17px;
+  transition:
+    background-color 180ms,
+    border-color 180ms,
+    color 180ms,
+    opacity 180ms;
+}
+.guide-controls button[aria-current='step'] {
+  background: #e0c581;
+  border-color: #e0c581;
+  color: #151c16;
+}
+.guide-controls button:not([aria-disabled='true'], [aria-current]):hover {
+  background: #ad9c5e29;
+}
+.guide-controls button[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: default;
+}
+.guide-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.guide-step {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: clamp(16px, 3vw, 32px);
+  align-items: center;
+  padding: clamp(14px, 3vw, 28px);
+  border: 1px solid #808063;
+  background: #151c16;
+}
+.guide-step:not([hidden]) + .guide-step:not([hidden]) {
+  margin-top: 12px;
+}
+.guide-step img {
+  width: 100%;
+  aspect-ratio: 1060 / 960;
+  object-fit: contain;
+  border: 1px solid #ad9c5e65;
+  border-radius: 6px;
+  background: #151b17;
+}
+.cli-guide summary {
   min-height: 44px;
   padding: 10px 6px;
   color: #f2e6bf;
   cursor: pointer;
 }
-.guide-steps {
-  display: grid;
-  grid-template-columns: 1fr 1.24fr 1fr;
-  counter-reset: step;
-  list-style: none;
-  padding: 0;
-  margin: 14px 0 0;
-  gap: 20px;
+.cli-guide figure {
+  margin-block: 14px;
 }
-.guide-steps li {
-  min-width: 0;
-  border-top: 1px solid #808063;
-  padding-top: 14px;
-  counter-increment: step;
-}
-.guide-steps h3 {
-  font:
-    600 25px/1.1 Twilight Serif,
-    Georgia,
-    serif;
-  color: #fff0c9;
-  margin-bottom: 12px;
-}
-.guide-steps h3::before {
-  content: counter(step, decimal-leading-zero);
-  display: block;
-  color: #d5bb79;
-  font: 12px/1.5 monospace;
-  margin-bottom: 5px;
-}
-.guide-steps figure {
-  margin-top: 14px;
-  background: #101813;
-  border-left: 2px solid #967e48;
-  padding: 12px;
-}
-.guide-steps pre {
+.cli-guide pre {
   margin: 4px 0 0;
-  padding: 0;
-  background: none;
-  color: #dae6d6;
-  font: 13px/1.6 monospace;
-  overflow-wrap: anywhere;
-}
-.guide-steps pre code {
-  font: inherit;
+  padding: 9px 12px;
+  background: #151c16;
+  white-space: pre-wrap;
 }
 .beta-card code {
   color: #f2e6bf;
@@ -254,7 +288,7 @@
 }
 
 @media (max-width: 760px) {
-  .guide-steps,
+  .guide-step,
   .beta-report {
     grid-template-columns: 1fr;
   }
@@ -279,7 +313,27 @@
     grid-template-columns: 1fr;
   }
   .beta-qr {
-    width: 164px;
-    margin: 0;
+    width: min(100%, 196px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy {
+    animation: beta-hero-in 480ms cubic-bezier(0.32, 0, 0.24, 1) both;
+  }
+}
+@keyframes beta-hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .guide-controls button {
+    transition: none;
   }
 }

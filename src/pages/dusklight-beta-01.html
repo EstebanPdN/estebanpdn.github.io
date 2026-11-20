@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="page-transitions.css" />
     <script src="theme.js"></script>
     <script src="page-transitions.js"></script>
+    <script src="interaction-motion.js"></script>
     <script src="forge-header.js" defer></script>
     <script src="dusklight-beta.js" defer></script>
   </head>
@@ -43,67 +44,139 @@
               <strong>Scan QR Code</strong>. You can also download the CIA and install it from your
               SD card.</p
             >
-            <a class="twilight-button" href="https://files.catbox.moe/q7h4fu.cia">Download CIA</a>
           </div>
-          <img
-            class="beta-qr"
-            src="assets/dusklight/public-beta-01-qr.png"
-            alt="FBI installation QR for the Dusklight Public Beta 01 CIA"
-          />
+          <div class="beta-install-download">
+            <img
+              class="beta-qr"
+              src="assets/dusklight/public-beta-01-qr.png"
+              width="296"
+              height="296"
+              alt="FBI installation QR for the Dusklight Public Beta 01 CIA"
+            />
+            <a class="twilight-button beta-download" href="https://files.catbox.moe/q7h4fu.cia"
+              >Download CIA</a
+            >
+          </div>
         </section>
 
         <section class="beta-card" aria-labelledby="extractor-title">
           <h2 id="extractor-title">Prepare the game files</h2>
           <p
             >Use the Dusklight extractor with your own GameCube Twilight Princess ISO (USA or PAL
-            revision 0, GZ2E01 or GZ2P01). It runs on Windows, macOS and Linux with Python 3.</p
+            revision 0, GZ2E01 or GZ2P01).</p
           >
-          <a class="twilight-button" href="downloads/dusklight-beta-01-extractor.zip" download
-            >Download ROM extractor</a
-          >
-          <details class="beta-guide" open>
-            <summary>How to use the extractor</summary>
-            <ol class="guide-steps">
-              <li
-                ><h3>Gather your files</h3
-                ><p
-                  >Unzip the extractor. In the same folder, place your GameCube ISO and name it
-                  <code>twilight.iso</code>.</p
-                >
-                <figure
-                  ><figcaption>Working folder</figcaption
-                  ><pre>
-├─ twilight_pack.py
-└─ twilight.iso</pre>
-                </figure></li
+          <section class="beta-guide" aria-label="Forge 3DS Converter guide">
+            <h3 class="guide-heading">Forge 3DS Converter</h3>
+            <ol class="guide-steps" id="extractor-steps">
+              <li class="guide-step">
+                <div>
+                  <h4>Select your ISO</h4>
+                  <p
+                    >Open Forge 3DS Converter and select <strong>DuskLight</strong>. Drag your ISO
+                    onto the window or click <strong>Choose ISO</strong> to browse for it.</p
+                  >
+                </div>
+                <img
+                  src="assets/dusklight/converter-choose-iso.webp"
+                  width="1060"
+                  height="960"
+                  alt="DuskLight converter with the ISO drop area and the Choose ISO button"
+                />
+              </li>
+              <li class="guide-step">
+                <div>
+                  <h4>Convert and find the pack</h4>
+                  <p
+                    >Wait for <strong>Game data verified</strong>. Click
+                    <strong>Show in folder</strong> to find <code>zelda.twilight</code> beside your
+                    ISO.</p
+                  >
+                </div>
+                <img
+                  src="assets/dusklight/converter-ready.webp"
+                  width="1060"
+                  height="960"
+                  alt="Completed conversion at 100% with Game data verified and the Show in folder button"
+                />
+              </li>
+              <li class="guide-step">
+                <div>
+                  <h4>Copy to your SD card</h4>
+                  <p
+                    >On your 3DS SD card, open <code>3ds</code> and create a
+                    <code>DuskLight</code> folder if needed. Copy the pack to
+                    <code>/3ds/DuskLight/zelda.twilight</code>, reinsert the card and launch
+                    Dusklight.</p
+                  >
+                </div>
+                <img
+                  src="assets/dusklight/converter-sd-folder.webp"
+                  width="1110"
+                  height="593"
+                  alt="Example SD card folder open at 3ds/DuskLight with zelda.twilight selected"
+                />
+              </li>
+            </ol>
+            <nav class="guide-controls" aria-label="Extractor steps" hidden>
+              <button
+                type="button"
+                class="guide-previous"
+                aria-label="Previous step"
+                aria-controls="extractor-steps"
+                >←</button
               >
-              <li
-                ><h3>Build the pack</h3
-                ><p
-                  >Open a terminal in that folder. Run the command for your computer and wait for it
-                  to finish.</p
-                >
-                <figure
-                  ><figcaption>Windows</figcaption
-                  >><pre><code>py -3 twilight_pack.py --input "twilight.iso" --output "zelda.twilight"</code></pre>
-                </figure>
-                <figure
-                  ><figcaption>macOS / Linux</figcaption
-                  >><pre><code>python3 twilight_pack.py --input "twilight.iso" --output "zelda.twilight"</code></pre>
-                </figure></li
+              <button
+                type="button"
+                data-guide-step="0"
+                aria-label="Step 1: Select your ISO"
+                aria-controls="extractor-steps"
+                >1</button
               >
-              <li
-                ><h3>Copy to your SD card</h3
-                ><p
-                  >Copy the new pack into <code>/3ds/DuskLight/</code>. Create the folder if needed.
-                  Reinsert the card and launch Dusklight.</p
-                >
-                <figure
-                  ><figcaption>SD card</figcaption>><pre>3ds/
-└─ DuskLight/
-   └─ <strong>zelda.twilight</strong></pre>
-                </figure></li
-              ></ol
+              <button
+                type="button"
+                data-guide-step="1"
+                aria-label="Step 2: Convert and find the pack"
+                aria-controls="extractor-steps"
+                >2</button
+              >
+              <button
+                type="button"
+                data-guide-step="2"
+                aria-label="Step 3: Copy to your SD card"
+                aria-controls="extractor-steps"
+                >3</button
+              >
+              <button
+                type="button"
+                class="guide-next"
+                aria-label="Next step"
+                aria-controls="extractor-steps"
+                >→</button
+              >
+              <span class="sr-only guide-count" role="status"></span>
+            </nav>
+          </section>
+          <details class="beta-guide cli-guide">
+            <summary>Use the Python extractor instead</summary>
+            <p
+              >Download and unzip the script, then place your ISO beside
+              <code>twilight_pack.py</code> and name it <code>twilight.iso</code>. Open a terminal
+              in that folder and run the command for your computer.</p
+            >
+            <a class="twilight-button" href="downloads/dusklight-beta-01-extractor.zip" download
+              >Download Python extractor</a
+            >
+            <figure>
+              <figcaption>Windows</figcaption>
+              <pre><code>py -3 twilight_pack.py --input "twilight.iso" --output "zelda.twilight"</code></pre>
+            </figure>
+            <figure>
+              <figcaption>macOS / Linux</figcaption>
+              <pre><code>python3 twilight_pack.py --input "twilight.iso" --output "zelda.twilight"</code></pre>
+            </figure>
+            <p
+              >Copy the resulting pack to <code>/3ds/DuskLight/zelda.twilight</code> on the SD
+              card.</p
             >
           </details>
         </section>
