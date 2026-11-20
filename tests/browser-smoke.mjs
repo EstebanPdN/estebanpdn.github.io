@@ -10,8 +10,8 @@ const server = await serve(dist);
 const routes = (await readdir(dist)).filter((file) => file.endsWith('.html')).sort();
 assert.equal(
   routes.length,
-  15,
-  'The published route set includes the Blog pages, development statement, Worms 3D and forge.store',
+  16,
+  'The published route set includes the direct-link Dusklight beta page',
 );
 
 for (const [engineName, browserType] of [

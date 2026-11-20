@@ -1,0 +1,192 @@
+.beta-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 clamp(14px, 4vw, 46px) 64px;
+  color: #e9e5d2;
+}
+.beta-hero {
+  padding: clamp(30px, 6vw, 74px) 0 34px;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 25%, #9c7d3530, transparent 67%);
+}
+.beta-platform {
+  font:
+    600 13px/1.4 'DM Sans',
+    Arial,
+    sans-serif;
+  letter-spacing: 0.17em;
+  color: #d7bf7f;
+}
+.beta-hero img {
+  width: min(100%, 490px);
+  margin: 16px auto 6px;
+}
+.beta-hero h1 {
+  font-size: clamp(36px, 6vw, 62px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+.beta-setup {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.beta-card {
+  padding: clamp(17px, 3vw, 30px);
+  background: #20271e;
+  border: 3px double #948458;
+  box-shadow: 0 8px 24px #0003;
+}
+.beta-card h2 {
+  color: #f2e6bf;
+  font-size: clamp(29px, 4vw, 38px);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 13px;
+}
+.beta-card p,
+.beta-guide,
+.beta-card form {
+  font:
+    16px/1.55 'DM Sans',
+    Arial,
+    sans-serif;
+}
+.beta-card p,
+.beta-guide ol {
+  color: #d5d1bb;
+}
+.beta-install {
+  display: grid;
+  gap: 19px;
+  align-items: start;
+}
+.beta-qr {
+  width: min(100%, 248px);
+  margin-inline: auto;
+  align-self: center;
+  image-rendering: pixelated;
+  background: #fff;
+}
+.beta-card .twilight-button {
+  margin-top: 18px;
+  font-size: 15px;
+}
+.beta-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 18px 0;
+  padding: 0;
+}
+.beta-downloads a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #ad9c5e85;
+  color: #f2e6bf;
+  font:
+    14px/1.5 'DM Sans',
+    Arial,
+    sans-serif;
+}
+.beta-downloads a:hover,
+.beta-guide summary:hover {
+  background: #ad9c5e29;
+}
+.beta-guide {
+  border-top: 1px solid #ad9c5e65;
+}
+.beta-guide summary {
+  min-height: 44px;
+  padding: 10px 6px;
+  color: #f2e6bf;
+  cursor: pointer;
+}
+.beta-guide ol {
+  padding-left: 26px;
+  margin-bottom: 0;
+}
+.beta-guide li + li {
+  margin-top: 7px;
+}
+.beta-card code {
+  color: #f2e6bf;
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+.beta-report {
+  margin-top: 18px;
+}
+.beta-report form {
+  margin-top: 18px;
+}
+.beta-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.beta-report label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 15px;
+  color: #f2e6bf;
+}
+.beta-report :is(input:not([type='checkbox']), select, textarea) {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid #ad9c5e85;
+  border-radius: 0;
+  background: #151c16;
+  color: #f2e6bf;
+  font: inherit;
+}
+.beta-report :is(input, select, textarea):focus-visible {
+  outline: 2px solid #b5d5bb;
+  outline-offset: 2px;
+}
+.beta-report .beta-hint {
+  margin: -8px 0 16px;
+  font-size: 14px;
+}
+.beta-report .beta-consent {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+}
+.beta-consent input {
+  flex: none;
+  margin-top: 5px;
+  accent-color: #dfc887;
+}
+.beta-report button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+.beta-report progress {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  accent-color: #b5d5bb;
+}
+.beta-report .beta-status:not(:empty) {
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+}
+.beta-report .beta-status[data-error] {
+  color: #ffd3b2;
+}
+@media (max-width: 700px) {
+  .beta-setup,
+  .beta-fields {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .beta-setup {
+    gap: 14px;
+  }
+}

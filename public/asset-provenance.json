@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "project": "Esteban’s Forge · v1.0.0",
   "generatedBy": "tools/build-provenance.mjs",
-  "assetFileCount": 520,
+  "assetFileCount": 521,
   "counts": {
     "context-only-permission-not-established": 116,
     "license-named-in-source-record-recheck-rights-holder": 7,
     "source-and-permission-not-documented": 177,
-    "source-recorded-permission-not-established": 220
+    "source-recorded-permission-not-established": 221
   },
   "reviewScope": "This inventory records bundled evidence and file hashes. It does not independently verify copyright ownership, the continued availability of source pages, or permissions beyond the terms recorded in source manifests.",
   "attributionNotice": "A credit or source link does not by itself grant permission to copy, adapt, or redistribute a work. Unknown permissions remain unknown.",
@@ -1679,7 +1679,7 @@
         {
           "record": "public/assets/dusklight/sources.json",
           "match": "path",
-          "field": "assets.6.file",
+          "field": "assets.7.file",
           "details": {
             "file": "collection-amber-twilight.webp",
             "source_page": "https://www.nintendo.co.jp/wiiu/azaj/index.html",
@@ -1776,7 +1776,7 @@
         {
           "record": "public/assets/dusklight/sources.json",
           "match": "path",
-          "field": "assets.2.file",
+          "field": "assets.3.file",
           "details": {
             "file": "hyrule.webp",
             "title": "Hyrule in peace landscape from public original-game gallery",
@@ -1804,7 +1804,7 @@
         {
           "record": "public/assets/dusklight/sources.json",
           "match": "path",
-          "field": "assets.1.file",
+          "field": "assets.2.file",
           "details": {
             "file": "link-epona.webp",
             "title": "Link riding Epona original promotional artwork",
@@ -1832,7 +1832,7 @@
         {
           "record": "public/assets/dusklight/sources.json",
           "match": "path",
-          "field": "assets.4.file",
+          "field": "assets.5.file",
           "details": {
             "file": "manual-cover.webp",
             "title": "Original GameCube Twilight Princess booklet cover",
@@ -1860,7 +1860,7 @@
         {
           "record": "public/assets/dusklight/sources.json",
           "match": "path",
-          "field": "assets.5.file",
+          "field": "assets.6.file",
           "details": {
             "file": "manual-moss-texture.webp",
             "title": "Blank dark moss paper from original GameCube manual controller spread",
@@ -1873,9 +1873,36 @@
       "permissionStatus": "source-recorded-permission-not-established"
     },
     {
+      "path": "public/assets/dusklight/public-beta-01-qr.png",
+      "bytes": 701,
+      "sha256": "91e1a0d91fdd79aac6e7ce059b64e4bb9bdeb48ad177da19eae59b7c2468931c",
+      "evidence": [
+        {
+          "record": "public/assets/dusklight/font-sources.json",
+          "match": "directory",
+          "details": {
+            "source": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond",
+            "license": "SIL Open Font License 1.1"
+          }
+        },
+        {
+          "record": "public/assets/dusklight/sources.json",
+          "match": "path",
+          "field": "assets.0.file",
+          "details": {
+            "file": "public-beta-01-qr.png",
+            "title": "DuskLight Public Beta 01 installer QR",
+            "source_url": "https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/DuskLight-Public-Beta-01.cia",
+            "processing": "Generated locally with qrencode from the direct CIA download URL."
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
       "path": "public/assets/dusklight/sources.json",
-      "bytes": 7133,
-      "sha256": "3f71ad4705267064a33bfe72e0012f59aa38d59b4b653910f4eb3555bf818062",
+      "bytes": 7468,
+      "sha256": "0c4959137548ac57e67acd8139bb5d55aba5c54026c014b84f2763598b8cc5b1",
       "evidence": [
         {
           "record": "public/assets/dusklight/font-sources.json",
@@ -1911,7 +1938,7 @@
         {
           "record": "public/assets/dusklight/sources.json",
           "match": "path",
-          "field": "assets.3.file",
+          "field": "assets.4.file",
           "details": {
             "file": "twilight-story.webp",
             "title": "Link and cloaked Zelda original illustration",
@@ -1939,7 +1966,7 @@
         {
           "record": "public/assets/dusklight/sources.json",
           "match": "path",
-          "field": "assets.0.file",
+          "field": "assets.1.file",
           "details": {
             "file": "wolf-midna.webp",
             "title": "Wolf Link and Midna original promotional artwork",

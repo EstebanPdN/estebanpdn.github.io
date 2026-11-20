@@ -74,6 +74,8 @@ def prepare_page(file, header, policy):
         return match[0] if name == 'welcome-init.js' else ''
 
     html = SCRIPT_TAG.sub(collect, html)
+    if file.name == 'dusklight-beta-01.html':
+        policy = policy.replace("connect-src 'self'", "connect-src 'self' https://estebansforge.estebanpdn.chatgpt.site")
     html = POLICY.sub(lambda match: match[1] + policy, html)
     if 'src="theme.js"' not in html:
         html = re.sub(r'</head\s*>', '<script src="theme.js"></script></head>', html)

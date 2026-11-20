@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#141916" />
+    <title>Dusklight Public Beta 01 · Esteban’s Forge</title>
+    <link rel="icon" href="assets/logos/dusklight-icon.png" />
+    <link rel="stylesheet" href="forge-header.css" />
+    <link rel="stylesheet" href="dusklight.css" />
+    <link rel="stylesheet" href="dusklight-beta.css" />
+    <link rel="stylesheet" href="page-transitions.css" />
+    <script src="theme.js"></script>
+    <script src="page-transitions.js"></script>
+    <script src="forge-header.js" defer></script>
+    <script src="dusklight-beta.js" defer></script>
+  </head>
+  <body data-game="dusklight">
+    <!-- forge-header -->
+    <a class="skip-link" href="#beta-main">Skip to beta downloads</a>
+    <main class="beta-page" id="beta-main">
+      <header class="beta-hero">
+        <p class="beta-platform">NEW NINTENDO 3DS</p>
+        <img src="assets/logos/dusklight.png" alt="Dusklight" width="2310" height="495" />
+        <h1>Public Beta 01</h1>
+      </header>
+
+      <div class="beta-setup">
+        <section class="beta-card beta-install" aria-labelledby="install-title">
+          <div>
+            <h2 id="install-title">Install the beta</h2>
+            <p
+              >In FBI on your New Nintendo 3DS, choose <strong>Remote Install</strong>, then
+              <strong>Scan QR Code</strong>. You can also download the CIA and install it from your
+              SD card.</p
+            >
+            <a
+              class="twilight-button"
+              href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/DuskLight-Public-Beta-01.cia"
+              >Download CIA</a
+            >
+          </div>
+          <img
+            class="beta-qr"
+            src="assets/dusklight/public-beta-01-qr.png"
+            alt="FBI installation QR for the Dusklight Public Beta 01 CIA"
+          />
+        </section>
+
+        <section class="beta-card" aria-labelledby="extractor-title">
+          <h2 id="extractor-title">Prepare the game files</h2>
+          <p
+            >Use the Forge 3DS Converter with your own GameCube Twilight Princess ISO. The converter
+            supports USA or PAL revision 0 (GZ2E01 or GZ2P01).</p
+          >
+          <ul class="beta-downloads" aria-label="Forge 3DS Converter downloads">
+            <li
+              ><a
+                href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/Forge-3DS-Converter-windows-x64.zip"
+                >Windows (64-bit)</a
+              ></li
+            >
+            <li
+              ><a
+                href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/Forge-3DS-Converter-mac-arm64.zip"
+                >macOS (Apple silicon)</a
+              ></li
+            >
+            <li
+              ><a
+                href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/Forge-3DS-Converter-mac-intel.zip"
+                >macOS (Intel)</a
+              ></li
+            >
+            <li
+              ><a
+                href="https://github.com/EstebanPdN/dusklight-3ds/releases/download/public-beta-01-downloads/Forge-3DS-Converter-linux-x64.tar.gz"
+                >Linux (64-bit)</a
+              ></li
+            >
+          </ul>
+          <details class="beta-guide">
+            <summary>How to use the converter</summary>
+            <ol>
+              <li>Extract the complete download and open <strong>Forge 3DS Converter</strong>.</li>
+              <li
+                >Select <strong>Dusklight</strong> and drop your ISO onto the app, or choose it with
+                the file picker.</li
+              >
+              <li>When conversion finishes, find <code>zelda.twilight</code> beside your ISO.</li>
+              <li
+                >On the 3DS SD card, create <code>/3ds/DuskLight/</code> if needed. Copy the file to
+                <code>/3ds/DuskLight/zelda.twilight</code>, then launch Dusklight.</li
+              >
+            </ol>
+          </details>
+        </section>
+      </div>
+
+      <section class="beta-card beta-report" aria-labelledby="report-title">
+        <h2 id="report-title">Send a dump</h2>
+        <p
+          >Tap <strong>DUMP</strong> on the lower screen and wait for <strong>DONE</strong>. ZIP one
+          completed folder from <code>/3ds/DuskLight/dumps/</code>. Include
+          <code>dump.dpk</code> and send each dump separately.</p
+        >
+        <form id="beta-report">
+          <div class="beta-fields">
+            <label
+              >Username
+              <input
+                name="username"
+                placeholder="Your tester handle"
+                type="text"
+                maxlength="40"
+                required
+            /></label>
+            <label
+              >Category
+              <select name="category" required>
+                <option value="">Choose a category</option>
+                <option>Bug</option>
+                <option>Visual</option>
+                <option>Crash</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+          <label
+            >Description
+            <textarea
+              name="description"
+              rows="4"
+              maxlength="500"
+              placeholder="Where did it happen, what were you doing, and what did you expect?"
+              required
+            ></textarea>
+          </label>
+          <label
+            >Dump ZIP
+            <input
+              name="dump"
+              type="file"
+              accept=".zip,application/zip"
+              aria-describedby="beta-zip-limit"
+              required
+          /></label>
+          <p class="beta-hint" id="beta-zip-limit">One ZIP, up to 50 MB.</p>
+          <label class="beta-consent"
+            ><input name="consent" type="checkbox" required />
+            <span
+              >I agree to share this dump and report privately with the Dusklight developer. The
+              dump may include screenshots and game memory.</span
+            ></label
+          >
+          <button class="twilight-button" type="submit">Send dump</button>
+          <progress aria-label="Dump upload progress" max="100" hidden></progress>
+          <p class="beta-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
