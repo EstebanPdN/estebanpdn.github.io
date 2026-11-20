@@ -5,36 +5,68 @@
   color: #e9e5d2;
 }
 .beta-hero {
-  padding: clamp(30px, 6vw, 74px) 0 34px;
-  text-align: center;
-  background: radial-gradient(ellipse at 50% 25%, #9c7d3530, transparent 67%);
+  margin: 22px 0;
+  padding: clamp(30px, 5vw, 64px);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-block: 1px solid #a58b52;
+  background:
+    linear-gradient(90deg, #111913 12%, #182119ea 45%, #38372166),
+    url('assets/dusklight/hyrule.webp') center 48% / cover;
 }
-.beta-platform {
+.beta-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0 1% 0 51%;
+  z-index: -1;
+  background: url('assets/dusklight/wolf-midna.webp') center / contain no-repeat;
+}
+.hero-copy {
+  max-width: 53%;
+}
+.beta-platform,
+.beta-guide figcaption {
   font:
-    600 13px/1.4 'DM Sans',
-    Arial,
+    bold 11px/1.5 Arial,
     sans-serif;
-  letter-spacing: 0.17em;
-  color: #d7bf7f;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e0c581;
 }
 .beta-hero img {
-  width: min(100%, 490px);
-  margin: 16px auto 6px;
+  width: min(100%, 380px);
+  margin: 14px 0 8px;
 }
 .beta-hero h1 {
-  font-size: clamp(36px, 6vw, 62px);
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1;
   font-weight: 500;
-  line-height: 1.1;
+  color: #fff2cf;
+}
+.beta-hero nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 22px;
+  font:
+    14px/1.6 Arial,
+    sans-serif;
+}
+.beta-hero nav a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: #aa925b;
 }
 .beta-setup {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
 .beta-card {
-  padding: clamp(17px, 3vw, 30px);
-  background: #20271e;
-  border: 3px double #948458;
+  padding: clamp(20px, 4vw, 42px);
+  background: linear-gradient(125deg, #283228, #1b231e);
+  border: 1px solid #555944;
+  border-top: 2px solid #a58b52;
   box-shadow: 0 8px 24px #0003;
 }
 .beta-card h2 {
@@ -59,7 +91,8 @@
 .beta-install {
   display: grid;
   gap: 19px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(110px, 165px);
+  align-items: center;
 }
 .beta-qr {
   width: min(100%, 248px);
@@ -91,12 +124,52 @@
   color: #f2e6bf;
   cursor: pointer;
 }
-.beta-guide ol {
-  padding-left: 26px;
-  margin-bottom: 0;
+.guide-steps {
+  display: grid;
+  grid-template-columns: 1fr 1.24fr 1fr;
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  gap: 20px;
 }
-.beta-guide li + li {
-  margin-top: 7px;
+.guide-steps li {
+  min-width: 0;
+  border-top: 1px solid #808063;
+  padding-top: 14px;
+  counter-increment: step;
+}
+.guide-steps h3 {
+  font:
+    600 25px/1.1 Twilight Serif,
+    Georgia,
+    serif;
+  color: #fff0c9;
+  margin-bottom: 12px;
+}
+.guide-steps h3::before {
+  content: counter(step, decimal-leading-zero);
+  display: block;
+  color: #d5bb79;
+  font: 12px/1.5 monospace;
+  margin-bottom: 5px;
+}
+.guide-steps figure {
+  margin-top: 14px;
+  background: #101813;
+  border-left: 2px solid #967e48;
+  padding: 12px;
+}
+.guide-steps pre {
+  margin: 4px 0 0;
+  padding: 0;
+  background: none;
+  color: #dae6d6;
+  font: 13px/1.6 monospace;
+  overflow-wrap: anywhere;
+}
+.guide-steps pre code {
+  font: inherit;
 }
 .beta-card code {
   color: #f2e6bf;
@@ -104,10 +177,13 @@
   overflow-wrap: anywhere;
 }
 .beta-report {
-  margin-top: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(20px, 4vw, 56px);
+  margin-top: 20px;
 }
 .beta-report form {
-  margin-top: 18px;
+  margin: 0;
 }
 .beta-fields {
   display: grid;
@@ -174,5 +250,36 @@
   }
   .beta-setup {
     gap: 14px;
+  }
+}
+
+@media (max-width: 760px) {
+  .guide-steps,
+  .beta-report {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .beta-hero {
+    padding: 24px 16px;
+  }
+  .hero-copy {
+    max-width: 100%;
+  }
+  .beta-hero img {
+    width: 57%;
+  }
+  .beta-hero::before {
+    inset: 0 0 20% 58%;
+  }
+  .beta-hero nav {
+    margin-top: 18px;
+  }
+  .beta-install {
+    grid-template-columns: 1fr;
+  }
+  .beta-qr {
+    width: 164px;
+    margin: 0;
   }
 }

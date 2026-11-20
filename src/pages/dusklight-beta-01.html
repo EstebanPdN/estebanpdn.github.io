@@ -23,9 +23,15 @@
     <a class="skip-link" href="#beta-main">Skip to beta downloads</a>
     <main class="beta-page" id="beta-main">
       <header class="beta-hero">
-        <p class="beta-platform">NEW NINTENDO 3DS</p>
-        <img src="assets/logos/dusklight.png" alt="Dusklight" width="2310" height="495" />
-        <h1>Public Beta 01</h1>
+        <div class="hero-copy"
+          ><p class="beta-platform">NEW NINTENDO 3DS</p>
+          <img src="assets/logos/dusklight.png" alt="Dusklight" width="2310" height="495" />
+          <h1>Public Beta 01</h1
+          ><nav aria-label="Beta shortcuts"
+            ><a href="#install-title">Installation</a><a href="#extractor-title">Extractor guide</a
+            ><a href="#report-title">Send a dump</a></nav
+          ></div
+        >
       </header>
 
       <div class="beta-setup">
@@ -55,38 +61,63 @@
           <a class="twilight-button" href="downloads/dusklight-beta-01-extractor.zip" download
             >Download ROM extractor</a
           >
-          <details class="beta-guide">
+          <details class="beta-guide" open>
             <summary>How to use the extractor</summary>
-            <ol>
+            <ol class="guide-steps">
               <li
-                >Extract the ZIP and put your ISO in the same folder as
-                <code>twilight_pack.py</code>. The command below assumes that the ISO is named
-                <code>twilight.iso</code>.</li
+                ><h3>Gather your files</h3
+                ><p
+                  >Unzip the extractor. In the same folder, place your GameCube ISO and name it
+                  <code>twilight.iso</code>.</p
+                >
+                <figure
+                  ><figcaption>Working folder</figcaption
+                  ><pre>
+├─ twilight_pack.py
+└─ twilight.iso</pre>
+                </figure></li
               >
               <li
-                >Open a terminal in that folder and run:
-                <pre><code>python3 twilight_pack.py --input "twilight.iso" --output "zelda.twilight"</code></pre>
-                On Windows, use <code>py -3</code> in place of <code>python3</code>.
-              </li>
-              <li
-                >When the extractor finishes, copy <code>zelda.twilight</code> to
-                <code>/3ds/DuskLight/zelda.twilight</code> on the 3DS SD card. Create the
-                <code>DuskLight</code> folder inside <code>3ds</code> if needed, then launch
-                Dusklight.</li
+                ><h3>Build the pack</h3
+                ><p
+                  >Open a terminal in that folder. Run the command for your computer and wait for it
+                  to finish.</p
+                >
+                <figure
+                  ><figcaption>Windows</figcaption
+                  >><pre><code>py -3 twilight_pack.py --input "twilight.iso" --output "zelda.twilight"</code></pre>
+                </figure>
+                <figure
+                  ><figcaption>macOS / Linux</figcaption
+                  >><pre><code>python3 twilight_pack.py --input "twilight.iso" --output "zelda.twilight"</code></pre>
+                </figure></li
               >
-            </ol>
+              <li
+                ><h3>Copy to your SD card</h3
+                ><p
+                  >Copy the new pack into <code>/3ds/DuskLight/</code>. Create the folder if needed.
+                  Reinsert the card and launch Dusklight.</p
+                >
+                <figure
+                  ><figcaption>SD card</figcaption>><pre>3ds/
+└─ DuskLight/
+   └─ <strong>zelda.twilight</strong></pre>
+                </figure></li
+              ></ol
+            >
           </details>
         </section>
       </div>
 
-      <section class="beta-card beta-report" aria-labelledby="report-title">
-        <h2 id="report-title">Send a dump</h2>
-        <p
-          >Tap <strong>DUMP</strong> on the lower screen and wait for <strong>DONE</strong>. ZIP one
-          completed folder from <code>/3ds/DuskLight/dumps/</code>. Include
-          <code>dump.dpk</code> and send each dump separately.</p
-        >
-        <form id="beta-report">
+      <section class="beta-card beta-report" aria-labelledby="report-title"
+        ><div class="report-intro">
+          <h2 id="report-title">Send a dump</h2>
+          <p
+            >Tap <strong>DUMP</strong> on the lower screen and wait for <strong>DONE</strong>. ZIP
+            one completed folder from <code>/3ds/DuskLight/dumps/</code>. Include
+            <code>dump.dpk</code> and send each dump separately.</p
+          > </div
+        ><form id="beta-report">
           <div class="beta-fields">
             <label
               >Username
