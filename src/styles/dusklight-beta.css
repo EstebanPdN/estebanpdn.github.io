@@ -133,6 +133,15 @@
 .guide-step h4 {
   margin-bottom: 10px;
 }
+.converter-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.converter-downloads .twilight-button {
+  margin-top: 0;
+}
 .guide-controls {
   display: flex;
   align-items: center;
