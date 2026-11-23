@@ -19,10 +19,20 @@ class PortReleaseTests(unittest.TestCase):
         self.assertEqual(render_release_metadata('<!-- port-status: alttp completed -->', ROOT), 'Completed · v4.0')
 
     def test_unreleased_ports_do_not_borrow_upstream_versions(self):
-        for project in ('sm64ds', 'dusklight', 'viper', 'worms'):
+        for project in ('sm64ds', 'viper', 'worms'):
             html = render_release_metadata(f'<!-- port-release: {project} -->', ROOT)
             self.assertIn('No public release yet', html)
             self.assertNotIn('<a ', html)
+
+    def test_public_beta_links_its_local_page_without_claiming_a_release(self):
+        html = render_release_metadata('<!-- port-release: dusklight -->', ROOT)
+        self.assertIn('href="dusklight-beta-01.html"', html)
+        self.assertIn('Public Beta 01', html)
+        self.assertNotIn('Stable release', html)
+        self.assertEqual(
+            render_release_metadata('<!-- port-status: dusklight -->', ROOT),
+            'In development · Public Beta 01',
+        )
 
     def test_unknown_project_fails_the_build(self):
         with self.assertRaises(KeyError):

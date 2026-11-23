@@ -51,7 +51,11 @@
     },
     "dusklight": {
       "page": "dusklight.html",
-      "stable": null
+      "stable": null,
+      "beta": {
+        "version": "Public Beta 01",
+        "url": "dusklight-beta-01.html"
+      }
     },
     "viper": {
       "page": "red-viper-color.html",

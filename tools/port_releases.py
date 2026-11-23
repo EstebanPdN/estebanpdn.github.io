@@ -21,8 +21,16 @@ def render_release_metadata(html, root):
         stable = entry.get('stable')
         if stable and (not stable['version'].startswith('v') or not stable['url'].startswith('https://github.com/EstebanPdN/')):
             raise ValueError(f'Invalid stable release for {project}')
+        beta = entry.get('beta')
+        if beta and not re.fullmatch(r'[a-z0-9-]+\.html', beta['url']):
+            raise ValueError(f'Invalid beta page for {project}')
         if kind == 'status':
-            label = ('Completed' if completed else 'Released') + ' · ' + stable['version'] if stable else 'In development · Unreleased'
+            if stable:
+                label = ('Completed' if completed else 'Released') + ' · ' + stable['version']
+            elif beta:
+                label = 'In development · ' + beta['version']
+            else:
+                label = 'In development · Unreleased'
             return escape(label)
         if stable:
             content = f'<a href="{escape(stable["url"], quote=True)}" target="_blank" rel="noreferrer">Stable release · {escape(stable["version"])}</a>'
@@ -31,6 +39,8 @@ def render_release_metadata(html, root):
                 if not experimental['url'].startswith('https://github.com/EstebanPdN/'):
                     raise ValueError(f'Invalid experimental release for {project}')
                 content += f'<a href="{escape(experimental["url"], quote=True)}" target="_blank" rel="noreferrer">Experimental · {escape(experimental["version"])}</a>'
+        elif beta:
+            content = f'<a href="{escape(beta["url"], quote=True)}">{escape(beta["version"])} · Play now</a>'
         else:
             content = '<span>In development · No public release yet</span>'
         return f'<p class="port-release" data-port-release="{project}" aria-label="Public release status">{content}</p>'

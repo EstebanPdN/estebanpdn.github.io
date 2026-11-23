@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "project": "Esteban’s Forge · v1.0.0",
   "generatedBy": "tools/build-provenance.mjs",
-  "assetFileCount": 524,
+  "assetFileCount": 525,
   "counts": {
     "context-only-permission-not-established": 116,
     "license-named-in-source-record-recheck-rights-holder": 7,
-    "source-and-permission-not-documented": 177,
+    "source-and-permission-not-documented": 178,
     "source-recorded-permission-not-established": 224
   },
   "reviewScope": "This inventory records bundled evidence and file hashes. It does not independently verify copyright ownership, the continued availability of source pages, or permissions beyond the terms recorded in source manifests.",
@@ -1043,6 +1043,13 @@
       "path": "public/assets/captures/a-link-to-the-past/v4-randomizer.mp4",
       "bytes": 207575,
       "sha256": "c342c54f8ed795a900c166534fe54abf38f3d42f0542cb379137ea692e0cdde3",
+      "evidence": [],
+      "permissionStatus": "source-and-permission-not-documented"
+    },
+    {
+      "path": "public/assets/captures/dusklight/public-beta-01-ordon.webp",
+      "bytes": 131510,
+      "sha256": "b98e0460d9554f2db5b216e8a7474a422d31d904e3aac43b2cb87133f8dbfc44",
       "evidence": [],
       "permissionStatus": "source-and-permission-not-documented"
     },

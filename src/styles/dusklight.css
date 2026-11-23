@@ -221,6 +221,24 @@ p + p {
   font-size: 17px;
   line-height: 1;
 }
+.twilight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 29px;
+}
+.twilight-actions > .twilight-button {
+  margin-top: 0;
+}
+.twilight-button.is-primary {
+  border-color: #d3c17c;
+  background: #bdae70;
+  color: #1c211c;
+  font-weight: 700;
+}
+.twilight-button.is-primary:hover {
+  background: #d3c17c;
+}
 .twilight-small-status {
   font:
     9px/1.6 'DM Sans',
@@ -1191,7 +1209,8 @@ p + p {
   .twilight-rule {
     margin: 24px auto;
   }
-  .twilight-small-status {
+  .twilight-small-status,
+  .twilight-actions {
     justify-content: center;
   }
   .twilight-intro {

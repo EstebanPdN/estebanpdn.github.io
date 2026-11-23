@@ -80,6 +80,15 @@ const consoleMedia = {
       'captures/star-fox/07-corneria-city.webp',
     ],
   },
+  dusklight: {
+    name: 'Dusklight',
+    platform: 'GAMECUBE → NEW NINTENDO 3DS',
+    description: 'Between light and shadow.\nPublic Beta 01 is out now.',
+    logo: ['logos/dusklight.png', 2310, 495, '0 0 2310 495'],
+    // Still Azahar capture of Public Beta 01: Ordon on top, the beta's status screen below.
+    top: ['captures/dusklight/public-beta-01-ordon.webp', 720, 240, '0 0 400 240'],
+    bottom: ['captures/dusklight/public-beta-01-ordon.webp', 720, 240, '400 0 320 240'],
+  },
   doom: {
     name: 'Legend of Doom',
     platform: 'ZELDA × DOOM → NINTENDO 3DS',
@@ -104,7 +113,7 @@ const consoleMedia = {
 const dual = document.getElementById('dual');
 const projectButtons = [...dual.querySelectorAll('[data-console]')];
 const railButtons = projectButtons.filter((button) => button.classList.contains('rail-project'));
-const gameKeys = ['alttp', 'minish', 'kart', 'doom', 'starwing'];
+const gameKeys = ['alttp', 'minish', 'kart', 'doom', 'starwing', 'dusklight'];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const phoneLayout = window.matchMedia('(max-width: 900px)');
 const initialPage = ['#progress', '#info'].includes(location.hash)
@@ -121,6 +130,7 @@ const mobileLogoBounds = {
   alttp: '0 0 1200 1066',
   starwing: '0 22 254 82',
   doom: '518 125 1310 1005',
+  dusklight: '0 0 2310 495',
 };
 let currentGame = 'kart';
 let requestedGame = currentGame,
@@ -179,12 +189,13 @@ function setScreen(surface, data, label) {
   image.setAttribute('href', 'assets/' + (poster || file));
   image.setAttribute('width', width);
   image.setAttribute('height', height);
-  if (!poster || !isScreen) return;
+  if (!isScreen) return;
+  // Cloned screens carry the previous project's video; still-only projects must drop it too.
   surface.querySelectorAll('video').forEach((video) => {
     video.pause();
     video.remove();
   });
-  if (reduceMotion.matches || window.navigator?.connection?.saveData) return;
+  if (!poster || reduceMotion.matches || window.navigator?.connection?.saveData) return;
   // Native HTML video with an already cropped frame avoids Safari's SVG foreignObject compositor.
   const side = viewBox.startsWith('0 ') ? 'top' : 'bottom';
   const video = document.createElement('video');

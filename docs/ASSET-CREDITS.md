@@ -2,7 +2,7 @@
 
 This register is generated from `public/assets/` and its source manifests by `npm run provenance`. It includes every media, font, manifest, and JSON file in that directory, with its SHA-256 digest, available evidence, and permission status based on that evidence.
 
-Inventoried files: **524**.
+Inventoried files: **525**.
 
 ## Understanding the status
 
@@ -107,6 +107,7 @@ Inventoried files: **524**.
 | `public/assets/captures/a-link-to-the-past/v4-mods.mp4` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `9909fb0b2fde8e120c7ee408b3062e9a83027cd1b40f0d5f88a030e42145cfa3` |
 | `public/assets/captures/a-link-to-the-past/v4-randomizer-poster.webp` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `f3610412bc95356ea7048c1e777209fec0ef8f2f1a1d354a2cfaaedf1ab9aab2` |
 | `public/assets/captures/a-link-to-the-past/v4-randomizer.mp4` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `c342c54f8ed795a900c166534fe54abf38f3d42f0542cb379137ea692e0cdde3` |
+| `public/assets/captures/dusklight/public-beta-01-ordon.webp` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `b98e0460d9554f2db5b216e8a7474a422d31d904e3aac43b2cb87133f8dbfc44` |
 | `public/assets/captures/legend-of-doom/01-title.webp` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `d5773b95d0332e6f2f23297a15e4eea4fd734a4a8a7855295b1fc6b11ab9a325` |
 | `public/assets/captures/legend-of-doom/02-main-menu.webp` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `8f1fe29634ae44c3680f5b6d8ec1b16464f4d429f9e882aabf4a492633335a9c` |
 | `public/assets/captures/legend-of-doom/03-hyrule-exploration.mp4` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `3021452fcae3a750dfa9868198b69809292e2cb58ddb90c1d4a657122f73f3d0` |

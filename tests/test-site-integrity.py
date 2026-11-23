@@ -172,7 +172,7 @@ def check_site(directory):
             require(any(node.has_class("channel-wallpaper") and node.attrs.get("src") == artwork for node in tile.all()), f"Collection {key}: approved artwork changed")
             require(any(node.tag == "image" and node.attrs.get("href") == logo for node in tile.all()), f"Collection {key}: approved logo changed")
         rail = [node.attrs.get("data-console") for node in index.nodes if node.has_class("rail-project")]
-        require(rail == ["alttp", "minish", "kart", "doom", "starwing"], f"Carousel games/order changed: {rail}")
+        require(rail == ["alttp", "minish", "kart", "doom", "starwing", "dusklight"], f"Carousel games/order changed: {rail}")
         ports = index.with_id("progress-ports")
         cards = [node for node in ports.all() if node.has_class("progress-card")] if ports else []
         require(len(cards) == 9, f"Owner progress must show nine projects, found {len(cards)}")
@@ -192,7 +192,7 @@ def check_site(directory):
             elif key == "doom":
                 require("future improvements" not in text, "Doom must not imply future improvements")
             elif key == "dusklight":
-                require("unreleased" in text, "Dusklight must be marked unreleased")
+                require("public beta 01" in text, "Dusklight must point to Public Beta 01")
             elif key == "sm64ds":
                 require("in development" in text and "nintendo ds" in text, "Super Mario 64 DS must be an in-development Nintendo DS port")
         require("Check it out!" in index.source, "Approved welcome button text is missing")

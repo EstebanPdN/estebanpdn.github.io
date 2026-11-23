@@ -32,6 +32,10 @@
   --accent: #a77c5c;
   --accent-rgb: 167, 124, 92;
 }
+.dual[data-game='dusklight'] {
+  --accent: #8e8450;
+  --accent-rgb: 142, 132, 80;
+}
 .dual:before {
   content: '';
   position: absolute;
@@ -74,6 +78,11 @@
   background:
     radial-gradient(ellipse 54% 32% at 28% 25%, #e9cbb3a0, transparent 85%),
     linear-gradient(#fcfaf8, #f5f0eb);
+}
+[data-ambient='dusklight'] {
+  background:
+    radial-gradient(ellipse 54% 32% at 28% 25%, #ddd3a8a0, transparent 85%),
+    linear-gradient(#fbfaf6, #f1efe6);
 }
 .dual .site-header {
   height: 110px;
@@ -327,7 +336,7 @@
 .dual-rail {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 13px;
   margin: 14px 0 0;
   width: 100%;
