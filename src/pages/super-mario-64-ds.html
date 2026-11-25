@@ -183,6 +183,83 @@
           ><span>PROJECT FILE · IN DEVELOPMENT</span></div
         >
       </section>
+      <section class="ds-workshop ds-install" id="install" aria-labelledby="install-title">
+        <div class="ds-window-bar" id="ds-project-notes"
+          ><span>PUBLIC BETA 01</span><span>SD CARD</span></div
+        >
+        <div class="ds-install-intro">
+          <h2 id="install-title">Install Super Mario 64 DS</h2>
+          <p
+            >Start with your own European Nintendo DS copy of Super Mario 64 DS. Both downloads use
+            the ASMP revision 0 dump (16,777,216 bytes). Keep your existing saves and settings in
+            <code>SD:/3ds/sm64ds/</code>.</p
+          >
+          <a
+            class="ds-outline-button"
+            href="https://github.com/EstebanPdN/sm64ds-3ds/releases/tag/beta-01"
+            >Download beta-01</a
+          >
+        </div>
+        <div class="ds-workshop-layout">
+          <div
+            ><h3>CIA · Install on the HOME Menu</h3>
+            <ol
+              ><li
+                >Create <code>SD:/3ds/sm64ds/</code> and copy your European <code>.nds</code> dump
+                into it. If you already have a verified <code>prepared.sm64ds</code>, you can use
+                that instead.</li
+              >
+              <li
+                >Install <code>SM64DS-Beta-01.cia</code> with FBI. To use the QR on the release
+                page, choose <strong>Remote Install → Scan QR Code</strong> in FBI.</li
+              >
+              <li
+                >Launch the game and let it prepare the ROM on first startup. The CIA includes the
+                native renderer banks. Once the star appears on the lower screen, touch it to
+                start.</li
+              ></ol
+            >
+          </div>
+          <div
+            ><h3>3DSX · Prepare the SD data on a computer</h3>
+            <ol
+              ><li
+                >Download the
+                <a href="https://github.com/EstebanPdN/sm64ds-3ds/archive/refs/tags/beta-01.zip"
+                  >beta-01 source ZIP</a
+                >
+                and extract it. Install Git and Python 3.11 or later.</li
+              >
+              <li
+                >Open a terminal in the extracted project and follow the
+                <a
+                  href="https://github.com/EstebanPdN/sm64ds-3ds/blob/beta-01/tools/native_renderer/README.md"
+                  >converter commands for beta-01</a
+                >. Supply your European <code>.nds</code> as the input. The first run downloads the
+                pinned dependencies.</li
+              >
+              <li
+                >Copy <code>prepared.sm64ds</code>, <code>build142-data.bin</code> and the entire
+                <code>native/</code> folder from the converter output to
+                <code>SD:/3ds/sm64ds/</code>. Keep the 542 native banks together.</li
+              >
+              <li
+                >Copy <code>SM64DS-Public-Beta-01.3dsx</code> to the same folder. Launch it from
+                Homebrew Launcher and touch the star.</li
+              ></ol
+            >
+          </div>
+        </div>
+        <details class="ds-install-help"
+          ><summary>How do I check the ROM or a missing data file?</summary>
+          <p
+            >The supported ROM has SHA-1 <code>1367529f2cb23e76ef295cb1727333ae8f0a6cd7</code>. If
+            the CIA cannot find it, check that the extracted <code>.nds</code> is directly inside
+            <code>SD:/3ds/sm64ds/</code>. If the 3DSX reports missing BUILD 142 data, copy all three
+            converter outputs into that folder and check for an extra nested directory.</p
+          >
+        </details>
+      </section>
       <section
         class="ds-manual character-guide"
         id="characters"
@@ -432,83 +509,6 @@
             ></div
           ></div
         >
-      </section>
-      <section class="ds-workshop ds-install" id="install" aria-labelledby="install-title">
-        <div class="ds-window-bar" id="ds-project-notes"
-          ><span>PUBLIC BETA 01</span><span>SD CARD</span></div
-        >
-        <div class="ds-install-intro">
-          <h2 id="install-title">Install Super Mario 64 DS</h2>
-          <p
-            >Start with your own European Nintendo DS copy of Super Mario 64 DS. Both downloads use
-            the ASMP revision 0 dump (16,777,216 bytes). Keep your existing saves and settings in
-            <code>SD:/3ds/sm64ds/</code>.</p
-          >
-          <a
-            class="ds-outline-button"
-            href="https://github.com/EstebanPdN/sm64ds-3ds/releases/tag/beta-01"
-            >Download beta-01</a
-          >
-        </div>
-        <div class="ds-workshop-layout">
-          <div
-            ><h3>CIA · Install on the HOME Menu</h3>
-            <ol
-              ><li
-                >Create <code>SD:/3ds/sm64ds/</code> and copy your European <code>.nds</code> dump
-                into it. If you already have a verified <code>prepared.sm64ds</code>, you can use
-                that instead.</li
-              >
-              <li
-                >Install <code>SM64DS-Beta-01.cia</code> with FBI. To use the QR on the release
-                page, choose <strong>Remote Install → Scan QR Code</strong> in FBI.</li
-              >
-              <li
-                >Launch the game and let it prepare the ROM on first startup. The CIA includes the
-                native renderer banks. Once the star appears on the lower screen, touch it to
-                start.</li
-              ></ol
-            >
-          </div>
-          <div
-            ><h3>3DSX · Prepare the SD data on a computer</h3>
-            <ol
-              ><li
-                >Download the
-                <a href="https://github.com/EstebanPdN/sm64ds-3ds/archive/refs/tags/beta-01.zip"
-                  >beta-01 source ZIP</a
-                >
-                and extract it. Install Git and Python 3.11 or later.</li
-              >
-              <li
-                >Open a terminal in the extracted project and follow the
-                <a
-                  href="https://github.com/EstebanPdN/sm64ds-3ds/blob/beta-01/tools/native_renderer/README.md"
-                  >converter commands for beta-01</a
-                >. Supply your European <code>.nds</code> as the input. The first run downloads the
-                pinned dependencies.</li
-              >
-              <li
-                >Copy <code>prepared.sm64ds</code>, <code>build142-data.bin</code> and the entire
-                <code>native/</code> folder from the converter output to
-                <code>SD:/3ds/sm64ds/</code>. Keep the 542 native banks together.</li
-              >
-              <li
-                >Copy <code>SM64DS-Public-Beta-01.3dsx</code> to the same folder. Launch it from
-                Homebrew Launcher and touch the star.</li
-              ></ol
-            >
-          </div>
-        </div>
-        <details class="ds-install-help"
-          ><summary>How do I check the ROM or a missing data file?</summary>
-          <p
-            >The supported ROM has SHA-1 <code>1367529f2cb23e76ef295cb1727333ae8f0a6cd7</code>. If
-            the CIA cannot find it, check that the extracted <code>.nds</code> is directly inside
-            <code>SD:/3ds/sm64ds/</code>. If the 3DSX reports missing BUILD 142 data, copy all three
-            converter outputs into that folder and check for an extra nested directory.</p
-          >
-        </details>
       </section>
       <section class="ds-questions" id="questions" aria-labelledby="questions-title" data-reveal
         ><p class="pixel-label">BEFORE YOU PRESS START</p
