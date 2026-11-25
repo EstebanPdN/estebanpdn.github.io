@@ -37,7 +37,7 @@ class PortReleaseTests(unittest.TestCase):
     def test_worms_beta_opens_its_installation_guide(self):
         html = render_release_metadata('<!-- port-release: worms -->', ROOT)
         self.assertIn('href="worms-3d.html#install"', html)
-        self.assertIn('Public Beta 01', html)
+        self.assertIn('Public Beta 02', html)
 
     def test_unknown_project_fails_the_build(self):
         with self.assertRaises(KeyError):

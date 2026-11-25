@@ -365,7 +365,7 @@
         "stereo": false
       },
       "release": null,
-      "repo": "EstebanPdN/worms-3d-3ds",
+      "repo": "EstebanPdN/worms-3ds",
       "page": "worms-3d.html",
       "needs": [
         "data"
