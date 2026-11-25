@@ -100,9 +100,39 @@
             ></div
           >
           <p class="w3-gauge-card"
-            ><b>In development · Unreleased</b><span>Esteban’s project status</span></p
+            ><b><!-- port-status: worms --></b><span>Esteban’s project status</span></p
           >
         </div>
+      </section>
+
+      <section class="w3-panel" id="install" aria-labelledby="install-title">
+        <header class="w3-heading"
+          ><span>Public beta 01 · Build 50</span
+          ><h2 id="install-title">Install Worms 3D</h2></header
+        >
+        <ol>
+          <li
+            >Open
+            <a
+              href="https://github.com/EstebanPdN/estebanpdn.github.io/releases/tag/forge-3ds-converter-v1.2.0"
+              >Forge 3DS Converter 1.2</a
+            >, select <strong>Worms 3D</strong> and choose your European GameCube ISO
+            (<code>GWMP8P</code>). The converter writes <code>assets.worms</code> beside the
+            ISO.</li
+          >
+          <li>Copy <code>assets.worms</code> to <code>/3ds/worms3ds/</code> on the SD card.</li>
+          <li
+            >Install the CIA with FBI, or copy the 3DSX into that folder and launch it from the
+            Homebrew Launcher.</li
+          >
+        </ol>
+        <div class="w3-actions"
+          ><a
+            class="w3-button w3-button-gold"
+            href="https://github.com/EstebanPdN/worms-3d-3ds/releases/tag/beta-01"
+            >Download beta-01 and FBI QR</a
+          ></div
+        >
       </section>
 
       <div class="w3-facts" aria-label="Port at a glance"
@@ -114,7 +144,7 @@
           ><p><strong>400 × 240</strong><span>upper screen, 5:3 camera</span></p></div
         ><div class="w3-fact"
           ><span class="w3-medal w3-medal-finger" aria-hidden="true"></span
-          ><p><strong>Lower screen</strong><span>interface coming soon</span></p></div
+          ><p><strong>Lower screen</strong><span>touch HUD and radar</span></p></div
         ><div class="w3-fact"
           ><span class="w3-medal w3-medal-scarf" aria-hidden="true"></span
           ><p><strong>Mod support</strong><span>.worms packages</span></p></div
@@ -161,21 +191,13 @@
               >
                 <image href="assets/worms/captures/menu.webp" width="400" height="240" />
               </svg>
-              <g class="w3-lower-screen">
-                <rect x="453" y="886" width="696" height="522" fill="#0b2a52" />
-                <rect x="453" y="886" width="696" height="522" fill="url(#w3-lower-glow)" />
-                <defs>
-                  <radialGradient id="w3-lower-glow" cx="50%" cy="38%" r="70%">
-                    <stop offset="0" stop-color="#3f86d6" />
-                    <stop offset="1" stop-color="#0b2a52" stop-opacity="0" />
-                  </radialGradient>
-                </defs>
-                <text x="801" y="1120" text-anchor="middle">LOWER-SCREEN</text>
-                <text x="801" y="1190" text-anchor="middle">INTERFACE</text>
-                <text class="w3-lower-small" x="801" y="1260" text-anchor="middle">
-                  COMING SOON
-                </text>
-              </g></svg
+              <image
+                href="assets/worms/captures/beta-01-hud.png"
+                x="453"
+                y="886"
+                width="696"
+                height="522"
+              /></svg
             ><span>Expand upper screen</span></button
           ><div class="w3-gallery-controls"
             ><div class="w3-caption-card"
@@ -308,8 +330,7 @@
         >
         <p class="w3-note"
           >Development captures from the port running in Azahar on macOS, composited onto a New
-          Nintendo 3DS XL photograph. The lower screen is shown as it is today: its interface has
-          not been built yet.</p
+          Nintendo 3DS XL photograph. The lower screen shows the battle HUD from public beta 01.</p
         >
       </section>
 
@@ -346,9 +367,8 @@
             ><span class="w3-medal w3-medal-finger" aria-hidden="true"></span
             ><h3>Bring your own game</h3
             ><p
-              >No game files are included. A small macOS extractor turns your own Worms 3D disc
-              image into a single <code>assets.worms</code> package that the port reads from the SD
-              card.</p
+              >Forge 3DS Converter reads your European Worms 3D GameCube ISO and creates the
+              <code>assets.worms</code> package that the port reads from the SD card.</p
             ></article
           ></div
         >
@@ -363,9 +383,9 @@
           ><div class="w3-screens"
             ><div class="w3-screen-row is-ready"
               ><b>Upper screen</b><span>The whole game, playable</span></div
-            ><div class="w3-screen-row is-pending"
+            ><div class="w3-screen-row is-ready"
               ><b>Lower screen</b
-              ><span>No interface yet — weapons, map and team info planned</span></div
+              ><span>Touch controls, weapon inventory, radar and team health</span></div
             ></div
           ></div
         >
@@ -462,8 +482,7 @@
               ><li>More performance work</li
               ><li>Worm clothing and accessories</li
               ><li>More Ultimate Mayhem content</li
-              ><li>Long play sessions on real hardware</li
-              ><li>A first public release</li></ul
+              ><li>Long play sessions on real hardware</li></ul
             ></div
           ></div
         >
@@ -483,8 +502,8 @@
         ><details
           ><summary>Can I download it yet?</summary
           ><p
-            >Not yet. The port is unreleased and around halfway through development. Follow the
-            Forge for the first release.</p
+            >Yes. <a href="#install">Install public beta 01</a> on a New Nintendo 3DS or New
+            Nintendo 2DS XL.</p
           ></details
         ><details
           ><summary>Does it work on an original Nintendo 3DS?</summary
@@ -493,16 +512,16 @@
             speed and memory it needs.</p
           ></details
         ><details
-          ><summary>Will the lower screen be used?</summary
+          ><summary>What does the lower screen show?</summary
           ><p
-            >Yes. Today the game runs entirely on the upper screen and the lower screen has no
-            interface yet. A touch interface is planned.</p
+            >The battle panel shows team health, radar, weapon, aim, wind and turn time. Tap the
+            weapon to open the inventory.</p
           ></details
         ><details
           ><summary>Do I need my own copy of the game?</summary
           ><p
-            >Yes. No game files are included. The extractor builds the port’s data package from your
-            own Worms 3D disc image.</p
+            >Yes. Use the European GameCube disc (GWMP8P) to create assets.worms with Forge 3DS
+            Converter.</p
           ></details
         ><a class="w3-button" href="index.html#progress"
           ><span class="w3-medal w3-medal-arrow" aria-hidden="true"></span>Follow the Forge

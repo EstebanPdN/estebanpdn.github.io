@@ -63,7 +63,11 @@
     },
     "worms": {
       "page": "worms-3d.html",
-      "stable": null
+      "stable": null,
+      "beta": {
+        "version": "Public Beta 01",
+        "url": "worms-3d.html#install"
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 
 This register is generated from `public/assets/` and its source manifests by `npm run provenance`. It includes every media, font, manifest, and JSON file in that directory, with its SHA-256 digest, available evidence, and permission status based on that evidence.
 
-Inventoried files: **525**.
+Inventoried files: **526**.
 
 ## Understanding the status
 
@@ -526,6 +526,7 @@ Inventoried files: **525**.
 | `public/assets/v10-mario/kinopio-highway.png` | No individual source is identified for this file in the records. | No associated source note or permission was found in the examined manifests. | `81a4ee341f353104ef2ce52bc5afb938315a33e066e144f794ec0ccab1752ec7` |
 | `public/assets/worms/LilitaOne-OFL.txt` | Recorded license: SIL Open Font License 1.1 | A license is named; the rights holder and coverage still need verification. | `255d5debbb80eb2ea762644311f266a279e8778f00156655a516e2b7781a63e1` |
 | `public/assets/worms/LilitaOne-Regular.ttf` | Juan Montoreano · Esteban's published Worms 3D tracker · Recorded license: SIL Open Font License 1.1 (LilitaOne-OFL.txt) | A license is named; the rights holder and coverage still need verification. | `f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59` |
+| `public/assets/worms/captures/beta-01-hud.png` | EstebanPdN / Worms 3D © Team17 · Worms 3D build 50 running in Code Atlas Azahar · Native 320 × 240 lower-screen capture | A source or provenance record exists, but no reuse license was found for this file. | `d827709748c8ca7aaadfe06ddb11e84d6e0a20461903fbf3bd466e8ffda7e344` |
 | `public/assets/worms/captures/bridge.webp` | Lossless WebP | A source or provenance record exists, but no reuse license was found for this file. | `068b20f0836b0936d00d63d3dd10da5ccad67b8087e536de032cbc6f9aa9b0a6` |
 | `public/assets/worms/captures/camp.webp` | Lossless WebP | A source or provenance record exists, but no reuse license was found for this file. | `46ae957e22997adc6aadbfe7bdb2bfe3da9671f622ec40521bb967c7b52d4fe3` |
 | `public/assets/worms/captures/fortress.webp` | Lossless WebP | A source or provenance record exists, but no reuse license was found for this file. | `96a5e556536d0827436ee925fadf781a915b4cbde4d8832844d9c86e2b421aa6` |
@@ -541,7 +542,7 @@ Inventoried files: **525**.
 | `public/assets/worms/mods/hat-render.webp` | Lossless WebP | A source or provenance record exists, but no reuse license was found for this file. | `258618cd9a9b137d50cad7597c10d32520f410e62c9aff152be114c217453163` |
 | `public/assets/worms/mods/military-cap-3ds.webp` | Lossless WebP | A source or provenance record exists, but no reuse license was found for this file. | `238ec041d5256314aa8f744c3365b9070b80aa6da8262664f6d5f4f0c737f664` |
 | `public/assets/worms/mods/safari-hat-3ds.webp` | Lossless WebP | A source or provenance record exists, but no reuse license was found for this file. | `1c5d166d38bcd7af64d91f58087a0d4ee7ee93e837238a93236614d288e2ef4a` |
-| `public/assets/worms/sources.json` | Recorded license: Worms 3D and its artwork belong to Team17 and their respective owners. Development captures are owner-supplied from EstebanPdN's port. No open redistribution license asserted. | Only project context is recorded; no file-specific source or permission is confirmed. | `cc61bb1542498562593ba544ecd7788ca34e3fd3b001a0cd3c1f27154eeb88d9` |
+| `public/assets/worms/sources.json` | Recorded license: Worms 3D and its artwork belong to Team17 and their respective owners. Development captures are owner-supplied from EstebanPdN's port. No open redistribution license asserted. | Only project context is recorded; no file-specific source or permission is confirmed. | `e9e1c0e71d28da7092b1b5b7a03585ca5171afe97d9ee93427e410ca683126a1` |
 | `public/assets/worms/wallpaper.webp` | Team17 / Sega · Esteban's published Worms 3D tracker (assets/wallpaper.png) · Cropped to remove the hosting footer, resized, WebP | A source or provenance record exists, but no reuse license was found for this file. | `068c5bd8608e2955f643120f787b734af9b8c90df8e55fd3067dc2bd8f340064` |
 
 ## Review for future versions

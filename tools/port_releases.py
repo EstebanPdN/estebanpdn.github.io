@@ -22,7 +22,7 @@ def render_release_metadata(html, root):
         if stable and (not stable['version'].startswith('v') or not stable['url'].startswith('https://github.com/EstebanPdN/')):
             raise ValueError(f'Invalid stable release for {project}')
         beta = entry.get('beta')
-        if beta and not re.fullmatch(r'[a-z0-9-]+\.html', beta['url']):
+        if beta and not re.fullmatch(r'[a-z0-9-]+\.html(?:#[a-z0-9-]+)?', beta['url']):
             raise ValueError(f'Invalid beta page for {project}')
         if kind == 'status':
             if stable:
