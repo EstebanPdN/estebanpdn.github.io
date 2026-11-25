@@ -248,6 +248,9 @@ def check_site(directory):
             require("preview" in page.source.casefold(), f"{filename}: legacy preview imagery needs its preview label")
             journal = "new" if key == "alttp" else "capture-journal"
             require(page.with_id(journal) is not None, f"{filename}: completed port needs its gameplay section")
+        elif key == "sm64ds":
+            guide = page.with_id("install")
+            require(guide is not None and all(word in guide.text() for word in ("beta-01", "CIA", "3DSX", "prepared.sm64ds", "build142-data.bin")), "Mario needs installation instructions for both beta downloads")
         elif key == "viper":
             require(page.with_id("viper-gallery") is not None and len([node for node in page.nodes if node.has_class("vb-scene")]) == 7, "Red Viper Color needs its menu preview and six captured scenes")
             require("design preview" in page.root.text().casefold() and "azahar" in page.root.text().casefold(), "Red Viper Color must distinguish menu designs from Azahar captures")

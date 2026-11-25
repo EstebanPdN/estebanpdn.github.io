@@ -19,7 +19,7 @@ class PortReleaseTests(unittest.TestCase):
         self.assertEqual(render_release_metadata('<!-- port-status: alttp completed -->', ROOT), 'Completed · v4.0')
 
     def test_unreleased_ports_do_not_borrow_upstream_versions(self):
-        for project in ('sm64ds', 'viper'):
+        for project in ('viper',):
             html = render_release_metadata(f'<!-- port-release: {project} -->', ROOT)
             self.assertIn('No public release yet', html)
             self.assertNotIn('<a ', html)
@@ -38,6 +38,11 @@ class PortReleaseTests(unittest.TestCase):
         html = render_release_metadata('<!-- port-release: worms -->', ROOT)
         self.assertIn('href="worms-3d.html#install"', html)
         self.assertIn('Public Beta 02', html)
+
+    def test_mario_beta_links_to_its_data_guide(self):
+        html = render_release_metadata('<!-- port-release: sm64ds -->', ROOT)
+        self.assertIn('super-mario-64-ds.html#install', html)
+        self.assertIn('Public Beta 01', html)
 
     def test_unknown_project_fails_the_build(self):
         with self.assertRaises(KeyError):

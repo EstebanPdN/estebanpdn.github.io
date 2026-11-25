@@ -2048,3 +2048,44 @@ body[data-game='sm64ds'] {
     DS Pixel,
     monospace;
 }
+
+.ds-install {
+  scroll-margin-top: 5rem;
+}
+.ds-install-intro,
+.ds-install-help {
+  margin: 1.6rem 4%;
+}
+.ds-install-intro p {
+  max-width: 68ch;
+  margin-bottom: 1rem;
+}
+.ds-install .ds-workshop-layout {
+  align-items: start;
+  padding-top: 0;
+  gap: 2rem;
+}
+.ds-install h3 {
+  font:
+    600 1.65rem/1.15 DS Pixel,
+    monospace;
+  margin-bottom: 1rem;
+}
+.ds-install ol {
+  padding-inline-start: 1.4rem;
+}
+.ds-install li {
+  margin-bottom: 0.75rem;
+  line-height: 1.55;
+}
+.ds-install code {
+  overflow-wrap: anywhere;
+}
+.ds-install-help summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.ds-install-help p {
+  max-width: 72ch;
+  margin-top: 0.75rem;
+}

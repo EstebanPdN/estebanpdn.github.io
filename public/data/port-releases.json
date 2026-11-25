@@ -47,7 +47,11 @@
     },
     "sm64ds": {
       "page": "super-mario-64-ds.html",
-      "stable": null
+      "stable": null,
+      "beta": {
+        "version": "Public Beta 01",
+        "url": "super-mario-64-ds.html#install"
+      }
     },
     "dusklight": {
       "page": "dusklight.html",
