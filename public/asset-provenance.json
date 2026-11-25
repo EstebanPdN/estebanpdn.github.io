@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "project": "Esteban’s Forge · v1.0.0",
   "generatedBy": "tools/build-provenance.mjs",
-  "assetFileCount": 526,
+  "assetFileCount": 527,
   "counts": {
     "context-only-permission-not-established": 116,
     "license-named-in-source-record-recheck-rights-holder": 7,
     "source-and-permission-not-documented": 178,
-    "source-recorded-permission-not-established": 225
+    "source-recorded-permission-not-established": 226
   },
   "reviewScope": "This inventory records bundled evidence and file hashes. It does not independently verify copyright ownership, the continued availability of source pages, or permissions beyond the terms recorded in source manifests.",
   "attributionNotice": "A credit or source link does not by itself grant permission to copy, adapt, or redistribute a work. Unknown permissions remain unknown.",
@@ -7280,6 +7280,26 @@
       "permissionStatus": "source-recorded-permission-not-established"
     },
     {
+      "path": "public/assets/worms/captures/beta-02-hud.png",
+      "bytes": 27023,
+      "sha256": "a319e05f210c2be20bea46f905fa11edc0b0764590a9178ab3b98c47f8c3cf30",
+      "evidence": [
+        {
+          "record": "public/assets/worms/sources.json",
+          "match": "path",
+          "field": "assets.19.file",
+          "details": {
+            "file": "captures/beta-02-hud.png",
+            "title": "Public beta 02 battle HUD",
+            "source": "Worms 3D build 52 running in Code Atlas Azahar",
+            "credit": "EstebanPdN / Worms 3D © Team17",
+            "processing": "Native 320 × 240 lower-screen capture"
+          }
+        }
+      ],
+      "permissionStatus": "source-recorded-permission-not-established"
+    },
+    {
       "path": "public/assets/worms/captures/bridge.webp",
       "bytes": 89498,
       "sha256": "068b20f0836b0936d00d63d3dd10da5ccad67b8087e536de032cbc6f9aa9b0a6",
@@ -7568,8 +7588,8 @@
     },
     {
       "path": "public/assets/worms/sources.json",
-      "bytes": 4578,
-      "sha256": "e9e1c0e71d28da7092b1b5b7a03585ca5171afe97d9ee93427e410ca683126a1",
+      "bytes": 4855,
+      "sha256": "506f06b6c976c7e73ac8a459107f1de135b7ddcf7cd821300803b29e531de525",
       "evidence": [
         {
           "record": "public/assets/worms/sources.json",
